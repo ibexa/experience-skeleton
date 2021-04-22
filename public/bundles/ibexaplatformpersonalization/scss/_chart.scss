@@ -1,0 +1,148 @@
+.ez-chart {
+    height: 100%;
+    max-height: calculateRem(1000px);
+    border: calculateRem(1px) solid $ibexa-color-base-medium;
+    border-radius: $ibexa-border-radius;
+
+    &--no-data {
+        .ez-chart {
+            &__canvas,
+            &__legend,
+            &__summary {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: calculateRem(16px);
+    }
+
+    &__time-range,
+    &__time-period {
+        color: $ibexa-color-font-pale;
+    }
+
+    &__message {
+        position: absolute;
+        z-index: 1;
+        top: calc(50% - 150px);
+        left: calc(50% - 190px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        width: calculateRem(400px);
+        height: calculateRem(226px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-base;
+        background: $ibexa-white;
+
+        .ez-icon {
+            margin-bottom: calculateRem(12px);
+        }
+    }
+
+    &__body {
+        position: relative;
+        padding: 0 calculateRem(14px) 0 calculateRem(12px);
+    }
+
+    &__canvas {
+        max-height: calculateRem(600px);
+        width: 100%
+    }
+
+    &__legend {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: calculateRem(16px) calculateRem(2px) 0 calculateRem(4px);
+    }
+
+    &__legend-checkbox-label {
+        display: flex;
+        height: calculateRem(20px);
+        align-items: center;
+        margin-right: calculateRem(15px);
+        font-size: calculateRem(14px);
+
+        .ez-input {
+            margin-right: calculateRem(4px);
+
+            &--legend-checkbox {
+                width: calculateRem(16px);
+                height: calculateRem(16px);
+            }
+        }
+    }
+
+    &__summary {
+        display: flex;
+        height: auto;
+        padding: calculateRem(16px);
+    }
+
+    &__summary-item {
+        padding: calculateRem(10px) calculateRem(15px);
+    }
+
+    &__summary-row-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: calculateRem(14px);
+        padding-left: 0;
+    }
+
+    &__summary-main-value {
+        color: $ibexa-color-font;
+        font-weight: bold;
+        font-size: calculateRem(28px);
+    }
+
+    &__summary-main-label {
+        color: $ibexa-color-font-pale;
+        font-size: calculateRem(14px);
+    }
+
+    &__summary {
+        &--revenue {
+            align-items: center;
+
+            .ez-chart__summary-item {
+                padding: calculateRem(10px) calculateRem(20px) 0 0;
+            }
+        }
+
+        &--recommendation-calls,
+        &--collected-events,
+        &--conversion-rate {
+            margin-top: 0 calculateRem(20px);
+
+            .ez-chart {
+                &__summary-item-details {
+                    padding: calculateRem(20px) calculateRem(16px) 0;
+                    flex: 0 0 70%;
+                }
+    
+                &__summary-item-total {
+                    padding: 0 0 0 calculateRem(20px);
+                    flex: 0 0 30%;
+                }
+    
+                &__summary-main-label {
+                    font-size: calculateRem(28px);
+                    text-align: right;
+                }
+
+                &__summary-main-value {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

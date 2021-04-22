@@ -1,0 +1,11 @@
+.c-events-action-btn {
+    height: calculateRem(32px);
+    width: calculateRem(32px);
+    padding: 0;
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+        background: none;
+    }
+}

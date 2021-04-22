@@ -1,0 +1,117 @@
+.ezcommerce-checkout {
+    margin: 16px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+
+    &__main {
+        width: 75%;
+        padding-right: 15px;
+    }
+
+    &__sidebar {
+        width: 25%;
+        padding-left: 15px;
+    }
+
+    &__step {
+        border: solid 1px #dddddd;
+        background-color: $ibexa-white;
+        margin-top: 16px;
+
+        &--done {
+            .ezcommerce-checkout__step-header {
+                background-color: $ibexa-color-primary;
+                color: $ibexa-white;
+
+                h4 {
+                    color: $ibexa-white;
+                }
+
+                .ezcommerce-checkout__step-action {
+                    display: block;
+                }
+            }
+        }
+
+        &--active {
+            .ezcommerce-checkout {
+                &__step-content {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__step-header {
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+
+        h4 {
+            margin: 0;
+            flex: auto;
+            padding: 0 8px;
+        }
+
+        .ezcommerce-checkout__step-action {
+            display: none;
+        }
+    }
+
+    &__step-number {
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    &__step-content {
+        display: none;
+        padding: 16px;
+    }
+
+    &__step-action {
+        display: inline-block;
+        border-radius: 4px;
+        padding: 8px 16px;
+        height: 40px;
+        outline: 0;
+        transition: background-color 0.3s ease-in-out;
+
+        &,
+        &:focus {
+            background-color: $ibexa-color-base-dark;
+            color: $ibexa-white;
+        }
+
+        &--small {
+            padding: 4px 8px;
+            height: auto;
+            font-size: 12px;
+        }
+
+        &:hover {
+            background-color: $ibexa-color-base-deep-dark;
+            color: $ibexa-white;
+        }
+
+        & + & {
+            margin-left: 8px;
+        }
+    }
+
+    &__step-error-message {
+        color: $ibexa-color-danger;
+        padding: 8px 0 16px;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    &__field-error-message {
+        color: $ibexa-color-danger;
+    }
+}

@@ -1,0 +1,17 @@
+.ezcommerce-basket-summary {
+    padding-right: 8px;
+
+    &__row {
+        display: flex;
+        text-align: right;
+    }
+
+    &__row-label {
+        width: 75%;
+    }
+
+    &__row-value {
+        width: 25%;
+        font-weight: bold;
+    }
+}

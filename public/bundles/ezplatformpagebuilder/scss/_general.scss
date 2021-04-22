@@ -1,0 +1,31 @@
+.ez-page-builder-preview,
+.ez-page-builder-edit,
+.ez-page-builder-create {
+    .ez-main-container {
+        padding: 0;
+        position: relative;
+    }
+}
+
+.ez-iframe-backdrop {
+    display: none;
+}
+
+.is-iframe-backdrop-displayed {
+    // fix for safari to not select element in background while dragging.
+    -webkit-user-select: none;
+}
+
+.is-iframe-backdrop-displayed .ez-iframe-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+.ez-tooltip--block-preview {
+    top: calculateRem(62px) !important;
+}

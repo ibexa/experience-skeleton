@@ -1,0 +1,176 @@
+.slick-slider figure {
+    margin: 0
+}
+
+.c-content__header {
+  background: #efefef;
+}
+
+.c-content__header-headline {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 40em) {
+  .c-content__header-headline {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+}
+
+.c-content__header-meta {
+    color: #555555;
+}
+
+.c-content__header-meta-author {
+
+}
+
+.c-content__header-meta-icon {
+
+}
+
+.c-content__header-intro p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.c-content__header figure {
+    margin: 0;
+}
+
+.c-content__header figure img {
+    width: 100%;
+}
+
+.c-content__header-img img {
+    /*display: block;
+    width: 100vw;
+    height: 250px;
+    object-fit: cover;*/
+}
+
+.c-content__card {
+  /*display: inline-block;*/
+  box-shadow: 0 0 3px rgba(0,0,0,0.12), 0 0 6px rgba(0,0,0,0.24);
+  margin: 0 0 30px 0 !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.c-content__card figure {
+    margin: 0;
+}
+
+.c-content__card figure img {
+    width: 100%;
+}
+
+.c-content__card-img img {
+    z-index: 1;
+}
+
+.c-content__card-headline {
+  font-size: 35px;
+  font-weight: 300;
+  margin-top: 15px;
+}
+
+.no-image-spacing {
+  margin-top: 65px !important;
+}
+
+@media only screen and (max-width: 40em) {
+  .c-content__card-headline {
+    font-size: 25px;
+  }
+}
+
+.c-content__card-headline a {
+    color: #333333;
+}
+
+.c-content__card-meta {
+    line-height: 36px;
+}
+
+.c-content__card-readmore {
+  color: #fff;
+  bottom: 10px;
+  right: 10px;
+  position: absolute !important;
+  margin-top: -20px !important;
+}
+.c-content__card-spacer {
+  height: 50px;
+  width: 10px;
+  float:left;
+  display:inline;
+}
+
+.c-content__card-date {
+  background: #fff;
+  text-align: center;
+  padding: 0.5em 1rem;
+  color: #444;
+  position: absolute;
+  z-index: 2;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.c-content__card-startdate {
+    float: left;
+}
+.c-content__card-enddate {
+    float: left;
+}
+
+.c-content__card-date-separator {
+    float: left;
+    margin: 0 0.5rem;
+    line-height: 2.5rem;
+    vertical-align: middle;
+}
+
+.c-content__card-day {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.c-content__card-month {
+  font-size: 12px;
+}
+
+.c-content__card-content-left {
+    background: linear-gradient(135deg, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
+}
+
+.c-content__card-content-top:after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 15px;
+    height: 15px;
+    bottom: -7px;
+    left: 20px;
+    transform: rotate(45deg);
+    box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.c-content__card-content-left:after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 15px;
+    height: 15px;
+    top: 35px;
+    right: -7px;
+    transform: rotate(45deg);
+    box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.u-margin-left-8x {
+    margin-left: 5.625rem !important;
+}

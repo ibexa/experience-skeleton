@@ -1,0 +1,80 @@
+.ezcommerce-basket-page {
+    margin: 16px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+    width: 100%;
+
+    .ezcommerce-basket-page {
+        &__error {
+            color: $ibexa-white;
+            background-color: $ibexa-color-danger;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        &__table {
+            width: 100%;
+        }
+
+        &__product-preview {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        &__product-image {
+            width: 30%;
+        }
+
+        &__product-data {
+            padding-left: 8px;
+            width: 70%;
+        }
+
+        &__quantity {
+            width: 50px;
+            margin: 0;
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__action-button {
+            display: inline-block;
+            background-color: $ibexa-color-base-dark;
+            border-radius: 4px;
+            color: $ibexa-white;
+            padding: 8px 16px;
+            height: 40px;
+            outline: 0;
+            transition: background-color 0.3s ease-in-out;
+
+            &--small {
+                padding: 4px 8px;
+                height: auto;
+                font-size: 12px;
+            }
+
+            &:hover {
+                background-color: $ibexa-color-base-deep-dark;
+                color: $ibexa-white;
+            }
+
+            & + & {
+                margin-left: 8px;
+            }
+        }
+
+        &__summary {
+            width: 35%;
+        }
+
+        &__checkout-actions {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+        }
+    }
+}

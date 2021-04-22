@@ -1,0 +1,56 @@
+// Default settings
+$tabs-top-active-color: $primary-color !default;
+$tabs-top-border-width: rem-calc(3) !default;
+
+$tabs-border-width: rem-calc(1) !default;
+$tabs-border-style: solid !default;
+$tabs-border-color: $flat-clouds !default;
+$tabs-border-bottom-color: $white !default;
+
+
+@media #{$small-only} {
+
+  .tabs dd,
+  .tabs .tab-title{
+    width: 100%;
+  }
+
+}
+
+.tabs .tab-title > a {
+  border: $tabs-border-width $tabs-border-style $tabs-border-color;
+
+  @media #{$medium-up} {
+    border-width: 0;
+
+    &:hover {
+      border-bottom-width: $tabs-border-width;
+    }
+  }
+}
+
+.tabs .tab-title.active > a {
+  position: relative;
+  border: $tabs-border-width $tabs-border-style $tabs-border-color;
+  border-bottom-color: $tabs-border-bottom-color;
+
+  &:before {
+    position: absolute;
+    top: -($tabs-border-width);
+    left: -($tabs-border-width);
+    right: -($tabs-border-width);
+    content: '';
+    height: $tabs-top-border-width;
+    background-color: $tabs-top-active-color;
+  }
+}
+
+.tabs-content {
+  padding: 0 $tabs-content-padding;
+  margin-top: -($tabs-border-width);
+  z-index: 1;
+}
+
+.tabs-content--bordered {
+  border: $tabs-border-width $tabs-border-style $tabs-border-color;
+}

@@ -1,0 +1,22 @@
+// Extends FOS Comments
+
+.c-comments__form {
+  position: relative;
+}
+
+.c-comments__comment {
+  border-bottom: 1px solid $iron;
+  margin-bottom: rem-calc(16);
+  padding-bottom: rem-calc(16);
+}
+
+.c-comments__comment-meta {
+  @include clearfix;
+  font-size: rem-calc(14);
+  margin-bottom: rem-calc(10);
+}
+
+.c-comments__comment-stars {
+  float: left;
+  margin-right: rem-calc(16);
+}

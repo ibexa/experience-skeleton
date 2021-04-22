@@ -1,0 +1,484 @@
+/* SETTINGS
+   ========================================================================== */
+
+@import "settings";
+
+
+// colors
+$color-alert: #F04124;
+$color-success: #43ac6a;
+$color-shading: #ccc;
+$color-link: #0B4E7A;
+$color-primary: lighten($color-alert, 10%);
+
+@import "storm/components.spinner";
+
+
+// New Cockpit Design Components
+[v-cloak] > * { display:none; }
+
+.cockpit-shop-data {
+  padding: rem-calc(0 30 30 30);
+  border: 1px solid #dbdbdb;
+  border-top: 0;
+}
+
+.cockpit-shop-filter {
+  margin-top: rem-calc(50);
+  font-size: rem-calc(20);
+  padding: rem-calc(20 10 5);
+  background-color: #dbdbdb;
+  border-radius: 5px 5px 0 0;
+  font-weight: 700;
+}
+
+.cockpit-overview__box {
+  border: 1px solid #dbdbdb;
+  background: #fff;
+}
+
+.cockpit-overview__box-icon {
+  float: left;
+  width: 30%;
+  background: #e5e3e3;
+  text-align: center;
+  height: rem-calc(100);
+  .fa {
+    font-size: rem-calc(35);
+    color: #666;
+    line-height: rem-calc(100);
+  }
+}
+
+.cockpit-overview__box--small .cockpit-overview__box-icon {
+  height: rem-calc(80);
+  .fa {
+    line-height: rem-calc(80);
+  }
+}
+
+.cockpit-overview__box--small .cockpit-overview__box-number {
+  font-size: rem-calc(20);
+  line-height: rem-calc(40);
+}
+
+.cockpit-overview__box-content {
+  width: 70%;
+  float: right;
+  padding: rem-calc(10);
+  text-align: center;
+}
+
+.cockpit-overview__box-number {
+  font-size: rem-calc(50);
+  line-height: rem-calc(50);
+}
+
+.cockpit-overview__box-desc {
+  font-size: rem-calc(13);
+  line-height: rem-calc(14);
+}
+
+.cockpit-overview__technical {
+  margin-bottom: rem-calc(30);
+}
+
+.erp-status-icon {
+  font-size: rem-calc(75);
+}
+
+.erp-status-icon--fine {
+  color: #2ecc71;
+}
+
+.erp-status-icon--not-fine {
+  color: #cf000f;
+}
+
+// // overriding datepicker look
+// .Zebra_DatePicker {
+//   background: darken($color-shading, 50%);
+//   border-color: darken($color-shading, 50%);
+// }
+// .Zebra_DatePicker td.dp_selected {
+//   background: $color-alert;
+//   color: white !important;
+// }
+// .Zebra_DatePicker td.dp_hover {
+//   background-color: $primary-color !important;
+//   background-image: none;
+// }
+
+.dashboard {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 0.8em;
+    margin: 10px;
+
+    label {
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0.5em 0 0.2em 0;
+        padding: 0;
+    }
+
+    ul.tabs li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        margin: 0;
+    }
+
+    ul.tabs li.selected a {
+        background: #444 none;
+        border-radius: 5px;
+        color: #f5f3dd;
+        text-decoration: none;
+
+        &:hover {
+          color: #f5f3dd;
+        }
+    }
+
+    ul.tabs li a {
+        display: block;
+        font-weight: bold;
+        padding: 2px 15px;
+        margin: 2px 0 5px 1px;
+        min-height: 16px;
+        color: #005b7f;
+        font-size: 1.1em;
+        text-decoration: underline;
+
+        &:hover {
+          color: #000;
+        }
+    }
+
+    .tab-block {
+        padding-top: 0.8em;
+        border-top: 1px dashed #ddd;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .left {
+        float: left;
+    }
+
+    // .row {
+    //     margin-bottom: 1em;
+    //
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+    // }
+    // .row * {
+    //     box-sizing: border-box;
+    // }
+
+    .line-divider {
+        border-top: 1px solid $color-shading;
+        margin-top: 15px;
+    }
+
+    .message,
+    .pillow {
+        border-radius: 3px;
+        background-color: $color-shading;
+        color: #333;
+        padding: 1px 5px;
+        font-weight: bold;
+
+        &.alert {
+            background-color: $color-alert;
+            color: white;
+        }
+
+        &.success {
+            background-color: $color-success;
+            color: white;
+        }
+    }
+
+    .message.alert {
+        background: lighten($color-alert, 38%);
+        color: darken($color-shading, 50%);
+        border: 1px solid $color-alert;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .panel {
+        width: 25%;
+        float: left;
+        padding: 10px;
+        border: 1px solid $color-shading;
+        border-left: 0;
+        background-color: lighten($color-shading, 10%);
+
+        h3 {
+            margin: 5px 0;
+        }
+
+        .inner {
+            height: auto;
+            padding: 0;
+            opacity: 1;
+        }
+    }
+
+    .panel:first-child {
+        border-left: 1px solid $color-shading;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+    .box {
+        border: 1px solid $color-shading;
+        padding: 5px;
+    }
+
+    .box h3 {
+        background: darken($color-shading, 50%);
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+        margin: 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .box h3 a {
+        color: $color-shading;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .box h3 a:hover {
+        color: #fff;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        background: white;
+        width: 200px;
+        padding: 5px;
+        box-shadow: 5px 5px 10px darken($color-shading, 20%);
+        display: none;
+        font-size: 12px;
+        position: absolute;
+        color: $color-shading;
+        right: 0;
+        top: 28px;
+    }
+
+    .dropdown-content:after {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid white;
+        content: '';
+        top: -5px;
+        right: 8px;
+        position: absolute;
+    }
+
+    .dropdown-content label {
+        font-weight: normal;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        color: $color-link;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .sidebar li:last-child {
+        margin-bottom: 0;
+    }
+
+    .sidebar ul ul {
+        padding: 0;
+    }
+
+    .sidebar ul > li {
+        text-align: right;
+    }
+
+    .sidebar li li {
+        text-align: left;
+    }
+
+    .sidebar .label {
+        float: left;
+        width: 75%;
+    }
+    .sidebar .number {
+        float: right;
+        text-align: right;
+        width: 25%;
+    }
+
+    .group:after,
+    .button-group:after,
+    // .row:after,
+    .sidebar li:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .sidebar h4 {
+        text-align: left;
+    }
+    .sidebar h4 small {
+        display: block;
+    }
+    .sidebar h4 span {
+        font-size: 2em;
+        padding-top: 5px;
+    }
+
+
+    .sidebar h5 {
+        background-color: darken($color-shading, 50%);
+        color: white;
+        padding: 5px;
+        font-size: 1em;
+    }
+
+    .sidebar img,
+    .main img {
+        width: 100%;
+    }
+
+    .button-group {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid $color-shading;
+        display: inline-block;
+    }
+
+    .button-group li {
+        display: inline;
+    }
+
+    .button-group a:hover,
+    .button-group .active a {
+        background: $color-primary;
+        color: white;
+    }
+
+    .button-group a {
+        border-right: 1px solid $color-shading;
+        padding: 5px;
+        background: lighten($color-shading, 10%);
+        float: left;
+        text-decoration: none;
+        color: #0b4e7a;
+    }
+    .button-group li:last-child a {
+        border: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .main .box table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .main .box tr:nth-child(odd) td {
+        background: none;
+    }
+    .main .box th,
+    .main .box td {
+        padding: 5px;
+        background: lighten($color-shading, 10%);
+        border-bottom: 1px solid;
+        border-color: $color-shading;
+        text-align: left;
+    }
+
+    .main .box th {
+        background: darken($color-shading, 40%);
+    }
+
+    .main .box .tab-content {
+        height: 27.7em;
+        overflow-y: scroll;
+        padding: 1em;
+        width: 100%;
+    }
+
+    .datepicker {
+        padding: 3px 0;
+    }
+
+    .datepicker a {
+        text-decoration: none;
+    }
+
+    footer p {
+        padding: 5px 0;
+    }
+
+    /* Charts */
+
+    .chart {
+        height: 280px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    .gauge {
+        width: 100%;
+        h4 {
+            text-align: center;
+        }
+    }
+
+    /* Datepicker override */
+
+    input.datepicker {
+        padding: 4px 4px 2px;
+        font-size: 12px;
+        width: 100px;
+        line-height: normal;
+    }
+
+    input[type="submit"] {
+        background: $color-primary;
+        color: white;
+        font-size: 12px;
+        border-radius: 4px;
+        height: 22px;
+        line-height: 18px;
+        margin-left: 5px;
+        border: 1px solid darken($color-primary, 10%);
+        text-shadow: 1px 1px darken($color-primary, 10%);
+    }
+}

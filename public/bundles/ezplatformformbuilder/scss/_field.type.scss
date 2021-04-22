@@ -1,0 +1,128 @@
+.ez-form-builder {
+    margin-bottom: calculateRem(20px);
+    border-bottom: calculateRem(1px) solid $ibexa-color-base;
+
+    &__call-to-action {
+        padding: 0 calculateRem(30px) calculateRem(16px);
+        display: none;
+
+        .ez-form-builder__message {
+            margin-bottom: calculateRem(32px);
+        }
+    }
+
+    &-preview {
+        position: relative;
+        background: $ibexa-white;
+        display: grid;
+        grid-template-areas: 'iframe actions';
+        grid-template-columns: auto calculateRem(40px);
+        grid-column-gap: calculateRem(16px);
+        padding: calculateRem(20px);
+
+        &__iframe {
+            grid-area: iframe;
+        }
+
+        &__actions {
+            grid-area: actions;
+        }
+
+        &__action {
+            border: 0;
+            width: calculateRem(40px);
+            height: calculateRem(40px);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: calculateRem(10px);
+            transition: background 0.3s $ibexa-admin-transition;
+            cursor: pointer;
+
+            &--edit:hover {
+                background: $ibexa-color-primary-hover;
+            }
+
+            &--trash:hover {
+                background: $ibexa-color-primary-hover;
+            }
+        }
+
+        &__preloader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0;
+            background: $ibexa-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &--no-value {
+        .ez-form-builder-preview {
+            display: none;
+        }
+
+        .ez-form-builder__call-to-action {
+            display: block;
+        }
+    }
+
+    &.is-invalid {
+        .ez-form-builder {
+            &__call-to-action {
+                @include exclamation-mark-error();
+
+                .ez-form-builder__error {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateY(-100%);
+                }
+            }
+        }
+    }
+
+    &--loading-preview {
+        .ez-form-builder-preview {
+            &__preloader {
+                z-index: 100;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.ez-form-builder-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $ibexa-color-base-pale;
+    overflow: auto;
+}
+
+.ez-form-builder--closed {
+    .ez-form-builder-wrapper {
+        display: none;
+    }
+}
+
+.ez-content-edit-container {
+    .ez-field-edit--ezform {
+        margin-bottom: 0;
+    }
+}
+
+.ez-field-edit.ez-field-edit--ezform {
+    border-bottom: 0;
+}

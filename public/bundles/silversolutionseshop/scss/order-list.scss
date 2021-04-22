@@ -1,0 +1,75 @@
+/* SETTINGS
+   ========================================================================== */
+
+@import "settings";
+$color-shading: #ccc;
+
+// Foundation settings
+$include-html-global-classes: false;
+$include-print-styles: false;
+
+@import "../vendor/foundation/scss/foundation/components/grid";
+
+// make row 100% width
+.main-content > .row {
+  width: 100%;
+  max-width: none;
+
+  // remove padding from first descended
+  > .columns {
+    padding: 0;
+  }
+}
+
+.scope-foundation {
+
+  // scoped components
+  @import "../vendor/foundation/scss/foundation/components/alert-boxes";
+  @import "../vendor/foundation/scss/foundation/components/buttons";
+  @import "../vendor/foundation/scss/foundation/components/forms";
+  @import "../vendor/foundation/scss/foundation/components/tables";
+  @import "../vendor/foundation/scss/foundation/components/pagination";
+
+  // we need this for grid to work
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+
+  // overriding datepicker look
+  .Zebra_DatePicker {
+    background: darken($color-shading, 50%);
+    border-color: darken($color-shading, 50%);
+  }
+  .Zebra_DatePicker td.dp_selected {
+    background: $primary-color;
+    color: white !important;
+  }
+  .Zebra_DatePicker td.dp_hover {
+    background-color: $primary-color !important;
+    background-image: none;
+  }
+
+  .Zebra_DatePicker_Icon_Inside {
+    padding: 0;
+    position: absolute;
+    background-color: transparent;
+    margin-right: rem-calc(5);
+  }
+
+  // datePicker foundation buttons
+  .dt-buttons {
+    .button {
+      @include button($padding: rem-calc(5));
+      margin-left: 1px;
+    }
+  }
+
+  // pagination override
+  .pagination {
+    a {
+      text-decoration: none;
+    }
+  }
+}

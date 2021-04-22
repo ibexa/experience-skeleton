@@ -1,0 +1,37 @@
+.ez-version-compare {
+    display: flex;
+
+    &__content-wrapper {
+        flex: 1;
+
+        &--first {
+            background-color: $ibexa-color-base-light;
+
+            .ez-table-header,
+            .table {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .ez-icon {
+        &--removed {
+            fill: $ibexa-color-version-compare-removed;
+        }
+
+        &--added {
+            fill: $ibexa-color-version-compare-added;
+        }
+    }
+
+    &__content {
+        padding: calculateRem(20px) calculateRem(20px) calculateRem(45px);
+        width: 100%;
+
+        .ez-content-field {
+            .ez-content-field-name {
+                background-color: transparent;
+            }
+        }
+    }
+}

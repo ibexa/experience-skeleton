@@ -1,0 +1,15 @@
+.ez-preview-switcher {
+    height: calculateRem(32px);
+    width: calculateRem(104px);
+    border: calculateRem(1px) solid $ibexa-color-ground-dark;
+    border-radius: calculateRem(2px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__action {
+        @include info-bar-button();
+
+        flex: 0 0 calculateRem(34px);
+    }
+}

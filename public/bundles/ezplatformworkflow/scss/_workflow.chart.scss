@@ -1,0 +1,20 @@
+.ez-workflow-chart {
+    width: 100%;
+
+    &__headline {
+        padding: calculateRem(8px) calculateRem(32px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base-medium;
+        font-size: calculateRem(16px);
+        color: $ibexa-color-font-pale;
+    }
+
+    &__item {
+        display: flex;
+        padding: calculateRem(12px) calculateRem(32px) 0;
+    }
+
+    &__icon-wrapper {
+        margin-right: calculateRem(10px);
+        padding-top: calculateRem(4px);
+    }
+}

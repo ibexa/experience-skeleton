@@ -1,0 +1,14 @@
+// Extend Foundation tooltip
+// Make the nub always on the bottom on mobile devices
+@media #{$small} {
+
+  .tooltip.tip-override > .nub {
+    border-color: transparent transparent $tooltip-bg transparent;
+  }
+
+  .tooltip.tip-override.tip-left > .nub,
+  .tooltip.tip-override.tip-right > .nub {
+    margin-top: 0;
+  }
+
+}

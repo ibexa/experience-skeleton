@@ -1,0 +1,106 @@
+/* TODO move to correct positions */
+
+// foundation-datepicker
+.c-page-footer__column p{
+  margin-bottom: 0;
+}
+
+// Slick slider
+.slick_slider_product_item .c-card__label--price {
+  position: absolute;
+  margin-top: -10px;
+  display: block !important;
+}
+
+.slick_slider_product_item .c-card__price--crossed-label {
+  position: absolute;
+  margin-top: -10px;
+  font-size: 0.75rem;
+  display: block !important;
+}
+
+// Landing page blocks
+.landing-page__block.block_contentlist h3 {
+  text-align: center;
+}
+
+.landing-page__block.block_newsletter {
+  background: #efefef;
+  padding: 25px;
+  margin-bottom: 35px;
+}
+
+.landing-page__block figure {
+  margin: rem-calc(0 15 15 15);
+}
+
+// Catalog card
+
+.c-card__list-wrapper {
+  .c-card__price--crossed {
+    text-align: left;
+  }
+}
+
+.embed-product {
+  width: 100%;
+  float: none;
+}
+
+.embed-product-list {
+  list-style-type: none;
+}
+
+
+@media #{$medium-up} {
+  .embed-product {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media #{$large-up} {
+  .embed-product {
+    width: 25%;
+    float: left;
+  }
+}
+
+// Zoom functionality on product detail page
+figure.zoom {
+  & img:hover {
+    opacity: 0;
+  }
+  img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+  }
+  background-position: 50% 50%;
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  width: 100%;
+}
+
+// Quantiy + / -
+
+.qtyamount {
+  float: left;
+  width: 50% !important;
+  height: 36px !important;
+  text-align: center;
+  border: 0;
+  font-size: 16px !important;
+}
+
+.qtyminus,.qtyplus {
+  float: left;
+  width: 25%;
+  height: 36px;
+  background: #FFFFFF;
+  color: $primary-color;
+  font-size: 20px !important;
+  border-color: #CCCCCC;
+  border-style: solid;
+}

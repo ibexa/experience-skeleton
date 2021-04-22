@@ -1,0 +1,28 @@
+.c-event-badge {
+    padding: calculateRem(5px) calculateRem(20px);
+
+    &__title {
+        font-size: calculateRem(14px);
+        font-weight: bold;
+    }
+
+    &__subtitle {
+        margin-top: calculateRem(-4px);
+        font-size: calculateRem(12px);
+        color: $ibexa-color-base-dark;
+    }
+
+    &__properties {
+        font-size: calculateRem(12px);
+        margin-top: calculateRem(10px);
+    }
+
+    &__property-label,
+    &__property-value {
+        vertical-align: top;
+    }
+
+    &__property-label {
+        padding-right: calculateRem(8px);
+    }
+}

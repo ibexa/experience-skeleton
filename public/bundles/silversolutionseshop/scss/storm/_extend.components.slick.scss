@@ -1,0 +1,64 @@
+// Default settings
+$slick-icon-next: "\f105" !default;
+$slick-icon-prev: "\f104" !default;
+$slick-icon-color: $secondary-color !default;
+$slick-icon-font-size: rem-calc(50) !default;
+$slick-icon-font-family: FontAwesome !default;
+$slick-icon-z-index: 98 !default;
+$slick-sliders-icons-right: rem-calc(10) !default;
+$slick-sliders-icons-left: rem-calc(10) !default;
+$slick-sliders-icons-height: rem-calc(60) !default;
+$slick-sliders-icons-width: rem-calc(60) !default;
+$slick-sliders-icons-margin-top: rem-calc(-30) !default;
+$slick-slider-tabs-icon-next-right: rem-calc(-30) !default;
+$slick-slider-tabs-icon-next-left: rem-calc(-30) !default;
+
+.slick_tabs_homepage_slider .slick-prev:before,
+.slick_tabs_homepage_slider .slick-next:before,
+.js-slick-main-homepage-slider .slick-prev:before,
+.js-slick-main-homepage-slider .slick-next:before {
+  font-size: $slick-icon-font-size;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: $slick-icon-font-family, sans-serif;
+  color: $slick-icon-color;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: $slick-icon-z-index;
+}
+
+.slick-next:before {
+  content: $slick-icon-next;
+}
+
+.slick-prev:before {
+  content: $slick-icon-prev;
+}
+
+.slick_tabs_homepage_slider .slick-next,
+.slick_tabs_homepage_slider .slick-prev,
+.js-slick-main-homepage-slider .slick-prev,
+.js-slick-main-homepage-slider .slick-next {
+  right: $slick-sliders-icons-right;
+  height: $slick-sliders-icons-height;
+  width: $slick-sliders-icons-width;
+  margin-top: $slick-sliders-icons-margin-top;
+}
+
+.js-slick-main-homepage-slider .slick-prev {
+  left: $slick-sliders-icons-left;
+  right: auto;
+}
+
+.slick_tabs_homepage_slider .slick-next {
+  right: $slick-slider-tabs-icon-next-right;
+}
+
+.slick_tabs_homepage_slider .slick-prev {
+  right: 0;
+  left: $slick-slider-tabs-icon-next-left;
+}

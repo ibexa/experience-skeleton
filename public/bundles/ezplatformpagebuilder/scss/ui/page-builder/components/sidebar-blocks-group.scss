@@ -1,0 +1,47 @@
+.c-sidebar-blocks-group {
+    max-height: auto;
+    margin-bottom: calculateRem(1px);
+
+    &--colapsed {
+        max-height: calculateRem(25px);
+
+        .ez-icon {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &--colapsed &__blocks {
+        display: none;
+    }
+
+    &__title-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: calculateRem(24px);
+        padding-left: calculateRem(9px);
+        background: $ibexa-color-base;
+        border-radius: 0;
+    }
+
+    &__title {
+        flex: 1 1 auto;
+        user-select: none;
+        font-size: calculateRem(12px);
+        font-weight: 100;
+        line-height: calculateRem(28px);
+    }
+
+    &__toggler {
+        flex: 0 0 calculateRem(24px);
+        line-height: calculateRem(18px);
+    }
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: calculateRem(8px);
+        background: $ibexa-white;
+    }
+}

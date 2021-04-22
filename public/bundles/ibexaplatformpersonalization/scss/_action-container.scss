@@ -1,0 +1,28 @@
+.ez-action-container {
+    padding: calculateRem(16px);
+    
+    &__title {
+        width: 100%;
+        margin-bottom: calculateRem(24px);
+        padding-bottom: calculateRem(8px);
+        font-size: calculateRem(16px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__available-model {
+        padding: calculateRem(16px);
+        margin-bottom: calculateRem(8px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &--models {
+        flex: 2;
+        margin-right: calculateRem(16px);
+    }
+
+    &--configured-models {
+        flex: 3;
+        margin-left: calculateRem(16px);
+    }
+}

@@ -1,0 +1,43 @@
+.ez-site-factory-widget {
+    margin: 0;
+    padding-top: calculateRem(24px);
+
+    &__error {
+        display: none;
+        margin-left: calculateRem(8px);
+        color: $ibexa-color-warning-dark;
+
+        &--visible {
+            display: inline-block;
+        }
+    }
+
+    &.is-invalid {
+        .ez-site-factory-widget {
+            &__data {
+                @include exclamation-mark-error();
+
+                .form-control {
+                    border-color: $ibexa-color-danger;
+                    background: $ibexa-color-warning-pale;
+                }
+            }
+        }
+    }
+
+    &.form-group {
+        width: 50%;
+    }
+
+    &__wrapper {
+        &--inline {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .ez-label,
+        .form-control {
+            margin: 0 calculateRem(8px);
+        }
+    }
+}

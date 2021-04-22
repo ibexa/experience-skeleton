@@ -1,0 +1,28 @@
+.c-image-editor-sidebar-group {
+    &__header {
+        background-color: $ibexa-color-base;
+        padding: calculateRem(8px);
+        margin-bottom: calculateRem(8px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__items {
+        padding: calculateRem(8px);
+    }
+
+    &--collapsed {
+        .c-image-editor-sidebar-group {
+            &__items {
+                transform: scaleY(0);
+                height: 0;
+            }
+
+            &__toggler {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}

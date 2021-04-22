@@ -1,0 +1,45 @@
+// Default settings (TODO)
+
+
+// CSS only Tooltip
+
+.css-tooltip{
+  position: relative;
+  z-index: 1;
+  color: #333;
+  font-weight: bolder;
+  cursor: pointer;
+  &:hover::before{
+    content: "";
+    border: solid transparent;
+    border-bottom-color: #333;
+    border-width: 5px;
+    position: absolute;
+    top: rem-calc(30);
+    left: rem-calc(10);
+  }
+
+  &:hover::after{
+    content: attr(aria-label);
+    position: absolute;
+    min-width: 15em;
+    line-height: 1.3em;
+    margin: 0;
+    background: #333;
+    color: #fff;
+    padding: rem-calc(10);
+    left: 0;
+    top: rem-calc(40);
+    z-index: 1;
+    font-size: rem-calc(14);
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+// Tooltip text-right
+
+.css-tooltip-right:hover::after {
+  right: 0;
+  left: auto;
+}

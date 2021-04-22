@@ -1,0 +1,16 @@
+.c-week-hour-view {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: calc((100% / 7) - 42);
+    font-size: calculateRem(13px);
+    min-height: calculateRem(45px);
+    border-style: solid;
+    border-color: $ibexa-color-base;
+    border-width: 0 calculateRem(1px) calculateRem(1px) 0;
+
+    &--past {
+        @include past-tile();
+    }
+}

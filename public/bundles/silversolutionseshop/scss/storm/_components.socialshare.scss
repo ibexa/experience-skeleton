@@ -1,0 +1,290 @@
+$social-items-line-height: rem-calc(20) !default;
+
+.social {
+  width: auto;
+  max-width: 763px;
+  margin: 40px 20px 20px;
+}
+.social_share_privacy_area {
+  clear: both;
+  margin: 0 !important;
+  list-style-type: none;
+  padding: 0 !important;
+  width: auto;
+  height: 25px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.social_share_privacy_area li {
+  display: inline-block;
+  width: 123px;
+  margin: 0 20px 0 0 !important;
+  padding: 0 !important;
+  height: 21px;
+  list-style: none outside none;
+}
+
+// custom media query
+@media (max-width: 840px) {
+  .social_share_privacy_area li {
+    display: block;
+    margin-bottom: ($column-gutter/2) !important;
+  }
+}
+
+.social_share_privacy_area li .dummy_btn {
+  float: left;
+  height: inherit;
+  cursor: pointer;
+  line-height: $social-items-line-height;
+}
+
+.social_share_privacy_area li div iframe {
+  overflow: hidden;
+  height: inherit;
+  width: 90px !important;
+}
+.social_share_privacy_area li.twitter div iframe {
+  width: 110px !important;
+  margin-right: -20px;
+}
+
+.social_share_privacy_area .is-on {
+  .switch {
+    color: $primary-color;
+  }
+}
+
+.social_share_privacy_area .facebook {
+  width: 143px;
+
+  &.is-on.share_btn {
+    width: 175px;
+
+    iframe {
+      width: 150px !important;
+    }
+
+  }
+
+}
+.social_share_privacy_area .facebook iframe {
+  width: 110px !important;
+}
+
+.social_share_privacy_area .pinterest {
+  margin-right: 0 !important;
+}
+
+/* Switch begin */
+.social_share_privacy_area li .switch {
+  float: left;
+  margin-right: rem-calc(5);
+  line-height: $social-items-line-height; // vertically align
+  cursor: pointer;
+
+  &.off {
+    opacity: .7;
+  }
+}
+.social_share_privacy_area li .switch.on {
+  background-position: 0 -12px;
+}
+
+.social_share_privacy_area li .checkbox_switch {
+  float: left;
+  margin-right: rem-calc(5);
+  width: rem-calc(20);
+  text-align: center;
+  line-height: $social-items-line-height;
+
+  input {
+    margin-bottom: 0;
+  }
+}
+
+/* Switch end */
+/* Tooltips begin */
+.social_share_privacy_area li.help_info {
+  position: relative;
+}
+.social_share_privacy_area li.help_info .info,
+.social_share_privacy_area li .help_info.icon .info {
+  position: absolute;
+  z-index: 500;
+  left: -12px;
+  bottom: 30px;
+  display: none;
+  background-color: $tooltip-bg;
+  color: $tooltip-font-color;
+  width: $tooltip-max-width;
+  padding: $tooltip-padding;
+  font-size: $tooltip-close-font-size;
+  line-height: $tooltip-line-height;
+  font-weight: $tooltip-close-font-weight;
+  text-align: left;
+
+  &:before {
+    @include css-triangle(10px, $tooltip-bg, 'top');
+    position: absolute;
+    bottom: -20px;
+  }
+}
+
+.social_share_privacy_area li .help_info.icon .info {
+  left: -10px;
+  bottom: 34px;
+}
+.social_share_privacy_area li.help_info.display .info,
+.social_share_privacy_area li .help_info.icon.display .info {
+  display: block;
+}
+.social_share_privacy_area li.help_info.info_off.display .info {
+  display: none;
+}
+.social_share_privacy_area li .help_info.icon {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  background: $flat-silver;
+  width: 25px;
+  height: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #222;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu.on .help_info.icon {
+  border-top-width: 0;
+  border-left-width: 0;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu.perma_option_off .help_info.icon {
+  border-right-width: 2px;
+}
+/* Tooltips end */
+/* Settings/Info begin */
+.social_share_privacy_area li.settings_info {
+  float: right;
+  position: relative;
+  margin-right: 0 !important;
+  width: 51px;
+  display: table-row;
+}
+.social_share_privacy_area li.settings_info a {
+  text-decoration: none;
+  margin: 0 !important;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu {
+  background-color: #c4c5c6;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 135px;
+  z-index: 19;
+  margin: 0;
+  padding: 0;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu.off {
+  border-width: 0;
+  background-color: transparent;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu.off form {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu .settings {
+  display: inline-block;
+  background-color: $flat-silver;
+  border-left: 1px solid white;
+  width: 25px;
+  height: 20px;
+  text-align: center;
+
+  i {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.social_share_privacy_area li.settings_info .settings_info_menu.on .settings {
+  border-top-width: 0;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu form fieldset {
+  border-width: 0;
+  margin: 0;
+  padding: 0 10px 10px;
+  float:left;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu form fieldset legend {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 14px;
+  margin: 0;
+  width: 115px;
+  background-color: transparent;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu form fieldset input {
+  clear: both;
+  float: left;
+  margin: 4px 10px 4px 0;
+  padding: 0;
+}
+.social_share_privacy_area li.settings_info .settings_info_menu form fieldset label {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.social_share_privacy_area li.settings_info .settings_info_menu form fieldset label {
+  color: $body-font-color;
+}
+
+.social_share_privacy_area li.settings_info .settings_info_menu form fieldset label.checked {
+  color: $primary-color;
+}
+.social_share_privacy_area form .social-refresh {
+  padding: 0 10px 10px;
+  text-align: center;
+  display: none;
+}
+.social_share_privacy_area form .social-refresh img {
+  margin: 0 auto
+}
+
+#footer .social {
+  height: 25px;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+#footer .socialshareprivacy ul li {
+  float: left;
+}
+
+#footer #panel .bar {
+  height: 40px;
+}
+.tobasket .social_share_privacy_area li.settings_info .settings_info_menu {
+  right: -60px;
+  top: -90px;
+}
+
+/* Settings/Info end */
+
+/* Social Share Sprite */
+.social-share {
+  background: url("/bundles/silversolutionseshop/img/sprite-socialshare.png") scroll top left no-repeat;
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+  vertical-align: top;
+}
+.social-01-facebook{ background-position: 0 0; width: 83px; height: 20px; }
+.social-03-pinterest{ background-position: 0 -63px; width: 43px; height: 20px; }
+.social-04-twitter{ background-position: 0 -84px; width: 55px; height: 20px; }

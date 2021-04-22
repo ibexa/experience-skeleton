@@ -1,0 +1,78 @@
+$dropdown-primary-color: $primary-color !default;
+$dropdown-secondary-color: #333 !default;
+
+@media #{$large-up} {
+  .nav-wrap {
+    background: $dropdown-primary-color;
+    border-color: #ccc
+  }
+  .nav-wrap .contain-to-grid {
+    background: $dropdown-primary-color;
+  }
+  .nav-wrap .contain-to-grid.fixed {
+    background: $white;
+    .icon-bar .item i {
+      color: $dropdown-secondary-color;
+    }
+    .c-icon-bar__menu-item i {
+      color: $dropdown-secondary-color !important;
+    }
+  }
+  .nav-wrap .top-bar-section ul li:not(.has-form) > a, .nav-wrap .top-bar {
+    color: $primary-color;
+  }
+
+  // 1st Level
+  .c-dropdownmenu .top-bar-section ul > li {
+    position: relative;
+  }
+  .c-dropdownmenu .top-bar-section ul > li > a {
+    font-size: rem-calc(15);
+    border-left: 0;
+    border-right: 0;
+    line-height: rem-calc(55) !important;
+  }
+  .c-dropdownmenu .top-bar-section li.active a,
+  .c-dropdownmenu .dropdown li:not(.has-form):not(.active)>a:not(.button) {
+    background: $white;
+    color: $dropdown-secondary-color;
+  }
+
+  .c-dropdownmenu .top-bar-section ul li:hover > a,
+  .c-dropdownmenu .top-bar-section ul li:active,
+  .c-dropdownmenu .top-bar-section li.active:not(.has-form) > a:not(.button) {
+    background: $white !important;
+    color: $dropdown-primary-color !important;
+    text-shadow: none;
+  }
+
+  .c-dropdownmenu .top-bar-section .has-dropdown > a:after {
+    top: 50%;
+    border-color: $primary-color transparent transparent transparent
+  }
+
+  .not-click > a {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  // 2nd Level
+
+  .c-dropdownmenu .top-bar-section .dropdown li > a:not(.button) {
+    background: $white;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    border: 0;
+    color: $dropdown-primary-color;
+    &:before {
+      font-family: FontAwesome;
+      content: "\f0da";
+      margin-right: rem-calc(10);
+      font-size: rem-calc(16);
+    }
+  }
+
+  .f-topbar-fixed .c-icon-bar__wrapper {
+    top: rem-calc(10);
+  }
+
+}

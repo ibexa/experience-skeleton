@@ -1,0 +1,9 @@
+.c-events {
+    &__expand {
+        width: 50%;
+        margin-left: 25%;
+        padding: 0 calculateRem(2px);
+        font-size: calculateRem(12px);
+        user-select: none;
+    }
+}

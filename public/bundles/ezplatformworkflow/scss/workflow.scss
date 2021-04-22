@@ -1,0 +1,11 @@
+@import './public/bundles/ezplatformadminui/scss/custom';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem';
+@import './public/bundles/ezplatformadminui/scss/mixins';
+
+@import 'widget';
+@import 'workflow.event';
+@import 'workflow.chart';
+@import 'workflow.popup';
+@import 'workflow.table';
+@import 'content.edit.workflow';
+@import 'workflow.dashboard.table';

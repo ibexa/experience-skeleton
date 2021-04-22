@@ -1,0 +1,32 @@
+// Default settings
+$account-box-headline-background: $primary-color !default;
+$account-box-headline-color: $white !default;
+$account-box-headline-padding: rem-calc(15 20) !default;
+$account-box-headline-margin: rem-calc(-20 -20 20 -20) !default;
+
+$account-box-icon-margin-top: rem-calc(-7) !default;
+
+// Profile page
+.c-account__box {
+  h2 {
+    background: $account-box-headline-background;
+    color: $account-box-headline-color;
+    padding: $account-box-headline-padding;
+    margin: $account-box-headline-margin;
+  }
+}
+
+.c-account__box-icon {
+  margin-top: $account-box-icon-margin-top !important;
+}
+
+// Address list
+
+// disable sorting
+.no-sort::after {
+  display: none!important;
+}
+.no-sort {
+  pointer-events: none!important;
+  cursor: default!important;
+}

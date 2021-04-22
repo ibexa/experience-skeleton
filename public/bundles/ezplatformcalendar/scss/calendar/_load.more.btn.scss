@@ -1,0 +1,12 @@
+.c-load-more-btn {
+    display: flex;
+
+    &.btn-dark:disabled {
+        opacity: 1;
+    }
+
+    &__spinner {
+        fill: $ibexa-white;
+        margin-right: calculateRem(10px);
+    }
+}

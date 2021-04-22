@@ -1,0 +1,30 @@
+$wf-d-table: '.ez-workflow-dashboard-table';
+
+#{$wf-d-table} {
+    .ez-btn--workflow-chart {
+        #{$wf-d-table} {
+            &__icon {
+                &--history {
+                    fill: $ibexa-color-base-dark;
+                    transition: fill 0.3s $ibexa-admin-transition;
+                }
+            }
+        }
+    }
+
+    .ez-btn--workflow-chart:hover,
+    .ez-btn--workflow-chart:focus {
+        #{$wf-d-table} {
+            &__icon {
+                &--history {
+                    fill: darken($ibexa-color-base-dark, 15%);
+                }
+            }
+        }
+    }
+
+    .ez-table__actions-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

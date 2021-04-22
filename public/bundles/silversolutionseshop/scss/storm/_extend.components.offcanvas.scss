@@ -1,0 +1,225 @@
+// Extends Off-canvas component
+
+// Default settings
+$off-canvas-first-level-bg: lighten($jet, 15%) !default;
+
+$off-canvas-hamburger-position: relative !default;
+$off-canvas-hamburger-zindex: 1 !default;
+$off-canvas-hamburger-line-height: rem-calc(40) !default;
+$off-canvas-hamburger-color: $primary-color !default;
+$off-canvas-hamburger-hover-color: $secondary-color !default;
+
+$off-canvas-dropdown-border-color: scale-color($off-canvas-bg, $lightness: 12%) !default;
+$off-canvas-dropdown-link-padding: rem-calc(0 5) !default;
+$off-canvas-dropdown-link-color: $oil !default;
+$off-canvas-dropdown-link-bg-color: $white !default;
+
+$off-canvas-accordion-nav-padding: $off-canvas-link-padding !default;
+$off-canvas-accordion-nav-color: $off-canvas-link-color !default;
+$off-canvas-accordion-nav-bg-color: $off-canvas-first-level-bg !default;
+$off-canvas-accordion-nav-icon-color: $off-canvas-link-color !default;
+
+$off-canvas-user-area-color: $white !default;
+$off-canvas-user-area-border-bottom: $off-canvas-link-border-bottom !default;
+$off-canvas-user-area-bg-color: lighten($off-canvas-first-level-bg, 25%) !default;
+$off-canvas-user-area-link-padding: 0 !default;
+$off-canvas-user-area-link-padding: 0 !default;
+$off-canvas-user-area-link-bg: none !default;
+$off-canvas-user-area-link-border-bottom: none !default;
+
+$off-canvas-link-icon-symbol: '\f0da' !default;
+$off-canvas-link-icon-float: right !default;
+$off-canvas-link-icon-font-family: 'FontAwesome' !default;
+$off-canvas-link-bg-color: $off-canvas-first-level-bg !default;
+$off-canvas-label-link-display: inline !default;
+$off-canvas-label-link-padding: 0 !default;
+$off-canvas-label-link-bg-color: transparent !default;
+$off-canvas-label-link-border: transparent !default;
+$off-canvas-label-cursor: default !default;
+
+$off-canvas-header-display: block !default;
+$off-canvas-header-margin: $off-canvas-label-margin !default;
+$off-canvas-header-padding: $off-canvas-link-padding !default;
+$off-canvas-header-color: rgba($white, .7) !default;
+$off-canvas-header-font-weight: $off-canvas-label-font-weight !default;
+$off-canvas-header-font-size: rem-calc(14) !default;
+$off-canvas-header-bg-color: $oil !default;
+$off-canvas-header-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: 12%) !default;
+$off-canvas-header-border-top: none !default;
+
+$off-canvas-back-padding: rem-calc(8 16) !default;
+$off-canvas-back-icon-symbol: '\f0d9' !default;
+$off-canvas-back-float: left !default;
+
+.left-submenu {
+  height: 100%;
+}
+
+// 1. We use this to make the hamburger menu clickable
+.left-off-canvas-toggle {
+  position: $off-canvas-hamburger-position; // [1]
+  z-index: $off-canvas-hamburger-zindex; // [1]
+  color: $off-canvas-hamburger-color;
+  line-height: $off-canvas-hamburger-line-height;
+
+  &:hover,
+  &:active,
+  &:focus{
+    color: $off-canvas-hamburger-hover-color;
+  }
+}
+
+
+.fixed.left-off-canvas-toggle {
+  position: fixed !important;
+  z-index: 9999;
+  left: rem-calc(5);
+}
+
+.left-off-canvas-menu {
+
+  h4 {
+    display: $off-canvas-header-display;
+    margin: $off-canvas-header-margin;
+    padding: $off-canvas-header-padding;
+    color: $off-canvas-header-color;
+    font-weight: $off-canvas-header-font-weight;
+    font-size: $off-canvas-header-font-size;
+    background: $off-canvas-header-bg-color;
+    border-bottom: $off-canvas-header-border-bottom;
+    border-top: $off-canvas-header-border-top;
+  }
+
+  // hide stupid eZ empty anchors
+  a[name^="eztoc"] {
+    display: none;
+  }
+
+  .accordion .accordion-navigation > a {
+    padding: $off-canvas-accordion-nav-padding;
+    color: $off-canvas-accordion-nav-color;
+    background: $off-canvas-accordion-nav-bg-color;
+
+    &:after {
+      color: $off-canvas-accordion-nav-icon-color;
+    }
+  }
+
+}
+
+.left-submenu .back > a:before,
+.left-off-canvas-menu ul.off-canvas-list li.has-submenu > a:after {
+  content: $off-canvas-link-icon-symbol;
+  float: $off-canvas-link-icon-float;
+  font-family: $off-canvas-link-icon-font-family;
+}
+
+.off-canvas-list {
+
+  .label a {
+    display: $off-canvas-label-link-display;
+    padding: $off-canvas-label-link-padding;
+    background: $off-canvas-label-link-bg-color;
+    border: $off-canvas-label-link-border;
+    transition: none;
+  }
+
+  a {
+    background: $off-canvas-link-bg-color;
+
+    &.last-item {
+      border-bottom: none;
+    }
+  }
+
+  .c-offcanvas__user-area a {
+    padding: $off-canvas-user-area-link-padding;
+    background: $off-canvas-user-area-link-bg;
+    border-bottom: $off-canvas-user-area-link-border-bottom;
+  }
+
+  label {
+    cursor: $off-canvas-label-cursor;
+  }
+
+  .back a {
+    padding: $off-canvas-back-padding;
+
+    &:before {
+      content: $off-canvas-back-icon-symbol;
+      float: $off-canvas-back-float;
+    }
+
+  }
+
+  .f-dropdown {
+    border-color: $off-canvas-dropdown-border-color;
+
+    li a {
+      padding: $off-canvas-dropdown-link-padding;
+      color: $off-canvas-dropdown-link-color;
+      background-color: $off-canvas-dropdown-link-bg-color;
+    }
+  }
+
+}
+
+.c-offcanvas__user-area {
+  color: $off-canvas-user-area-color;
+  border-bottom: $off-canvas-user-area-border-bottom;
+
+  .accordion .accordion-navigation > .content.active {
+    background-color: $off-canvas-user-area-bg-color;
+  }
+
+  .accordion .accordion-navigation.active .content a:after {
+    display: none;
+  }
+}
+
+// @deprecated
+.c-offcanvas--secondary {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    font-size: rem-calc(12);
+    background-color: lighten($flat-wet-asphalt, 5%);
+
+    li a {
+      padding-left: rem-calc(24);
+    }
+
+  }
+
+}
+// @deprecated
+.c-offcanvas__header {
+  font-size: $off-canvas-label-font-size;
+  color: $off-canvas-label-color;
+  padding: $off-canvas-label-padding;
+  margin: 0;
+  border-bottom: $off-canvas-label-border-bottom;
+
+  // language switch
+  button {
+    margin-top: 2px;
+  }
+}
+
+// @deprecated
+.c-offcanvas__content {
+  background: $off-canvas-first-level-bg;
+
+  form {
+    padding: $off-canvas-label-padding;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .is-logged-in & {
+    padding: 0;
+  }
+}

@@ -1,0 +1,85 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem';
+@import 'fields';
+
+.ez-main-container,
+[name='field_configuration'],
+.ez-field-config {
+    height: 100%;
+}
+
+.ez-field-config {
+    display: grid;
+    grid-template-areas: 'tabs' 'content' 'actions';
+    grid-template-rows: calculateRem(54px) auto calculateRem(8px);
+
+    &__tabs {
+        grid-area: tabs;
+        margin: 0 calculateRem(-15px);
+        background: $ibexa-white;
+        padding: 0 calculateRem(20px);
+        border: 0 none;
+    }
+
+    &__link-wrapper {
+        position: relative;
+    }
+
+    &__link {
+        line-height: calculateRem(42px);
+        padding: 0 calculateRem(16px);
+        border: 0 none;
+
+        &--has-invalid-fields {
+            + .ez-warning-icon {
+                display: flex;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    &__content {
+        grid-area: content;
+        overflow: auto;
+        padding: calculateRem(24px);
+    }
+
+    &__actions {
+        @include modal-footer();
+
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        padding: calculateRem(24px);
+    }
+
+    [data-open-udw] {
+        display: block;
+    }
+
+    &__error {
+        display: inline-block;
+        margin-left: calculateRem(8px);
+        color: $ibexa-color-danger;
+    }
+
+    .ez-field-config__link {
+        &,
+        &:hover {
+            border: none;
+        }
+    }
+
+    &--default {
+        background: $ibexa-white;
+
+        .ez-main-container {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

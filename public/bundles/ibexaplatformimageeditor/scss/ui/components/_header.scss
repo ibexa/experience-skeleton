@@ -1,0 +1,21 @@
+.c-image-editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: calculateRem(32px);
+
+    &__title-wrapper {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__title {
+        font-size: calculateRem(22px);
+        margin-right: calculateRem(8px);
+    }
+
+    &__subtitle {
+        color: $ibexa-color-font-pale;
+    }
+}

@@ -1,0 +1,36 @@
+.ez-site-factory-form-site-skeleton {
+    margin-top: calculateRem(4px);
+
+    .ez-label {
+        padding-bottom: calculateRem(8px);
+    }
+
+    &--is-hidden {
+        display: none;
+    }
+
+    &__widget {
+        min-width: calculateRem(48px);
+        margin-right: calculateRem(20px);
+        @include checkbox-switcher();
+
+        .ez-data-source {
+            display: flex;
+            align-items: center;
+
+            .form-check-label {
+                display: none;
+            }
+
+            &__label {
+                margin-bottom: 0;
+
+                &,
+                &:before,
+                &:after {
+                    background-color: $ibexa-color-base-light;
+                }
+            }
+        }
+    }
+}

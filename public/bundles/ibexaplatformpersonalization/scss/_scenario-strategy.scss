@@ -1,0 +1,31 @@
+.ez-scenario-strategy {
+    display: flex;
+
+    &__item {
+        flex: 1;
+        padding: 0 calculateRem(4px);
+        margin-right: calculateRem(24px)
+    }
+
+    &__item-title {
+        color: $ibexa-color-font-pale;
+    }
+
+    &__models {
+        margin-top: calculateRem(8px);
+    }
+
+    &__model {
+        width: 100%;
+        min-height: calculateRem(28px);
+        margin-top: calculateRem(8px);
+        padding: calculateRem(4px) calculateRem(8px);
+        background: $ibexa-color-base;
+        color: $ibexa-white; 
+        border-radius: $ibexa-border-radius;
+
+        &--filled {
+            background: $ibexa-color-primary;
+        }
+    }
+}

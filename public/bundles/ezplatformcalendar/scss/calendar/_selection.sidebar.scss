@@ -1,0 +1,92 @@
+.c-selection-sidebar {
+    @include container-box-shadow-left;
+
+    position: absolute;
+    height: 100%;
+    width: calculateRem(60px);
+    background: $ibexa-white;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &--hidden {
+        display: none;
+    }
+
+    &--expanded {
+        width: calculateRem(300px);
+
+        .c-selection-sidebar {
+            &__header {
+                height: calculateRem(43px);
+            }
+
+            &__expand-btn {
+                border-width: 0;
+            }
+
+            &__header {
+                border-bottom: calculateRem(1px) solid $ibexa-color-base;
+            }
+        }
+
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__expand-btn {
+        width: calculateRem(60px);
+        height: calculateRem(38px);
+        margin-bottom: calculateRem(5px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: calculateRem(40px);
+        padding: calculateRem(5px) 0;
+    }
+
+    &__event {
+        display: grid;
+        grid-template-columns: 1fr calculateRem(60px);
+        border-bottom: solid calculateRem(1px) $ibexa-white;
+    }
+
+    &__events-info {
+        font-size: calculateRem(10px);
+        text-align: center;
+        border-bottom: calculateRem(1px) solid $ibexa-white;
+        display: flex;
+        flex-direction: column;
+        height: calculateRem(45px);
+        justify-content: center;
+    }
+
+    &__events-group {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__events-list {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__selected-events-count {
+        font-size: calculateRem(16px);
+        font-weight: bold;
+        height: calculateRem(18px);
+    }
+}

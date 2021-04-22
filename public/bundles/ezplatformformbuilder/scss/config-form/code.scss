@@ -1,0 +1,28 @@
+.ez-field-config--code {
+    #basic.active {
+        height: 100%;
+
+        .ez-field-config {
+            &__fields {
+                height: 100%;
+                display: grid;
+                grid-template-areas: 'name' 'other';
+                grid-template-rows: 80px 1fr;
+            }
+
+            &__field {
+                &--name {
+                    grid-area: name;
+                }
+
+                &--other {
+                    grid-area: other;
+
+                    #field_configuration_attributes_content_value {
+                        height: calc(100% - 50px);
+                    }
+                }
+            }
+        }
+    }
+}

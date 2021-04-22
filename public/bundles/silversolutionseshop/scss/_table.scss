@@ -1,0 +1,20 @@
+.ez-table {
+    &--price-management,
+    &--stock-update {
+        margin-bottom: calculateRem(24px);
+
+        tbody td {
+            vertical-align: middle;
+        }
+
+        .ez-icon--trash {
+            fill: $ibexa-color-primary;
+        }
+    }
+
+    &--price-management {
+        tr:last-child td {
+            border-bottom: calculateRem(1px) solid $ibexa-color-base;
+        }
+    }
+}

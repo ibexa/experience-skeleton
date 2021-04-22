@@ -1,0 +1,36 @@
+.ez-site-factory-domain {
+    display: flex;
+    align-items: center;
+    padding-left: calculateRem(16px);
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        background-color: $ibexa-color-base-deep;
+        width: calculateRem(12px);
+        height: calculateRem(1px);
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -50%;
+        background-color: $ibexa-color-base-deep;
+        width: calculateRem(1px);
+        height: 100%;
+    }
+
+    &__url {
+        padding: 0 calculateRem(4px) 0 calculateRem(8px);
+    }
+
+    &__icon {
+        display: flex;
+    }
+}

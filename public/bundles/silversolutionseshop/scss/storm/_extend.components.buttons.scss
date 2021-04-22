@@ -1,0 +1,28 @@
+// Default settings
+$button-success-color: $white !default;
+$button-secondary-dimmed-background: lighten($secondary-color, 30%) !default;
+$button-secondary-dimmed-background-hover: $secondary-color !default;
+
+// extends Foundation buttons
+button,
+.button {
+  &.in-progress {
+    i {
+      @extend .fa-spinner;
+      @extend .fa-pulse;
+    }
+  }
+
+  &.success:hover,
+  &.success {
+    color: $button-success-color;
+  }
+}
+
+.button.secondary.dimmed {
+  background-color: $button-secondary-dimmed-background;
+
+  &:hover {
+    background-color: $button-secondary-dimmed-background-hover;
+  }
+}

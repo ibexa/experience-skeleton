@@ -1,0 +1,23 @@
+.fb-config-field {
+    &__btn {
+        &--open-udw {
+            display: flex;
+            align-items: center;
+
+            .ez-icon {
+                fill: $ibexa-white;
+                margin-right: calculateRem(8px);
+            }
+        }
+    }
+
+    &__config-label {
+        font-size: calculateRem(14px);
+
+        &--required {
+            &:after {
+                content: '*:';
+            }
+        }
+    }
+}

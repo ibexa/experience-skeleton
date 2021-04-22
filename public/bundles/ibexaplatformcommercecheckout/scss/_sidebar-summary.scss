@@ -1,0 +1,17 @@
+.ezcommerce-sidebar-summary {
+    &__header {
+        margin-top: 16px;
+        font-weight: bold;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin-left: 8px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        max-width: 200px;
+    }
+}

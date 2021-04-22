@@ -1,0 +1,34 @@
+.ez-site-factory-header {
+    display: flex;
+    margin-bottom: calculateRem(24px);
+
+    &__col {
+        width: 50%;
+        display: flex;
+        align-items: center;
+
+        &--create {
+            justify-content: flex-end;
+
+            .btn {
+                display: flex;
+                align-items: center;
+                color: $ibexa-color-primary;
+                text-decoration: none;
+            }
+
+            .ez-icon {
+                margin-right: calculateRem(3px);
+            }
+        }
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+
+        .ez-btn--search {
+            margin-left: calculateRem(16px);
+        }
+    }
+}

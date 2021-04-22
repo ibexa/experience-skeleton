@@ -1,0 +1,26 @@
+.ez-site-factory {
+    .ez-btn--delete {
+        .ez-icon {
+            fill: $ibexa-color-danger;
+        }
+    }
+}
+
+.ez-site-factory-status {
+    display: inline-block;
+    border-radius: 50%;
+    width: calculateRem(12px);
+    height: calculateRem(12px);
+
+    &--offline {
+        background-color: $ibexa-color-base-dark;
+    }
+
+    &--online {
+        background-color: $ibexa-color-positive;
+    }
+
+    &--build {
+        background-color: $ibexa-color-warning;
+    }
+}

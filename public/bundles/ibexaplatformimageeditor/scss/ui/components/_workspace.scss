@@ -1,0 +1,18 @@
+.c-image-editor-workspace {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'canvas' 'info';
+    grid-template-rows: 1fr calculateRem(40px);
+
+    &__canvas-wrapper {
+        grid-area: canvas;
+    }
+
+    &__image-info {
+        grid-area: info;
+        background-color: $ibexa-white;
+        display: flex;
+        align-items: center;
+        padding-left: calculateRem(32px);
+    }
+}

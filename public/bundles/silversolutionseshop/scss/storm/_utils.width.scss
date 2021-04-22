@@ -1,0 +1,26 @@
+// We use this to set width
+
+.u-full-width { width: 100% !important; }
+
+// Margin class names
+$width-class-names:
+  small,
+  medium,
+  large;
+
+// Margin breakpoints
+$width-class-breakpoints:
+  $small-only,
+  $medium-only,
+  $large-only;
+
+// Generates display classes
+@mixin width-classes{
+  @for $i from 1 through length($width-class-names) {
+    @media #{(nth($width-class-breakpoints, $i))} {
+      .u-full-width-on-#{(nth($width-class-names, $i))} { width: 100% !important; }
+    }
+  }
+}
+
+@include width-classes;

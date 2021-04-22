@@ -1,0 +1,107 @@
+.ez-ecommerce-configuration-settings {
+    &__info {
+        margin-top: calculateRem(1px);
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .ez-tabs--commerce-settings {
+        border-bottom: 0;
+    }
+
+    .ez-card--commerce-configuration-group {
+        background: $ibexa-white;
+
+        &.ez-card--collapsed {
+            .ez-card__body {
+                max-height: 0;
+                overflow: hidden;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .ez-card__body-display-toggler {
+                .ez-icon--caret-down {
+                    display: none;
+                }
+            }
+        }
+
+        &:not(.ez-card--collapsed) {
+            .ez-card__body-display-toggler {
+                .ez-icon--caret-next {
+                    display: none;
+                }
+            }
+        }
+
+        .ez-card__header {
+            line-height: calculateRem(40px);
+            padding: 0 calculateRem(20px);
+            display: flex;
+
+            .ez-icon {
+                fill: $ibexa-black;
+                height: calculateRem(24px);
+            }
+
+            .ez-label {
+                margin-bottom: 0;
+                font-weight: 700;
+                color: $ibexa-black;
+                font-size: calculateRem(17px);
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            .ez-card__body-display-toggler {
+                margin: 0.25rem 0 0.25rem auto;
+                height: 2rem;
+                width: 2rem;
+                padding: 0;
+                cursor: pointer;
+                background: $ibexa-white;
+                transition: background 0.3s $ibexa-admin-transition;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background: darken($ibexa-white, 15%);
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+
+                .ez-icon {
+                    fill: $ibexa-black;
+                }
+            }
+        }
+    }
+
+    .ez-table__cell {
+        vertical-align: top;
+
+        &--name {
+            width: 20%;
+        }
+
+        &--value {
+            width: 30%;
+        }
+
+        &--description {
+            width: 50%;
+        }
+    }
+}

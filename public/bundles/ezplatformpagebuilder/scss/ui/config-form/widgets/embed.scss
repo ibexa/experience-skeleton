@@ -1,0 +1,64 @@
+@import './public/bundles/ezplatformadminui/scss/_custom.scss';
+@import './public/bundles/ezplatformadminui/scss/_mixins.scss';
+
+.ez-embed-meta {
+    display: grid;
+    grid-template-areas: 'preview info actions';
+    grid-template-columns: calculateRem(192px) auto calculateRem(48px);
+    grid-gap: calculateRem(16px);
+    padding: calculateRem(16px);
+    background: $ibexa-white;
+    margin-top: calculateRem(16px);
+
+    &__preview {
+        grid-area: preview;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    &__preview-icon {
+        grid-area: preview;
+        width: calculateRem(100px);
+        height: calculateRem(100px);
+        justify-self: center;
+    }
+
+    &__info {
+        grid-area: info;
+    }
+
+    &__actions {
+        grid-area: actions;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__action {
+        @include btn-preview-action;
+    }
+
+    &__title {
+        font-size: calculateRem(16px);
+    }
+
+    &__breadcrumb {
+        font-size: calculateRem(14px);
+    }
+
+    &__content-type {
+        font-size: calculateRem(14px);
+        font-style: italic;
+    }
+
+    &--video {
+        grid-template-areas:
+            'preview actions'
+            'info actons';
+        grid-template-columns: auto calculateRem(48px);
+        grid-template-rows: auto auto;
+        padding: calculateRem(10px);
+    }
+}

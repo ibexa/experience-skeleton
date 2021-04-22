@@ -1,0 +1,14 @@
+.c-calendar-paginator {
+    display: flex;
+    align-items: center;
+    padding: calculateRem(8px);
+    font-size: calculateRem(16px);
+
+    &__caret {
+        display: flex;
+        background-color: $ibexa-white;
+        border-radius: calculateRem(4px);
+        height: calculateRem(16px);
+        margin: 0 calculateRem(8px);
+    }
+}

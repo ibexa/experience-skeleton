@@ -1,0 +1,55 @@
+.c-image-editor-sidebar {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 'header' 'actions' 'buttons';
+    grid-template-rows: calculateRem(50px) 1fr calculateRem(95px);
+
+    &__header {
+        grid-area: header;
+        border-top: calculateRem(1px) solid $ibexa-color-base;
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+        display: flex;
+        align-items: center;
+        padding: 0 calculateRem(16px);
+        font-weight: bold;
+    }
+
+    &__actions {
+        grid-area: actions;
+        padding: calculateRem(16px);
+        overflow: auto;
+        max-height: calc(100vh - #{calculateRem(240px)});
+    }
+
+    &__tools {
+        display: flex;
+        margin-bottom: calculateRem(16px);
+
+        .btn {
+            border: calculateRem(1px) solid $ibexa-color-base;
+            padding: calculateRem(8px);
+            margin-right: calculateRem(8px);
+
+            &:not([disabled]):hover {
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+
+    &__buttons {
+        grid-area: buttons;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: calculateRem(16px);
+        border-top: calculateRem(1px) solid $ibexa-color-base;
+
+        .btn {
+            flex: 1 1 50%;
+
+            &.btn-primary {
+                margin-right: calculateRem(16px);
+            }
+        }
+    }
+}

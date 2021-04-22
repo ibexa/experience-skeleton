@@ -1,0 +1,107 @@
+// Default settings
+
+
+// Bestsellers page
+
+.c-bestsellers {
+  border-top-color: #999999 !important;
+  border-top-width: 7px !important;
+  //.c-card__title {
+  //  border: 1px solid $secondary-color;
+  //  border-left: 0;
+  //  border-right: 0;
+  //  font-weight: bold;
+  //
+  //  a {
+  //    color: $primary-color;
+  //  }
+  //
+  //}
+  //
+  //.c-card__description {
+  //  background-color: $primary-color;
+  //  color: $white;
+  //  margin-bottom: 0;
+  //}
+
+}
+
+.c-bestsellers-top {
+  .c-card__title {
+    font-size: rem-calc(30);
+  }
+}
+
+.c-bestsellers-top-1 {
+  border-top-color: #D3362D !important;
+  border-top-width: 7px !important;
+  padding-top: 0;
+}
+
+.c-bestsellers-top-2 {
+  border-top-color: #E7711B !important;
+  border-top-width: 7px !important;
+  padding-top: 0;
+}
+
+.c-bestsellers-top-3 {
+  border-top-color: #F1CA3A !important;
+  border-top-width: 7px !important;
+  padding-top: 0;
+}
+
+
+.c-bestsellers-top__ribbon {
+  line-height: rem-cacl(30);
+  font-size: rem-calc(30);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0,0,0,.15);
+  letter-spacing: -2px;
+  display: block;
+  width: rem-calc(64);
+  height: rem-calc(80);
+  background: linear-gradient(to bottom, #999999 0%,#CCCCCC 100%);
+  color: $white;
+  padding-top: rem-calc(16);
+  position: absolute;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 32px solid transparent;
+    border-left: 32px solid transparent;
+    border-top: 24px solid #CCCCCC;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+  }
+
+  &.c-bestsellers-top__ribbon--1 {
+    background: linear-gradient(to bottom, #D3362D 0%, #E57368 100%);
+
+    &:after {
+      border-top: 24px solid #E57368;
+    }
+  }
+
+  &.c-bestsellers-top__ribbon--2 {
+    background: linear-gradient(to bottom, #E7711B 0%,#F7981D 100%);
+
+    &:after {
+      border-top: 24px solid #F7981D;
+    }
+  }
+
+  &.c-bestsellers-top__ribbon--3 {
+    background: linear-gradient(to bottom, #F1CA3A 0%,#F6EB3B 100%);
+
+    &:after {
+      border-top: 24px solid #F6EB3B;
+    }
+  }
+
+
+}

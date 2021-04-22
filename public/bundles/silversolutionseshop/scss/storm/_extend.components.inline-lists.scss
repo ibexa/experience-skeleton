@@ -1,0 +1,18 @@
+// Default settings
+$inline-list-font-color: $primary-color !default;
+$inline-list-parent-font-size: rem-calc(12) !default;
+$inline-list-children-font-size: rem-calc(14) !default;
+
+// extends Foundation component
+.inline-list .inline-list li:first-child {
+  margin-left: 0;
+}
+
+.inline-list > li > a {
+  color: $inline-list-font-color;
+  font-size: $inline-list-parent-font-size;
+}
+
+.inline-list a {
+  font-size: $inline-list-children-font-size;
+}

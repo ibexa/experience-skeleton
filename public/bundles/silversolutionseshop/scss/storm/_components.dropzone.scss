@@ -1,0 +1,46 @@
+// Default settings
+$dropzone-height: rem-calc(249) !default;
+$dropzone-padding: rem-calc(60) !default;
+$dropzone-line-height: rem-calc(32) !default;
+$dropzone-text-align: center !default;
+$dropzone-bg-color: $flat-clouds !default;
+$dropzone-border-width: rem-calc(2) !default;
+$dropzone-border-style: dashed !default;
+$dropzone-border-color: $flat-silver !default;
+
+$dropzone-plus-height: rem-calc(60) !default;
+$dropzone-plus-width: $dropzone-plus-height !default;
+$dropzone-plus-line-height: $dropzone-plus-height !default;
+$dropzone-plus-margin: rem-calc(0) auto !default;
+$dropzone-plus-border-width: $dropzone-border-width !default;
+$dropzone-plus-border-style: $dropzone-border-style !default;
+$dropzone-plus-border-color: $dropzone-border-color !default;
+$dropzone-plus-icon: $fa-var-upload !default; // please FontAwesome values, or override the selector in your project
+$dropzone-plus-icon-font-size: rem-calc(24) !default;
+
+.c-dropzone {
+  height: $dropzone-height;
+  padding: $dropzone-padding;
+  line-height: $dropzone-line-height;
+  text-align: $dropzone-text-align;
+  background-color: $dropzone-bg-color;
+  border: $dropzone-border-width $dropzone-border-style $dropzone-border-color;
+}
+
+.c-dropzone__plus  {
+  height: $dropzone-plus-height;
+  width: $dropzone-plus-width;
+  margin: $dropzone-plus-margin;
+  line-height: $dropzone-plus-line-height;
+  border: $dropzone-plus-border-width $dropzone-plus-border-style $dropzone-plus-border-color;
+}
+
+.c-dropzone__icon {
+  @include fa-icon();
+  font-size: $dropzone-plus-icon-font-size;
+
+  &:before {
+    content: $dropzone-plus-icon;
+  }
+
+}

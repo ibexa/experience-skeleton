@@ -1,0 +1,81 @@
+.ez-extra-actions-container {
+    .ez-extra-actions {
+        &--page-edit,
+        &--page-create {
+            background-color: $ibexa-white;
+            border: 0;
+            padding: 0 calculateRem(16px);
+            top: calc(100% + #{calculateRem(10px)});
+            height: calc(100vh - #{calculateRem(200px)});
+            transform: scaleX(1);
+            transition: $ibexa-admin-widget-open-transition;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &--page-create {
+            left: auto;
+            right: 0;
+        }
+
+        &--hidden {
+            transform: scaleX(0);
+            transition: $ibexa-admin-widget-close-transition;
+        }
+
+        &--scale-left {
+            transform-origin: left;
+        }
+    }
+}
+
+.ez-dropdown {
+    .ez-extra-actions {
+        border-radius: calculateRem(8px);
+        border: calculateRem(6px) solid $ibexa-color-primary;
+        box-shadow: none;
+
+        .ez-extra-actions {
+            &__header {
+                line-height: calculateRem(45px);
+                color: $ibexa-white;
+                padding: 0 calculateRem(8px);
+                font-weight: 700;
+                border-bottom: 0;
+                font-size: inherit;
+            }
+
+            &__content {
+                background: $ibexa-color-base-light;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            height: calculateRem(40px);
+            width: calculateRem(10px);
+            top: calculateRem(30px);
+            right: calculateRem(-6px);
+            transform: translate(100%, -50%);
+            z-index: 0;
+            background: $ibexa-color-primary;
+        }
+    }
+
+    .ez-extra-actions-container {
+        .ez-extra-actions {
+            &--dropdown {
+                top: initial;
+                bottom: initial;
+                transform: translate(calc(-100% - #{calculateRem(10px)}), 0);
+            }
+
+            &--hidden {
+                transform: translate(calc(-100% - #{calculateRem(15px)}), 0);
+            }
+        }
+    }
+}

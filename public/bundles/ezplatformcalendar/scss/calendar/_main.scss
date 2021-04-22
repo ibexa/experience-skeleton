@@ -1,0 +1,14 @@
+.m-calendar {
+    &__header {
+        padding: calculateRem(24px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__view {
+        padding: calculateRem(16px) calculateRem(24px);
+    }
+}
+
+.ez-container--thin {
+    max-width: calculateRem(1248px);
+}

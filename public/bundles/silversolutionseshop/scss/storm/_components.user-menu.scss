@@ -1,0 +1,35 @@
+.c-user-menu__trigger {
+  position: relative;
+  line-height: 2.9em;
+  padding: rem-calc(0 10);
+  border: 1px solid $primary-color;
+
+  &.open:after,
+  &:hover:after {
+    left: 0;
+    position: absolute;
+    z-index: $z-index-base;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: $white;
+  }
+
+}
+
+.c-user-menu__content {
+  // ugly override
+  &.f-dropdown.content {
+    left: auto !important;
+    right: ($column-gutter / 2);
+    outline: none;
+    max-width: rem-calc(300);
+    margin-top: -1px;
+    border-color: $primary-color;
+  }
+
+  &:after,
+  &:before {
+    display: none;
+  }
+}

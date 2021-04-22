@@ -1,0 +1,34 @@
+.ez-event-item {
+    max-width: calculateRem(400px);
+    min-width: calculateRem(250px);
+    text-align: left;
+    color: $ibexa-black;
+
+    &__title {
+        font-size: calculateRem(13px);
+    }
+
+    &__name {
+        font-size: calculateRem(12px);
+        margin-bottom: 0;
+    }
+
+    &__type {
+        font-size: calculateRem(11px);
+        margin-top: calculateRem(-4px);
+        margin-bottom: 0;
+        color: $ibexa-color-base-dark;
+    }
+
+    .table {
+        background-color: transparent;
+        margin-bottom: 0;
+
+        td {
+            border-top: none;
+            vertical-align: initial;
+            padding: calculateRem(4px) 0;
+            font-size: calculateRem(12px);
+        }
+    }
+}

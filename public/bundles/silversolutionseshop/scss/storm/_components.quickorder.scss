@@ -1,0 +1,116 @@
+// Default settings
+
+$quickorder-padding: rem-calc(10 20) !default;
+
+$quickorder-header-background-color: $primary-color !default;
+$quickorder-header-font-color: $white !default;
+
+$quickorder-item-background-color: #efefef !default;
+$quickorder-item-border-color: #ccc !default;
+
+$medium-down: "#{$screen} and (max-width:#{upper-bound($medium-range)})";
+
+// Quickorder
+
+.c-quickorder {
+  border: 0;
+}
+
+.c-quickorder__header {
+  font-size: rem-calc(12);
+  padding: $quickorder-padding;
+  background: $quickorder-header-background-color;
+  color: $quickorder-header-font-color;
+}
+
+.c-quickorder__item {
+  padding: $quickorder-padding;
+  background: $quickorder-item-background-color;
+  border: 1px solid $quickorder-item-border-color;
+  border-top: 0;
+  font-size: rem-calc(12);
+  position: relative;
+
+  input {
+    margin: rem-calc(5 0);
+  }
+
+  // Mobile/Tablet
+
+  @media #{$medium-down} {
+    border: 1px solid $quickorder-item-border-color;
+    margin-bottom: rem-calc(20);
+  }
+
+}
+
+.c-quickorder__info {
+  font-size: rem-calc(12);
+  border: 2px dashed $secondary-color !important;
+
+  a {
+    padding: rem-calc(5 40 5 10) !important;
+    background: $white !important;
+  }
+
+  p, ul, ol {
+    font-size: rem-calc(12);
+    margin-bottom: rem-calc(5);
+  }
+
+}
+
+.c-quickorder__produkt {
+  display: table;
+  padding: rem-calc(5 0);
+  width: 100%;
+
+  a {
+    font-size: rem-calc(15);
+    line-height: 15px;
+    vertical-align: middle;
+    display: table-cell;
+    margin-right: rem-calc(5);
+  }
+
+}
+
+//CSV Upload
+
+.c-dropzone {
+  height: rem-calc(180);
+  padding: rem-calc(20 10)
+}
+
+// Clearfix
+
+@media #{$medium-down} {
+  .c-quickorder__clearfix--small {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+  }
+}
+
+// Delete
+
+.c-quickorder__delete {
+  font-size: rem-calc(17);
+
+
+  // Mobile/Tablet
+
+  @media #{$medium-down} {
+    position: absolute !important;
+    top: rem-calc(5);
+    right: 0;
+
+    .show-for-medium-down {
+      display: inline !important;
+    }
+
+  }
+
+}

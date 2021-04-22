@@ -1,0 +1,19 @@
+.ez-field-edit-preview {
+    &__action {
+        &--edit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calculateRem(40px);
+            height: calculateRem(40px);
+            margin-bottom: calculateRem(12px);
+            background: $ibexa-color-primary;
+            border: none;
+            outline: none;
+
+            &[disabled] {
+                opacity: 0.3;
+            }
+        }
+    }
+}

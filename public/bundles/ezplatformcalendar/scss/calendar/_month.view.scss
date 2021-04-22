@@ -1,0 +1,19 @@
+.c-month-view {
+    position: relative;
+    
+    &__week-days {
+        display: flex;
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__day-name {
+        padding-left: calculateRem(5px);
+        font-size: calculateRem(16px);
+        flex: 0 0 calculateRem(171px);
+    }
+
+    &__days {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

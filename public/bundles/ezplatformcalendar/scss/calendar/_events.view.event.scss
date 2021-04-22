@@ -1,0 +1,44 @@
+.c-events-view-event {
+    position: relative;
+
+    &:hover {
+        .c-event-tooltip {
+            display: block;
+            z-index: 1;
+        }
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        padding: calculateRem(2px) calculateRem(6px);
+        margin-bottom: calculateRem(2px);
+        cursor: pointer;
+        line-height: calculateRem(24px);
+        font-weight: bold;
+        background: $ibexa-color-base-light;
+        opacity: 0.5;
+
+        &--not-selectable {
+            cursor: not-allowed;
+        }
+
+        &--selected {
+            opacity: 1;
+        }
+    }
+
+    &__name {
+        max-width: calculateRem(98px);
+        font-size: calculateRem(13px);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-right: calculateRem(4px);
+    }
+
+    &__time {
+        font-size: calculateRem(13px);
+        white-space: nowrap;
+    }
+}

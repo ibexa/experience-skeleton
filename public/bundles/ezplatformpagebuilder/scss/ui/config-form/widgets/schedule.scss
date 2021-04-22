@@ -1,0 +1,201 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-schedule {
+    position: relative;
+
+    &__btn-wrapper {
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__active-items,
+    &__queue-items {
+        list-style: none;
+        margin: 0 0 calculateRem(16px);
+        min-height: calculateRem(36px);
+        padding: calculateRem(8px) calculateRem(8px) calculateRem(1px) calculateRem(8px);
+        background-color: $ibexa-color-base-pale;
+    }
+
+    &__active-item {
+        display: flex;
+        border-radius: calculateRem(4px);
+        background-color: $ibexa-white;
+        border: 2px solid rgba(237, 237, 237, 0.5);
+        padding: calculateRem(8px);
+        align-items: center;
+        margin-bottom: calculateRem(8px);
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+        cursor: grab;
+
+        &:hover {
+            border: 2px solid rgba(219, 219, 219, 0.75);
+        }
+
+        &__error {
+            font-style: italic;
+            color: $ibexa-color-warning-dark;
+            font-size: calculateRem(16px);
+            display: none;
+        }
+
+        &--is-unavailable {
+            .ez-schedule__active-item__error {
+                display: block;
+            }
+
+            .ez-schedule__active-item-change-airtime {
+                .ez-btn--change-airtime {
+                    cursor: not-allowed;
+                }
+
+                .ez-icon {
+                    fill: $ibexa-color-base-dark;
+                }
+            }
+        }
+
+        &-drag {
+            display: flex;
+            flex-basis: calculateRem(32px);
+            height: calculateRem(32px);
+
+            .ez-icon {
+                align-self: center;
+                width: calculateRem(20px);
+                height: calculateRem(20px);
+            }
+        }
+
+        &-name {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 0 calculateRem(8px);
+            flex-basis: calc(100% - 3.5rem);
+            font-size: calculateRem(14px);
+        }
+
+        &-trash,
+        &-change-airtime {
+            height: calculateRem(24px);
+            cursor: pointer;
+            flex-basis: calculateRem(24px);
+        }
+
+        &-change-airtime {
+            margin-right: calculateRem(16px);
+        }
+
+        &--placeholder {
+            display: block;
+            height: calculateRem(40px);
+            background-color: rgba(168, 200, 213, 0.25);
+            pointer-events: none;
+        }
+
+        &--drag-disabled {
+            cursor: auto;
+
+            .ez-schedule__active-item-drag .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+    }
+
+    &__queue-item {
+        display: flex;
+        border-radius: calculateRem(4px);
+        background-color: $ibexa-white;
+        border: 2px solid transparent;
+        padding: calculateRem(8px);
+        align-items: center;
+        margin-bottom: calculateRem(8px);
+
+        &-name {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 0 calculateRem(8px);
+            flex-basis: calc(100% - 14.8rem);
+            font-size: calculateRem(14px);
+        }
+
+        &-airtime {
+            font-size: calculateRem(13px);
+            flex-basis: calculateRem(160px);
+        }
+
+        &-trash,
+        &-change-airtime {
+            height: calculateRem(24px);
+            cursor: pointer;
+            flex-basis: calculateRem(24px);
+        }
+
+        &-change-airtime {
+            margin-right: calculateRem(16px);
+            margin-left: calculateRem(16px);
+        }
+
+        &__error {
+            font-style: italic;
+            color: $ibexa-color-warning-dark;
+            font-size: calculateRem(16px);
+            display: none;
+        }
+
+        &--is-unavailable {
+            .ez-schedule__queue-item__error {
+                display: block;
+            }
+
+            .ez-schedule__queue-item-change-airtime {
+                .ez-btn--change-airtime {
+                    cursor: not-allowed;
+                }
+
+                .ez-icon {
+                    fill: $ibexa-color-base-dark;
+                }
+            }
+        }
+    }
+
+    &__loading {
+        display: none;
+    }
+
+    &__no-active-items-info,
+    &__no-queued-items-info {
+        &--hidden {
+            display: none;
+        }
+
+        position: absolute;
+        min-height: calculateRem(36px);
+        padding: calculateRem(8px);
+        color: $ibexa-color-base-dark;
+        font-style: italic;
+        font-size: small;
+    }
+
+    &--is-loading {
+        .ez-schedule {
+            &__items-wrapper {
+                display: none;
+            }
+
+            &__loading {
+                width: 100%;
+                height: calculateRem(320px);
+                background-color: $ibexa-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

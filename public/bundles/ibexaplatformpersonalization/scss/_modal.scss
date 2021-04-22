@@ -1,0 +1,41 @@
+.ez-modal {
+    &--strategy-edit {
+        .ez-modal {
+            .modal-dialog {
+                max-width: calculateRem(600px);
+            }
+        
+            &__row-input {
+                margin-bottom: calculateRem(16px);
+        
+                .ez-label {
+                    display: inline;
+                }
+            }
+        
+            &__sub-row-input {
+                margin-top: calculateRem(8px);
+        
+                .ez-label {
+                    font-size: calculateRem(14px);
+                }
+                
+                .ez-personalization-base-item__input-field--number-spinner {
+                    display: inline;
+                }
+        
+                &--first-level {
+                    margin-left: calculateRem(32px);
+                }
+        
+                &--second-level {
+                    margin-left: calculateRem(64px);
+                }
+        
+                &--inactive {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}

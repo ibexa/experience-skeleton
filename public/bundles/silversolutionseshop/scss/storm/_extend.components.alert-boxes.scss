@@ -1,0 +1,142 @@
+// extend Foundation alert boxes component
+// alert box background gets 15% lighten color than border color
+
+// border colors
+// primary 446cb3
+// secondary adb2bd
+// info 89c4f4
+// alert f22613
+// success 87d37c
+// warning f89406
+
+$alert-lighten: $global-alert-lighten !default;
+$alert-text-color-darken: 50% !default;
+$alert-left-border-width: 5px !default;
+
+$alert-primary-border-color: #446cb3;
+$alert-primary-bg-color: lighten($alert-primary-border-color, $alert-lighten);
+
+$alert-secondary-border-color: #adb2bd;
+$alert-secondary-bg-color: lighten($alert-secondary-border-color, $alert-lighten);
+
+$alert-info-border-color: $info-color;
+$alert-info-bg-color: lighten($alert-info-border-color, $alert-lighten);
+
+$alert-alert-border-color: $alert-color;
+$alert-alert-bg-color: lighten($alert-alert-border-color, $alert-lighten);
+
+$alert-success-border-color: $success-color;
+$alert-success-bg-color: lighten($alert-success-border-color, $alert-lighten);
+
+$alert-warning-border-color: $warning-color;
+$alert-warning-bg-color: lighten($alert-warning-border-color, $alert-lighten);
+
+.alert-box {
+  color: darken($alert-primary-border-color, $alert-text-color-darken);
+  background-color: $alert-primary-bg-color;
+  border-color: $alert-primary-border-color;
+  border-width: 0 0 0 rem-calc($alert-left-border-width);
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a,
+  h4 {
+    color: darken($alert-primary-border-color, $alert-text-color-darken);
+  }
+
+  .close {
+    top: 1rem;
+    text-decoration: none;
+  }
+
+  &.secondary {
+    color: darken($alert-secondary-border-color, $alert-text-color-darken);
+    background-color: $alert-secondary-bg-color;
+    border-color: $alert-secondary-border-color;
+
+    a,
+    h4 {
+      color: darken($alert-secondary-border-color, $alert-text-color-darken);
+    }
+  }
+
+  &.info {
+    color: darken($alert-info-border-color, $alert-text-color-darken);
+    background-color: $alert-info-bg-color;
+    border-color: $alert-info-border-color;
+
+    a,
+    h4 {
+      color: darken($alert-info-border-color, $alert-text-color-darken);
+    }
+  }
+
+  &.alert {
+    color: darken($alert-alert-border-color, $alert-text-color-darken);
+    background-color: $alert-alert-bg-color;
+    border-color: $alert-alert-border-color;
+
+    a,
+    h4 {
+      color: darken($alert-alert-border-color, $alert-text-color-darken);
+    }
+  }
+
+  &.success {
+    color: darken($success-color, $alert-text-color-darken);
+    background-color: $alert-success-bg-color;
+    border-color: $alert-success-border-color;
+
+    a,
+    h4 {
+      color: darken($alert-success-border-color, $alert-text-color-darken);
+    }
+
+    p {
+      // overrides styling from cookie policy CSS
+        margin-bottom: $paragraph-margin-bottom/2;
+    }
+  }
+
+  &.warning {
+    color: $alert-font-color-alt;
+    background-color: $alert-warning-bg-color;
+    border-color: $alert-warning-border-color;
+
+    a,
+    h4 {
+      color: $alert-font-color-alt;
+    }
+  }
+
+  // order matter in that case, don't put these declaration at the top
+  ol,
+  ul,
+  p {
+    font-size: $alert-font-size;
+    font-weight: normal;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // order matter in that case, don't put these declaration at the top
+  p,
+  ol + p,
+  ul + p,
+  p + ol,
+  p + ul {
+    margin-top: $paragraph-margin-bottom/2;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,27 @@
+.c-events-table {
+    position: absolute;
+    top: calculateRem(48px);
+    right: 0;
+    background-color: $ibexa-white;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s $ibexa-admin-transition;
+    min-width: calculateRem(700px);
+    padding: calculateRem(8px);
+    border-radius: calculateRem(2px);
+    box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba($ibexa-black, 0.4);
+
+    &--is-visible {
+        transform: scaleY(1);
+    }
+
+    &__title {
+        font-size: calculateRem(16px);
+        margin-bottom: calculateRem(16px);
+        font-weight: normal;
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,54 @@
+.c-month-day-view {
+    min-height: calculateRem(120px);
+    width: calculateRem(171px);
+    border-color: $ibexa-color-base-medium;
+    border-width: calculateRem(1px) calculateRem(1px) 0 0;
+    border-style: solid;
+
+    &:nth-child(7n) {
+        border-right-width: 0;
+    }
+
+    &--past {
+        @include past-tile();
+    }
+
+    &--selected {
+        font-weight: bold;
+        box-shadow: inset 0 0 0 calculateRem(1px) $ibexa-color-primary;
+
+        .c-month-day-view__day {
+            color: $ibexa-color-primary;
+        }
+
+        .c-events {
+            margin: 0 calculateRem(1px);
+        }
+    }
+
+    &__day {
+        margin: calculateRem(4px) calculateRem(3px);
+        width: calculateRem(30px);
+        height: calculateRem(30px);
+        line-height: calculateRem(30px);
+        text-align: center;
+        display: block;
+        user-select: none;
+
+        &--disabled {
+            color: $ibexa-color-font-pale;
+        }
+
+        &--past {
+            @include past-tile();
+        }
+
+        &--selectable {
+            cursor: pointer;
+
+            &:hover {
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+}

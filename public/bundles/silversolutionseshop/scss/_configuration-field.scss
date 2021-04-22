@@ -1,0 +1,11 @@
+.ez-configuration-field {
+    &--boolean {
+        @include checkbox-switcher();
+
+        .ez-data-source {
+            &__value {
+                display: none;
+            }
+        }
+    }
+}

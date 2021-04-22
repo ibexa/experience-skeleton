@@ -1,0 +1,107 @@
+.c-week-view {
+    position: relative;
+
+    .c-week-view__day-time {
+        width: calculateRem(42px);
+        margin-top: calculateRem(-12px);
+        font-size: calculateRem(14px);
+        border-style: solid;
+        border-color: $ibexa-color-base;
+        border-width: 0 calculateRem(1px) calculateRem(1px) 0;
+
+        &--no-border-bottom {
+            border-bottom-width: 0;
+        }
+
+        &--no-border {
+            border-width: 0;
+        }
+    }
+
+    &__days-names,
+    &__days-dates {
+        display: flex;
+    }
+
+    &__day-date-wrapper,
+    &__day-name {
+        flex-grow: 1;
+        flex-basis: 0;
+        border-style: solid;
+        border-color: $ibexa-color-base;
+        border-width: 0 calculateRem(1px) calculateRem(1px) 0;
+
+        &--past {
+            @include past-tile();
+        }
+    }
+
+    &__day-name {
+        border-top-width: 0;
+        height: calculateRem(32px);
+    }
+
+    &__day-date-wrapper {
+        height: calculateRem(59px);
+    }
+
+    &__day-date {
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+        line-height: calculateRem(32px);
+        text-align: center;
+        display: block;
+        user-select: none;
+
+        &--disabled {
+            color: $ibexa-color-font-pale;
+        }
+
+        &--selected {
+            font-weight: bold;
+            color: $ibexa-color-primary;
+        }
+
+        &--past {
+            @include past-tile();
+        }
+
+        &--selectable {
+            cursor: pointer;
+
+            &:hover {
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+
+    &__day-name {
+        display: flex;
+        align-items: center;
+        padding-left: calculateRem(5px);
+    }
+
+    &__days {
+        display: flex;
+        flex-direction: column;
+        grid-area: week;
+    }
+
+    &__hour-row {
+        display: flex;
+        min-height: calculateRem(90px);
+    }
+
+    &__hour-label-wrapper {
+        position: relative;
+    }
+
+    &__hour-label {
+        position: absolute;
+        font-size: calculateRem(11px);
+        width: calculateRem(60px);
+        transform: translate(-100%, -50%);
+        text-align: right;
+        color: $ibexa-color-font;
+    }  
+}

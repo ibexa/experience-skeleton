@@ -1,0 +1,54 @@
+.ez-summary {
+    padding: calculateRem(20px) 0;
+
+    &__item {
+        padding: calculateRem(24px) calculateRem(16px);
+        text-align: center;
+        background: $ibexa-white;
+    }
+
+    &__item-period {
+        color: $ibexa-color-font-pale;
+        font-size: calculateRem(14px);
+    }
+
+    &__item-value {
+        font-weight: bold;
+        font-size: calculateRem(26px);
+        padding: calculateRem(12px) 0 calculateRem(4px);
+    }
+
+    &__item-name {
+        color: $ibexa-color-font-pale;
+    }
+
+    &__reco-delta-value {
+        color: $ibexa-color-font-pale;
+
+        .ez-icon {
+            display: none;
+            width: calculateRem(14px);
+            height: calculateRem(14px);
+        }
+
+        &--up {
+            color: $ibexa-color-positive;
+
+            .ez-icon {
+                display: inline;
+                fill: $ibexa-color-positive;
+                transform: rotate(90deg);
+            }
+        }
+
+        &--down {
+            color: $ibexa-color-danger;
+
+            .ez-icon {
+                display: inline;
+                fill: $ibexa-color-danger;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}

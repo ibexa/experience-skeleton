@@ -1,0 +1,14 @@
+.dbp-notification {
+    .ez-notifications-modal__type {
+        .type__icon {
+            background: $ibexa-color-danger;
+            fill: $ibexa-color-base-light;
+        }
+    }
+
+    &.ez-notifications-modal__item--read {
+        .type__icon {
+            background-color: $ibexa-color-base-dark;
+        }
+    }
+}

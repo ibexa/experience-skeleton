@@ -1,0 +1,13 @@
+.c-calendar-header {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        font-weight: bold;
+        font-size: calculateRem(16px);
+    }
+
+    &__btns {
+       display: flex;
+    } 
+}
