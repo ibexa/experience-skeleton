@@ -1,0 +1,14 @@
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-block-radio-field {
+    .form-check {
+        display: flex;
+    }
+
+    .form-check-input {
+        @include radio-input;
+
+        margin-right: calculateRem(4px);
+    }
+}

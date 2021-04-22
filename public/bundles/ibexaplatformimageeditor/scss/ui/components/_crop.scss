@@ -1,0 +1,109 @@
+.c-image-editor-crop {
+    &__btn-ratio {
+        border: calculateRem(1px) solid $ibexa-color-base;
+        padding: calculateRem(7px) calculateRem(6px);
+        margin-left: calculateRem(4px);
+
+        &--active {
+            border-color: $ibexa-color-primary;
+        }
+
+        &:hover {
+            color: $ibexa-color-primary;
+        }
+    }
+
+    &__ratio {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn-apply,
+    &__btn-remove {
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn-apply {
+        border: calculateRem(1px) solid $ibexa-color-positive;
+        border-radius: 50%;
+        padding: calculateRem(5px);
+        margin: 0 calculateRem(8px);
+
+        .ez-icon {
+            fill: $ibexa-color-positive;
+            width: calculateRem(12px);
+            height: calculateRem(12px);
+        }
+    }
+
+    &__btn-remove {
+        .ez-icon {
+            fill: $ibexa-color-danger;
+        }
+    }
+
+    &__size {
+        display: flex;
+        align-items: center;
+        margin-top: calculateRem(8px);
+    }
+
+    &__input-wrapper {
+        margin-left: calculateRem(8px);
+        position: relative;
+    }
+
+    &__input-label {
+        color: $ibexa-color-font-pale;
+        position: absolute;
+        top: 50%;
+        right: calculateRem(4px);
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &__input {
+        height: calculateRem(30px);
+        padding: calculateRem(4px);
+        border-color: $ibexa-color-base;
+        width: 8ch;
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            -moz-appearance: initial;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: inner-spin-button;
+                margin-left: calculateRem(2px);
+            }
+
+            & + .c-image-editor-crop__input-label {
+                display: none;
+            }
+        }
+    }
+
+    .ez-alert {
+        display: flex;
+        font-size: calculateRem(12px);
+        padding: calculateRem(8px);
+        margin-bottom: calculateRem(8px);
+
+        .ez-icon {
+            margin-right: calculateRem(4px);
+        }
+    }
+}

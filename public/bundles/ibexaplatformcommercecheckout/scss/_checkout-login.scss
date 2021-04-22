@@ -1,0 +1,32 @@
+.ezcommerce-checkout-login {
+    display: flex;
+
+    &__column {
+        width: 50%;
+
+        & + & {
+            margin-left: 16px;
+        }
+
+        p {
+            margin: 16px 2px 8px;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        background-color: $ibexa-color-base-dark;
+        border-radius: 4px;
+        color: $ibexa-white;
+        padding: 8px 16px;
+        height: 40px;
+        outline: 0;
+        border: 0;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $ibexa-color-base-deep-dark;
+            color: $ibexa-white;
+        }
+    }
+}

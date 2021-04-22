@@ -1,0 +1,48 @@
+.c-event-tooltip {
+    background-color: $ibexa-color-base-pale;
+    position: absolute;
+    right: 0;
+    transform: translateX(calc(100% + 1rem));
+    top: calculateRem(-25px);
+    box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba(0, 0, 0, 0.5);
+    cursor: auto;
+    border-radius: calculateRem(4px);
+    max-height: calculateRem(500px);
+    overflow: auto;
+
+    &__item {
+        padding: calculateRem(16px) calculateRem(21px) calculateRem(12px) calculateRem(16px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base-light;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    &:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: calculateRem(10px) solid transparent;
+        border-bottom: calculateRem(10px) solid transparent;
+        border-right: calculateRem(10px) solid $ibexa-color-base-pale;
+        filter: drop-shadow(-2px 0 lighten($ibexa-color-base-dark, 45%));
+        position: absolute;
+        left: calculateRem(-10px);
+        top: calculateRem(25px);
+    }
+
+    &--on-left {
+        left: 0;
+        right: auto;
+        transform: translateX(calc(-100% - 1rem));
+
+        &:before {
+            left: auto;
+            right: calculateRem(10px);
+            border-left: calculateRem(10px) solid $ibexa-color-base-pale;
+            border-right: none;
+            filter: drop-shadow(2px 0 lighten($ibexa-color-base-dark, 45%));
+        }
+    }
+}

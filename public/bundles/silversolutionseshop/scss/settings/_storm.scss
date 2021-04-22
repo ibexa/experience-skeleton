@@ -1,0 +1,1050 @@
+/**
+ * @copyright Copyright (C) Ibexa AS. All rights reserved.
+ * @license For full copyright and license information view LICENSE file distributed with this source code.
+ */
+
+// Allows the use of rem-calc() or lower-bound() in your settings
+@import "../../vendor/foundation/scss/foundation/functions";
+
+//
+
+// Table of Contents
+// Storm Settings
+//
+// a. Typography
+// 01. Autocomplete
+// 02. Card
+// 03. Checkout
+// 04. Comparison
+// 05. Cookie Policy
+// 06. Drop Zone
+// 07. Facets
+// 08. Flyout
+// 09. Landingpage
+// 10. List
+// 10a. List Blog
+// 10b. List Events
+// 11. Megamenu
+// 12. Nav Meta
+// 13. Page Footer
+// 14. Page Header
+// 15. Pagination
+// 16. Print
+// 17. Scroll
+// 18. Search
+// 19. Social Share
+// 20. Spinner
+// 21. Tag Cloud
+// 22. Tagged Content
+// 23. Text Buttons
+// 24. Toggler
+// 25. User Menu
+// 26. Variants
+// 27. Account
+// 28. Quickorder
+// 29. Basket
+// 30. Stored Basket
+
+// Foundation extends
+// F01. Accordion
+// F02. Alert Boxes
+// F03. Buttons
+// F04. Data Tables
+// F05. Date Picker
+// F06. Dropdown
+// F07. Forms
+// F08. Grid
+// F09. Icon Bar
+// F10. Inline Lists
+// F11. Label
+// F12. Offcanvas
+// F13. Panels
+// F14. Reveal
+// F15. Side Nav
+// F16. Tabs
+// F17. Progress bars
+
+// Other Vendors Extends
+// V01. Slick Slider
+// V02. Font Awesome
+// V02. Toastr
+
+/* a. Typography
+  ========================================================================== */
+
+$roboto-font-path: "/bundles/silversolutionseshop/vendor/roboto-fontface/fonts";
+$OpenSansPath: "/bundles/silversolutionseshop/vendor/open-sans-fontface/fonts";
+
+/* 01. Autocomplete
+  ========================================================================== */
+
+// $autocomplete-border-width: 1px;
+// $autocomplete-border-style: solid;
+// $autocomplete-border-color: $aluminum;
+
+// $autocomplete-bg-color: $white;
+
+// $autocomplete-box-offset-x: 1px;
+// $autocomplete-box-offset-y: 4px;
+// $autocomplete-box-blur: 3px;
+// $autocomplete-box-spread: 0;
+// $autocomplete-box-color: $iron;
+
+// $autocomplete-highlight-font-weight: bold;
+// $autocomplete-highlight-font-color: $black;
+
+// $autocomplete-item-padding: rem-calc(2px 5px);
+// $autocomplete-selected-bg-color: $snow;
+
+// $autocomplete-group-title-font-weight: bold;
+// $autocomplete-group-title-font-size: rem-calc(16);
+// $autocomplete-group-title-font-color: $black;
+// $autocomplete-group-title-border-bottom-width: 1px;
+// $autocomplete-group-title-border-bottom-style: solid;
+// $autocomplete-group-title-border-bottom-color: black;
+
+/* 02. Card
+  ========================================================================== */
+
+// $card-spacing-unit: ($rem-base/2); // 8px
+
+// $card-grid-items-small: 1;
+// $card-grid-items-medium: 2;
+// $card-grid-items-large: 3;
+// $card-grid-wide-items-large: 3;
+// $card-grid-wide-items-xlarge: 4;
+// $card-space-bottom: rem-calc(50);
+
+// $card-border-width: 1px;
+// $card-border-style: solid;
+// $card-border-color: $iron;
+// $card-position: relative;
+
+// $card-price-wrapper-padding-top: rem-calc($card-spacing-unit);
+
+// $card-button-group-position: absolute;
+// $card-button-group-right: rem-calc($rem-base + $card-spacing-unit);
+// $card-button-group-bottom: rem-calc($card-spacing-unit);
+// $card-button-disabled-hover-bg: $flat-concrete;
+
+// $card-title-font-size: rem-calc(16);
+// $card-title-padding: rem-calc($card-spacing-unit);
+// $card-title-margin: 0;
+// $card-title-overflow: hidden;
+// $card-title-text-overflow: ellipsis;
+// $card-title-link-color: $flat-peter-river;
+
+// $card-description-font-size: rem-calc(14);
+// $card-description-padding: rem-calc($card-spacing-unit);
+// $card-description-margin: rem-calc(0 0 $card-spacing-unit 0);
+// $card-description-overflow: hidden;
+// $card-description-last-paragraph-margin: rem-calc(0);
+
+// $card-sku-font-size: rem-calc(12);
+// $card-sku-padding: rem-calc($card-spacing-unit/2 $card-spacing-unit);
+// $card-sku-margin: 0;
+// $card-sku-overflow: hidden;
+// $card-sku-text-overflow: ellipsis;
+
+// $card-img-display: table;
+// $card-img-width: auto;
+// $card-img-height: rem-calc(250);
+// $card-img-inline-display: inline-block;
+// $card-img-padding-top: rem-calc($card-spacing-unit);
+// $card-img-padding-bottom: rem-calc($card-spacing-unit);
+
+// $card-price-wrap-padding: rem-calc(0 $card-spacing-unit $card-spacing-unit $card-spacing-unit);
+// $card-price-wrap-line-height: normal;
+
+// $card-label-font-size: rem-calc(12);
+
+// $card-shipping-paragraph-display: inline;
+// $card-shipping-paragraph-font-size: 100%;
+// $card-shipping-paragraph-margin-bottom: 0;
+
+// $card-price-color: $primary-color;
+// $card-price-font-size: rem-calc(30);
+
+// $card-btn-secondary-wrap-width-small: 50%;
+// $card-btn-secondary-wrap-width-large: 25%;
+// $card-btn-secondary-padding-left: rem-calc(5);
+// $card-btn-secondary-padding-right: rem-calc(5);
+// $card-btn-secondary-bg-color: $flat-peter-river;
+// $card-btn-secondary-font-color: $white;
+// $card-btn-secondary-font-size: rem-calc(16);
+// $card-btn-primary-wrap-width: 50%;
+// $card-btn-primary-bg-color: $flat-peter-river;
+// $card-btn-primary-font-size: rem-calc(16);
+
+// $card-sidebar-bg-color: scale-color($white, $lightness: -5%);
+
+// $card-footer-padding: rem-calc($card-spacing-unit);
+// $card-footer-line-height: rem-calc(36);
+// $card-footer-bg-color: lighten($iron, 10%);
+
+// $card-table-price-font-size: rem-calc(20);
+
+/* 03. Checkout
+  ========================================================================== */
+
+/* 04. Comparison
+  ========================================================================== */
+
+// $comparison-list-background: $primary-color;
+// $comparison-list-color: $white;
+// $comparsion-list-padding: rem-calc(10);
+//
+// $comparison-paginator-arrow-color: $primary-color;
+//
+// $comparison-data-headline-color: $primary-color;
+// $comparison-data-headline-arrow-color: $primary-color;
+//
+// $comparison-item-background: $white;
+//
+// $comparison-data-table-li-padding: rem-calc(5 15);
+// $comparison-data-table-li-background: $white;
+// $comparison-data-table-li-color: $primary-color;
+// $comparison-data-table-li-odd-background: $flat-clouds;
+// $comparison-data-table-li-odd-color: $primary-color;
+
+/* 05. Cookie Policy
+  ========================================================================== */
+
+/* 06. Drop Zone
+========================================================================== */
+
+// $dropzone-height: rem-calc(249);
+// $dropzone-padding: rem-calc(60);
+// $dropzone-line-height: rem-calc(32);
+// $dropzone-text-align: center;
+// $dropzone-bg-color: $flat-clouds;
+// $dropzone-border-width: rem-calc(2);
+// $dropzone-border-style: dashed;
+// $dropzone-border-color: $flat-silver;
+
+// $dropzone-plus-height: rem-calc(60);
+// $dropzone-plus-width: $dropzone-plus-height;
+// $dropzone-plus-line-height: $dropzone-plus-height;
+// $dropzone-plus-margin: rem-calc(0) auto;
+// $dropzone-plus-border-width: $dropzone-border-width;
+// $dropzone-plus-border-style: $dropzone-border-style;
+// $dropzone-plus-border-color: $dropzone-border-color;
+// $dropzone-plus-icon: $fa-var-upload; // please FontAwesome values, or override the selector in your project
+// $dropzone-plus-icon-font-size: rem-calc(24);
+
+/* 07. Facets
+========================================================================== */
+
+// $facet-dropdown-margin-top: rem-calc(-1);
+//
+// $facet-btn-margin-bottom: rem-calc(5);
+// $facet-btn-padding: rem-calc(8 30 8 10);
+// $facet-btn-font-color: $jet;
+// $facet-btn-bg-color: $smoke;
+// $facet-btn-border-width: rem-calc(1);
+// $facet-btn-border-style: solid;
+// $facet-btn-border-color: $f-dropdown-border-color;
+// $facet-btn-hover-bg-color: $f-dropdown-border-color;
+// $facet-btn-hover-font-color: $jet;
+// $facet-btn-hover-outline: none;
+// $facet-btn-arrow-position-right: rem-calc(10);
+// $facet-btn-arrow-bg-color: $oil;
+// $facet-btn-apply-padding: rem-calc(5 10);
+// $facet-btn-apply-margin-top: rem-calc(5);
+// $facet-btn-apply-disabled-bg-color: $aluminum;
+// $facet-btn-apply-disabled-hover-bg-color: $facet-btn-apply-disabled-bg-color;
+//
+// $facet-list-padding-right: rem-calc(5);
+// $facet-list-padding-left: rem-calc(5);
+// $facet-list-max-height: rem-calc(120);
+// $facet-list-overflow-y: auto;
+// $facet-list-mega-max-height: rem-calc(240);
+// $facet-item-padding-top: rem-calc(4);
+// $facet-item-padding-bottom: rem-calc(4);
+// $facet-item-padding-top-large: rem-calc(2);
+// $facet-item-padding-bottom-large: rem-calc(2);
+
+// item width for different resolutions in case parent has .mega class assigned
+// $facet-list-mega-item-width-small: 50%;
+// $facet-list-mega-item-width-large: 33.33%;
+// $facet-list-mega-item-width-xlarge: 25%;
+//
+// $facet-search-padding-right: rem-calc(20);
+// $facet-icon-search-position: absolute;
+// $facet-icon-search-position-top: rem-calc(12);
+// $facet-icon-search-position-right: rem-calc(6);
+//
+// $facet-active-margin: rem-calc(2 2 5);
+// $facet-active-padding-top: 0;
+// $facet-active-padding-bottom: rem-calc(3);
+// $facet-active-line-height: rem-calc(18);
+// $facet-active-cursor: pointer;
+//
+// $facet-icon-close-position: relative;
+// $facet-icon-close-position-top: rem-calc(3);
+// $facet-icon-close-font-size: rem-calc(20);
+// $facet-icon-close-font-weight: bold;
+// $facet-icon-close-rounded-position: absolute;
+// $facet-icon-close-rounded-position-top: rem-calc(12);
+// $facet-icon-close-rounded-position-right: rem-calc(5);
+// $facet-icon-close-rounded-width: rem-calc(20);
+// $facet-icon-close-rounded-height: rem-calc(20);
+// $facet-icon-close-rounded-padding: 0;
+// $facet-icon-close-rounded-margin: 0;
+// $facet-icon-close-rounded-border-radius: 50%;
+// $facet-icon-close-rounded-cursor: pointer;
+//
+// $facet-active-group-position: relative;
+// $facet-active-group-display: inline-block;
+// $facet-active-group-padding: rem-calc(0 5 2);
+// $facet-active-group-margin: rem-calc(5 10 15 0);
+// $facet-active-group-margin-top-large: 0;
+// $facet-active-group-border-width: rem-calc(1);
+// $facet-active-group-border-style: solid;
+// $facet-active-group-border-color: $flat-clouds;
+// $facet-active-group-multi-padding-right: rem-calc(33);
+// $facet-active-group-title-display: table;
+// $facet-active-group-title-margin: rem-calc(-8 0 0 );
+// $facet-active-group-title-font-size: rem-calc(12);
+// $facet-active-group-title-font-weight: normal;
+// $facet-active-group-title-bg-color: $white;
+
+/* 08. Flyout
+========================================================================== */
+
+// $flyout-max-height: rem-calc(300);
+// $flyout-overflow-y: auto;
+// $flyout-row-margin: 0;
+// $flyout-line-space-start: 0;
+// $flyout-line-space-end: 0;
+
+/* 09. Landingpage
+========================================================================== */
+
+/* 10. List
+========================================================================== */
+
+// $list-padding: 0;
+// $list-margin: 0;
+// $list-style-type: none;
+//
+// $list-item-spacing: $column-gutter;
+// $list-item-border-width: rem-calc(1);
+// $list-item-border-style: solid;
+// $list-item-border-color: $secondary-color;
+// $list-item-left-border-width: rem-calc(10);
+// $list-item-left-border-style: solid;
+// $list-item-left-border-color: $secondary-color;
+// $list-item-full-padding: 0;
+// $list-item-full-margin-bottom: 0;
+// $list-item-full-border: 0;
+//
+// $list-title-font-size: $h2-font-size;
+// $list-title-display: block;
+// $list-title-border: rem-calc(1) solid $secondary-color;
+// $list-sub-title-font-size: $h3-font-size;
+// $list-sub-title-display: block;
+// $list-sub-title-color: $subheader-font-color;
+//
+// $list-description-font-size: rem-calc(16);
+// $list-description-line-height: 1.6;
+//
+// $list-thumb-margin: 0 ($list-item-spacing/2) ($list-item-spacing/2) 0;
+//
+// $list-meta-line-height: rem-calc(36); // same height like the tiny button (... read more)
+// $list-more-link-font-size: rem-calc(12);
+//
+// $list-date-display: inline;
+// $list-date-margin-right: ($list-item-spacing/2);
+// $list-date-line-height: $list-meta-line-height;
+// $list-date-font-size: rem-calc(14);
+// $list-date-icon: "\f073";
+// $list-date-icon-color: $primary-color;
+// $list-date-icon-margin-right: rem-calc(5);
+//
+// $list-author-display: inline;
+// $list-author-margin-right: ($list-item-spacing/2);
+// $list-author-line-height: $list-meta-line-height;
+// $list-author-font-size: rem-calc(14);
+//
+// $list-author-bio-heading-font-size: rem-calc(16);
+// $list-author-bio-figure-margin: 0;
+//
+// $list-comments-line-height: $list-meta-line-height;
+//
+// $list-embed-margin-bottom: ($list-item-spacing/2);
+// $list-embed-width: 100%;
+// $list-embed-list-style: none;
+// $list-embed-width-large: 33.33%;
+// $list-embed-margin-right-large: ($list-item-spacing/2);
+//
+// $list-location-display: inline;
+// $list-location-margin-right: ($list-item-spacing/2);
+// $list-location-font-size: rem-calc(14);
+// $list-location-line-height: $list-meta-line-height;
+// $list-location-icon: "\f041";
+// $list-location-icon-color: $primary-color;
+// $list-location-icon-margin-right: rem-calc(5);
+
+/* 10a. List Blog
+========================================================================== */
+
+/* 10b. List Events
+========================================================================== */
+
+/* 11. Megamenu
+========================================================================== */
+
+// $megamenu-highlight-bg: lighten($secondary-color, 10%);
+// $megamenu-highlite-bg: $megamenu-highlight-bg;
+// $megamenu-link-bg-color: $megamenu-highlight-bg;
+// $megamenu-dropdown-border-width: 1px 1px 1px 1px;
+// $megamenu-dropdown-border-style: solid;
+// $megamenu-dropdown-border-color: $secondary-color;
+// $megamenu-dropdown-box-shadow: 1px 14px 75px -8px rgba(0,0,0,0.27);
+// $megamenu-border-radius: 0 0 10px 10px;
+
+// $megamenu-1st-level-height: rem-calc(61);
+// $megamenu-1st-level-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-1st-level-hover-font-color: $primary-color;
+// $megamenu-1st-level-arrow-color: $primary-color;
+// $megamenu-1st-level-arrow-top: ($topbar-height / 2) + rem-calc(8);
+// $megamenu-1st-level-item-bg-color: none;
+// $megamenu-1st-level-item-border-right-width: 1px;
+// $megamenu-1st-level-item-border-right-style: solid;
+// $megamenu-1st-level-item-border-right-color: $secondary-color;
+// $megamenu-1st-level-link-font-size: rem-calc(16);
+// $megamenu-1st-level-link-font-color: $primary-color;
+// $megamenu-1st-level-link-padding-top: rem-calc(8);
+// $megamenu-1st-level-link-padding-bottom: rem-calc(8);
+// $megamenu-1st-level-link-active-bg-color: $megamenu-highlight-bg;
+// $megamenu-1st-level-link-active-font-color: $primary-color;
+// $megamenu-1st-level-link-active-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-1st-level-link-active-hover-font-color: $primary-color;
+// $megamenu-1st-level-link-active-arrow-color: $primary-color;
+//
+// $megamenu-2nd-level-bg-color: $megamenu-highlight-bg;
+// $megamenu-2nd-level-parent-width: 100%;
+// $megamenu-2nd-level-parent-padding-left: rem-calc(10);
+// $megamenu-2nd-level-stretched-bg-color: transparent; // set to transparent in order to remove
+// $megamenu-2nd-level-item-margin-right: rem-calc(20);
+// $megamenu-2nd-level-link-padding: rem-calc(0 10);
+// $megamenu-2nd-level-link-font-size: rem-calc(18);
+// $megamenu-2nd-level-link-font-color: $primary-color;
+// $megamenu-2nd-level-width: 20%;
+// $megamenu-2nd-level-link-active-bg-color: $megamenu-highlight-bg;
+// $megamenu-2nd-level-link-active-font-color: $flat-peter-river;
+// $megamenu-2nd-level-link-active-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-2nd-level-link-active-hover-font-color: $flat-peter-river;
+//
+// $megamenu-3rd-level-padding-left: 0;
+// $megamenu-3rd-level-border-top-width: 1px;
+// $megamenu-3rd-level-border-top-style: solid;
+// $megamenu-3rd-level-border-top-color: $primary-color;
+// $megamenu-3rd-level-link-padding-left: rem-calc(10);
+// $megamenu-3rd-level-link-font-size: rem-calc(15);
+// $megamenu-3rd-level-link-line-height: rem-calc(35);
+// $megamenu-3rd-level-link-border-bottom: none;
+// $megamenu-3rd-level-link-hover-font-color: $flat-peter-river;
+// $megamenu-3rd-level-link-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-3rd-level-link-active-bg-color: $megamenu-highlight-bg;
+// $megamenu-3rd-level-link-active-font-color: $flat-peter-river;
+// $megamenu-3rd-level-link-active-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-3rd-level-link-active-hover-font-color: $flat-peter-river;
+//
+// $megamenu-4th-level-link-padding-left: rem-calc(10);
+// $megamenu-4th-level-link-font-size: rem-calc(13);
+// $megamenu-4th-level-link-hover-font-color: $flat-peter-river;
+// $megamenu-4th-level-link-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-4th-level-link-active-bg-color: $megamenu-highlight-bg;
+// $megamenu-4th-level-link-active-font-color: $flat-peter-river;
+// $megamenu-4th-level-link-active-hover-bg-color: $megamenu-highlight-bg;
+// $megamenu-4th-level-link-active-hover-font-color: $flat-peter-river;
+
+/* 12. Nav Meta
+========================================================================== */
+
+// $nav-meta-margin: rem-calc($rem-base/2) 0;
+// $nav-meta-medium-float: right;
+// $nav-meta-medium-overflow: visible;
+// $nav-meta-tiny-dropdown-width: rem-calc(200);
+// $nav-meta-small-dropdown-width: rem-calc(300);
+// $nav-meta-medium-dropdown-width: rem-calc(400);
+// $nav-meta-large-dropdown-width: rem-calc(600);
+// $nav-meta-huge-dropdown-width: rem-calc(768);
+// $nav-meta-link-text-decoration: underline;
+// $nav-meta-link-hover-text-decoration: none;
+// $nav-meta-icon-margin-right: em-calc(5);
+//
+// $nav-meta-customer-number-width: 100%;
+// $nav-meta-customer-number-margin-bottom: rem-calc(16);
+// $nav-meta-customer-number-line-height: normal;
+// $nav-meta-customer-number-text-align: left;
+//
+// $nav-meta-dropdown-trigger-padding-right: rem-calc(15);
+// $nav-meta-dropdown-trigger-letter-spacing: rem-calc(1);
+// $nav-meta-dropdown-trigger-text-transform: uppercase;
+// $nav-meta-dropdown-trigger-arrow-top: rem-calc(8);
+// $nav-meta-dropdown-trigger-arrow-width: rem-calc(5);
+// $nav-meta-dropdown-trigger-arrow-border-color: $primary-color;
+//
+// $nav-meta-dropdown-content-link-font-color: $flat-peter-river;
+//
+// $nav-meta-dropdown-column-border-width: 1px;
+// $nav-meta-dropdown-column-border-color: lighten($f-dropdown-border-color, 15%);
+// $nav-meta-dropdown-column-position-top: ($f-dropdown-content-padding * 4);
+// $nav-meta-dropdown-column-position-bottom: $f-dropdown-content-padding;
+// $nav-meta-dropdown-column-margin-left: -($f-dropdown-content-padding);
+// $nav-meta-dropdown-header-link-margin-left: -($f-dropdown-content-padding);
+// $nav-meta-dropdown-header-link-padding-left: $f-dropdown-content-padding;
+// $nav-meta-dropdown-header-link-font-weight: bold;
+// $nav-meta-dropdown-header-link-text-transform: uppercase;
+// $nav-meta-dropdown-header-link-border-left-width: 1px;
+// $nav-meta-dropdown-header-link-border-left-style: solid;
+// $nav-meta-dropdown-header-link-border-left-color: $f-dropdown-border-color;
+
+/* 13. Page Footer
+========================================================================== */
+
+// $page-footer-margin-top: rem-calc(25);
+// $page-footer-padding: rem-calc($rem-base) 0;
+//
+// $page-footer-background: lighten($flat-silver, 18%);
+//
+// $page-footer-font-size: rem-calc(14)
+//
+// $page-footer-column-border-right-width: rem-calc(1);
+// $page-footer-column-border-right-style: solid;
+// $page-footer-column-border-right-color: $gainsboro;
+
+/* 14. Page Header
+========================================================================== */
+
+//$meta-nav-background: lighten($secondary-color, 10%);
+//
+//$tools-wrap-background: $white;
+//$tools-wrap-border-color: $crumb-border-color;
+//$tools-wrap-border-style: solid;
+//$tools-wrap-border-width: rem-calc(1);
+//$tools-wrap-line-height: rem-calc(36);
+//$tools-wrap-padding-top: rem-calc(12);
+//$tools-wrap-padding-bottom: rem-calc(12);
+//$tools-wrap-line-height-large-up: normal;
+//$tools-wrap-padding-top-large-up: rem-calc(30);
+//$tools-wrap-padding-bottom-large-up: rem-calc(30);
+//$tools-wrap-border-bottom-width-large-up: 0;
+//
+//$nav-wrap-position: relative;
+//$nav-wrap-position-right: rem-calc(0);
+//$nav-wrap-margin-top: rem-calc(-65);
+//$nav-wrap-padding-top: rem-calc(12);
+//$nav-wrap-padding-bottom: rem-calc(12);
+//
+//$nav-wrap-border-color-on-large: $secondary-color;
+//$nav-wrap-border-style-on-large: solid;
+//$nav-wrap-border-width-on-large: rem-calc(1);
+//$nav-wrap-background-on-large: $white;
+//$nav-wrap-position-on-large: static;
+//$nav-wrap-margin-top-on-large: 0;
+//$nav-wrap-padding-on-large: 0;
+//$nav-wrap-background-contain-to-grid: $white;
+//$nav-wrap-border-color-fixed: $secondary-color;
+//$nav-wrap-border-style-fixed: solid;
+//$nav-wrap-border-width-fixed: rem-calc(1);
+//
+//$nav-wrap-top-bar-background: none;
+//$nav-wrap-top-bar-overflow: visible;
+//$nav-wrap-top-bar-background-on-large: $white;
+//$nav-wrap-form-margin-top: rem-calc(12);
+//$nav-wrap-form-element-margin: 0;
+//$nav-wrap-form-button-background: $flat-belize-hole;
+//$nav-wrap-form-button-border-color: darken($flat-belize-hole, 5%);
+//
+//$crumb-wrap-background: scale-color($white, $lightness: -5%);
+//
+//$page-header-logo-position: relative;
+//$page-header-logo-index: 1;
+//$page-header-logo-display: inline-block;
+
+/* 15. Pagination
+========================================================================== */
+
+/* 16. Print
+========================================================================== */
+
+/* 17. Scroll
+========================================================================== */
+
+// $scroll-to-top-position-right: ($column-gutter / 2);
+// $scroll-to-top-position-bottom: rem-calc(62);
+//
+// $scroll-to-top-color: $flat-peter-river;
+//
+// $scroll-to-top-size: rem-calc(20);
+
+/* 18. Search
+========================================================================== */
+
+// $search-input-border-width: rem-calc(1);
+// $search-input-border-style: solid;
+// $search-input-border-color: $secondary-color;
+// $search-input-height: rem-calc(40);
+//
+// $search-button-background: lighten($secondary-color, 10%);
+// $search-button-color: $primary-color;
+// $search-button-border-width: rem-calc(1);
+// $search-button-border-style: solid;
+// $search-button-border-color: $secondary-color;
+// $search-button-height: rem-calc(40);
+// $search-button-hover-background: $secondary-color;
+// $search-button-hover-color: $primary-color;
+//
+// $search-dropdown-background: darken($primary-color, 5%);
+
+/* 19. Social Share
+========================================================================== */
+
+/* 20. Spinner
+========================================================================== */
+
+// $spinner-position: fixed;
+// $spinner-zindex: 9998;
+// $spinner-bg-color: rgba(0, 0, 0, 0.45);
+
+// $spinner-icon-display: inline-block;
+// $spinner-icon-margin-left: rem-calc(-24);
+// $spinner-icon-margin-top: rem-calc(-36);
+// $spinner-icon-font-size: rem-calc(48);
+// $spinner-icon-font-family: FontAwesome, serif;
+// $spinner-icon-color: $white;
+// $spinner-icon-symbol: "\f110";
+
+// $spinner-inner-icon-font-size: rem-calc(32);
+// $spinner-inner-icon-color: $primary-color;
+
+// $spinner-contained-zindex: 98;
+// $spinner-contained-icon-color: $primary-color;
+// $spinner-contained-bg-color: rgba(255, 255, 255, 0.45);
+
+/* 21. Tag Cloud
+========================================================================== */
+
+// $tagcloud-margin: rem-calc(0);
+// $tagcloud-font-size: rem-calc(12);
+// $tagcloud-separator-icon: "\00B7";
+// $tagcloud-separator-margin-right: rem-calc(5);
+// $tagcloud-item-display: inline;
+
+/* 22. Tagged Content
+========================================================================== */
+
+/* 23. Text Buttons
+========================================================================== */
+
+// $text-buttons-margin: 0;
+//
+// $text-buttons-item-margin-bottom: rem-calc(5);
+// $text-buttons-item-padding-bottom: rem-calc(5);
+
+/* 24. Toggler
+========================================================================== */
+
+// $toggler-text-align: center;
+// $toggler-line-color: #999;
+// $toggler-line-height: 1px;
+// $toggler-trigger-font-size: rem-calc(14);
+// $toggler-trigger-padding: rem-calc(5);
+// $toggler-trigger-bg-color: $white;
+
+/* 25. User Menu
+========================================================================== */
+
+/* 26. Variants
+========================================================================== */
+
+/* 27. Account
+========================================================================== */
+
+// $account-box-headline-background: $primary-color;
+// $account-box-headline-color: $white;
+// $account-box-headline-padding: rem-calc(15 20);
+// $account-box-headline-margin: rem-calc(-20 -20 20 -20);
+//
+// $account-box-icon-margin-top: margin-top: rem-calc(-7);
+
+/* 28. Quickorder
+========================================================================== */
+
+// $quickorder-padding: rem-calc(10 20);
+//
+// $quickorder-header-background-color: $primary-color;
+// $quickorder-header-font-color: $white;
+//
+// $quickorder-item-background-color: #efefef;
+// $quickorder-item-border-color: #ccc;
+
+/* 29. Basket
+========================================================================== */
+
+// $basket-padding: rem-calc(10);
+//
+// $basket-header-background-color: $primary-color;
+// $basket-header-font-color: $white;
+//
+// $basket-item-background-color: #efefef;
+// $basket-item-border-color: #ccc;
+
+/* 30. Stored Basket
+========================================================================== */
+
+// $stored-basket-padding: rem-calc(10 20);
+//
+// $stored-basket-header-background-color: $primary-color;
+// $stored-basket-header-font-color: $white;
+//
+// $stored-basket-item-background-color: #efefef;
+// $stored-basket-item-border-color: #ccc;
+
+/* ============================================================================
+   Foundation extends
+   Extending standard Foundation components
+============================================================================ */
+
+/* F01. Accordion
+========================================================================== */
+
+// $accordion-nav-border-bottom-width: 1px;
+// $accordion-nav-border-bottom-style: solide;
+// $accordion-nav-border-bottom-color: $white;
+// $accordion-nav-link-position: relative;
+// $accordion-nav-link-icon-position: absolute;
+// $accordion-nav-link-icon-right: ($column-gutter / 2);
+// $accordion-nav-link-icon-symbol: '';
+// $accordion-nav-link-active-icon-symbol: '';
+// $accordion-nav-link-icon-color: $flat-wet-asphalt;
+// $accordion-nav-link-icon-font-family: FontAwesome;
+// $accordion-nav-small-link-padding: ($accordion-navigation-padding / 2);
+
+// $accordion-content-inner-table-border-color: $accordion-navigation-active-bg-color;
+// $accordion-content-inner-table-border-top: none;
+
+// $accordion-content-bordered-border-width: $accordion-border-width;
+// $accordion-content-bordered-border-style: solid;
+// $accordion-content-bordered-border-width: $accordion-navigation-active-bg-color;
+// $accordion-content-inner-table-border-top-width: 0;
+
+/* F02. Alert Boxes
+========================================================================== */
+
+// Warning.
+// this component is using some global variables. Keep in mind that if you
+// change it you should probably also change the value in settings/_global.scss
+
+// $alert-lighten: $global-alert-lighten;
+// $alert-left-border-width: 5px;
+// $alert-text-color-darken:  50%;
+
+/* F03. Buttons
+========================================================================== */
+
+// $button-success-color: $white;
+// $button-secondary-dimmed-background: lighten($secondary-color, 30%);
+// $button-secondary-dimmed-background-hover: $secondary-color;
+
+/* F04. Data Tables
+========================================================================== */
+
+/* F05. Date Picker
+========================================================================== */
+
+// $datepicker-color-bg: $white; // #fff
+// $datepicker-color-smoke: $smoke; // #eee
+// $datepicker-color-iron: $iron; // #ccc
+// $datepicker-color-aluminum: $aluminum; // #999
+// $datepicker-color-oil: $oil; // #333
+// $datepicker-color-primary: $primary-color;
+// $datepicker-black-20: rgba(0, 0, 0, .2);
+
+/* F06. Dropdown
+========================================================================== */
+
+// $dropdown-smaller-max-width: rem-calc(250);
+
+// $dropdown-flexible-width: 95% !important;
+// $dropdown-flexible-left: 2.5% !important;
+// $dropdown-flexible-medium-only-right: ($column-gutter/2) !important;
+// $dropdown-flexible-medium-only-left: auto !important;
+// $dropdown-flexible-medium-only-tiny-max-width: rem-calc(200) !important;
+// $dropdown-flexible-medium-only-small-max-width: rem-calc(300) !important;
+// $dropdown-flexible-medium-only-medium-max-width: rem-calc(500) !important;
+// $dropdown-flexible-large-up-width: auto !important;
+// $dropdown-flexible-large-up-tiny-max-width: rem-calc(200) !important;
+// $dropdown-flexible-large-up-small-max-width: rem-calc(300) !important;
+// $dropdown-flexible-large-up-medium-max-width: rem-calc(500) !important;
+
+/* F07. Forms
+========================================================================== */
+
+// $pair-wrapper-label-padding-left: rem-calc(20);
+// $pair-wrapper-paragraph-padding-right: 0;
+// $pair-wrapper-paragraph-inner-color: $form-label-font-color;
+// $pair-wrapper-paragraph-inner-font-weight: normal;
+// $pair-wrapper-required-symbol: '*';
+
+// $form-label-paragraph-inner-display: inline-block;
+// $form-label-paragraph-inner-margin-bottom: 0;
+// $form-label-paragraph-inner-padding-right: rem-calc(5);
+// $form-label-paragraph-inner-font-size: rem-calc(14);
+
+/* F08. Grid
+========================================================================== */
+
+/* F09. Icon Bar
+========================================================================== */
+
+// $icon-bar-border-width: 0;
+// $icon-bar-border-style: solid;
+// $icon-bar-border-color: $primary-color;
+//
+// $icon-bar-background: transparent;
+// $icon-bar-hover-background: transparent;
+//
+// $icon-bar-wrapper-column-width: 5;
+
+// $icon-bar-menu-link-padding-left: rem-calc(42);
+
+/* F10. Inline Lists
+========================================================================== */
+
+// $inline-list-font-color: $primary-color;
+// $inline-list-parent-font-size: rem-calc(12); // first level if there is a dropdown inside inline list
+// $inline-list-children-font-size: rem-calc(14); // general font size for link items inside inline lists
+
+/* F11. Label
+========================================================================== */
+
+// $label-paragraph-display: inline;
+// $label-paragraph-font-size: rem-calc(11);
+
+// $label-info-link-color: $white;
+// $label-info-link-font-size: rem-calc(11);
+// $label-info-link-text-decoration: underline;
+// $label-info-link-hover-color: $white;
+// $label-info-link-hover-text-decoration: none;
+
+// $label-warning-color: darken($alert-warning-border-color, $alert-text-color-darken);
+// $label-secondary-color: darken($alert-secondary-border-color, $alert-text-color-darken);
+// $label-success-color: darken($alert-success-border-color, $alert-text-color-darken);
+
+/* F12. Offcanvas
+========================================================================== */
+
+// $off-canvas-first-level-bg: lighten($jet, 15%);
+
+// $off-canvas-hamburger-position: relative;
+// $off-canvas-hamburger-zindex: 1;
+// $off-canvas-hamburger-line-height: rem-calc(40);
+// $off-canvas-hamburger-color: $primary-color;
+// $off-canvas-hamburger-hover-color: $secondary-color;
+
+// $off-canvas-dropdown-border-color: scale-color($off-canvas-bg, $lightness: 12%);
+// $off-canvas-dropdown-link-padding: rem-calc(0 5);
+// $off-canvas-dropdown-link-color: $oil;
+// $off-canvas-dropdown-link-bg-color: $white;
+
+// $off-canvas-accordion-nav-padding: $off-canvas-link-padding;
+// $off-canvas-accordion-nav-color: $off-canvas-link-color;
+// $off-canvas-accordion-nav-bg-color: $off-canvas-first-level-bg;
+// $off-canvas-accordion-nav-icon-color: $off-canvas-link-color;
+
+// $off-canvas-user-area-color: $white;
+// $off-canvas-user-area-border-bottom: $off-canvas-link-border-bottom;
+// $off-canvas-user-area-bg-color: lighten($off-canvas-first-level-bg, 25%);
+// $off-canvas-user-area-link-padding: 0;
+// $off-canvas-user-area-link-padding: 0;
+// $off-canvas-user-area-link-bg: none;
+// $off-canvas-user-area-link-border-bottom: none;
+
+// $off-canvas-link-icon-symbol: '\f0da';
+// $off-canvas-link-icon-float: right;
+// $off-canvas-link-icon-font-family: 'FontAwesome';
+// $off-canvas-link-bg-color: $off-canvas-first-level-bg;
+// $off-canvas-label-link-display: inline;
+// $off-canvas-label-link-padding: 0;
+// $off-canvas-label-link-bg-color: transparent;
+// $off-canvas-label-link-border: transparent;
+// $off-canvas-label-cursor: default;
+
+// $off-canvas-header-display: block;
+// $off-canvas-header-margin: $off-canvas-label-margin;
+// $off-canvas-header-padding: $off-canvas-link-padding;
+// $off-canvas-header-color: rgba($white, .7);
+// $off-canvas-header-font-weight: $off-canvas-label-font-weight;
+// $off-canvas-header-font-size: rem-calc(14);
+// $off-canvas-header-bg-color: $oil;
+// $off-canvas-header-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: 12%);
+// $off-canvas-header-border-top: none;
+
+// $off-canvas-back-padding: rem-calc(8 16);
+// $off-canvas-back-icon-symbol: '\f0d9';
+// $off-canvas-back-float: left;
+
+/* F13. Panels
+========================================================================== */
+
+// $panel-small-padding: ($panel-padding / 2);
+
+/* F14. Reveal
+========================================================================== */
+
+// $reveal-error-color: $alert-color;
+// $reveal-error-close-color: $white;
+
+// $reveal-success-color: $success-color;
+// $reveal-success-close-color: $white;
+
+// $reveal-info-color: $info-color;
+// $reveal-info-close-color: $white;
+
+// $reveal-with-text-position: fixed;
+// $reveal-with-text-top: 5% !important;
+// $reveal-with-text-left: 50%;
+// $reveal-with-text-max-height: 0;
+// $reveal-with-text-min-height: 90%;
+// $reveal-with-text-width: 90%;
+// $reveal-with-text-overflow-y: auto;
+// $reveal-with-text-transform: translateX(-50%);
+
+// $reveal-no-full-screen-left: 50%;
+// $reveal-no-full-screen-padding: rem-calc(16);
+// $reveal-no-full-screen-max-height: 0;
+// $reveal-no-full-screen-min-height: 80vh;
+// $reveal-no-full-screen-height: auto;
+// $reveal-no-full-screen-width: 90%;
+// $reveal-no-full-screen-transform: translateX(-50%);
+
+/* F15. Side Nav
+========================================================================== */
+
+// $side-nav-border-width: rem-calc(1);
+// $side-nav-border-color: $iron;
+// $side-nav-border-style: solid;
+//
+// $side-nav-element-font-color: $primary-color;
+// $side-nav-element-background: $white;
+//
+// $side-nav-margin-bottom: rem-calc(16);
+//
+// $side-nav-active-element-background: $flat-peter-river;
+// $side-nav-active-element-color: $white;
+
+/* F16. Tabs
+========================================================================== */
+
+// $tabs-top-active-color: $primary-color;
+// $tabs-top-border-width: rem-calc(3);
+//
+// $tabs-border-width: rem-calc(1);
+// $tabs-border-style: solid;
+// $tabs-border-color: $flat-clouds;
+// $tabs-border-bottom-color: $white;
+
+/* F17. Progress bars
+========================================================================== */
+
+// $progress-bar-rating-color: orange;
+
+/* ============================================================================
+   Third Party Extends
+   Extending Other Vendors
+============================================================================ */
+
+/* V01. Slick Slider
+========================================================================== */
+
+// Default settings override
+$slick-loader-path: "/bundles/silversolutionseshop/img/";
+$slick-font-path: "/bundles/silversolutionseshop/vendor/slick.js/slick/fonts/";
+
+// Extended settings
+// $slick-control-element-next: "\f105";
+// $slick-control-element-prev: "\f104";
+// $slick-control-element-color: $secondary-color;
+// $slick-icon-font-size: rem-calc(50);
+// $slick-icon-font-family: FontAwesome;
+// $slick-icon-z-index: 98;
+// $slick-sliders-icons-right: rem-calc(10);
+// $slick-sliders-icons-left: rem-calc(10);
+// $slick-sliders-icons-height: rem-calc(60);
+// $slick-sliders-icons-width: rem-calc(60);
+// $slick-sliders-icons-margin-top: rem-calc(-30);
+// $slick-slider-tabs-icon-next-right: rem-calc(-30);
+// $slick-slider-tabs-icon-next-left: rem-calc(-30);
+
+/* V02. Font Awesome
+========================================================================== */
+
+$fa-font-path: "/bundles/silversolutionseshop/vendor/font-awesome/fonts";
+
+/* V02. Toastr
+========================================================================== */
+
+// $toastr-base-border-radius: $alert-radius;
+// $toastr-base-border-left-width: $alert-left-border-width;
+// $toastr-base-border-left-style: solid;
+
+// $toastr-box-shadow-bg: $base;
+
+// $toastr-icon-darken: 10%;
+
+// $toastr-container-xxlarge-left: 50%;
+// $toastr-container-xxlarge-margin-left: rem-calc(275);
+
+// $toastr-container-inner-large-width: rem-calc(300);
+// $toastr-container-inner-margin: rem-calc(0 0 10);
+// $toastr-container-inner-padding: rem-calc(15 25 15 50);
+// $toastr-container-inner-font-size: rem-calc(14);
+// $toastr-container-inner-liner-height: normal;
+// $toastr-container-inner-border-radius: 0;
+// $toastr-container-inner-box-shadow: 0 0 30px $toastr-box-shadow-bg;
+// $toastr-container-inner-box-shadow-hover: 0 0 30px darken($toastr-box-shadow-bg, 5%);
+// $toastr-container-inner-opacity: 1;
+
+// $toastr-container-icon-position: absolute;
+// $toastr-container-icon-left: rem-calc(15);
+// $toastr-container-icon-top: 50%;
+// $toastr-container-icon-font-family: FontAwesome;
+// $toastr-container-icon-font-size: rem-calc(24);
+// $toastr-container-icon-transform: translateY(-50%);
+
+// $toastr-success-color: darken($success-color, $alert-text-color-darken);
+// $toastr-success-bg-color: $alert-success-bg-color;
+// $toastr-success-bg-image: none !important;
+// $toastr-success-icon-symbol: '\f058';
+// $toastr-success-icon-color: darken($success-color, $toastr-icon-darken);
+
+// $toastr-alert-color: darken($alert-color, $alert-text-color-darken);
+// $toastr-alert-bg-color: $alert-alert-bg-color;
+// $toastr-alert-bg-image: none !important;
+// $toastr-alert-icon-symbol: '\f06a';
+// $toastr-alert-icon-color: darken($alert-color, $toastr-icon-darken);
+
+// $toastr-info-color: darken($info-color, $alert-text-color-darken);
+// $toastr-info-bg-color: $alert-info-bg-color;
+// $toastr-info-bg-image: none !important;
+// $toastr-info-icon-symbol: '\f05a';
+// $toastr-info-icon-color: darken($info-color, $toastr-icon-darken);
+
+// $toastr-warning-color: darken($warning-color, $alert-text-color-darken);
+// $toastr-warning-bg-color: $alert-warning-bg-color;
+// $toastr-warning-bg-image: none !important;
+// $toastr-warning-icon-symbol: '\f071';
+// $toastr-warning-icon-color: darken($warning-color, $toastr-icon-darken);
+
+// $toastr-close-top: rem-calc(16) !important;
+// $toastr-close-right: rem-calc(6) !important;
+// $toastr-close-font-weight: normal;
+// $toastr-close-text-shadow: none;
+// $toastr-close-opacity: 0.3;
+// $toastr-close-hover-bg: none;
+// $toastr-close-hover-opacity: 0.5;

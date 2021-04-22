@@ -1,0 +1,13 @@
+.ez-table-header--price-management {
+    .ez-table-header {
+        &__tools {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__price-select {
+            margin-right: calculateRem(8px);
+        }
+    }
+}

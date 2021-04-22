@@ -1,0 +1,121 @@
+// todo: refactor
+
+.c-checkout__content {
+  border: 1px solid $white-smoke;
+  border-top: none;
+
+  .in-progress & {
+    border-color: $flat-carrot;
+  }
+
+  .done & {
+    border-color: $flat-nephritis;
+  }
+
+  .not-done & {
+    border-color: $flat-clouds;
+  }
+
+}
+
+/* Checkout steps */
+.checkout-step {
+  margin-top: ($column-gutter/2);
+  padding: em-calc(5px 15px);
+  background-color: $white-smoke;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  position: relative;
+
+  .js-checkout-box:first-child & {
+    margin-top: 0;
+  }
+
+  h4 {
+    margin: rem-calc(4 0 2 45);
+    line-height: normal;
+
+    .button {
+      border-radius: 3px;
+    }
+  }
+
+  .done & {
+    background-color: $flat-emerald;
+    border-bottom-color: $flat-nephritis;
+
+    h4 {
+      color: $white;
+    }
+  }
+
+  .in-progress & {
+    background-color: $flat-orange;
+    border-bottom-color: $flat-carrot;
+
+    h4 {
+      color: $white;
+    }
+
+  }
+
+  .not-done & {
+    margin-bottom: 0;
+    border-bottom-color: $flat-clouds;
+  }
+
+}
+/* Sidebar */
+.checkout-sidebar {
+  padding: 0 ($column-gutter/2);
+  border-left: 1px solid #ddd;
+  z-index: 98;
+  font-size: rem-calc(14);
+
+  ul {
+    font-size: 90%;
+  }
+
+}
+
+
+// trick to solve "duplicated" sticky sidebar content in Chrome
+.sticky-wrapper.is-sticky {
+  background: white;
+}
+
+.delivery-address-list {
+  max-height: rem-calc(300);
+  overflow-y: auto;
+  margin-bottom: rem-calc(15);
+  @media #{$large-up} {
+    max-height: rem-calc(500)
+  }
+}
+
+// Checkout Steps
+.checkout-step-number {
+  float: left;
+  position: absolute;
+  background: $flat-clouds;
+  top: 0;
+  left: 0;
+  height: rem-calc(43);
+  line-height: rem-calc(43);
+  width: rem-calc(50);
+  text-align: center;
+  font-weight: bold;
+  font-size: rem-calc(23);
+}
+
+.done .checkout-step-number {
+  background: $flat-nephritis;
+  color: $white !important;
+
+}
+
+.in-progress .checkout-step-number {
+  background: $flat-carrot;
+  color: $white !important;
+
+}

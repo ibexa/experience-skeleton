@@ -1,0 +1,26 @@
+.ez-block-config--code {
+    #basic.active {
+        height: 100%;
+
+        .ez-block-config {
+            &__fields {
+                display: grid;
+                grid-template-areas: 'name' 'other';
+            }
+
+            &__field {
+                &--name {
+                    grid-area: name;
+                }
+
+                &--other {
+                    grid-area: other;
+
+                    #block_configuration_attributes_content_value {
+                        height: calc(100% - 50px);
+                    }
+                }
+            }
+        }
+    }
+}

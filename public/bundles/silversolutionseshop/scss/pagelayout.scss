@@ -1,0 +1,12 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+@import './public/bundles/silversolutionseshop/vendor/foundation/scss/foundation/components/_global.scss';
+
+@media #{$large-up} {
+    .f-topbar-fixed {
+        .top-bar {
+            height: calculateRem(64px);
+            line-height: calculateRem(64px);
+        }
+    }
+}

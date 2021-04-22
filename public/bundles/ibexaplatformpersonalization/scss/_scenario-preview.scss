@@ -1,0 +1,169 @@
+.ez-scenario-preview {
+    &__container  {
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+
+        &--recomendation-response {
+            margin-top: calculateRem(24px);
+        }
+
+        &--recomendation-call {
+            margin-bottom: calculateRem(50px);
+
+            .ez-content-field {
+                border: none;
+            }
+
+            .ez-content-field-name {
+                color: $ibexa-color-font-pale;
+            }
+
+            .ez-content-field-value {
+                display: flex;
+                align-items: middle;
+            }
+        }
+    }
+
+    &__row {
+        padding: calculateRem(16px) 0;
+    }
+
+    &__col {
+        &--light {
+            color: $ibexa-color-font-pale;
+        }
+    }
+
+
+    &__gallery {
+        display: flex;
+        height: calculateRem(250px);
+        overflow: hidden;
+    }
+
+    &__gallery-control-button {
+        width: 2%;
+        height: calculateRem(250px);
+    }
+
+    &__gallery-content {
+        width: 96%;
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__gallery-message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: $ibexa-color-primary;
+    }
+
+    &__gallery-item-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: calculateRem(276px);
+        height: calculateRem(250px);
+        margin: 0;
+        transition: all 0.8s $ibexa-admin-transition;
+    }
+
+    &__gallery-item {
+        width: calculateRem(250px);
+        height: calculateRem(250px);
+        border-radius: $ibexa-border-radius;
+        border: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__gallery-item-header {
+        height: calculateRem(110px);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__gallery-item-body {
+        padding: calculateRem(12px);
+        font-size: calculateRem(14px);
+    }
+
+    &__gallery-item-title {
+        height: calculateRem(50px);
+    }
+
+    &__json-response {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__json-response-container {
+        display: flex;
+        flex-direction: column;
+        max-height: calculateRem(400px);
+        overflow: hidden;
+        padding-top: calculateRem(5px);
+        border: calculateRem(1px) solid $ibexa-color-base;
+        border-radius: $ibexa-border-radius;
+        transition: all 0.3s $ibexa-admin-transition;
+
+        &--hide {
+            max-height: 0;
+            border: none;
+        }
+    }
+
+    &__json-response-content {
+        max-height: calculateRem(300px);
+        overflow: auto;
+        padding-left: calculateRem(20px);
+    }
+
+    &__json-response-button {
+        width: calculateRem(200px);
+        align-self: flex-end;
+        text-align: right;
+        margin-bottom: calculateRem(5px);
+    }
+    
+    &__context-items-add-container,
+    &__attributes-add-container,
+    &__custom-parameters-add-container {
+        display: flex;
+        width: calculateRem(480px);
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__input {
+        margin-right: calculateRem(4px);
+    }
+
+    &__send-request {
+        margin: calculateRem(24px) 0;
+    }
+
+    .ez-personalization-base-item__form {
+        .ez-field-edit--ezinteger .ez-data-source__input {
+            width: calculateRem(450px);
+        }
+        
+        .ez-scenario-preview { 
+            &__field-name {
+                margin: calculateRem(16px) 0 calculateRem(4px);
+                color: $ibexa-color-font-pale;
+
+                .col-form-label,
+                .ez-field-edit__label {
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 300;
+                    color: $ibexa-color-font-pale;
+                }
+            }
+        }
+    }
+}

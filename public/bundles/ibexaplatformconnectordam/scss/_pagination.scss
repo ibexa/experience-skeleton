@@ -1,0 +1,46 @@
+.ez-modal--search-dam {
+    .ez-pagination {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        list-style: none;
+        border-radius: calcuateRem(4px);
+
+        &--hidden {
+            display: none;
+        }
+
+        &__button {
+            .page-link {
+                border-radius: calculateRem(5px);
+                color: $ez-white;
+                background-color: $ez-color-secondary;
+
+                &:disabled {
+                    border-color: $ez-color-secondary;
+                    opacity: 0.3;
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
+            }
+        }
+
+        &__element {
+            &--active {
+                .page-link {
+                    font-weight: bold;
+                    color: $ez-black;
+                    background-color: $ez-white;
+                    border-color: transparent;
+                }
+            }
+
+            &--disabled {
+                .page-link {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

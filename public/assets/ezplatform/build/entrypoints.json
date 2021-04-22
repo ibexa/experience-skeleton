@@ -1,0 +1,771 @@
+{
+  "entrypoints": {
+    "ezplatform-personalization-scenarios-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-scenarios-list-js.js"
+      ]
+    },
+    "ezplatform-richtext-onlineeditor-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-richtext-onlineeditor-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-bookmark-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-bookmark-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-draft-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-draft-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-type-create-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-type-create-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-type-edit-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-type-edit-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-type-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-type-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-type-view-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-type-view-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-type-group-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-type-group-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-language-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-language-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-object-state-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-object-state-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-object-state-group-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-object-state-group-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-policy-create-with-limitation-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-policy-create-with-limitation-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-policy-edit-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-policy-edit-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-role-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-role-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-role-view-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-role-view-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-role-assignment-create-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-role-assignment-create-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-search-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-search-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-section-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-section-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-section-view-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-section-view-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-trash-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-trash-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-preview-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-preview-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-location-view-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-location-view-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-modal-location-trash-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-modal-location-trash-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-modal-location-trash-container-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-modal-location-trash-container-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-modal-location-trash-single-asset-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-modal-location-trash-single-asset-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-dashboard-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-dashboard-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-link-manager-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-link-manager-list-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-link-manager-view-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-link-manager-view-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-change-user-password-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-change-user-password-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-edit-parts-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-edit-parts-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-settings-datetime-format-update-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-settings-datetime-format-update-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-udw-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-udw-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-udw-tabs-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-udw-tabs-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-udw-extras-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-udw-extras-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-mfu-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-mfu-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-subitems-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-subitems-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-content-tree-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-tree-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-url-management-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-url-management-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-url-management-update-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-url-management-update-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-login-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-login-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-layout-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-layout-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-admin-ui-layout-css.css"
+      ]
+    },
+    "ezplatform-admin-ui-content-edit-parts-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-edit-parts-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-admin-ui-content-edit-parts-css.css"
+      ]
+    },
+    "ezplatform-admin-ui-location-view-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-location-view-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-admin-ui-location-view-css.css"
+      ]
+    },
+    "ezplatform-admin-ui-security-base-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-security-base-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-admin-ui-security-base-css.css"
+      ]
+    },
+    "date-based-publisher-common-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/date-based-publisher-common-js.js"
+      ]
+    },
+    "date-based-publisher-common-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/date-based-publisher-common-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/date-based-publisher-common-css.css"
+      ]
+    },
+    "ezplatform-workflow-common-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-workflow-common-js.js"
+      ]
+    },
+    "ezplatform-workflow-view-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-workflow-view-js.js"
+      ]
+    },
+    "ezplatform-workflow-common-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-workflow-common-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-workflow-common-css.css"
+      ]
+    },
+    "ezplatform-calendar-common-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-calendar-common-js.js"
+      ]
+    },
+    "ezplatform-calendar-module-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-calendar-module-js.js"
+      ]
+    },
+    "ezplatform-calendar-module-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-calendar-module-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-calendar-module-css.css"
+      ]
+    },
+    "ezplatform-version-comparison-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-version-comparison-js.js"
+      ]
+    },
+    "ezplatform-version-comparison-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-version-comparison-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-version-comparison-css.css"
+      ]
+    },
+    "ezplatform-personalization-dashboard-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-dashboard-js.js"
+      ]
+    },
+    "ezplatform-admin-ui-layout-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-admin-ui-layout-js.js"
+      ]
+    },
+    "ezplatform-personalization-validator-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-validator-js.js"
+      ]
+    },
+    "ezplatform-personalization-scenarios-preview-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-scenarios-preview-js.js"
+      ]
+    },
+    "ezplatform-personalization-welcome-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-welcome-js.js"
+      ]
+    },
+    "ezplatform-personalization-model-details-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-model-details-js.js"
+      ]
+    },
+    "ezplatform-personalization-model-edit-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-model-edit-js.js"
+      ]
+    },
+    "ezplatform-personalization-scenarios-edit-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-scenarios-edit-js.js"
+      ]
+    },
+    "ezplatform-personalization-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-personalization-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-personalization-css.css"
+      ]
+    },
+    "ezcommerce-shop-pagelayout-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-pagelayout-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezcommerce-shop-pagelayout-css.css"
+      ]
+    },
+    "ezcommerce-admin-ui-configuration-settings-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-admin-ui-configuration-settings-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezcommerce-admin-ui-configuration-settings-css.css"
+      ]
+    },
+    "ezcommerce-admin-ui-configuration-settings-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-admin-ui-configuration-settings-js.js"
+      ]
+    },
+    "ezcommerce-checkout-layout-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-checkout-layout-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezcommerce-checkout-layout-css.css"
+      ]
+    },
+    "ezcommerce-shop-core-basket-widget-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-core-basket-widget-js.js"
+      ]
+    },
+    "ezcommerce-shop-design-basket-widget-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-design-basket-widget-js.js"
+      ]
+    },
+    "ezcommerce-checkout-core-basket-page-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-checkout-core-basket-page-js.js"
+      ]
+    },
+    "ezcommerce-checkout-design-basket-page-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-checkout-design-basket-page-js.js"
+      ]
+    },
+    "ezcommerce-checkout-core-checkout-page-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-checkout-core-checkout-page-js.js"
+      ]
+    },
+    "ezcommerce-checkout-design-checkout-page-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-checkout-design-checkout-page-js.js"
+      ]
+    },
+    "ezcommerce-business-design-confirmation-page-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-business-design-confirmation-page-js.js"
+      ]
+    },
+    "ezcommerce-shop-core-product-widgets-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-core-product-widgets-js.js"
+      ]
+    },
+    "ezcommerce-shop-design-product-widgets-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-design-product-widgets-js.js"
+      ]
+    },
+    "ezcommerce-shop-design-product-variants-b2c-widgets-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-design-product-variants-b2c-widgets-js.js"
+      ]
+    },
+    "ezcommerce-shop-design-product-variants-b2b-widgets-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezcommerce-shop-design-product-variants-b2b-widgets-js.js"
+      ]
+    },
+    "ezplatform-page-builder-block-config-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-block-config-js.js"
+      ]
+    },
+    "ezplatform-page-builder-create-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-create-js.js"
+      ]
+    },
+    "ezplatform-page-builder-edit-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-edit-js.js"
+      ]
+    },
+    "ezplatform-page-builder-parts-javascript-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-parts-javascript-js.js"
+      ]
+    },
+    "ezplatform-page-builder-preview-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-js.js"
+      ]
+    },
+    "ezplatform-page-builder-preview-in-siteaccess-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-in-siteaccess-js.js"
+      ]
+    },
+    "ezplatform-page-builder-preview-non-location-based-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-non-location-based-js.js"
+      ]
+    },
+    "ezplatform-page-builder-translate-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-translate-js.js"
+      ]
+    },
+    "ezplatform-page-builder-config-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-config-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-config-css.css"
+      ]
+    },
+    "ezplatform-page-builder-config-code-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-config-code-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-config-code-css.css"
+      ]
+    },
+    "ezplatform-page-builder-translate-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-translate-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-translate-css.css"
+      ]
+    },
+    "ezplatform-page-builder-iframe-editor-ui-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-iframe-editor-ui-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-iframe-editor-ui-css.css"
+      ]
+    },
+    "ezplatform-page-builder-create-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-create-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-create-css.css"
+      ]
+    },
+    "ezplatform-page-builder-edit-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-edit-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-edit-css.css"
+      ]
+    },
+    "ezplatform-page-builder-preview-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-css.css"
+      ]
+    },
+    "ezplatform-page-builder-preview-non-location-based-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-non-location-based-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-preview-non-location-based-css.css"
+      ]
+    },
+    "ezplatform-page-builder-layout-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-builder-layout-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-builder-layout-css.css"
+      ]
+    },
+    "ezplatform-page-select-items-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-select-items-js.js"
+      ]
+    },
+    "ezplatform-page-fieldtype-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-fieldtype-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-fieldtype-css.css"
+      ]
+    },
+    "ezplatform-page-fieldtype-common-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-page-fieldtype-common-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-page-fieldtype-common-css.css"
+      ]
+    },
+    "ezplatform-form-builder-common-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-common-js.js"
+      ]
+    },
+    "ezplatform-form-builder-fields-config-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-fields-config-js.js"
+      ]
+    },
+    "ezplatform-form-builder-submissions-tab-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-submissions-tab-js.js"
+      ]
+    },
+    "ezplatform-form-builder-fields-config-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-fields-config-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-form-builder-fields-config-css.css"
+      ]
+    },
+    "ezplatform-form-builder-submissions-tab-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-submissions-tab-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-form-builder-submissions-tab-css.css"
+      ]
+    },
+    "ezplatform-form-builder-form-preview-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-form-preview-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-form-builder-form-preview-css.css"
+      ]
+    },
+    "ezplatform-form-builder-common-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-common-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-form-builder-common-css.css"
+      ]
+    },
+    "ezplatform-form-builder-ajax-captcha-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-form-builder-ajax-captcha-js.js"
+      ]
+    },
+    "ezplatform-site-factory-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-site-factory-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-site-factory-css.css"
+      ]
+    },
+    "ezplatform-site-factory-list-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-site-factory-list-js.js"
+      ]
+    },
+    "ezplatform-site-factory-form-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-site-factory-form-js.js"
+      ]
+    },
+    "ezplatform-segmentation-common-js": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-segmentation-common-js.js"
+      ]
+    },
+    "ezplatform-segmentation-common-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js",
+        "/assets/ezplatform/build/ezplatform-segmentation-common-css.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-segmentation-common-css.css"
+      ]
+    },
+    "ezplatform-richtext-onlineeditor-css": {
+      "js": [
+        "/assets/ezplatform/build/runtime.js"
+      ],
+      "css": [
+        "/assets/ezplatform/build/ezplatform-richtext-onlineeditor-css.css"
+      ]
+    }
+  }
+}

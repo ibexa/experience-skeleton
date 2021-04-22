@@ -1,0 +1,63 @@
+.ez-personalization-list{
+    .ez-table-header {
+        &__headline {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__hedaline-action {
+            font-weight: normal;
+        }
+    }
+
+    .ez-table {
+        &__header-cell {
+            vertical-align: middle;
+        }
+
+        &__header-cell-content,
+        &__cell-content {
+            display: flex;
+        }
+
+        &__cell {
+            border-bottom: calculateRem(1px) solid $ibexa-color-base-pale;
+        }
+
+        &__cell-description {
+            margin-top: calculateRem(20px);  
+        }
+
+        &__status {
+            display: inline-block;
+
+            &--as-dot {
+                &:before {
+                    content: " ";
+                    display: inline-block;
+                    width: calculateRem(12px);
+                    height: calculateRem(12px);
+                    margin-right: calculateRem(5px);
+                    border-radius: 50%;
+                }
+            }
+
+            &--danger {
+                color: $ibexa-color-danger;
+
+                &:before {
+                    background: $ibexa-color-danger;
+                }
+            }
+
+            &--success {
+                color: $ibexa-color-positive;
+
+                &:before {
+                    background: $ibexa-color-positive;
+                }
+            }
+        }
+    }
+}

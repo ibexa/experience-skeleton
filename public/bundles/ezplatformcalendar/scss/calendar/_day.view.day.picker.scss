@@ -1,0 +1,60 @@
+.c-day-view-day-picker {
+    width: calculateRem(280px);
+    height: calculateRem(196px);
+    position: sticky;
+    top: calculateRem(10px);
+    user-select: none;
+
+    &__week-days {
+        display: flex;
+        margin-bottom: calculateRem(8px);
+        font-size: calculateRem(13px);
+    }
+
+    &__day-name {
+        justify-content: space-between;
+        width: calculateRem(40px);
+        color: $ibexa-color-base-dark;
+    }
+
+    &__days {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: calculateRem(13px);
+    }
+
+    &__day {
+        width: calculateRem(30px);
+        height: calculateRem(32px);
+        line-height: calculateRem(20px);
+        text-align: center;
+        vertical-align: middle;
+        border: calculateRem(5px) solid $ibexa-white;
+        border-radius: calculateRem(8px);
+
+        &--disabled {
+            color: $ibexa-color-base-light;
+        }
+
+        &--selected {
+            font-weight: bold;
+            color: $ibexa-color-primary;
+        }
+
+        &--past {
+            @include past-tile();
+            
+            line-height: calculateRem(32px);
+            border-radius: 0;
+            border-width: 0;
+        }
+
+        &--selectable {
+            cursor: pointer;
+
+            &:hover {
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+}

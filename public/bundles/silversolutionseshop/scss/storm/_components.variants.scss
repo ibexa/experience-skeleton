@@ -1,0 +1,138 @@
+// todo: refactor
+.variant-group .variant-list {
+  list-style: none;
+  padding-left: 0;
+}
+.variant-group .variant-list li {
+  margin-bottom: 3px;
+  display: inline-block;
+
+}
+.variant-group .variant-list a {
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.variant-group .variant-list img {
+  vertical-align: middle;
+}
+.variant-group .variant-list a:hover {
+  border-color: #000;
+  text-decoration: none;
+}
+
+.variant-group .variant-list .active a {
+  border-color: #000;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #000;
+  -moz-box-shadow: inset 0px 0px 0px 1px #000;
+  box-shadow: inset 0px 0px 0px 1px #000;
+}
+
+.variant-group .variant-list .unavailable a {
+  opacity: 0.35;
+  cursor: default;
+}
+.variant-group .variant-list .unavailable a:hover {
+  border-color: #ccc;
+}
+
+.variant-group .color.blue a   { background-color:#137bea !important; }
+.variant-group .color.red a    { background-color:#dA5433 !important; }
+.variant-group .color.grey a   { background-color:#888 !important; }
+.variant-group .color.green a  { background-color:#4b9e1d !important; }
+
+.variant-group
+.variant-group .variant-list .round {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* B2B variants table */
+
+.tab_panes.variants {
+  padding: 10px;
+  text-align: center;
+}
+
+.tab_panes.variants table {
+  margin-bottom: 10px;
+}
+.tab_panes.variants th {
+  color: #454545;
+  text-align: center;
+}
+.tab_panes.variants td.stock span {
+  margin-left: -24px !important;
+}
+.tab_panes.variants button {
+  margin: 0 auto;
+}
+
+/* By default dots are grey which indicates unknown state */
+
+.stock span {
+  display: inline-block;
+  background-color: $info-color;
+  width: rem-calc(25);
+  height: rem-calc(25);
+  position: relative;
+  //text-indent: -9999em;
+  border-radius: 50%;
+  text-align: center;
+  &:before {
+    font-size: rem-calc(16);
+    font-family: FontAwesome;
+    color: $white;
+    position: relative;
+    content: "\f128";
+    width: rem-calc(25);
+    height: rem-calc(25);
+    vertical-align: middle;
+    line-height: rem-calc(25);
+  }
+}
+
+/* For available last dot is green */
+.stock .available {
+  background-color: $success-color;
+    &:before {
+      content: "\f00c";
+  }
+}
+/* For low middle dot is yellow */
+.stock .low {
+  background: $warning-color;
+  &:before {
+    content: "\f12a";
+  }
+}
+/* For not available first dot is red */
+.stock .unavailable {
+  background-color: $alert-color;
+  &:before {
+    content: "\f068";
+  }
+}
+
+/* Stock legend */
+
+.stock.legend {
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+  line-height: rem-calc(20);
+}
+.stock.legend span {
+  //position: relative;
+  //top: 2px;
+  margin-bottom: rem-calc(5)
+}
+
+.legend-text {
+  margin-left: rem-calc(10);
+  display: inline;
+}

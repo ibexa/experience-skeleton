@@ -1,0 +1,32 @@
+.c-top-bar {
+    margin-bottom: calculateRem(32px);
+    
+    &__menu {
+        display: flex;
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__date-paginator-wrapper,
+    &__view-switcher-wrapper,
+    &__filters-toggler-wrapper {
+        width: calc(100% / 3);
+        display: flex;
+    }
+
+    &__view-switcher-wrapper {
+        justify-content: center;
+    }
+
+    &__filters-toggler-wrapper {
+        justify-content: flex-end;
+    }
+
+    &__filters-toggler-btn {
+        display: flex;
+        justify-content: center;
+        padding: calculateRem(5px);
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+        border: none;
+    }
+}

@@ -1,0 +1,95 @@
+.c-image-editor-focal-point {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__settings {
+        display: flex;
+    }
+
+    &__input-wrapper {
+        margin-right: calculateRem(8px);
+        position: relative;
+    }
+
+    &__input-label {
+        color: $ibexa-color-font-pale;
+        position: absolute;
+        top: 50%;
+        right: calculateRem(4px);
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    &__input {
+        height: calculateRem(30px);
+        padding: calculateRem(4px);
+        border-color: $ibexa-color-base;
+        width: 8ch;
+        -moz-appearance: textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            -moz-appearance: initial;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: inner-spin-button;
+                margin-left: calculateRem(2px);
+            }
+
+            & + .c-image-editor-focal-point__input-label {
+                display: none;
+            }
+        }
+    }
+
+    &__btn-remove {
+        border: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ez-icon {
+            fill: $ibexa-color-danger;
+        }
+
+        &--hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__btn-toggle {
+        border: calculateRem(1px) solid $ibexa-color-base;
+        padding: calculateRem(6px) calculateRem(16px);
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        &--active {
+            border-color: $ibexa-color-primary;
+        }
+
+        &:hover {
+            color: $ibexa-color-primary;
+
+            .ez-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        .ez-icon {
+            margin-right: calculateRem(8px);
+        }
+    }
+}

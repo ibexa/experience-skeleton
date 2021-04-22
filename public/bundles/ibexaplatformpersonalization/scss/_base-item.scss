@@ -1,0 +1,124 @@
+.ez-personalization-base-item {
+    &__input-field {
+        &--short {
+            max-width: calculateRem(450px);
+        }
+    }
+    
+    .ez-header {
+        display: flex;
+        padding-top: calculateRem(24px);
+        padding-bottom: calculateRem(24px);
+        background: $ibexa-white;
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+
+        &__exit-btn {
+            position: fixed;
+            top: calculateRem(5px);
+            left: calculateRem(5px);
+            display: flex;
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+            width: calculateRem(30px);
+            height: calculateRem(30px);
+        }
+    }
+
+    .ez-fieldgroup {
+        &__name {
+            border-bottom: none;
+            padding: calculateRem(32px) 0 0;
+        }
+    }
+
+    .ez-main-row {
+        background: $ibexa-white;
+    }
+
+    &__checkbox-input-field-contanier {
+        display: flex;
+    }
+
+    &__input-field {
+        &--short {
+            max-width: calculateRem(450px);
+        }
+
+        &--description {
+            min-height: calculateRem(200px);
+        }
+
+        &--checkbox-number-input {
+            max-width: calculateRem(80px);
+        }
+
+        &--checkbox-text-input {
+            max-width: calculateRem(120px);
+        }
+
+        &--number-spinner {
+            max-width: calculateRem(100px);
+        }
+    }
+
+    .ez-field-edit__error {
+        margin-top: 0;
+    }
+
+    &--edit {
+        .ez-field-edit {
+            padding: calculateRem(24px) 0;
+            border-bottom: calculateRem(1px) solid $ibexa-color-base;
+
+            &__data {
+                & > .form-check {
+                    margin: calculateRem(4px) 0;
+                }
+            }
+
+            &__data-group-items {
+                &--boost-items {
+                    display: flex;
+                }
+
+                &--inline {
+                    display: flex;
+                    align-items: center;
+
+                    .col-form-label {
+                        font-weight: normal;
+                    }
+
+                    .form-control {
+                        margin-bottom: 0;
+                    }
+
+                    .form-check-label {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .ez-field-edit__label-wrapper {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            .ez-field-edit__label {
+                margin: 0;
+                font-size: calculateRem(16px);
+                font-weight: normal;
+                color: $ibexa-color-font-pale;
+            }
+        }
+    }
+
+    &--details {
+        .ez-content-edit-container {
+            margin-left: calculateRem(90px);
+        }
+    }
+}

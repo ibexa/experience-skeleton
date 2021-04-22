@@ -1,0 +1,62 @@
+.c-update-preview-request-params {
+    margin-right: calculateRem(8px);
+    position: relative;
+
+    &__list-toggler {
+        @include info-bar-button();
+
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+    }
+
+    &__segments-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 150;
+        background: $ibexa-white;
+        min-width: calculateRem(200px);
+        box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba(0, 0, 0, 0.45);
+        overflow: auto;
+        max-height: 50vh;
+
+        &--hidden {
+            display: none;
+        }
+
+        .ez-input--radio {
+            &:active {
+                border-color: $ibexa-color-ground-dark;
+                box-shadow: 0 0 calculateRem(2px) 0 rgba($ibexa-color-ground-dark, 0.75);
+            }
+
+            &:checked {
+                border: calculateRem(1px) solid $ibexa-color-ground-dark;
+                box-shadow: inset 0 0 0 calculateRem(4px) $ibexa-color-ground-dark;
+            }
+        }
+    }
+
+    &__segments-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding: calculateRem(5px) calculateRem(20px);
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $ibexa-color-ground-dark;
+            color: $ibexa-color-font-light;
+        }
+
+        .ez-input--radio {
+            margin-right: calculateRem(6px);
+        }
+    }
+
+    &__segments-group-name {
+        padding: calculateRem(5px) calculateRem(20px) calculateRem(5px) calculateRem(42px);
+        background-color: $ibexa-color-base-pale;
+        color: $ibexa-color-font-pale;
+    }
+}

@@ -1,0 +1,69 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-collection {
+    &__items {
+        list-style: none;
+        padding: calculateRem(8px) calculateRem(8px) calculateRem(1px) calculateRem(8px);
+        margin-top: calculateRem(16px);
+        min-height: calculateRem(36px);
+        background-color: $ibexa-color-base-pale;
+    }
+
+    &__item {
+        display: flex;
+        border-radius: calculateRem(4px);
+        background-color: $ibexa-white;
+        border: calculateRem(2px) solid rgba($ibexa-white, 0.5);
+        padding: calculateRem(8px);
+        align-items: center;
+        margin-bottom: calculateRem(8px);
+        cursor: move;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+        cursor: grab;
+        animations: all 0.3s;
+
+        &:hover {
+            border: calculateRem(2px) solid rgba($ibexa-white, 0.75);
+        }
+
+        &-drag {
+            display: flex;
+            flex-basis: calculateRem(32px);
+            height: calculateRem(32px);
+
+            .ez-icon {
+                align-self: center;
+                width: calculateRem(20px);
+                height: calculateRem(20px);
+            }
+        }
+
+        &-name,
+        &-content-type {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 0 calculateRem(8px);
+            flex-basis: calc(80% - 3.5rem);
+            font-size: calculateRem(14px);
+        }
+
+        &-content-type {
+            flex-basis: 20%;
+        }
+
+        &-trash {
+            height: calculateRem(24px);
+            cursor: pointer;
+        }
+
+        &--placeholder {
+            display: block;
+            height: calculateRem(40px);
+            background-color: rgba($ibexa-white, 0.25);
+            pointer-events: none;
+        }
+    }
+}

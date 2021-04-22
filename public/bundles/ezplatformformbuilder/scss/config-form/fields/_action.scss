@@ -1,0 +1,28 @@
+.fb-config-field.fb-config-field--action {
+    .ez-custom-dropdown__selection-info,
+    .ez-custom-dropdown__items {
+        width: 100%;
+    }
+
+    .fb-config-field {
+        &__action-wrapper {
+            padding: calculateRem(20px);
+            background: $ibexa-color-base-light;
+        }
+    }
+
+    .ez-custom-dropdown {
+        &__selected-item[data-value=''] {
+            background: none;
+            border: none;
+
+            .ez-custom-dropdown__remove-selection {
+                display: none;
+            }
+        }
+
+        &__item[disabled] {
+            display: none;
+        }
+    }
+}

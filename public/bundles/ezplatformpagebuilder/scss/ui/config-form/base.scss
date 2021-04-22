@@ -1,0 +1,74 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-main-container,
+[name='block_configuration'],
+.ez-block-config {
+    height: 100%;
+}
+
+.ez-block-config {
+    display: grid;
+    grid-template-areas: 'tabs' 'content' 'actions';
+    grid-template-rows: calculateRem(54px) auto calculateRem(80px);
+
+    &--default {
+        .ez-main-container {
+            padding: 0;
+        }
+    }
+
+    &__tabs {
+        grid-area: tabs;
+        background: $ibexa-white;
+        border: 0 none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__link-wrapper {
+        position: relative;
+    }
+
+    &__link {
+        padding: 0 calculateRem(16px);
+        border: 0 none;
+
+        &--has-invalid-fields {
+            + .ez-warning-icon {
+                display: flex;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    &__content {
+        grid-area: content;
+        padding: calculateRem(24px) calculateRem(48px);
+        background-color: $ibexa-white;
+        overflow: auto;
+    }
+
+    &__actions {
+        @include modal-footer();
+
+        background: $ibexa-white;
+        grid-area: actions;
+        padding: calculateRem(24px);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    [data-open-udw] {
+        display: block;
+    }
+
+    &__error {
+        @include error-under-label();
+    }
+}

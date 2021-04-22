@@ -1,0 +1,183 @@
+.ezcommerce-product {
+    margin: 20px auto 0;
+    max-width: 1200px;
+    width: 100%;
+
+    &__top {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    &__main {
+        width: 65%;
+    }
+
+    &__sidebar {
+        width: 35%;
+    }
+
+    &__bottom {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid $ibexa-color-base-dark;
+        border-radius: 10px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+
+    &__image-gallery {
+        img {
+            border: 1px solid $ibexa-color-base-dark;
+        }
+    }
+
+    &__data {
+        margin-top: 20px;
+    }
+
+    &__data-row {
+        margin-bottom: 10px;
+    }
+
+    &__header {
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__subheader {
+        margin: 10px 0 5px;
+        font-size: 16px;
+    }
+
+    &__content {
+        padding: 0 20px 10px;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: $ibexa-color-base-dark;
+        }
+    }
+
+    &__content-row {
+        display: flex;
+        padding: 4px 0;
+    }
+
+    &__content-row-column {
+        width: 33%;
+        
+    }
+
+    &__product-availability {
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        .ezcommerce-product {
+            &__label,
+            &__value {
+                cursor: default;
+                display: inline-block;
+            }
+        }
+    }
+
+    &__basket {
+        border: 1px solid $ibexa-color-base-dark;
+        border-radius: 5px;
+        background-color: $ibexa-color-base-light;
+        padding: 20px;
+    }
+
+    &__basket-quantity {
+        label,
+        input {
+            display: inline-block;
+        }
+
+        input {
+            width: 100px;
+        }
+    }
+
+    &__basket-button {
+        background-color: $ibexa-color-base-dark;
+        color: $ibexa-white;
+        width: 100%;
+        padding: 8px 16px;
+        transition: background-color 0.3s ease-in-out;
+
+        &:disabled {
+            &,
+            &:hover {
+                background-color: $ibexa-color-base-dark;
+                color: $ibexa-white;
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        }
+
+        &:hover {
+            background-color: $ibexa-color-base-deep-dark;
+            color: $ibexa-white;
+        }
+    }
+
+    &__variants {
+        padding-bottom: 20px;
+    }
+
+    &__variant-group {
+        padding-bottom: 10px;
+
+        input {
+            margin: 0;
+        }
+    }
+
+    &__variant-options {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__variant-option {
+        background-color: $ibexa-color-base-dark;
+        color: $ibexa-white;
+        padding: 8px 16px;
+        min-width: 50px;
+        margin-right: 8px;
+        transition: background-color 0.3s ease-in-out;
+
+        &:disabled {
+            &,
+            &:hover {
+                background-color: $ibexa-color-base-dark;
+                color: $ibexa-white;
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        }
+
+        &:hover,
+        &.ezcommerce-js--selected {
+            background-color: $ibexa-color-base-deep-dark;
+            color: $ibexa-white;
+        }
+    }
+
+    &__price {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,58 @@
+// Default settings
+$page-footer-margin-top: rem-calc(25) !default;
+$page-footer-padding: rem-calc($rem-base) 0 !default;
+
+$page-footer-background: lighten($flat-silver, 18%) !default;
+
+$page-footer-font-size: rem-calc(14) !default;
+
+$page-footer-column-border-right-width: rem-calc(1) !default;
+$page-footer-column-border-right-style: solid !default;
+$page-footer-column-border-right-color: $gainsboro !default;
+
+.c-page-footer {
+  margin-top: $page-footer-margin-top;
+  padding: $page-footer-padding;
+  background: $page-footer-background;
+  font-size: $page-footer-font-size;
+
+  // these comes directly from CMS so no classes on them
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+  p {
+    font-size: $page-footer-font-size;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+  .c-page-footer__column {
+    border-right: $page-footer-column-border-right-width $page-footer-column-border-right-style $page-footer-column-border-right-color;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  @media print {
+
+    .c-page-footer__column--printable {
+      width: 100%;
+      height: auto !important;
+      border-right: 0;
+
+      br {
+        display: none;
+      }
+
+      p {
+        display: inline;
+        margin-right: rem-calc(5);
+      }
+
+    }
+
+  }

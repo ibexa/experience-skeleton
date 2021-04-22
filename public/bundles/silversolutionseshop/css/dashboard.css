@@ -1,0 +1,471 @@
+@charset "UTF-8";
+/* SETTINGS
+   ========================================================================== */
+/* a. Typography
+  ========================================================================== */
+/* 01. Autocomplete
+  ========================================================================== */
+/* 02. Card
+  ========================================================================== */
+/* 03. Checkout
+  ========================================================================== */
+/* 04. Comparison
+  ========================================================================== */
+/* 05. Cookie Policy
+  ========================================================================== */
+/* 06. Drop Zone
+========================================================================== */
+/* 07. Facets
+========================================================================== */
+/* 08. Flyout
+========================================================================== */
+/* 09. Landingpage
+========================================================================== */
+/* 10. List
+========================================================================== */
+/* 10a. List Blog
+========================================================================== */
+/* 10b. List Events
+========================================================================== */
+/* 11. Megamenu
+========================================================================== */
+/* 12. Nav Meta
+========================================================================== */
+/* 13. Page Footer
+========================================================================== */
+/* 14. Page Header
+========================================================================== */
+/* 15. Pagination
+========================================================================== */
+/* 16. Print
+========================================================================== */
+/* 17. Scroll
+========================================================================== */
+/* 18. Search
+========================================================================== */
+/* 19. Social Share
+========================================================================== */
+/* 20. Spinner
+========================================================================== */
+/* 21. Tag Cloud
+========================================================================== */
+/* 22. Tagged Content
+========================================================================== */
+/* 23. Text Buttons
+========================================================================== */
+/* 24. Toggler
+========================================================================== */
+/* 25. User Menu
+========================================================================== */
+/* 26. Variants
+========================================================================== */
+/* 27. Account
+========================================================================== */
+/* 28. Quickorder
+========================================================================== */
+/* 29. Basket
+========================================================================== */
+/* 30. Stored Basket
+========================================================================== */
+/* ============================================================================
+   Foundation extends
+   Extending standard Foundation components
+============================================================================ */
+/* F01. Accordion
+========================================================================== */
+/* F02. Alert Boxes
+========================================================================== */
+/* F03. Buttons
+========================================================================== */
+/* F04. Data Tables
+========================================================================== */
+/* F05. Date Picker
+========================================================================== */
+/* F06. Dropdown
+========================================================================== */
+/* F07. Forms
+========================================================================== */
+/* F08. Grid
+========================================================================== */
+/* F09. Icon Bar
+========================================================================== */
+/* F10. Inline Lists
+========================================================================== */
+/* F11. Label
+========================================================================== */
+/* F12. Offcanvas
+========================================================================== */
+/* F13. Panels
+========================================================================== */
+/* F14. Reveal
+========================================================================== */
+/* F15. Side Nav
+========================================================================== */
+/* F16. Tabs
+========================================================================== */
+/* F17. Progress bars
+========================================================================== */
+/* ============================================================================
+   Third Party Extends
+   Extending Other Vendors
+============================================================================ */
+/* V01. Slick Slider
+========================================================================== */
+/* V02. Font Awesome
+========================================================================== */
+/* V02. Toastr
+========================================================================== */
+.c-spinner {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.45); }
+  .c-spinner:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.5rem;
+    margin-top: -2.25rem;
+    display: inline-block;
+    font-family: FontAwesome, serif;
+    font-size: 3rem;
+    color: #FFFFFF;
+    content: "";
+    animation: fa-spin 1s infinite steps(8);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.c-spinner--inner {
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  background: none; }
+  .c-spinner--inner:after {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    -ms-transform: none;
+        transform: none; }
+
+.c-spinner--contained {
+  position: absolute;
+  z-index: 98;
+  background: rgba(255, 255, 255, 0.45); }
+  .c-spinner--contained:after {
+    color: #333; }
+
+[v-cloak] > * {
+  display: none; }
+
+.cockpit-shop-data {
+  padding: 0 1.875rem 1.875rem 1.875rem;
+  border: 1px solid #dbdbdb;
+  border-top: 0; }
+
+.cockpit-shop-filter {
+  margin-top: 3.125rem;
+  font-size: 1.25rem;
+  padding: 1.25rem 0.625rem 0.3125rem;
+  background-color: #dbdbdb;
+  border-radius: 5px 5px 0 0;
+  font-weight: 700; }
+
+.cockpit-overview__box {
+  border: 1px solid #dbdbdb;
+  background: #fff; }
+
+.cockpit-overview__box-icon {
+  float: left;
+  width: 30%;
+  background: #e5e3e3;
+  text-align: center;
+  height: 6.25rem; }
+  .cockpit-overview__box-icon .fa {
+    font-size: 2.1875rem;
+    color: #666;
+    line-height: 6.25rem; }
+
+.cockpit-overview__box--small .cockpit-overview__box-icon {
+  height: 5rem; }
+  .cockpit-overview__box--small .cockpit-overview__box-icon .fa {
+    line-height: 5rem; }
+
+.cockpit-overview__box--small .cockpit-overview__box-number {
+  font-size: 1.25rem;
+  line-height: 2.5rem; }
+
+.cockpit-overview__box-content {
+  width: 70%;
+  float: right;
+  padding: 0.625rem;
+  text-align: center; }
+
+.cockpit-overview__box-number {
+  font-size: 3.125rem;
+  line-height: 3.125rem; }
+
+.cockpit-overview__box-desc {
+  font-size: 0.8125rem;
+  line-height: 0.875rem; }
+
+.cockpit-overview__technical {
+  margin-bottom: 1.875rem; }
+
+.erp-status-icon {
+  font-size: 4.6875rem; }
+
+.erp-status-icon--fine {
+  color: #2ecc71; }
+
+.erp-status-icon--not-fine {
+  color: #cf000f; }
+
+.dashboard {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.8em;
+  margin: 10px;
+  /* Charts */
+  /* Datepicker override */ }
+  .dashboard label {
+    font-size: 1em;
+    font-weight: normal; }
+  .dashboard h1, .dashboard h2, .dashboard h3, .dashboard h4, .dashboard h5, .dashboard h6 {
+    margin: 0.5em 0 0.2em 0;
+    padding: 0; }
+  .dashboard ul.tabs li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    margin: 0; }
+  .dashboard ul.tabs li.selected a {
+    background: #444 none;
+    border-radius: 5px;
+    color: #f5f3dd;
+    text-decoration: none; }
+    .dashboard ul.tabs li.selected a:hover {
+      color: #f5f3dd; }
+  .dashboard ul.tabs li a {
+    display: block;
+    font-weight: bold;
+    padding: 2px 15px;
+    margin: 2px 0 5px 1px;
+    min-height: 16px;
+    color: #005b7f;
+    font-size: 1.1em;
+    text-decoration: underline; }
+    .dashboard ul.tabs li a:hover {
+      color: #000; }
+  .dashboard .tab-block {
+    padding-top: 0.8em;
+    border-top: 1px dashed #ddd; }
+  .dashboard ul {
+    margin: 0;
+    padding: 0; }
+  .dashboard .right {
+    float: right; }
+  .dashboard .left {
+    float: left; }
+  .dashboard .line-divider {
+    border-top: 1px solid #ccc;
+    margin-top: 15px; }
+  .dashboard .message,
+  .dashboard .pillow {
+    border-radius: 3px;
+    background-color: #ccc;
+    color: #333;
+    padding: 1px 5px;
+    font-weight: bold; }
+    .dashboard .message.alert,
+    .dashboard .pillow.alert {
+      background-color: #F04124;
+      color: white; }
+    .dashboard .message.success,
+    .dashboard .pillow.success {
+      background-color: #43ac6a;
+      color: white; }
+  .dashboard .message.alert {
+    background: #fcded9;
+    color: #4d4d4d;
+    border: 1px solid #F04124;
+    padding: 10px;
+    font-size: 12px; }
+  .dashboard .panel {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    background-color: #e6e6e6; }
+    .dashboard .panel h3 {
+      margin: 5px 0; }
+    .dashboard .panel .inner {
+      height: auto;
+      padding: 0;
+      opacity: 1; }
+  .dashboard .panel:first-child {
+    border-left: 1px solid #ccc; }
+  .dashboard .sidebar {
+    width: 100%; }
+  .dashboard .box {
+    border: 1px solid #ccc;
+    padding: 5px; }
+  .dashboard .box h3 {
+    background: #4d4d4d;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    margin: 0;
+    display: inline-block;
+    width: 100%; }
+  .dashboard .box h3 a {
+    color: #ccc;
+    text-decoration: none;
+    position: relative; }
+  .dashboard .box h3 a:hover {
+    color: #fff; }
+  .dashboard .sidebar ul {
+    list-style: none;
+    margin: 0; }
+  .dashboard .dropdown-content {
+    background: white;
+    width: 200px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px #999999;
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    color: #ccc;
+    right: 0;
+    top: 28px; }
+  .dashboard .dropdown-content:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    content: '';
+    top: -5px;
+    right: 8px;
+    position: absolute; }
+  .dashboard .dropdown-content label {
+    font-weight: normal;
+    width: 100%; }
+  .dashboard .dropdown-content a {
+    color: #0B4E7A; }
+  .dashboard .dropdown:hover .dropdown-content {
+    display: block; }
+  .dashboard .sidebar li:last-child {
+    margin-bottom: 0; }
+  .dashboard .sidebar ul ul {
+    padding: 0; }
+  .dashboard .sidebar ul > li {
+    text-align: right; }
+  .dashboard .sidebar li li {
+    text-align: left; }
+  .dashboard .sidebar .label {
+    float: left;
+    width: 75%; }
+  .dashboard .sidebar .number {
+    float: right;
+    text-align: right;
+    width: 25%; }
+  .dashboard .group:after,
+  .dashboard .button-group:after,
+  .dashboard .sidebar li:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .dashboard .sidebar h4 {
+    text-align: left; }
+  .dashboard .sidebar h4 small {
+    display: block; }
+  .dashboard .sidebar h4 span {
+    font-size: 2em;
+    padding-top: 5px; }
+  .dashboard .sidebar h5 {
+    background-color: #4d4d4d;
+    color: white;
+    padding: 5px;
+    font-size: 1em; }
+  .dashboard .sidebar img,
+  .dashboard .main img {
+    width: 100%; }
+  .dashboard .button-group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    display: inline-block; }
+  .dashboard .button-group li {
+    display: inline; }
+  .dashboard .button-group a:hover,
+  .dashboard .button-group .active a {
+    background: #f36a54;
+    color: white; }
+  .dashboard .button-group a {
+    border-right: 1px solid #ccc;
+    padding: 5px;
+    background: #e6e6e6;
+    float: left;
+    text-decoration: none;
+    color: #0b4e7a; }
+  .dashboard .button-group li:last-child a {
+    border: 0; }
+  .dashboard .main {
+    width: 100%; }
+  .dashboard .main .box table {
+    width: 100%;
+    border-collapse: collapse; }
+  .dashboard .main .box tr:nth-child(odd) td {
+    background: none; }
+  .dashboard .main .box th,
+  .dashboard .main .box td {
+    padding: 5px;
+    background: #e6e6e6;
+    border-bottom: 1px solid;
+    border-color: #ccc;
+    text-align: left; }
+  .dashboard .main .box th {
+    background: #666666; }
+  .dashboard .main .box .tab-content {
+    height: 27.7em;
+    overflow-y: scroll;
+    padding: 1em;
+    width: 100%; }
+  .dashboard .datepicker {
+    padding: 3px 0; }
+  .dashboard .datepicker a {
+    text-decoration: none; }
+  .dashboard footer p {
+    padding: 5px 0; }
+  .dashboard .chart {
+    height: 280px;
+    margin: 0 auto;
+    text-align: center; }
+  .dashboard .gauge {
+    width: 100%; }
+    .dashboard .gauge h4 {
+      text-align: center; }
+  .dashboard input.datepicker {
+    padding: 4px 4px 2px;
+    font-size: 12px;
+    width: 100px;
+    line-height: normal; }
+  .dashboard input[type="submit"] {
+    background: #f36a54;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 22px;
+    line-height: 18px;
+    margin-left: 5px;
+    border: 1px solid #f04124;
+    text-shadow: 1px 1px #f04124; }

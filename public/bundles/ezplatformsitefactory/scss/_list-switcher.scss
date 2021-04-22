@@ -1,0 +1,15 @@
+.ez-site-factory-list-switcher {
+    @include toggler-wrapper();
+    width: calculateRem(64px);
+    margin-left: auto;
+    margin-right: 0;
+
+    &__option {
+        @include toggler-icon-btn();
+        z-index: 1;
+
+        &--active {
+            @include toggler-selected-btn();
+        }
+    }
+}

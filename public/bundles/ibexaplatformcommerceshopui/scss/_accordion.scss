@@ -1,0 +1,70 @@
+.ezcommerce-accordion {
+    position: relative;
+    background: #fff;
+    border: 2px dashed #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    
+    &__navigation {
+        position: relative;
+        padding: 5px 10px;
+    
+        & > a.ezcommerce-accordion__navigation-label {
+            color: #131c26;
+            padding: 0;
+            background: none;
+    
+            &:hover {
+                background: none;
+            }
+        }
+    
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #131c26;
+        }
+    }
+    
+    &__navigation-content {
+        height: 0;
+        overflow: hidden;
+        
+        & > p {
+            margin: 0;
+            padding: 5px 0;
+            font-size: 12px;
+        }
+    
+        &--expanded {
+            height: auto;
+        }
+    }
+
+    &--simple {
+        background: none;
+        border: none;
+
+        .ezcommerce-accordion {
+            &__navigation-content {
+                padding: 0;
+                border: none;
+
+                &--expanded {
+                    height: auto;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}

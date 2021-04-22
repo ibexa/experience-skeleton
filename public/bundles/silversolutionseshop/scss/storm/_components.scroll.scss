@@ -1,0 +1,23 @@
+// Default settings
+$scroll-to-top-position-right: ($column-gutter / 2) !default;
+$scroll-to-top-position-bottom: rem-calc(62) !default;
+
+$scroll-to-top-color: $flat-peter-river !default;
+
+$scroll-to-top-size: rem-calc(15) !default;
+
+.c-scroll {
+  position: fixed;
+  right: $scroll-to-top-position-right;
+  bottom: $scroll-to-top-position-bottom;
+  z-index: 99;
+  color: $scroll-to-top-color;
+  font-size: $scroll-to-top-size;
+  opacity: 0.6;
+}
+
+.c-scroll--centered {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}

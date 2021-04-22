@@ -1,0 +1,69 @@
+.ez-content-action-info {
+    display: grid;
+    grid-template-areas:
+        'action action'
+        'link language';
+    grid-column-gap: calculateRem(8px);
+    grid-template-columns: 1fr auto;
+
+    .ez-future-preview & {
+        display: none;
+    }
+
+    &__missing-translation {
+        color: $ibexa-color-danger;
+        display: flex;
+        align-items: center;
+        grid-area: language;
+
+        .ez-future-preview & {
+            display: none;
+        }
+
+        .ez-icon {
+            fill: $ibexa-color-danger;
+            margin-right: calculateRem(8px);
+        }
+
+        .ez-btn {
+            margin-left: calculateRem(16px);
+            padding: calculateRem(2px) calculateRem(8px);
+            line-height: 1.2;
+        }
+    }
+
+    &__action-type {
+        grid-area: action;
+    }
+
+    &__preview-url {
+        display: inline-block;
+        grid-area: link;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        direction: rtl;
+        text-align: left;
+
+        &--active {
+            color: $ibexa-color-font;
+
+            &:hover {
+                text-decoration: underline;
+                color: $ibexa-color-primary;
+            }
+        }
+    }
+
+    &__preview-url-content {
+        display: inline-block;
+        direction: ltr;
+        text-decoration: underline;
+        font-size: calculateRem(16px);
+    }
+
+    &__language {
+        grid-area: language;
+        font-size: calculateRem(16px);
+    }
+}

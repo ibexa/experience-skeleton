@@ -1,0 +1,31 @@
+.c-sidebar-field {
+    height: calculateRem(40px);
+    background: $ibexa-white;
+    display: grid;
+    grid-template-areas: 'icon label';
+    grid-template-columns: calculateRem(24px) auto;
+    grid-column-gap: calculateRem(16px);
+    padding-left: calculateRem(12px);
+    font-size: calculateRem(16px);
+    color: $ibexa-color-font;
+    width: calculateRem(213px);
+    border: calculateRem(1px) solid $ibexa-color-base;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+
+    &__icon-wrapper {
+        grid-area: icon;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__label {
+        grid-area: label;
+        display: flex;
+        align-items: center;
+    }
+
+}

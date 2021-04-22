@@ -1,0 +1,308 @@
+/*
+    Document        : storm.cookiepolicy
+    Author          : mkr, mno
+    Dependencies    :
+    Description:
+        Storm cookie policy plugin stylesheets.
+*/
+
+.cp-overlay {
+  @include reveal-bg();
+}
+
+.cp-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+  z-index: 9999;
+  text-align: left;
+
+  @media #{$small-only} {
+    top: (-(rem-calc(10)));
+    position: fixed;
+  }
+
+}
+
+.cp-dialog h2 {
+  margin: 0 0 10px;
+}
+
+.cp-dialog-content {
+  padding: 20px;
+  margin: 20px auto;
+  width: 700px;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+
+  @media #{$small-only} {
+    position: fixed;
+    top: 2% !important;
+    width: 96%;
+    max-height: 96%;
+    padding: $rem-base;
+    margin: 0 2%;
+    overflow-y: auto;
+  }
+
+}
+
+.cp-dialog .close,
+.cp-button-wrap .close {
+  @include reveal-close(
+    $color: $reveal-close-color
+  );
+
+  @media #{$small-only} {
+    top: 0;
+    right: rem-calc(10)
+  }
+}
+
+.cp-button-wrap .close.simple {
+  top: ($column-gutter/4);
+  right: ($column-gutter/2);
+  margin: 0;
+  color: $white;
+  font-size: 1em;
+}
+
+.cp-button-wrap .close {
+  top: 0;
+  right: ($column-gutter/2);
+}
+
+.cp-dialog-content .cp-logo-link {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  background-color: #efefef;
+  padding: 0 5px;
+  display: block;
+}
+
+.cp-dialog-content h1 {
+  font-size: 23px;
+  border-bottom: 1px solid;
+  border-color: inherit;
+  margin: 0 0 20px 0;
+  line-height: 1.6em;
+}
+
+.cp-button-wrap {
+  margin-top: ($column-gutter/2);
+
+  .simple & {
+    margin-top: 0;
+  }
+}
+
+.cp-level-changer {
+  overflow: visible;
+  margin: 0 auto 5px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.cp-level-changer a {
+  display: inline-block;
+  height: 150px;
+  cursor: pointer;
+  position: relative;
+  border: 5px solid #888;
+  max-width: 150px;
+  text-decoration: none !important;
+  -moz-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.cp-level-changer a:hover {
+  filter: alpha(opacity=90);
+  opacity: 0.9;
+  -webkit-box-shadow: 0 0 5px 0 rgba(50, 180, 50, 0.3);
+  box-shadow: 0 0 5px 0 rgba(50, 180, 50, 0.3);
+}
+
+.cp-level-changer a span.cp-level-button-icon {
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 10%;
+  right: 13%;
+  height: 75px;
+}
+
+.cp-level-changer a span.cp-level-button-icon div {
+  display: block;
+  background-color: #888;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid #fff;
+}
+
+.cp-level-changer a span.cp-level-button-title {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 45px;
+  padding-top: 10px;
+  background-color: #888;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cp-level-changer a.activated {
+  border-color: #888;
+}
+
+.cp-level-changer a.activated span.cp-level-button-title {
+  background-color: #888;
+}
+
+.cp-level-changer a.activated span.cp-level-button-icon div.activated {
+  background-color: #EC731E;
+}
+
+.cp-permission-panels {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.cp-permission-panels ul {
+  padding: 5px 0 0;
+  margin: 0 0 0 20px;
+}
+
+.cp-permission-panels ul li {
+  padding: 0 0 4px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.cp-permission-panel-disallowed {
+  float: left;
+  width: 49%;
+}
+
+.cp-permission-panel-allowed {
+  float: right;
+  width: 49%;
+}
+
+.cp-permission-panel-title {
+  font-size: 16px;
+  padding: 10px 0 0;
+  font-weight: bold;
+}
+
+/* Cookies Warning */
+.cp-popup {
+  z-index: 1999;
+  background: $flat-clouds;
+  font-size: rem-calc(12);
+}
+
+.cp-popup-inner {
+  @include grid-row();
+  position: relative;
+  padding: ($column-gutter/2) ($column-gutter * 3) ($column-gutter) ($column-gutter);
+
+  .simple & {
+    padding-bottom: ($column-gutter/2)
+  }
+}
+
+/* Magic Button */
+.cp-toggle-magic-button {
+  display: block;
+  float: right;
+  margin: 10px 0 10px;
+  text-decoration: underline;
+}
+
+.cp-toggle-magic-button .ui-icon {
+  float: left;
+  margin: 3px 2px 0 0;
+}
+
+.cp-dialog .cp-toggle-magic-button {
+  line-height: 20px;
+}
+
+.cp-magic-button-wrap {
+  display: none;
+}
+
+.cp-magic-button-wrap iframe {
+  height: 137px;
+  width: 100%;
+}
+
+.cp-magic-button-wrap .ui-state-highlight {
+  margin: 0 0 15px;
+  padding: 15px;
+}
+
+/* Additional Styles @mkr */
+.notice p,
+.success p {
+  margin: 0;
+}
+
+.notice.border,
+.success.border {
+  padding-bottom: 5px;
+}
+
+.bottom-links {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+.clear-cookies-wrapper {
+  float: right;
+  text-align: right;
+}
+
+.cp-button-wrap .ui-button.text-link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+.cp-popup a:hover,
+.cp-button-wrap .ui-button.text-link:hover {
+  text-decoration: none;
+}
+
+.cp-level-changer-wrap {
+  float: left;
+  width: 100%;
+}
+
+p.description {
+  text-align: center;
+  clear: both;
+  padding: 5px 10px;
+}
+
+.cp-save-wrapper {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+#powerTip ul {
+  padding-left: 15px;
+}

@@ -1,0 +1,36 @@
+.ez-compared-part {
+    display: inline;
+    padding: calculateRem(2px) calculateRem(5px);
+
+    &--multiple-selection {
+        display: inline-block;
+        margin-right: 100%;
+    }
+
+    &--relation-row {
+        display: table-row;
+    }
+
+    &--removed {
+        color: $ibexa-color-version-compare-removed;
+        text-decoration: line-through;
+
+        td {
+            position: relative;
+            text-decoration: none;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                border-bottom: calculateRem(1px) solid $ibexa-color-version-compare-removed;
+                width: 100%;
+            }
+        }
+    }
+
+    &--added {
+        background-color: $ibexa-color-version-compare-added;
+    }
+}

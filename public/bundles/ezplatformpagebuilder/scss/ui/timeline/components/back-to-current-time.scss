@@ -1,0 +1,41 @@
+.c-back-to-current-time {
+    display: none;
+    grid-template-areas:
+        'btn warning'
+        'btn info';
+    grid-column-gap: calculateRem(8px);
+    grid-template-columns: auto 1fr;
+
+    .ez-future-preview & {
+        display: grid;
+    }
+
+    &__btn-wrapper {
+        @include info-bar-button();
+
+        grid-area: btn;
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+        align-self: center;
+    }
+
+    &__btn {
+        border: none;
+        display: flex;
+        cursor: pointer;
+    }
+
+    &__warning {
+        color: $ibexa-color-danger;
+        display: inline-block;
+        grid-area: warning;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__info {
+        grid-area: info;
+    }
+}

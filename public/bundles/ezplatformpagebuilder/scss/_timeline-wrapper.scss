@@ -1,0 +1,16 @@
+.ez-timeline-wrapper {
+    transition: transform 0.3s linear;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calculateRem(56px);
+    z-index: 125;
+    transform: scaleY(0);
+    transform-origin: top;
+    will-change: transform;
+
+    .ez-timeline-visible & {
+        transform: scaleY(1);
+    }
+}

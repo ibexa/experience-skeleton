@@ -1,0 +1,7 @@
+// Event type list
+
+$event-highlight-color: $flat-amethyst !default;
+
+.c-list__item--event {
+  border-left-color: $event-highlight-color;
+}

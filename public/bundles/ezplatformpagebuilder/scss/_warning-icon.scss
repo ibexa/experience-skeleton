@@ -1,0 +1,22 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+
+.ez-warning-icon {
+    position: absolute;
+    background: $ibexa-color-danger;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    top: -0.5rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    .ez-icon {
+        &.ez-icon--warning {
+            height: 12px;
+            width: 12px;
+            margin: -2px 0 0;
+            fill: $ibexa-white;
+        }
+    }
+}

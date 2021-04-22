@@ -1,0 +1,25 @@
+// Default settings
+$tagcloud-margin: rem-calc(0) !default;
+$tagcloud-font-size: rem-calc(12) !default;
+$tagcloud-separator-icon: "\00B7" !default;
+$tagcloud-separator-margin-right: rem-calc(5) !default;
+$tagcloud-item-display: inline !default;
+
+.c-tagcloud {
+  margin: $tagcloud-margin;
+  list-style: none;
+  font-size: $tagcloud-font-size;
+}
+
+  .c-tagcloud__item {
+    display: $tagcloud-item-display;
+
+    &:after {
+      content: $tagcloud-separator-icon;
+      margin-left: $tagcloud-separator-margin-right;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+  }

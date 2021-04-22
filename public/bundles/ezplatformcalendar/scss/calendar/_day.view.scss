@@ -1,0 +1,94 @@
+.c-day-view {
+    display: grid;
+    grid-template-columns: 1fr calculateRem(300px);
+    grid-template-rows: calculateRem(38px) 1fr;
+    grid-template-areas: 'day-header picker-header' 'day picker';
+    grid-row-gap: calculateRem(24px);
+    grid-column-gap: calculateRem(20px);
+
+    &__header {
+        display: flex;
+    }
+
+    &__header--day {
+        grid-area: day-header;
+        padding-left: calculateRem(8px);
+        border-bottom: calculateRem(1px) solid $ibexa-color-base;
+    }
+
+    &__header-label--date {
+        font-size: calculateRem(16px);
+    }
+
+    &__header-label--day {
+        font-size: calculateRem(16px);
+        line-height: calculateRem(24px);
+        margin-left: calculateRem(5px);
+    }
+
+    &__day {
+        position: relative;
+        grid-area: day;
+        display: flex;
+        padding: calculateRem(10px) calculateRem(20px) calculateRem(10px) calculateRem(110px);
+    }
+
+    &__agenda {
+        flex-grow: 1;
+        font-size: calculateRem(8px);
+    }
+
+    &__hour {
+        position: relative;
+        min-height: calculateRem(80px);
+
+        &--last {
+            min-height: calculateRem(10px);
+        }
+    }
+
+    &__hour-separator {
+        border-top: calculateRem(1px) solid $ibexa-color-base;
+        padding-top: calculateRem(2px);
+
+        &--blurred {
+            filter: blur(#{calculateRem(2px)});
+        }
+    }
+
+    &__hour-label {
+        position: absolute;
+        width: calculateRem(60px);
+        font-size: calculateRem(14px);
+        white-space: nowrap;
+        transform: translate(-120%, calculateRem(-14px));
+        text-align: right;
+        padding-right: calculateRem(5px);
+
+        &--blurred {
+            filter: blur(#{calculateRem(2px)});
+            user-select: none;
+        }
+    }
+
+    &__load-more-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: calculateRem(16px);
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &__header--picker {
+        grid-area: picker-header;
+        padding-left: calculateRem(8px);
+        font-size: calculateRem(16px);
+    }
+
+    &__picker {
+        grid-area: picker;
+        display: flex;
+        justify-content: center;
+    }
+}

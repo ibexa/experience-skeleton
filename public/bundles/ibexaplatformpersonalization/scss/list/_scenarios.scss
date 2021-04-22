@@ -1,0 +1,33 @@
+.ez-container--scenarios-list {
+    .ez-table {
+        &__header-cell {
+            &--scenarion-actions {
+                max-width: calculateRem(200px);
+
+                .ez-table__header-cell-content {
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &__cell {
+            &--scenarion-name {
+                max-width: calculateRem(300px);
+            }
+
+            &--scenarion-actions {
+                justify-content: space-between;
+
+                .ez-table__cell-content {
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        &__status {
+            font-size: calculateRem(14px);
+            margin-top: calculateRem(5px);  
+        }
+    }
+}

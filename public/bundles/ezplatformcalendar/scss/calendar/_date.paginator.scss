@@ -1,0 +1,32 @@
+.c-date-paginator {
+    display: flex;
+
+    &__date {
+        display: flex;
+        align-items: center;
+        margin-left: calculateRem(24px);
+        font-weight: bold;
+    }
+
+    &__date-main {
+        margin-right: calculateRem(8px);
+    }
+
+    &__btn {
+        padding: 0;
+    }
+
+    &__btn--increase,
+    &__btn--decrease {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(24px);
+        height: calculateRem(32px);
+        margin-left: calculateRem(8px);
+    }
+
+    &__btn--today {
+        width: calculateRem(85px);
+    }
+}

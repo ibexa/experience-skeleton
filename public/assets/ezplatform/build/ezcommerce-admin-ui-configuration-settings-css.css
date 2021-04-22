@@ -1,0 +1,273 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-configuration-field--boolean .ez-data-source__label {
+  position: relative;
+  width: 2.5rem;
+  height: calc(2.5rem - 1rem);
+  background-color: transparent;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  border: 0.0625rem solid #878b90;
+}
+
+.ez-configuration-field--boolean .ez-data-source__label input {
+  opacity: 0;
+  height: 1px;
+}
+
+.ez-configuration-field--boolean .ez-data-source__label .ez-data-source__indicator {
+  width: calc(2.5rem - 1.5rem);
+  height: calc(2.5rem - 1.5rem);
+  display: block;
+  background-color: #878b90;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.1875rem;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(calc(2.5rem / 10));
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ez-configuration-field--boolean .ez-data-source__label.is-checked {
+  background-color: transparent;
+  border: 0.0625rem solid #ae1164;
+}
+
+.ez-configuration-field--boolean .ez-data-source__label.is-checked .ez-data-source__indicator {
+  transform: translateX(calc(calc(2.5rem / 2) - calc(2.5rem / 10)));
+  background-color: #ae1164;
+}
+
+.ez-configuration-field--boolean .ez-data-source__label.is-disabled {
+  opacity: 0.5;
+}
+
+.ez-configuration-field--boolean .ez-data-source__value {
+  display: none;
+}
+
+.ez-configuration-field-array__item {
+  display: flex;
+}
+
+.ez-configuration-field-array__inputs {
+  width: calc(100% - 2.375rem);
+  display: flex;
+}
+
+.ez-configuration-field-array__input {
+  min-width: 13.75rem;
+  padding-right: 0.25rem;
+}
+
+.ez-configuration-field-array__actions {
+  width: 2.375rem;
+}
+
+.ez-configuration-field-array .ez-btn {
+  height: 2.375rem;
+}
+
+.ez-configuration-field-array .ez-btn--trash {
+  width: 2.375rem;
+  padding: 0;
+}
+
+.ez-configuration-field-array .ez-btn--trash .ez-icon {
+  fill: #ae1164;
+}
+
+.ez-configuration-field-array .ez-btn--add-input {
+  width: 2.5rem;
+  padding: 0;
+}
+
+.ez-ecommerce-configuration-settings__info {
+  margin-top: 0.0625rem;
+}
+
+.ez-ecommerce-configuration-settings__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ez-ecommerce-configuration-settings .ez-tabs--commerce-settings {
+  border-bottom: 0;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group {
+  background: #fff;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group.ez-card--collapsed .ez-card__body {
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group.ez-card--collapsed .ez-card__body-display-toggler .ez-icon--caret-down {
+  display: none;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group:not(.ez-card--collapsed) .ez-card__body-display-toggler .ez-icon--caret-next {
+  display: none;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header {
+  line-height: 2.5rem;
+  padding: 0 1.25rem;
+  display: flex;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-icon {
+  fill: #131c26;
+  height: 1.5rem;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-label {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #131c26;
+  font-size: 1.0625rem;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-label:after {
+  display: none;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-card__body-display-toggler {
+  margin: 0.25rem 0 0.25rem auto;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  cursor: pointer;
+  background: #fff;
+  transition: background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-card__body-display-toggler:hover {
+  background: #d9d9d9;
+  outline: none;
+  box-shadow: none;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-card__body-display-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.ez-ecommerce-configuration-settings .ez-card--commerce-configuration-group .ez-card__header .ez-card__body-display-toggler .ez-icon {
+  fill: #131c26;
+}
+
+.ez-ecommerce-configuration-settings .ez-table__cell {
+  vertical-align: top;
+}
+
+.ez-ecommerce-configuration-settings .ez-table__cell--name {
+  width: 20%;
+}
+
+.ez-ecommerce-configuration-settings .ez-table__cell--value {
+  width: 30%;
+}
+
+.ez-ecommerce-configuration-settings .ez-table__cell--description {
+  width: 50%;
+}
+
+.ez-product-management {
+  margin-bottom: 2rem;
+}
+
+.ez-product-management__title {
+  font-size: 1rem;
+}
+
+.ez-stock-update {
+  display: flex;
+}
+
+.ez-stock-update__item {
+  margin-right: 2rem;
+}
+
+.ez-stock-update__sku {
+  line-height: 2.375rem;
+}
+
+.ez-stock-update__label {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.ez-stock-update__input {
+  width: 12.5rem;
+}
+
+.ez-stock-update .ez-btn {
+  margin-top: 2rem;
+}
+
+.ez-table--price-management, .ez-table--stock-update {
+  margin-bottom: 1.5rem;
+}
+
+.ez-table--price-management tbody td, .ez-table--stock-update tbody td {
+  vertical-align: middle;
+}
+
+.ez-table--price-management .ez-icon--trash, .ez-table--stock-update .ez-icon--trash {
+  fill: #ae1164;
+}
+
+.ez-table--price-management tr:last-child td {
+  border-bottom: 0.0625rem solid #e0e0e8;
+}
+
+.ez-table-header--price-management .ez-table-header__tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ez-table-header--price-management .ez-table-header__price-select {
+  margin-right: 0.5rem;
+}
+
+.ez-sku-search {
+  padding: 1.5rem 0.5rem;
+}
+
+.ez-sku-search__tools {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.ez-sku-search__results--hidden {
+  display: none;
+}
+
+.ez-sku-search__input {
+  width: 12.5rem;
+  margin-right: 0.75rem;
+}
+
+.ez-sku-search .ez-btn--search {
+  display: flex;
+  align-items: center;
+}
+
+.ez-sku-search .ez-btn--hidden {
+  display: none;
+}
+

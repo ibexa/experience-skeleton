@@ -1,0 +1,26 @@
+.ez-time-range {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calculateRem(300px);
+    justify-content: flex-end;
+
+    &__label {
+        height: calculateRem(38px);
+        line-height: calculateRem(38px);
+        margin-right: calculateRem(10px);
+        color: $ibexa-color-font-pale;
+    }
+
+    &__download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calculateRem(38px);
+        width: calculateRem(30px);
+    }
+
+    &__custom-range-container {
+        min-width: calculateRem(225px);
+        margin-right: calculateRem(38px);
+    }
+}

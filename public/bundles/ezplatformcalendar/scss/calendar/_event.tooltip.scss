@@ -1,0 +1,64 @@
+.c-event-tooltip {
+    color: $ibexa-color-font;
+    background-color: $ibexa-white;
+    position: absolute;
+    transform: translateX(calc(100% + 6px)) translateY(calc(-50% - 14px));
+    box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba(0, 0, 0, 0.15);
+    cursor: auto;
+    border-radius: $ibexa-border-radius;
+    max-height: calculateRem(500px);
+    width: calculateRem(300px);
+    right: 0;
+    display: none;
+
+    &:hover {
+        display: block;
+        z-index: 1;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: $ibexa-white;
+    }
+
+    &:before {
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg) translateX(-50%);
+        box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba(0, 0, 0, 0.15);
+        left: 0;
+        top: 50%;
+        z-index: -1;
+    }
+
+    &:after {
+        width: 20px;
+        height: 20px;
+        transform: translateY(-50%);
+        left: 0;
+        top: 50%;
+    }
+
+    &--on-left {
+        transform: translateX(calc(-100% - 6px)) translateY(calc(-50% - 14px));
+        right: auto;
+        left: 0;
+
+        &:before,
+        &:after {
+            left: auto;
+        }
+
+        &:before {
+            right: calculateRem(-7px);
+            box-shadow: calculateRem(2px) 0 calculateRem(4px) 0 rgba(0, 0, 0, 0.15);
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+}

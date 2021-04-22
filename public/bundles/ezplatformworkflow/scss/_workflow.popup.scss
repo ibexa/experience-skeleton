@@ -1,0 +1,10 @@
+.ez-popup--workflow {
+    .modal-dialog {
+        min-width: calculateRem(860px);
+        width: 60vh;
+    }
+
+    .modal-body {
+        padding-top: 0;
+    }
+}

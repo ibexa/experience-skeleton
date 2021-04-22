@@ -1,0 +1,26 @@
+.ez-editorial-models {
+    margin-top: calculateRem(16px);
+
+    &__actions-wrapper {
+        padding: calculateRem(16px) calculateRem(30px);
+        background: $ibexa-color-base-light;
+    }
+
+    &__btn {
+        margin: calculateRem(12px) 0 calculateRem(24px);
+    }
+
+    &__no-items {
+        font-size: calculateRem(14px);
+    }
+
+    &__items {
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__item {
+        display: inline-block;
+        margin: calculateRem(4px) 0;
+        font-size: calculateRem(14px);
+    }
+}

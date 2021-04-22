@@ -1,0 +1,8 @@
+.loginpage #header #header-design
+{
+  background: transparent url('../images/logo.png') center 80% no-repeat !important;
+}
+
+#header-logo a, #header-logo span {
+  background: transparent url(../images/logo_small.png) 5px 22px no-repeat !important;
+}

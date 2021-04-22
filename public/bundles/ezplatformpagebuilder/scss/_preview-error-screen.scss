@@ -1,0 +1,28 @@
+.ez-error-screen {
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    &__icon {
+        width: 6rem;
+        height: auto;
+        fill: $ibexa-black;
+    }
+
+    &__icon-wrapper {
+        border-radius: 50%;
+        background: $ibexa-color-warning;
+        width: 10rem;
+        height: 10rem;
+        margin-bottom: 5rem;
+    }
+
+    &__link {
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}

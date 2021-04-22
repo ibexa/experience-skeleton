@@ -1,0 +1,38 @@
+.ez-site-factory-form {
+    &__group {
+        &--public-access {
+            .ez-fieldgroup {
+                &__content {
+                    margin-top: calculateRem(24px);
+                    margin-bottom: calculateRem(24px);
+                }
+
+                &__name {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+
+            .form-inline {
+                display: inline-flex;
+            }
+        }
+    }
+
+    .ez-card {
+        &__body-display-toggler {
+            .ez-icon {
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+
+        &--collapsed {
+            .ez-card__body-display-toggler {
+                .ez-icon {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.ez-product-management {
+    margin-bottom: calculateRem(32px);
+
+    &__title {
+        font-size: calculateRem(16px);
+    }
+}

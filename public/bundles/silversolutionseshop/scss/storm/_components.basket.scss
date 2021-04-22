@@ -1,0 +1,81 @@
+// Default settings
+
+$basket-padding: rem-calc(10) !default;
+
+$basket-header-background-color: $primary-color !default;
+$basket-header-font-color: $white !default;
+
+$basket-item-background-color: #efefef !default;
+$basket-item-border-color: #ccc !default;
+
+$medium-down: "#{$screen} and (max-width:#{upper-bound($medium-range)})";
+
+// basket
+
+.c-basket {
+  border: 0;
+}
+
+.c-basket__header {
+  font-size: rem-calc(12);
+  padding: $basket-padding;
+  background: $basket-header-background-color;
+  color: $basket-header-font-color;
+}
+
+.c-basket__item {
+  padding: $basket-padding;
+  background: $basket-item-background-color;
+  border: 1px solid $basket-item-border-color;
+  border-top: 0;
+  font-size: rem-calc(12);
+  position: relative;
+
+  input {
+    margin: rem-calc(5 0);
+  }
+
+  // Mobile/Tablet
+
+  @media #{$medium-down} {
+    border: 1px solid $basket-item-border-color;
+    margin-bottom: rem-calc(20);
+  }
+
+}
+
+.c-basket__stock {
+  margin-top: rem-calc(5);
+}
+
+.c-basket__info {
+  font-size: rem-calc(12);
+  border: 2px dotted $secondary-color !important;
+
+  a {
+    padding: rem-calc(5 40 5 10) !important;
+    background: $white !important;
+  }
+
+  p, ul, ol {
+    font-size: rem-calc(12);
+    margin-bottom: rem-calc(5);
+  }
+
+}
+
+// Delete
+
+.c-basket__delete {
+  font-size: rem-calc(17);
+
+  // Mobile/Tablet
+
+  @media #{$medium-down} {
+    position: absolute !important;
+    right: rem-calc(10);
+    top: rem-calc(5);
+  }
+
+}
+

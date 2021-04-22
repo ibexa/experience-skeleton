@@ -1,0 +1,37 @@
+.ez-configuration-field-array {
+    &__item {
+        display: flex;
+    }
+
+    &__inputs {
+        width: calc(100% - #{calculateRem(38px)});
+        display: flex;
+    }
+
+    &__input {
+        min-width: calculateRem(220px);
+        padding-right: calculateRem(4px);
+    }
+
+    &__actions {
+        width: calculateRem(38px);
+    }
+
+    .ez-btn {
+        height: calculateRem(38px);
+
+        &--trash {
+            width: calculateRem(38px);
+            padding: 0;
+
+            .ez-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        &--add-input {
+            width: calculateRem(40px);
+            padding: 0;
+        }
+    }
+}

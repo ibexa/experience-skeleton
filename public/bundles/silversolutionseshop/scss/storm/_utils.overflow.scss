@@ -1,0 +1,26 @@
+// We use this to set overflow auto
+
+.u-overflow-auto { overflow-y: auto !important; }
+
+// Overflow class names
+$overflow-class-names:
+small,
+medium,
+large;
+
+// Overflow breakpoints
+$overflow-class-breakpoints:
+$small-only,
+$medium-only,
+$large-only;
+
+// Generates display classes
+@mixin overflow-classes{
+  @for $i from 1 through length($overflow-class-names) {
+    @media #{(nth($overflow-class-breakpoints, $i))} {
+      .u-overflow-auto-on-#{(nth($overflow-class-names, $i))} { overflow-y: auto !important; }
+    }
+  }
+}
+
+@include overflow-classes;

@@ -1,0 +1,23 @@
+.ez-site-factory-toggle-group {
+    &__checkbox {
+        margin: 0 calculateRem(7px) 0 calculateRem(-10px);
+    }
+
+    .ez-card__header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        .form-check {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__actions {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

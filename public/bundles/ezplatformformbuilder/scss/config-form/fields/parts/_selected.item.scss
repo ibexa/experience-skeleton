@@ -1,0 +1,60 @@
+.fb-selected-item {
+    display: grid;
+    grid-template-areas: 'image desc actions';
+    grid-template-columns: 125px auto 40px;
+    grid-column-gap: calculateRem(16px);
+
+    &__image-wrapper {
+        grid-area: image;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__actions {
+        grid-area: actions;
+    }
+
+    &__action {
+        border-radius: 50%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: $ibexa-color-primary;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s $ibexa-admin-transition;
+
+        .ez-icon {
+            fill: $ibexa-white;
+            height: 24px;
+            width: 24px;
+        }
+
+        &:hover {
+            background: $ibexa-color-primary-hover;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: calculateRem(14px);
+        margin-bottom: calculateRem(10px);
+    }
+
+    &__type {
+        font-size: calculateRem(13px);
+        color: $ibexa-color-primary;
+    }
+}

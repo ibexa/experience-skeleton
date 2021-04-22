@@ -1,0 +1,168 @@
+// Default settings
+$comparison-list-background: $primary-color !default;
+$comparison-list-color: $white !default;
+$comparsion-list-padding: rem-calc(10) !default;
+
+$comparison-paginator-arrow-color: $primary-color !default;
+
+$comparison-data-headline-color: $primary-color !default;
+$comparison-data-headline-arrow-color: $primary-color !default;
+
+$comparison-item-background: $white !default;
+
+$comparison-data-table-li-padding: rem-calc(5 15) !default;
+$comparison-data-table-li-background: $white !default;
+$comparison-data-table-li-color: $primary-color !default;
+$comparison-data-table-li-odd-background: $flat-clouds !default;
+$comparison-data-table-li-odd-color: $primary-color !default;
+
+// todo: continue to refactor classes
+
+.c-comparison__list {
+  height: rem-calc(522);
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.c-comparison__list .js-comparison-tabs li a {
+  color: $primary-color;
+  display: block;
+  padding-left: rem-calc(5);
+  padding-right: rem-calc(5);
+}
+.c-comparison__list .js-comparison-tabs li.active a {
+  background: $comparison-list-background;
+  color: $comparison-list-color;
+  padding: $comparsion-list-padding;
+}
+
+.c-comparison .box-elements .element .element-info {
+  height: rem-calc(350);
+}
+
+.c-comparison .pagination-wrapper {
+  position: absolute;
+  top: rem-calc(12);
+  right: rem-calc(10);
+  font-size: rem-calc(24);
+}
+.pagination-wrapper a {
+  color: $comparison-paginator-arrow-color;
+  text-decoration: none;
+}
+
+.element-attributes h4,
+.c-comparison__data-attributes h4 {
+  position: relative;
+  padding-right: rem-calc(24);
+  cursor: pointer;
+  font-size: rem-calc(16);
+  margin: rem-calc(10 -20 10 0);
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: $comparison-data-headline-color;
+}
+.c-comparison__data-attributes h4:after {
+  content: '';
+  position: absolute;
+  top: rem-calc(6);
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: rem-calc(10) solid transparent;
+  border-right: rem-calc(10) solid transparent;
+  border-top: rem-calc(10) solid $comparison-data-headline-arrow-color;
+}
+
+.c-comparison__data-attributes .collapsed h4:after {
+  border-top: 0;
+  border-left: rem-calc(10) solid transparent;
+  border-right: rem-calc(10) solid transparent;
+  border-bottom: rem-calc(10) solid $comparison-data-headline-arrow-color;
+}
+
+/* Sortable List */
+
+.sortable-list-group {
+  overflow: hidden;
+  //position: relative;
+}
+
+.sortable-list-group-item-inner {
+  padding: 0 ($column-gutter/4);
+}
+
+.sortable-list-group-item .drag-item {
+  text-align: center;
+  margin: rem-calc(10 0 30 0);
+  height: rem-calc(45);
+}
+.sortable-list-group-item .drag-item i {
+  cursor: pointer;
+}
+
+/* element info */
+
+.element-info {
+  padding: ($column-gutter/3);
+  height: rem-calc(380);
+  background-color: $comparison-item-background;
+  border: rem-calc(1) solid $secondary-color;
+}
+
+.element-info .comparison-image {
+  height: rem-calc(145);
+  overflow: hidden;
+  border-bottom: rem-calc(1) solid $secondary-color;
+  padding-bottom: rem-calc(5);
+  text-align: center;
+}
+.element-info .comparison-price {
+  margin-top: rem-calc(16);
+  height: rem-calc(143);
+}
+.element-info .comparison-image figure {
+  margin: 0;
+}
+
+.element-info .comparison-image figcaption {
+  text-align: left;
+}
+
+.element-info .remove-basketline {
+}
+
+/* element attributes and box attributes */
+
+.c-comparison__data-attributes ul {
+  margin: 0 (-$column-gutter) 0 0;
+}
+
+.element-attributes ul {
+  margin: 0 (-$column-gutter/4);
+}
+
+.element-attributes ul li,
+.c-comparison__data-attributes ul li {
+
+  padding: $comparison-data-table-li-padding;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.element-list {
+  border-top: rem-calc(1) solid #ccc;
+}
+
+.element-list li {
+  background: $comparison-data-table-li-background;
+  color: $comparison-data-table-li-color;
+}
+
+.element-list li.odd {
+  background: $comparison-data-table-li-odd-background;
+  color: $comparison-data-table-li-odd-color;
+}

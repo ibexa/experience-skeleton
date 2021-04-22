@@ -1,0 +1,30 @@
+// We use this file to create display block/inline/inline-block classes for different breakpoints
+
+// Display class names
+$display-class-names:
+  small,
+  medium,
+  large;
+
+// Display breakpoints
+$display-class-breakpoints:
+  $small-only,
+  $medium-only,
+  $large-only;
+
+// Generates display classes
+@mixin display-classes{
+  .u-inline        { display: inline !important; }
+  .u-block         { display: block !important; }
+  .u-inline-block  { display: inline-block !important; }
+
+  @for $i from 1 through length($display-class-names) {
+    @media #{(nth($display-class-breakpoints, $i))} {
+      .u-inline-on-#{(nth($display-class-names, $i))}       { display: inline !important; }
+      .u-block-on-#{(nth($display-class-names, $i))}        { display: block !important; }
+      .u-inline-block-on-#{(nth($display-class-names, $i))} { display: inline-block !important; }
+    }
+  }
+}
+
+@include display-classes;

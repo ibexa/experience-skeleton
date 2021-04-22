@@ -1,0 +1,52 @@
+// extends label component
+
+// Default settings
+$label-paragraph-display: inline !default;
+$label-paragraph-font-size: rem-calc(11) !default;
+
+$label-info-link-color: $white !default;
+$label-info-link-font-size: rem-calc(11) !default;
+$label-info-link-text-decoration: underline !default;
+$label-info-link-hover-color: $white !default;
+$label-info-link-hover-text-decoration: none !default;
+
+$label-warning-color: darken($alert-warning-border-color, $alert-text-color-darken) !default;
+
+$label-secondary-color: darken($alert-secondary-border-color, $alert-text-color-darken) !default;
+
+$label-success-color: darken($alert-success-border-color, $alert-text-color-darken) !default;
+
+.label p {
+  display: $label-paragraph-display;
+  font-size: $label-paragraph-font-size;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label.info a {
+  color: $label-info-link-color;
+  font-size: $label-info-link-font-size;
+  text-decoration: $label-info-link-text-decoration;
+
+  &:hover {
+    color: $label-info-link-hover-color;
+    text-decoration: $label-info-link-hover-text-decoration;
+  }
+}
+
+// since we have changed the background colors for alerts we need to apply font-color changes
+// color property matches the colors defined in vendor/silversolutions/silver.e-shop/src/Silversolutions/Bundle/EshopBundle/Resources/public/scss/storm/_extend.components.alert-boxes.scss
+
+.label.warning {
+  color: $label-warning-color;
+}
+
+.label.secondary {
+  color: $label-secondary-color;
+}
+
+.label.success {
+  color: $label-success-color;
+}

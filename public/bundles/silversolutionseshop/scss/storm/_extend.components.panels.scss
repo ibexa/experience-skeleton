@@ -1,0 +1,12 @@
+// Extends Panel component
+
+// Default settings
+$panel-small-padding: ($panel-padding / 2) !default;
+
+.panel {
+
+  &.small {
+    padding: $panel-small-padding;
+  }
+
+}

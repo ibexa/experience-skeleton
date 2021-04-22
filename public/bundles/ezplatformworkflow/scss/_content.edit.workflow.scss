@@ -1,0 +1,14 @@
+.ez-content-edit-workflow {
+    padding: calculateRem(24px) calculateRem(30px);
+
+    &__chart-title {
+        background: $ibexa-white;
+        border-radius: calculateRem(4px) calculateRem(4px) 0 0;
+        line-height: calculateRem(45px);
+        margin: 0;
+    }
+
+    &__chart {
+        background: $ibexa-white;
+    }
+}

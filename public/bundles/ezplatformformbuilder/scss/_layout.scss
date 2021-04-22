@@ -1,0 +1,33 @@
+.ez-form-builder {
+    #ez-form-builder-root,
+    .ez-main-container {
+        height: 100%;
+    }
+}
+
+.m-form-builder {
+    display: grid;
+    grid-template-areas: 'sidebar workspace' 'popup popup';
+    grid-template-columns: calculateRem(245px) auto;
+    grid-column-gap: calculateRem(16px);
+    height: 100%;
+    max-height: 100vh;
+
+    &__sidebar-wrapper {
+        margin-top: calculateRem(46px);
+        grid-area: sidebar;
+        height: 100%;
+    }
+
+    &__sidebar {
+        background: $ibexa-white;
+    }
+
+    &__workspace {
+        grid-area: workspace;
+    }
+
+    &__popup-container {
+        grid-area: popup;
+    }
+}

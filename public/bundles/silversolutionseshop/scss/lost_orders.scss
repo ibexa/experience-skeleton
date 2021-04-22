@@ -1,0 +1,34 @@
+/* SETTINGS
+   ========================================================================== */
+
+@import "settings";
+
+// extra scope to override eZ styles
+.scope-foundation {
+
+    width: 100%;
+
+    overflow: auto;
+
+  // scoped components
+
+  @import "../vendor/foundation/scss/foundation/components/tables";
+  @import "../vendor/foundation/scss/foundation/components/alert-boxes";
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  thead tr {
+    background-color: transparent;
+  }
+  td {
+    vertical-align: top;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+}
+

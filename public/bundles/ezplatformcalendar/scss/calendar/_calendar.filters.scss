@@ -1,0 +1,27 @@
+.c-calendar-filters {
+    display: flex;
+    font-size: calculateRem(14px);
+
+    &__filter-label {
+        display: inline-block;
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__type {
+        padding-bottom: calculateRem(5px);
+    }
+
+    &__type-label {
+        padding: 0 calculateRem(5px);
+    }
+
+    &__types-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__languages {
+        margin-left: calculateRem(24px);
+    }
+}

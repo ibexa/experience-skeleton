@@ -1,0 +1,28 @@
+.ez-site-factory-form-status {
+    padding-top: calculateRem(24px);
+
+    .ez-label {
+        font-weight: 500;
+        padding-right: calculateRem(5px);
+        margin-bottom: 0;
+
+        &:after {
+            content: ': ';
+        }
+    }
+
+    &__widget {
+        min-width: calculateRem(48px);
+        margin-right: calculateRem(20px);
+        @include checkbox-switcher();
+
+        .ez-data-source {
+            display: flex;
+            align-items: center;
+
+            &__label {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

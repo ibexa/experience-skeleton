@@ -1,0 +1,14 @@
+.ez-modal--create-segment-group {
+    .modal-dialog {
+        max-width: 40vw;
+    }
+
+    .modal-body {
+        max-height: calculateRem(500px);
+        overflow: auto;
+
+        .form-group {
+            width: 60%;
+        }
+    }
+}

@@ -1,0 +1,278 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.droppable-placeholder {
+  width: 100%;
+  flex: 0 0 100%;
+  min-height: 64px;
+  height: 100%;
+  box-sizing: border-box;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  outline: 1px solid #fff;
+  outline-offset: -8px;
+  padding: 0;
+}
+
+.droppable-placeholder > * {
+  display: none;
+}
+
+.droppable-placeholder + [data-ez-block-id] {
+  margin-top: 12px;
+}
+
+.droppable-placeholder--dragover {
+  background: rgba(135, 139, 144, 0.25);
+}
+
+.droppable-placeholder:before {
+  color: #878b90;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1;
+  content: attr(data-drop-here-message);
+  flex: 1;
+}
+
+.droppable-placeholder.droppable-placeholder--removing {
+  opacity: 0;
+  background: rgba(217, 45, 66, 0.75);
+}
+
+.droppable-placeholder.droppable-placeholder--removing:before {
+  color: #fff;
+}
+
+[data-ez-zone-id] {
+  min-height: 250px;
+  outline: 1px solid #fff;
+}
+
+[data-ez-zone-id].m-page-builder__zone:after {
+  content: attr(data-call-to-action-text);
+  display: block;
+  margin-bottom: 12px;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: 22px 0;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1;
+  color: #878b90;
+  flex: 1;
+}
+
+[data-ez-zone-id].m-page-builder__zone--dragover:after {
+  display: none;
+}
+
+[data-ez-zone-id].m-page-builder__zone--dragover .droppable-placeholder {
+  display: flex;
+}
+
+[data-ez-block-id] {
+  margin-bottom: 12px;
+}
+
+[data-ez-block-id]:focus {
+  outline: none;
+}
+
+[data-ez-block-id] .c-block-preview {
+  min-height: 16px;
+  overflow: auto;
+}
+
+[data-ez-block-id] .c-block-preview:focus {
+  outline: none;
+}
+
+[data-ez-block-id] .c-block-preview--empty {
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: 16px 0;
+  color: #878b90;
+  background: rgba(135, 139, 144, 0.15);
+}
+
+[data-ez-block-id] .c-block-preview--invalid {
+  background: rgba(217, 45, 66, 0.5);
+}
+
+[data-ez-block-id] .c-block-preview--unavailable {
+  position: relative;
+  background: none;
+}
+
+[data-ez-block-id] .c-block-preview--unavailable .c-block-preview {
+  position: relative;
+}
+
+[data-ez-block-id] .c-block-preview__unavailable-mask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: rgba(236, 236, 241, 0.9);
+}
+
+[data-ez-block-id] .c-block-preview__unavailable-mask-title {
+  font-size: 22px;
+  text-align: center;
+}
+
+[data-ez-block-id] .c-block-preview__unavailable-mask-content {
+  margin-top: 8px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+[data-ez-block-id] .c-block-preview__delete-unavailable-block {
+  background: #878b90;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+[data-ez-block-id]:hover .c-block-preview:not([data-ez-block-id]--unavailable) *,
+.c-block-preview--action-menu-visible:not([data-ez-block-id]--unavailable) * {
+  user-select: none;
+  pointer-events: none;
+}
+
+[data-ez-block-id] .c-action-menu {
+  all: initial;
+  box-sizing: border-box;
+  display: none;
+  background: #004d5d;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 500px;
+  min-width: 150px;
+  max-width: 100%;
+  align-items: center;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  height: 38px;
+  line-height: 38px;
+}
+
+[data-ez-block-id] .c-action-menu .ez-icon {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+[data-ez-block-id] .c-action-menu .c-action-menu__handler {
+  flex: 0 0 38px;
+  height: 100%;
+  cursor: not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-ez-block-id] .c-action-menu .c-action-menu__handler .ez-icon {
+  fill: #878b90;
+}
+
+[data-ez-block-id] .c-action-menu .c-action-menu__handler--is-editable {
+  cursor: move;
+  cursor: -webkit-grab;
+}
+
+[data-ez-block-id] .c-action-menu .c-action-menu__handler--is-editable .ez-icon {
+  fill: #fff;
+}
+
+[data-ez-block-id] .c-action-menu .c-action-menu__name {
+  flex: 1 1 auto;
+  padding-left: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+[data-ez-block-id] .c-action-menu .c-action-menu__actions {
+  display: flex;
+  align-items: center;
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: not-allowed;
+  height: 38px;
+  width: 38px;
+  padding: 0;
+  transition: background 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action .ez-icon {
+  fill: #878b90;
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action--is-editable {
+  cursor: pointer;
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action--is-editable .ez-icon {
+  fill: #fff;
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action--is-editable:hover, [data-ez-block-id] .c-action-menu .c-preview-block__action--is-editable:focus {
+  background: #00232a;
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action:not(:last-child), [data-ez-block-id] .c-action-menu__handler {
+  position: relative;
+}
+
+[data-ez-block-id] .c-action-menu .c-preview-block__action:not(:last-child):after, [data-ez-block-id] .c-action-menu__handler:after {
+  content: '';
+  height: 30px;
+  display: block;
+  width: 1px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+[data-ez-block-id]:hover .c-action-menu,
+[data-ez-block-id]:not(:hover) .c-action-menu.c-action-menu--keep-visible {
+  display: flex;
+}
+
+[data-ez-block-id].c-preview-block--action-menu-to-right:hover .c-action-menu {
+  left: auto;
+  right: 0;
+}
+
+[data-ez-block-id].c-preview-block--action-menu-to-right .c-action-menu.c-action-menu--keep-visible {
+  left: auto;
+  right: 0;
+}
+

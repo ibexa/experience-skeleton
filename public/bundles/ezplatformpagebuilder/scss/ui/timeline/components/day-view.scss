@@ -1,0 +1,30 @@
+.c-day-view {
+    flex: 1 0 calculateRem(75px);
+    height: calculateRem(75px);
+    position: relative;
+
+    &__label {
+        padding: calculateRem(2px) calculateRem(6px);
+        font-size: calculateRem(16px);
+    }
+
+    &--is-selected {
+        border: 1px solid $ibexa-color-primary;
+
+        .c-day-view__label {
+            color: $ibexa-color-primary;
+        }
+    }
+
+    &--is-selectable {
+        cursor: pointer;
+    }
+
+    &:not(.c-day-view--is-selectable) {
+        background-color: $ibexa-color-base-light;
+
+        .c-day-view__label {
+            color: $ibexa-color-font-pale;
+        }
+    }
+}

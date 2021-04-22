@@ -1,0 +1,7 @@
+// Blog type list
+
+$blog-highlight-color: $flat-peter-river !default;
+
+.c-list__item--blog {
+  border-left-color: $blog-highlight-color;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "hinclude",
+  "homepage": "https://github.com/mnot/hinclude",
+  "version": "0.9.5",
+  "_release": "0.9.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.5",
+    "commit": "7fa3177037f74c54055deb96356c3ff512d92d27"
+  },
+  "_source": "git://github.com/mnot/hinclude.git",
+  "_target": "~0.9.5",
+  "_originalSource": "hinclude",
+  "_direct": true
+}

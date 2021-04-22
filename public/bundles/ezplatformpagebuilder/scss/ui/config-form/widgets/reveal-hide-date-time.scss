@@ -1,0 +1,38 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-reveal-hide-date-time {
+    background-color: $ibexa-white;
+    padding: calculateRem(20px);
+    border-radius: calculateRem(4px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: calculateRem(64px);
+    grid-template-areas: 'reveal hide';
+
+    .form-group {
+        margin-bottom: calculateRem(4px);
+
+        .col-form-label {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__reveal {
+        grid-area: reveal;
+    }
+
+    &__hide {
+        grid-area: hide;
+    }
+
+    .ez-picker {
+        margin-left: calculateRem(25px);
+        margin-bottom: calculateRem(5px);
+    }
+
+    .form-check-label {
+        display: inline-block;
+    }
+}

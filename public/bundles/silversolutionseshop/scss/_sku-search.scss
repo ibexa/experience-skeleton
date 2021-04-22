@@ -1,0 +1,26 @@
+.ez-sku-search {
+    padding: calculateRem(24px) calculateRem(8px);
+
+    &__tools {
+        display: flex;
+        margin-bottom: calculateRem(16px);
+    }
+
+    &__results--hidden {
+        display: none;
+    }
+
+    &__input {
+        width: calculateRem(200px);
+        margin-right: calculateRem(12px);
+    }
+
+    .ez-btn--search {
+        display: flex;
+        align-items: center;
+    }
+
+    .ez-btn--hidden {
+        display: none;
+    }
+}

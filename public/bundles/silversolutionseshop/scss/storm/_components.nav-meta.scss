@@ -1,0 +1,232 @@
+$nav-meta-margin: rem-calc($rem-base/2) 0 !default;
+$nav-meta-medium-float: right !default;
+$nav-meta-medium-overflow: visible !default;
+$nav-meta-tiny-dropdown-width: rem-calc(200) !default;
+$nav-meta-small-dropdown-width: rem-calc(300) !default;
+$nav-meta-medium-dropdown-width: rem-calc(400) !default;
+$nav-meta-large-dropdown-width: rem-calc(600) !default;
+$nav-meta-huge-dropdown-width: rem-calc(768) !default;
+$nav-meta-link-text-decoration: underline !default;
+$nav-meta-link-hover-text-decoration: none !default;
+$nav-meta-icon-margin-right: em-calc(5) !default;
+
+$nav-meta-customer-number-width: 100% !default;
+$nav-meta-customer-number-margin-bottom: rem-calc(16) !default;
+$nav-meta-customer-number-line-height: normal !default;
+$nav-meta-customer-number-text-align: left !default;
+
+$nav-meta-dropdown-trigger-padding-right: rem-calc(15) !default;
+$nav-meta-dropdown-trigger-letter-spacing: rem-calc(1) !default;
+$nav-meta-dropdown-trigger-text-transform: uppercase !default;
+$nav-meta-dropdown-trigger-arrow-top: rem-calc(8) !default;
+$nav-meta-dropdown-trigger-arrow-width: rem-calc(5) !default;
+$nav-meta-dropdown-trigger-arrow-border-color: $primary-color !default;
+
+$nav-meta-dropdown-content-link-font-color: $flat-peter-river !default;
+
+$nav-meta-dropdown-column-border-width: 1px !default;
+$nav-meta-dropdown-column-border-color: lighten($f-dropdown-border-color, 15%) !default;
+$nav-meta-dropdown-column-position-top: ($f-dropdown-content-padding * 4) !default;
+$nav-meta-dropdown-column-position-bottom: $f-dropdown-content-padding !default;
+$nav-meta-dropdown-column-margin-left: -($f-dropdown-content-padding) !default;
+$nav-meta-dropdown-header-link-margin-left: -($f-dropdown-content-padding) !default;
+$nav-meta-dropdown-header-link-padding-left: $f-dropdown-content-padding !default;
+$nav-meta-dropdown-header-link-font-weight: bold !default;
+$nav-meta-dropdown-header-link-text-transform: uppercase !default;
+$nav-meta-dropdown-header-link-border-left-width: 1px !default;
+$nav-meta-dropdown-header-link-border-left-style: solid !default;
+$nav-meta-dropdown-header-link-border-left-color: $f-dropdown-border-color !default;
+
+
+.c-nav-meta {
+  margin: $nav-meta-margin;
+
+  @media #{$medium-up} {
+    float: $nav-meta-medium-float;
+    overflow: $nav-meta-medium-overflow;
+
+    > li {
+      position: relative; // to make the dropdown content position properly
+    }
+
+    // override Foundation standard
+    // our meta nav is floated to the right and we need some custom handling
+    .f-dropdown {
+
+      &:after {
+        left: auto !important;
+        right: -1px;
+      }
+
+      // place the arrow on the right side
+      &:before {
+        left: auto !important;
+        right: 0;
+      }
+
+      // content positioning
+      &.tiny,
+      &.small,
+      &.medium,
+      &.large,
+      &.huge {
+        left: auto !important;
+        right: -2px !important;
+        width: $nav-meta-small-dropdown-width;
+      }
+
+      &.tiny {
+        width: $nav-meta-tiny-dropdown-width;
+        max-width: $nav-meta-tiny-dropdown-width;
+      }
+
+      &.medium {
+        width: $nav-meta-medium-dropdown-width;
+        max-width: $nav-meta-medium-dropdown-width
+      }
+
+      &.large {
+        width: $nav-meta-large-dropdown-width;
+        max-width: $nav-meta-large-dropdown-width;
+      }
+
+      &.huge {
+        width: $nav-meta-huge-dropdown-width;
+        max-width: $nav-meta-huge-dropdown-width;
+      }
+
+    }
+  }
+}
+
+.c-nav-meta__link {
+  text-decoration: $nav-meta-link-text-decoration;
+
+  &:hover {
+    text-decoration: $nav-meta-link-hover-text-decoration;
+  }
+}
+
+.c-nav-meta__icon {
+  margin-right: $nav-meta-icon-margin-right;
+}
+
+.c-nav-meta__customer-number {
+  width: $nav-meta-customer-number-width;
+  margin-bottom: $nav-meta-customer-number-margin-bottom;
+  line-height: $nav-meta-customer-number-line-height;
+  text-align: $nav-meta-customer-number-text-align;
+}
+
+.c-nav-meta__dropdown {
+  position: relative;
+  padding-right: $nav-meta-dropdown-trigger-padding-right;
+  letter-spacing: $nav-meta-dropdown-trigger-letter-spacing;
+  text-transform: $nav-meta-dropdown-trigger-text-transform;
+
+  &.with-arrow:after {
+    position: absolute;
+    top: $nav-meta-dropdown-trigger-arrow-top;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $nav-meta-dropdown-trigger-arrow-width $nav-meta-dropdown-trigger-arrow-width 0 $nav-meta-dropdown-trigger-arrow-width;
+    border-color: $nav-meta-dropdown-trigger-arrow-border-color transparent transparent transparent;
+  }
+}
+
+.c-nav-meta__content {
+  a:hover {
+    color: $nav-meta-dropdown-content-link-font-color;
+  }
+}
+
+.c-nav-meta__column {
+
+  &:after {
+    position: absolute;
+    width: $nav-meta-dropdown-column-border-width;
+    background-color: $nav-meta-dropdown-column-border-color;
+    content: '';
+    top: $nav-meta-dropdown-column-position-top;
+    bottom: $nav-meta-dropdown-column-position-bottom;
+    margin-left: $nav-meta-dropdown-column-margin-left;
+  }
+
+  &:first-child {
+    padding-left: 0 !important;
+
+    &:after {
+      display: none;
+    }
+
+    a {
+      border: 0;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0 !important;
+    border-right: 0;
+  }
+
+  > a {
+    margin-left: $nav-meta-dropdown-header-link-margin-left;
+    padding-left: $nav-meta-dropdown-header-link-padding-left !important;
+    font-weight: $nav-meta-dropdown-header-link-font-weight;
+    text-transform: $nav-meta-dropdown-header-link-text-transform;
+    border-left: $nav-meta-dropdown-header-link-border-left-width $nav-meta-dropdown-header-link-border-left-style $nav-meta-dropdown-header-link-border-left-color;
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+  }
+}
+
+.c-nav-meta__cookie-notice {
+  padding: rem-calc(7 10);
+  &.label {
+    color: $white;
+  }
+}
+
+.c-nav-meta__flag {
+  display: inline-block !important;
+  float: left;
+  width: rem-calc(30);
+  height: rem-calc(30);
+  margin-right: rem-calc(10);
+  opacity: 0.5;
+  background: white !important;
+  padding: 0 !important;
+  border-bottom: none !important;
+  border-radius: 50%;
+
+  @media #{$large-up} {
+    margin-right: 0;
+    margin-left: rem-calc(10);
+    width: rem-calc(22);
+    height: rem-calc(22);
+  }
+
+  &.is-current,
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.c-nav-meta__flag-icon {
+  border-radius: 50%;
+  border: 1px solid $white;
+  box-shadow: 1px 1px 0 $iron;
+  width: 30px;
+  height: 30px;
+
+  @media #{$large-up} {
+    width: rem-calc(22);
+    height: rem-calc(22);
+  }
+}

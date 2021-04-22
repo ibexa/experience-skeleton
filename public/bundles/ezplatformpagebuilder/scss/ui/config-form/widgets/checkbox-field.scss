@@ -1,0 +1,74 @@
+@import './public/bundles/ezplatformadminui/scss/_custom.scss';
+
+.ez-block-checkbox-field {
+    .form-check {
+        display: flex;
+        margin-left: 2.5rem;
+        height: 100%;
+    }
+
+    &__indicator {
+        width: 2rem;
+        height: 2rem;
+        display: block;
+        background-color: $ibexa-white;
+        border-radius: 50%;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        transition: all 0.3s $ibexa-admin-transition;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &__label {
+        position: relative;
+        width: 2rem;
+        height: 2.25rem;
+        background-color: $ibexa-color-base-deep;
+        margin-left: 1.125rem;
+        cursor: pointer;
+        margin-bottom: 0;
+
+        input {
+            opacity: 0;
+            height: 1px;
+        }
+
+        &.is-checked {
+            background-color: $ibexa-color-primary;
+
+            .ez-block-checkbox-field__indicator {
+                transform: translateX(50%);
+            }
+
+            &:before,
+            &:after {
+                background-color: $ibexa-color-primary;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            height: 2.25rem;
+            width: 2.25rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            background-color: $ibexa-color-base-deep;
+            cursor: pointer;
+        }
+
+        &:before {
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        &:after {
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+    }
+}

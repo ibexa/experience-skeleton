@@ -1,0 +1,167 @@
+.ezcommerce-basket-widget {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.3;
+
+    &__summary {
+        border: 1px solid $ibexa-color-base-dark;
+        padding: 8px;
+        font-size: 14px;
+        display: flex;
+        height: 56px;
+
+        &,
+        &:hover {
+            color: $ibexa-black;
+        }
+    }
+
+    &__column {
+        &--labels {
+            width: calc(100% - 40px);
+            text-align: right;
+        }
+
+        &--icons {
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    &__cart-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    &__header {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    &__badge {
+        background-color: $ibexa-color-primary;
+        color: $ibexa-white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        transform: translate(0, 100%);
+        background: $ibexa-white;
+        border: 1px solid $ibexa-color-base-dark;
+        width: 100vw;
+        max-width: 350px;
+    }
+
+    &__category {
+        padding: 8px;
+
+        & + & {
+            padding: 0 8px;
+        }
+    }
+
+    &__row {
+        display: flex;
+
+        & + & {
+            padding-top: 8px;
+        }
+    }
+
+    &__name {
+        width: 70%;
+        text-align: left;
+    }
+
+    &__price {
+        width: 30%;
+        text-align: right;
+    }
+
+    &__total {
+        border-top: 1px solid $ibexa-color-base-dark;
+        display: flex;
+        padding: 8px;
+        font-weight: 700;
+    }
+
+    &__total-label {
+        width: 70%;
+        text-align: left;
+    }
+
+    &__total-value {
+        width: 30%;
+        text-align: right;
+    }
+
+    &__actions {
+        padding: 0px 8px 8px;
+        display: flex;
+    }
+
+    &__button {
+        background-color: $ibexa-color-base-dark;
+        color: $ibexa-white;
+        width: 50%;
+        padding: 8px 16px;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $ibexa-color-base-deep-dark;
+            color: $ibexa-white;
+        }
+
+        & + & {
+            margin-left: 8px;
+        }
+    }
+
+    &:hover {
+        .ezcommerce-basket-widget {
+            &__summary {
+                border-bottom: 0;
+            }
+
+            &__dropdown {
+                display: block;
+            }
+        }
+    }
+
+    &[data-products-in-basket='0']:hover {
+        .ezcommerce-basket-widget {
+            &__summary {
+                border-bottom: 1px solid $ibexa-color-base-dark;
+            }
+
+            &__dropdown {
+                display: none;
+            }
+        }
+    }
+}
+
+.f-topbar-fixed {
+    .ezcommerce-basket-widget {
+        &__summary {
+            padding: 3px 8px;
+            height: 46px;
+        }
+    }
+}

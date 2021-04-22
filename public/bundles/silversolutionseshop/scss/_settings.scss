@@ -1,0 +1,13 @@
+// We use this file in case we would like to include our settings in another file
+// like we did for dashboard. Using this approach we can reorder positions and add new
+// settings in one place and never forget to update in any other place
+
+@import "settings/global";
+
+// Duplicated vendor/foundation/scss/foundation/_settings.scss
+// It is duplicated and not imported for easier update process
+@import "settings/foundation";
+
+// Settings that are not part of Foundation framework
+// Feel free to override this file in your project
+@import "settings/storm";

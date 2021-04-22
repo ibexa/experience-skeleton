@@ -1,0 +1,11 @@
+.c-image-editor-canvas {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: calculateRem(30px);
+
+    &__technical {
+        position: absolute;
+    }
+}

@@ -1,0 +1,56 @@
+.c-calendar {
+    position: relative;
+
+    &__toggler {
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+        border-radius: calculateRem(2px);
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+
+        .ez-icon {
+            fill: $ibexa-color-ground-dark;
+        }
+
+        &:hover,
+        &:focus {
+            background: $ibexa-color-ground-dark;
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+    }
+
+    &__view {
+        position: absolute;
+        top: calculateRem(32px);
+        left: 0;
+        background-color: $ibexa-white;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s $ibexa-admin-transition;
+        border-radius: calculateRem(2px);
+        z-index: 1;
+        box-shadow: 0 calculateRem(2px) calculateRem(4px) 0 rgba(0, 0, 0, 0.45);
+        padding: calculateRem(8px);
+    }
+
+    &--is-expanded {
+        .c-calendar__toggler {
+            background-color: $ibexa-color-ground-dark;
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+
+        .c-calendar__view {
+            transform: scaleY(1);
+        }
+    }
+}

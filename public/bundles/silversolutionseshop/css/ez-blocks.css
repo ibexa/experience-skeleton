@@ -1,0 +1,24 @@
+/* Landingpage Blocks CSS */
+
+/* Banner */
+
+.ez-banner {
+  margin-bottom: 30px;
+}
+
+.ez-banner figure {
+  margin: 0;
+}
+
+.ez-banner img {
+  width: 100%;
+}
+
+ /* Map */
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* Landing Page blocks */

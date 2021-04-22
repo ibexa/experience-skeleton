@@ -1,0 +1,13 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+@import 'ui/page-builder/components/block-preview';
+@import 'ui/page-builder/components/sidebar-blocks-group';
+@import 'ui/page-builder/components/block-sidebar';
+@import 'ui/page-builder/components/config-popup';
+@import 'ui/page-builder/components/sidebar';
+@import 'ui/page-builder/components/layout-selector';
+@import 'ui/page-builder/components/iframe';
+@import 'ui/page-builder/components/date-picker';
+@import 'ui/page-builder/page-builder';

@@ -1,0 +1,13 @@
+.ezcommerce-checkout-summary {
+    &__table {
+        width: 100%;
+    }
+
+    &__product-preview {
+        display: flex;
+    }
+
+    &__product-data {
+        padding-left: 8px;
+    }
+}
