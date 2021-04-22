@@ -1,0 +1,15 @@
+// Global settings shared among Foundation and Storm components
+
+// Global settings should come only from Storm components because Storm
+// is loaded after Foundation so it has already access to all variables
+// from Foundation. Every global variable should also be prefixed with $global-
+
+// Colors
+@import "colors.flat";
+
+// Fonts
+$global-primary-font: Open Sans, Helvetica, Arial, sans-serif;
+$global-secondary-font: Roboto, Helvetica, Arial, sans-serif;
+
+// Alert component
+$global-alert-lighten: 15%;

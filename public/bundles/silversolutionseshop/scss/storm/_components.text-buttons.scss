@@ -1,0 +1,30 @@
+// Default settings
+$text-buttons-margin: 0 !default;
+
+$text-buttons-item-margin-bottom: rem-calc(5) !default;
+$text-buttons-item-padding-bottom: rem-calc(5) !default;
+
+.c-text-buttons {
+  margin: $text-buttons-margin;
+  list-style: none;
+}
+
+  .c-text-buttons__item {
+    margin-bottom: $text-buttons-item-margin-bottom;
+    padding-bottom: $text-buttons-item-padding-bottom;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &.is-disabled {
+      opacity: $button-disabled-opacity;
+
+      a:hover {
+        cursor: default;
+      }
+
+    }
+
+  }

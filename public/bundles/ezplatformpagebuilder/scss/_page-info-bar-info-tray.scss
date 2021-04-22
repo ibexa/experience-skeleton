@@ -1,0 +1,18 @@
+.ez-info-tray {
+    transition: transform 0.3s $ibexa-admin-transition;
+    position: absolute;
+    top: calculateRem(65px);
+    left: 0;
+    width: 100%;
+    z-index: 115;
+    transform: scaleY(0);
+    transform-origin: top;
+    will-change: transform;
+    padding: calculateRem(8px) calculateRem(16px);
+    background-color: $ibexa-white;
+    box-shadow: 0 calculateRem(4px) calculateRem(4px) 0 rgba(219, 219, 219, 0.35);
+
+    &--visible {
+        transform: scaleY(1);
+    }
+}

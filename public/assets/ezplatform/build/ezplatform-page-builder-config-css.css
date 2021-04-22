@@ -1,0 +1,808 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-main-container,
+[name='block_configuration'],
+.ez-block-config {
+  height: 100%;
+}
+
+.ez-block-config {
+  display: grid;
+  grid-template-areas: 'tabs' 'content' 'actions';
+  grid-template-rows: 3.375rem auto 5rem;
+}
+
+.ez-block-config--default .ez-main-container {
+  padding: 0;
+}
+
+.ez-block-config__tabs {
+  grid-area: tabs;
+  background: #fff;
+  border: 0 none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.ez-block-config__link-wrapper {
+  position: relative;
+}
+
+.ez-block-config__link {
+  padding: 0 1rem;
+  border: 0 none;
+}
+
+.ez-block-config__link--has-invalid-fields + .ez-warning-icon {
+  display: flex;
+  top: 0;
+  right: 0;
+}
+
+.ez-block-config__content {
+  grid-area: content;
+  padding: 1.5rem 3rem;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.ez-block-config__actions {
+  justify-content: flex-start;
+  padding: 1.5rem 0;
+  background: #fff;
+  grid-area: actions;
+  padding: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.ez-block-config__actions .btn {
+  margin: 0 0.25rem 0 0;
+}
+
+.ez-block-config [data-open-udw] {
+  display: block;
+}
+
+.ez-block-config__error {
+  display: flex;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #d92d42;
+  align-items: center;
+  box-sizing: border-box;
+  flex-basis: 100%;
+  margin: 0 0 0.625rem 0.125rem;
+}
+
+.ez-block-config__error:before {
+  content: '!';
+  font-size: 0.75rem;
+  display: flex;
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #fff;
+  background: #d92d42;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.3125rem;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-scheduler-tab {
+  margin: 0;
+}
+
+.ez-scheduler-tab .col-form-label {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-warning-icon {
+  position: absolute;
+  background: #d92d42;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  top: -0.5rem;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.ez-warning-icon .ez-icon.ez-icon--warning {
+  height: 12px;
+  width: 12px;
+  margin: -2px 0 0;
+  fill: #fff;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-embed-meta {
+  display: grid;
+  grid-template-areas: 'preview info actions';
+  grid-template-columns: 12rem auto 3rem;
+  grid-gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  margin-top: 1rem;
+}
+
+.ez-embed-meta__preview {
+  grid-area: preview;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ez-embed-meta__preview-icon {
+  grid-area: preview;
+  width: 6.25rem;
+  height: 6.25rem;
+  justify-self: center;
+}
+
+.ez-embed-meta__info {
+  grid-area: info;
+}
+
+.ez-embed-meta__actions {
+  grid-area: actions;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ez-embed-meta__action {
+  padding: 0;
+  border: 0 none;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 2.5rem;
+  cursor: pointer;
+  transition: background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ez-embed-meta__action .ez-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.ez-embed-meta__title {
+  font-size: 1rem;
+}
+
+.ez-embed-meta__breadcrumb {
+  font-size: 0.875rem;
+}
+
+.ez-embed-meta__content-type {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.ez-embed-meta--video {
+  grid-template-areas: 'preview actions' 'info actons';
+  grid-template-columns: auto 3rem;
+  grid-template-rows: auto auto;
+  padding: 0.625rem;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-block-select-field {
+  position: relative;
+}
+
+.ez-block-select-field *,
+.ez-block-select-field *:after,
+.ez-block-select-field *:before {
+  box-sizing: border-box;
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ez-block-select-field__selected {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
+  padding: 0 1rem 0.375rem 0.5rem;
+  border: 0.0625rem solid #878b90;
+  border-radius: 0.125rem;
+  position: relative;
+  min-height: 2.375rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.ez-block-select-field__selected:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 1.3125rem;
+  right: 0.5rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.4375rem 0.25rem 0 0.25rem;
+  border-color: #131c26 transparent transparent transparent;
+}
+
+.ez-block-select-field__selected:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0.625rem;
+  right: 0.5rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0.25rem 0.4375rem 0.25rem;
+  border-color: transparent transparent #131c26 transparent;
+}
+
+.ez-block-select-field__selected.is-invalid {
+  border-color: #aa0000;
+  background: #fceaec;
+}
+
+.ez-block-select-field__selected-item {
+  position: relative;
+  display: inline-flex;
+  min-width: 4.375rem;
+  margin-right: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.0625rem 1.5625rem 0.0625rem 0.5rem;
+  background: #e0e0e8;
+  border: 0.0625rem solid #878b90;
+  border-radius: 0.125rem;
+  color: #131c26;
+  font-size: 0.875rem;
+  font-weight: normal;
+  align-items: center;
+}
+
+.ez-block-select-field__selected-remove {
+  display: inherit;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1.75rem;
+  height: 1.25rem;
+  transform: translateY(-50%);
+}
+
+.ez-block-select-field__selected-remove:before, .ez-block-select-field__selected-remove:after {
+  content: '';
+  width: 0.125rem;
+  height: 0.75rem;
+  background: #131c26;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ez-block-select-field__selected-remove:before {
+  transform: translate(50%, -50%) rotate(-45deg);
+}
+
+.ez-block-select-field__selected-remove:after {
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+.ez-block-select-field__options {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  position: absolute;
+  top: calc(100% - 0.0625rem);
+  transform: scaleY(1);
+  transform-origin: top center;
+  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 50%;
+  background: #fff;
+  border: 0.0625rem solid #878b90;
+  color: #131c26;
+  z-index: 2;
+  border-radius: 0 0 0.125rem 0.125rem;
+}
+
+.ez-block-select-field__options--hidden {
+  transform: scaleY(0);
+}
+
+.ez-block-select-field__options-item {
+  margin: 0.125rem 0;
+  padding: 0.5rem 1rem;
+  min-height: 1.875rem;
+  transition: background 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ez-block-select-field__options-item:hover {
+  background: #e0e0e8;
+}
+
+.ez-block-select-field__options-item[disabled] {
+  color: #f5f5f5;
+}
+
+.ez-block-select-field__options-item[disabled]:hover {
+  background: inherit;
+  cursor: not-allowed;
+}
+
+.ez-block-select-field__options-item:last-child {
+  margin-top: 0;
+}
+
+.ez-block-select-field__options-item:last-child {
+  margin-bottom: 0;
+}
+
+.ez-block-radio-field .form-check {
+  display: flex;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-reveal-hide-date-time {
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4rem;
+  grid-template-areas: 'reveal hide';
+}
+
+.ez-reveal-hide-date-time .form-group {
+  margin-bottom: 0.25rem;
+}
+
+.ez-reveal-hide-date-time .form-group .col-form-label {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.ez-reveal-hide-date-time__reveal {
+  grid-area: reveal;
+}
+
+.ez-reveal-hide-date-time__hide {
+  grid-area: hide;
+}
+
+.ez-reveal-hide-date-time .ez-picker {
+  margin-left: 1.5625rem;
+  margin-bottom: 0.3125rem;
+}
+
+.ez-reveal-hide-date-time .form-check-label {
+  display: inline-block;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-block-checkbox-field .form-check {
+  display: flex;
+  margin-left: 2.5rem;
+  height: 100%;
+}
+
+.ez-block-checkbox-field__indicator {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ez-block-checkbox-field__label {
+  position: relative;
+  width: 2rem;
+  height: 2.25rem;
+  background-color: #fff;
+  margin-left: 1.125rem;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.ez-block-checkbox-field__label input {
+  opacity: 0;
+  height: 1px;
+}
+
+.ez-block-checkbox-field__label.is-checked {
+  background-color: #ae1164;
+}
+
+.ez-block-checkbox-field__label.is-checked .ez-block-checkbox-field__indicator {
+  transform: translateX(50%);
+}
+
+.ez-block-checkbox-field__label.is-checked:before, .ez-block-checkbox-field__label.is-checked:after {
+  background-color: #ae1164;
+}
+
+.ez-block-checkbox-field__label:before, .ez-block-checkbox-field__label:after {
+  content: '';
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.ez-block-checkbox-field__label:before {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.ez-block-checkbox-field__label:after {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-collection__items {
+  list-style: none;
+  padding: 0.5rem 0.5rem 0.0625rem 0.5rem;
+  margin-top: 1rem;
+  min-height: 2.25rem;
+  background-color: #f5f5f5;
+}
+
+.ez-collection__item {
+  display: flex;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  border: 0.125rem solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  animations: all 0.3s;
+}
+
+.ez-collection__item:hover {
+  border: 0.125rem solid rgba(255, 255, 255, 0.75);
+}
+
+.ez-collection__item-drag {
+  display: flex;
+  flex-basis: 2rem;
+  height: 2rem;
+}
+
+.ez-collection__item-drag .ez-icon {
+  align-self: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ez-collection__item-name, .ez-collection__item-content-type {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  flex-basis: calc(80% - 3.5rem);
+  font-size: 0.875rem;
+}
+
+.ez-collection__item-content-type {
+  flex-basis: 20%;
+}
+
+.ez-collection__item-trash {
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.ez-collection__item--placeholder {
+  display: block;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-schedule {
+  position: relative;
+}
+
+.ez-schedule__btn-wrapper {
+  margin-bottom: 1rem;
+}
+
+.ez-schedule__active-items, .ez-schedule__queue-items {
+  list-style: none;
+  margin: 0 0 1rem;
+  min-height: 2.25rem;
+  padding: 0.5rem 0.5rem 0.0625rem 0.5rem;
+  background-color: #f5f5f5;
+}
+
+.ez-schedule__active-item {
+  display: flex;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  border: 2px solid rgba(237, 237, 237, 0.5);
+  padding: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.ez-schedule__active-item:hover {
+  border: 2px solid rgba(219, 219, 219, 0.75);
+}
+
+.ez-schedule__active-item__error {
+  font-style: italic;
+  color: #aa0000;
+  font-size: 1rem;
+  display: none;
+}
+
+.ez-schedule__active-item--is-unavailable .ez-schedule__active-item__error {
+  display: block;
+}
+
+.ez-schedule__active-item--is-unavailable .ez-schedule__active-item-change-airtime .ez-btn--change-airtime {
+  cursor: not-allowed;
+}
+
+.ez-schedule__active-item--is-unavailable .ez-schedule__active-item-change-airtime .ez-icon {
+  fill: #878b90;
+}
+
+.ez-schedule__active-item-drag {
+  display: flex;
+  flex-basis: 2rem;
+  height: 2rem;
+}
+
+.ez-schedule__active-item-drag .ez-icon {
+  align-self: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ez-schedule__active-item-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  flex-basis: calc(100% - 3.5rem);
+  font-size: 0.875rem;
+}
+
+.ez-schedule__active-item-trash, .ez-schedule__active-item-change-airtime {
+  height: 1.5rem;
+  cursor: pointer;
+  flex-basis: 1.5rem;
+}
+
+.ez-schedule__active-item-change-airtime {
+  margin-right: 1rem;
+}
+
+.ez-schedule__active-item--placeholder {
+  display: block;
+  height: 2.5rem;
+  background-color: rgba(168, 200, 213, 0.25);
+  pointer-events: none;
+}
+
+.ez-schedule__active-item--drag-disabled {
+  cursor: auto;
+}
+
+.ez-schedule__active-item--drag-disabled .ez-schedule__active-item-drag .ez-icon {
+  fill: #fff;
+}
+
+.ez-schedule__queue-item {
+  display: flex;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ez-schedule__queue-item-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  flex-basis: calc(100% - 14.8rem);
+  font-size: 0.875rem;
+}
+
+.ez-schedule__queue-item-airtime {
+  font-size: 0.8125rem;
+  flex-basis: 10rem;
+}
+
+.ez-schedule__queue-item-trash, .ez-schedule__queue-item-change-airtime {
+  height: 1.5rem;
+  cursor: pointer;
+  flex-basis: 1.5rem;
+}
+
+.ez-schedule__queue-item-change-airtime {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.ez-schedule__queue-item__error {
+  font-style: italic;
+  color: #aa0000;
+  font-size: 1rem;
+  display: none;
+}
+
+.ez-schedule__queue-item--is-unavailable .ez-schedule__queue-item__error {
+  display: block;
+}
+
+.ez-schedule__queue-item--is-unavailable .ez-schedule__queue-item-change-airtime .ez-btn--change-airtime {
+  cursor: not-allowed;
+}
+
+.ez-schedule__queue-item--is-unavailable .ez-schedule__queue-item-change-airtime .ez-icon {
+  fill: #878b90;
+}
+
+.ez-schedule__loading {
+  display: none;
+}
+
+.ez-schedule__no-active-items-info, .ez-schedule__no-queued-items-info {
+  position: absolute;
+  min-height: 2.25rem;
+  padding: 0.5rem;
+  color: #878b90;
+  font-style: italic;
+  font-size: small;
+}
+
+.ez-schedule__no-active-items-info--hidden, .ez-schedule__no-queued-items-info--hidden {
+  display: none;
+}
+
+.ez-schedule--is-loading .ez-schedule__items-wrapper {
+  display: none;
+}
+
+.ez-schedule--is-loading .ez-schedule__loading {
+  width: 100%;
+  height: 20rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-segmentation__items {
+  list-style: none;
+  padding: 0.5rem 0.5rem 0.0625rem;
+  margin-top: 1rem;
+  background-color: #f5f5f5;
+}
+
+.ez-segmentation__item {
+  display: flex;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  padding: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.ez-segmentation__item--placeholder {
+  display: block;
+  height: 2.5rem;
+  background-color: #f5f5f5;
+  pointer-events: none;
+}
+
+.ez-segmentation__item--no-configuration {
+  cursor: default;
+}
+
+.ez-segmentation__item:not(:last-child) .ez-btn--add {
+  display: none;
+}
+
+.ez-segmentation__select-wrapper {
+  width: 18.75rem;
+  display: flex;
+}
+
+.ez-segmentation__select {
+  width: 50%;
+}
+
+.ez-segmentation__select--segment {
+  margin-left: 1rem;
+}
+
+.ez-segmentation__content-wrapper {
+  margin-left: 1rem;
+}
+
+.ez-segmentation__item-actions {
+  margin-left: 1rem;
+}
+
+.ez-segmentation__content-info {
+  display: flex;
+  background-color: #f5f5f5;
+  padding: 0.25rem;
+  border-radius: 0.125rem;
+  font-size: 0.75rem;
+}
+
+.ez-segmentation__content-info--hidden {
+  display: none;
+}
+
+.ez-segmentation__content-info .ez-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ez-segmentation__content-title, .ez-segmentation__content-breadcrumbs {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 11.25rem;
+}
+
+.ez-segmentation__content-breadcrumbs {
+  color: #878b90;
+}
+

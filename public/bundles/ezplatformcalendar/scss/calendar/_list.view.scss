@@ -1,0 +1,90 @@
+.c-list-view {
+    &__top-bar {
+        display: flex;
+        padding: calculateRem(10px) calculateRem(20px) calculateRem(30px) calculateRem(20px);
+    }
+
+    &__table {
+        width: 100%;
+
+        &--hoverable {
+            tbody {
+                tr:hover {
+                    color: $ibexa-black;
+                    background-color: $ibexa-color-base-pale;
+                }
+            }
+        }
+    }
+
+    &__table-cell-header {
+        color: $ibexa-color-base-dark;
+        border-color: $ibexa-color-base;
+        border-style: solid;
+        border-width: calculateRem(1px) 0 calculateRem(1px);
+    }
+
+    &__list {
+        position: relative;
+
+        &--loading {
+            height: calculateRem(400px);
+        }
+    }
+
+    &__load-more-wrapper {
+        padding: calculateRem(16px);
+        display: flex;
+        justify-content: center;
+        background: $ibexa-white;
+    }
+
+    &__table-cell-header,
+    &__table-cell {
+        font-weight: normal;
+        min-height: calculateRem(40px);
+        padding: calculateRem(10px) 0;
+        font-size: calculateRem(16px);
+
+        &--checkbox {
+            width: calculateRem(40px);
+        }
+
+        &--checkbox {
+            position: relative;
+            padding-left: calculateRem(16px);
+        }
+
+        &--time {
+            width: calculateRem(100px);
+        }
+
+        &--separator {
+            padding-left: calculateRem(10px);
+            font-size: calculateRem(14px);
+        }
+
+        &--no-events {
+            font-size: calculateRem(14px);
+            padding: calculateRem(11px) calculateRem(22px);
+        }
+    }
+
+    &__table-event-marker {
+        border-left-width: calculateRem(7px);
+        border-left-style: solid;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__table-separator {
+        background: $ibexa-color-base-pale;
+    }
+
+    &__table-separator:first-of-type,
+    &__table-no-events {
+        border-top-width: calculateRem(3px);
+    }
+}

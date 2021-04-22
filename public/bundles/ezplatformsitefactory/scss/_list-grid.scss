@@ -1,0 +1,8 @@
+.ez-site-factory-list-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: calculateRem(1px) solid $ibexa-color-base;
+    padding: calculateRem(32px);
+}

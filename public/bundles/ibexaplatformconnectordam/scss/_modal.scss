@@ -1,0 +1,76 @@
+.ez-modal--search-dam {
+    z-index: 9999;
+
+    .modal-dialog {
+        max-width: initial;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .modal-header {
+        background-color: $ibexa-white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: calculateRem(50px);
+        border: 0;
+        padding: 0 calculateRem(24px);
+
+        .modal-title {
+            font-size: calculateRem(26px);
+            margin-top: calculateRem(12px);
+        }
+    
+        .close {
+            padding: calculateRem(1px) calculateRem(6px);
+            margin: 0;
+            outline: 0;
+        }
+    }
+
+    .tab-content,
+    .tab-pane {
+        height: 100%;
+    }
+
+    .modal-content {
+        height: 100%;
+        overflow: hidden;
+        padding: 0;
+
+        .ez-tabs {
+            padding: 0 calculateRem(8px);
+        }
+    }
+
+    .modal-body {
+        height: calc(100% - #{calculateRem(120px)});
+        padding: calculateRem(24px) calculateRem(32px);
+    }
+
+    .input-group {
+        display: flex;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            margin-right: calculateRem(8px);
+        }
+
+        input {
+            max-width: calculateRem(500px);
+            margin-right: calculateRem(8px);
+        }
+
+        select {
+            max-width: calculateRem(300px);
+            margin-right: calculateRem(8px);
+        }
+
+        .ez-btn--search {
+            display: flex;
+            align-items: center;
+        }
+    }
+}

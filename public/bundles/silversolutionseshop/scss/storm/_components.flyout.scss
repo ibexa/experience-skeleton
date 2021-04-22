@@ -1,0 +1,27 @@
+// Default settings
+$flyout-max-height: rem-calc(300) !default;
+$flyout-overflow-y: auto !default;
+$flyout-row-margin: 0 !default;
+$flyout-line-space-start: 0 !default;
+$flyout-line-space-end: 0 !default;
+
+// We use this component for any flyout type content e.g. basket flyout, etc
+
+.c-flyout__content {
+  max-height: $flyout-max-height;
+  overflow-y: $flyout-overflow-y;
+
+  .row {
+    margin: $flyout-row-margin;
+
+    .columns:first-child {
+      padding-left: $flyout-line-space-start;
+    }
+
+    .columns:last-child {
+      padding-right: $flyout-line-space-end;
+    }
+
+  }
+
+}

@@ -1,0 +1,230 @@
+// Default settings
+$facet-dropdown-margin-top: rem-calc(-1) !default;
+
+$facet-btn-margin-bottom: rem-calc(5) !default;
+$facet-btn-padding: rem-calc(8 30 8 10) !default;
+$facet-btn-font-color: $jet !default;
+$facet-btn-bg-color: $smoke !default;
+$facet-btn-border-width: rem-calc(1) !default;
+$facet-btn-border-style: solid !default;
+$facet-btn-border-color: $f-dropdown-border-color !default;
+$facet-btn-hover-bg-color: $f-dropdown-border-color !default;
+$facet-btn-hover-font-color: $jet !default;
+$facet-btn-hover-outline: none !default;
+$facet-btn-arrow-position-right: rem-calc(10) !default;
+$facet-btn-arrow-bg-color: $oil !default;
+$facet-btn-apply-padding: rem-calc(5 10) !default;
+$facet-btn-apply-margin-top: rem-calc(5) !default;
+$facet-btn-apply-disabled-bg-color: $aluminum !default;
+$facet-btn-apply-disabled-hover-bg-color: $facet-btn-apply-disabled-bg-color !default;
+
+$facet-list-padding-right: rem-calc(5) !default;
+$facet-list-padding-left: rem-calc(5) !default;
+$facet-list-max-height: rem-calc(120) !default;
+$facet-list-overflow-y: auto !default;
+$facet-list-mega-max-height: rem-calc(240) !default;
+$facet-item-padding-top: rem-calc(4) !default;
+$facet-item-padding-bottom: rem-calc(4) !default;
+$facet-item-padding-top-large: rem-calc(2) !default;
+$facet-item-padding-bottom-large: rem-calc(2) !default;
+
+// item width for different resolutions in case parent has .mega class assigned
+$facet-list-mega-item-width-small: 50% !default;
+$facet-list-mega-item-width-large: 33.33% !default;
+$facet-list-mega-item-width-xlarge: 25% !default;
+
+$facet-search-padding-right: rem-calc(20) !default;
+$facet-icon-search-position: absolute !default;
+$facet-icon-search-position-top: rem-calc(12) !default;
+$facet-icon-search-position-right: rem-calc(6) !default;
+
+$facet-active-margin: rem-calc(2 2 5) !default;
+$facet-active-padding-top: 0 !default;
+$facet-active-padding-bottom: rem-calc(3) !default;
+$facet-active-line-height: rem-calc(18) !default;
+$facet-active-cursor: pointer !default;
+
+$facet-icon-close-position: relative !default;
+$facet-icon-close-position-top: rem-calc(3) !default;
+$facet-icon-close-font-size: rem-calc(20) !default;
+$facet-icon-close-font-weight: bold !default;
+$facet-icon-close-rounded-position: absolute !default;
+$facet-icon-close-rounded-position-top: rem-calc(12) !default;
+$facet-icon-close-rounded-position-right: rem-calc(5) !default;
+$facet-icon-close-rounded-width: rem-calc(20) !default;
+$facet-icon-close-rounded-height: rem-calc(20) !default;
+$facet-icon-close-rounded-padding: 0 !default;
+$facet-icon-close-rounded-margin: 0 !default;
+$facet-icon-close-rounded-border-radius: 50% !default;
+$facet-icon-close-rounded-cursor: pointer !default;
+
+$facet-active-group-position: relative !default;
+$facet-active-group-display: inline-block !default;
+$facet-active-group-padding: rem-calc(0 5 2) !default;
+$facet-active-group-margin: rem-calc(5 10 15 0) !default;
+$facet-active-group-margin-top-large: 0 !default;
+$facet-active-group-border-width: rem-calc(1) !default;
+$facet-active-group-border-style: solid !default;
+$facet-active-group-border-color: $flat-clouds !default;
+$facet-active-group-multi-padding-right: rem-calc(33) !default;
+$facet-active-group-title-display: table !default;
+$facet-active-group-title-margin: rem-calc(-8 0 0 ) !default;
+$facet-active-group-title-font-size: rem-calc(12) !default;
+$facet-active-group-title-font-weight: normal !default;
+$facet-active-group-title-bg-color: $white !default;
+
+.c-facets__dropdown {
+  margin-top: $facet-dropdown-margin-top;
+}
+
+.c-facets__button {
+  margin-bottom: $facet-btn-margin-bottom;
+  padding: $facet-btn-padding !important;
+  color: $facet-btn-font-color;
+  background-color: $facet-btn-bg-color;
+  border: $facet-btn-border-width $facet-btn-border-style $facet-btn-border-color;
+
+  &:focus,
+  &:hover {
+    background: $facet-btn-hover-bg-color;
+    color: $facet-btn-hover-font-color;
+    outline: $facet-btn-hover-outline;
+  }
+
+  &:after {
+    right: $facet-btn-arrow-position-right !important;
+    border-color: $facet-btn-arrow-bg-color transparent transparent transparent!important;
+    border-width: rem-calc(7);
+    margin-top: rem-calc(-2);
+    border-style: solid;
+    content: "";
+    display: block;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    width: 0;
+  }
+
+  &--apply {
+    padding: $facet-btn-apply-padding !important;
+    margin-top: $facet-btn-apply-margin-top !important;
+
+    &.disabled {
+      background-color: $facet-btn-apply-disabled-bg-color;
+
+      &:active,
+      &:hover {
+        background-color: $facet-btn-apply-disabled-hover-bg-color;
+      }
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+.c-facets__items-list {
+  padding-right: $facet-list-padding-right;
+  padding-left: $facet-list-padding-left;
+  max-height: $facet-list-max-height;
+  overflow-y: $facet-list-overflow-y;
+
+  // allow for multiple columns
+  .mega & {
+    max-height: $facet-list-mega-max-height;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+.c-facets__item {
+  padding-top: $facet-item-padding-top;
+  padding-bottom: $facet-item-padding-bottom;
+
+  @media #{$large-up} {
+    padding-top: $facet-item-padding-top-large;
+    padding-bottom: $facet-item-padding-bottom-large;
+  }
+
+  // small has 2 columns
+  .mega & {
+    width: $facet-list-mega-item-width-small;
+
+    // large-up has 3 columns
+    @media #{$large-up} {
+      width: $facet-list-mega-item-width-large;
+    }
+
+    // xlarge-up has 4 columns
+    @media #{$xlarge-up} {
+      width: $facet-list-mega-item-width-xlarge;
+    }
+  }
+}
+
+.c-facets__search-field {
+  padding-right: $facet-search-padding-right;
+}
+
+.c-facets__search-icon {
+  position: $facet-icon-search-position;
+  top: $facet-icon-search-position-top;
+  right: $facet-icon-search-position-right;
+}
+
+.c-facets__active {
+  margin: $facet-active-margin;
+  padding-top: $facet-active-padding-top;
+  padding-bottom: $facet-active-padding-bottom;
+  line-height: $facet-active-line-height;
+  cursor: $facet-active-cursor;
+}
+
+.c-facets__icon-close {
+  position: $facet-icon-close-position;
+  top: $facet-icon-close-position-top;
+  font-size: $facet-icon-close-font-size;
+  font-weight: $facet-icon-close-font-weight;
+}
+
+.c-facets__icon-close--rounded {
+  position: $facet-icon-close-rounded-position;
+  top: $facet-icon-close-rounded-position-top;
+  right: $facet-icon-close-rounded-position-right;
+  width: $facet-icon-close-rounded-width;
+  height: $facet-icon-close-rounded-height;
+  padding: $facet-icon-close-rounded-padding;
+  margin: $facet-icon-close-rounded-margin;
+  border-radius: $facet-icon-close-rounded-border-radius;
+  cursor: $facet-icon-close-rounded-cursor;
+}
+
+.c-facet__active-group {
+  position: $facet-active-group-position;
+  display: $facet-active-group-display;
+  padding: $facet-active-group-padding;
+  margin: $facet-active-group-margin;
+  border: $facet-active-group-border-width $facet-active-group-border-style $facet-active-group-border-color;
+
+  @media #{$large-up} {
+    margin-top: $facet-active-group-margin-top-large;
+  }
+}
+
+.c-facet__active-group--multi {
+  padding-right: $facet-active-group-multi-padding-right;
+}
+
+.c-facet__active-group-title {
+  display: table;
+  margin: $facet-active-group-title-margin;
+  font-size: $facet-active-group-title-font-size;
+  font-weight: $facet-active-group-title-font-weight;
+  background-color: $facet-active-group-title-bg-color;
+}

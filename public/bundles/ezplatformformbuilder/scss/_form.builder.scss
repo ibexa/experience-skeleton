@@ -1,0 +1,61 @@
+.droppable-placeholder {
+    width: 100%;
+    flex: 0 0 100%;
+    align-self: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s $ibexa-admin-transition;
+    font-family: $font-family-sans-serif;
+    padding: 0 calculateRem(16px);
+    background: rgba($ibexa-white, 0.25);
+    border: calculateRem(2px) solid rgba($ibexa-white, 0.25);
+    min-height: calculateRem(56px);
+    border-radius: calculateRem(4px);
+
+    & > * {
+        display: none;
+    }
+
+    &.droppable-placeholder--removing {
+        opacity: 0;
+        background: rgba($ibexa-color-danger, 0.75);
+
+        &:before {
+            content: 'Field dropped incorrectly';
+            color: $ibexa-white;
+        }
+    }
+}
+
+.m-form-builder__workspace {
+    padding: calculateRem(44px) calculateRem(96px);
+
+    &--empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:after {
+            flex: 0 0 100%;
+            content: attr(data-empty-message);
+            font-size: calculateRem(18px);
+            font-weight: bold;
+            color: lighten($ibexa-color-base-dark, 15%);
+
+            .droppable--is-removing-placeholder & {
+                display: none;
+            }
+        }
+    }
+}
+
+.c-form-field {
+    & + .c-form-field,
+    & + .droppable-placeholder {
+        margin-top: calculateRem(16px);
+    }
+}

@@ -1,0 +1,201 @@
+// Default settings
+$list-padding: 0 !default;
+$list-margin: 0 !default;
+$list-style-type: none !default;
+
+$list-item-spacing: $column-gutter !default;
+$list-item-border-width: rem-calc(1) !default;
+$list-item-border-style: solid !default;
+$list-item-border-color: $secondary-color !default;
+$list-item-left-border-width: rem-calc(10) !default;
+$list-item-left-border-style: solid !default;
+$list-item-left-border-color: $secondary-color !default;
+$list-item-full-padding: 0 !default;
+$list-item-full-margin-bottom: 0 !default;
+$list-item-full-border: 0 !default;
+
+$list-title-font-size: $h2-font-size !default;
+$list-title-display: block !default;
+$list-title-border: rem-calc(1) solid $secondary-color !default;
+$list-sub-title-font-size: $h3-font-size !default;
+$list-sub-title-display: block !default;
+$list-sub-title-color: $subheader-font-color !default;
+
+$list-description-font-size: rem-calc(16) !default;
+$list-description-line-height: 1.6 !default;
+
+$list-thumb-margin: 0 ($list-item-spacing/2) ($list-item-spacing/2) 0 !default;
+
+$list-meta-line-height: rem-calc(36) !default; // same height like the tiny button (... read more)
+$list-more-link-font-size: rem-calc(12) !default;
+
+$list-date-display: inline !default;
+$list-date-margin-right: ($list-item-spacing/2) !default;
+$list-date-line-height: $list-meta-line-height !default;
+$list-date-font-size: rem-calc(14) !default;
+$list-date-icon: "\f073" !default;
+$list-date-icon-color: $primary-color !default;
+$list-date-icon-margin-right: rem-calc(5) !default;
+
+$list-author-display: inline !default;
+$list-author-margin-right: ($list-item-spacing/2) !default;
+$list-author-line-height: $list-meta-line-height !default;
+$list-author-font-size: rem-calc(14) !default;
+
+$list-author-bio-heading-font-size: rem-calc(16) !default;
+$list-author-bio-figure-margin: 0 !default;
+
+$list-comments-line-height: $list-meta-line-height !default;
+$list-comments-font-size: rem-calc(14) !default;
+
+$list-embed-margin-bottom: ($list-item-spacing/2) !default;
+$list-embed-width: 100% !default;
+$list-embed-list-style: none !default;
+$list-embed-width-large: 33.33% !default;
+$list-embed-margin-right-large: ($list-item-spacing/2) !default;
+
+$list-location-display: inline !default;
+$list-location-margin-right: ($list-item-spacing/2) !default;
+$list-location-font-size: rem-calc(14) !default;
+$list-location-line-height: $list-meta-line-height !default;
+$list-location-icon: "\f041" !default;
+$list-location-icon-color: $primary-color !default;
+$list-location-icon-margin-right: rem-calc(5) !default;
+
+.c-list {
+  margin: $list-margin;
+  padding: $list-padding;
+  list-style-type: $list-style-type;
+}
+
+  .c-list__item {
+    padding: ($list-item-spacing/2);
+    margin-bottom: $list-item-spacing;
+    border: $list-item-border-width $list-item-border-style $secondary-color;
+    border-left: $list-item-left-border-width $list-item-left-border-style $list-item-left-border-color;
+
+    &--full {
+      padding: $list-item-full-padding;
+      margin-bottom: $list-item-full-margin-bottom;
+      border: $list-item-full-border;
+    }
+
+  }
+
+  .c-list__title {
+    font-size: $list-title-font-size;
+    display: $list-title-display;
+    border-bottom: $list-title-border;
+  }
+
+  .c-list__sub-title {
+    font-size: $list-sub-title-font-size;
+    display: $list-sub-title-display;
+    color: $list-sub-title-color;
+  }
+
+  .c-list__description,
+  .c-list__short-description {
+
+    p {
+      font-size: $list-description-font-size;
+      line-height: $list-description-line-height;
+    }
+
+  }
+
+  .c-list__thumb {
+    margin: $list-thumb-margin;
+  }
+
+  .c-list__date {
+    display: $list-date-display;
+    margin-right: $list-date-margin-right;
+    font-size: $list-date-font-size;
+    line-height: $list-date-line-height;
+
+    // calendar icon
+    &:before{
+      content: "#{$list-date-icon}";
+      font-family: FontAwesome;
+      color: $list-date-icon-color;
+      margin-right: $list-date-icon-margin-right;
+    }
+
+  }
+
+  // For date range don't display second icon
+  .c-list__date + .c-list__date {
+
+    &:before {
+      display: none;
+    }
+
+  }
+
+  .c-list__author {
+    display: inline;
+    margin-right: $list-author-margin-right;
+    line-height: $list-author-line-height;
+    font-size: $list-author-font-size;
+  }
+
+  // detail page
+  .c-list_author-bio {
+
+    h3 {
+      font-size: $list-author-bio-heading-font-size;
+
+      // hide break inside the author field
+      br {
+        display: none;
+      }
+    }
+
+    figure {
+      margin: $list-author-bio-figure-margin;
+    }
+
+  }
+
+  .c-list__comments-link {
+    font-size: $list-comments-font-size;
+    line-height: $list-comments-line-height;
+  }
+
+  // product, etc
+  .c-list__embed-object {
+    margin-bottom: $list-embed-margin-bottom;
+    width: $list-embed-width;
+    list-style-type: $list-embed-list-style;
+
+    @media #{$large-up} {
+      width: $list-embed-width-large;
+      margin-right: $list-embed-margin-right-large;
+    }
+
+    .js-add-to-basket-parent {
+      float: left;
+    }
+
+  }
+
+  .c-list__more-link {
+    font-size: $list-more-link-font-size;
+  }
+
+  .c-list__location {
+    display: $list-location-display;
+    margin-right: $list-location-margin-right;
+    font-size: $list-location-font-size;
+    line-height: $list-location-line-height;
+
+    &:before{
+      content: "#{$list-location-icon}";
+      font-family: FontAwesome;
+      color: $list-location-icon-color;
+      margin-right: $list-location-icon-margin-right;
+    }
+
+  }
+

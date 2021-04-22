@@ -1,0 +1,279 @@
+// Default settings
+$card-spacing-unit: ($rem-base/2) !default; // 8px
+
+$card-grid-items-small: 1 !default;
+$card-grid-items-medium: 2 !default;
+$card-grid-items-large: 3 !default;
+$card-grid-wide-items-large: 3 !default;
+$card-grid-wide-items-xlarge: 4 !default;
+$card-space-bottom: rem-calc(50) !default;
+
+$card-border-width: 1px !default;
+$card-border-style: solid !default;
+$card-border-color: $iron !default;
+$card-position: relative !default;
+
+$card-price-wrapper-padding-top: rem-calc($card-spacing-unit) !default;
+
+$card-button-group-position: absolute !default;
+$card-button-group-right: rem-calc($rem-base + $card-spacing-unit) !default;
+$card-button-group-bottom: rem-calc($card-spacing-unit) !default;
+$card-button-disabled-hover-bg: $flat-concrete !default;
+
+$card-title-font-size: rem-calc(16) !default;
+$card-title-padding: rem-calc($card-spacing-unit) !default;
+$card-title-margin: 0 !default;
+$card-title-overflow: hidden !default;
+$card-title-text-overflow: ellipsis !default;
+$card-title-link-color: $flat-peter-river !default;
+
+$card-description-font-size: rem-calc(14) !default;
+$card-description-padding: rem-calc($card-spacing-unit) !default;
+$card-description-margin: rem-calc(0 0 $card-spacing-unit 0) !default;
+$card-description-overflow: hidden !default;
+$card-description-last-paragraph-margin: rem-calc(0) !default;
+
+$card-sku-font-size: rem-calc(12) !default;
+$card-sku-padding: rem-calc($card-spacing-unit/2 $card-spacing-unit) !default;
+$card-sku-margin: 0 !default;
+$card-sku-overflow: hidden !default;
+$card-sku-text-overflow: ellipsis !default;
+
+$card-img-display: table !default;
+$card-img-width: auto !default;
+$card-img-height: rem-calc(250) !default;
+$card-img-inline-display: inline-block !default;
+$card-img-padding-top: rem-calc($card-spacing-unit) !default;
+$card-img-padding-bottom: rem-calc($card-spacing-unit) !default;
+
+$card-price-wrap-padding: rem-calc(0 $card-spacing-unit $card-spacing-unit $card-spacing-unit) !default;
+$card-price-wrap-line-height: normal !default;
+
+$card-label-font-size: rem-calc(12) !default;
+
+$card-shipping-paragraph-display: inline !default;
+$card-shipping-paragraph-font-size: 100% !default;
+$card-shipping-paragraph-margin-bottom: 0 !default;
+
+$card-price-color: $primary-color !default;
+$card-price-font-size: rem-calc(30) !default;
+
+$card-btn-secondary-wrap-width-small: 50% !default;
+$card-btn-secondary-wrap-width-large: 25% !default;
+$card-btn-secondary-padding-left: rem-calc(5) !default;
+$card-btn-secondary-padding-right: rem-calc(5) !default;
+$card-btn-secondary-bg-color: $flat-peter-river !default;
+$card-btn-secondary-font-color: $white !default;
+$card-btn-secondary-font-size: rem-calc(16) !default;
+$card-btn-primary-wrap-width: 50% !default;
+$card-btn-primary-bg-color: $flat-peter-river !default;
+$card-btn-primary-font-size: rem-calc(16) !default;
+
+$card-sidebar-bg-color: scale-color($white, $lightness: -5%) !default;
+
+$card-footer-padding: rem-calc($card-spacing-unit) !default;
+$card-footer-line-height: rem-calc(36) !default;
+$card-footer-bg-color: lighten($iron, 10%) !default;
+
+$card-table-price-font-size: rem-calc(20) !default;
+
+// product list view
+
+.c-card__list-wrapper {
+
+  @include block-grid($card-grid-items-small);
+
+  @media #{$medium-up} {
+    @include block-grid($card-grid-items-medium);
+
+    &.is-list-view {
+      @include block-grid(1);
+    }
+  }
+
+  @media #{$large-up} {
+    @include block-grid($card-grid-items-large);
+  }
+
+}
+
+.c-card__list-wrapper--wide {
+
+  @media #{$large-up} {
+    @include block-grid($card-grid-wide-items-large);
+  }
+
+  @media #{$xlarge-up} {
+    @include block-grid($card-grid-wide-items-xlarge);
+  }
+
+}
+
+// list view
+.c-card__list-wrapper.is-list-view {
+
+  // last column gets padding bottom to make space for button group
+  .c-card .row > div:last-child {
+    padding-bottom: $card-space-bottom;
+  }
+
+  .c-card .button-group {
+    position: $card-button-group-position;
+    right: $card-button-group-right;
+    bottom: $card-button-group-bottom;
+  }
+
+  .c-card__price-wrapper {
+    padding-top: $card-price-wrapper-padding-top;
+  }
+
+  .c-card__image {
+    @media #{$small-only} {
+      height: auto;
+    }
+  }
+
+}
+
+.c-card {
+  border: $card-border-width $card-border-style $card-border-color;
+  position: $card-position;
+
+  .button,
+  button {
+    &.disabled:focus,
+    &.disabled:hover {
+      background: $card-button-disabled-hover-bg;
+    }
+  }
+}
+
+  .c-card__title {
+    font-size: $card-title-font-size;
+    padding: $card-title-padding;
+    margin: $card-title-margin;
+    overflow: $card-title-overflow;
+    text-overflow: $card-title-text-overflow;
+
+    a {
+      color: $card-title-link-color;
+    }
+
+    @media #{$small-only} {
+      padding: 0 $card-title-padding;
+    }
+
+  }
+
+  .c-card__description {
+    font-size: $card-description-font-size;
+    padding: $card-description-padding;
+    margin: $card-description-margin;
+    overflow: $card-description-overflow;
+
+    p:last-child {
+      margin: $card-description-last-paragraph-margin;
+    }
+
+    @media #{$small-only} {
+      padding: 0 $card-description-padding;
+    }
+
+  }
+
+  .c-card__sku {
+     font-size: $card-sku-font-size;
+     padding: $card-sku-padding;
+     margin: $card-sku-margin;
+     overflow: $card-sku-overflow;
+     text-overflow: $card-sku-text-overflow;
+   }
+
+  .c-card__image {
+    display: $card-img-display;
+    width: $card-img-width;
+    max-height: $card-img-height;
+    margin: 0 auto;
+
+    @media #{$small-only} {
+      width: auto;
+      margin: 0 auto;
+      height: rem-calc(120);
+    }
+
+  }
+
+  .c-card__image--inline {
+    display: $card-img-inline-display;
+    padding-top: $card-img-padding-top;
+    padding-left: $card-img-padding-bottom;
+  }
+
+  .c-card__price-wrapper {
+    padding: $card-price-wrap-padding;
+    line-height: $card-price-wrap-line-height;
+  }
+
+    .c-card__label {
+      font-size: $card-label-font-size;
+    }
+
+    .c-card__label--shipping {
+
+      p {
+        display: $card-shipping-paragraph-display;
+        font-size: $card-shipping-paragraph-font-size;
+        margin-bottom: $card-shipping-paragraph-margin-bottom;
+      }
+
+    }
+
+    .c-card__price {
+      color: $card-price-color;
+      font-size: $card-price-font-size;
+    }
+
+  .c-card__button--secondary {
+    width: $card-btn-secondary-wrap-width-small !important;
+
+    .button {
+      padding-left: $card-btn-secondary-padding-left;
+      padding-right: $card-btn-secondary-padding-right;
+      background-color: $card-btn-secondary-bg-color;
+      color: $card-btn-secondary-font-color;
+      font-size: $card-btn-secondary-font-size;
+    }
+
+    @media #{$large-up} {
+      width: $card-btn-secondary-wrap-width-large !important;
+    }
+  }
+
+
+  .c-card__button--primary {
+    width: $card-btn-primary-wrap-width !important;
+
+    .button {
+      background-color: $card-btn-primary-bg-color;
+      font-size: $card-btn-primary-font-size;
+    }
+
+  }
+
+  .c-card--sidebar {
+    background-color: $card-sidebar-bg-color;
+  }
+
+  .c-card__footer {
+    padding: $card-footer-padding;
+    line-height: $card-footer-line-height; // button height
+    background-color: $card-footer-bg-color;
+  }
+
+// product table view
+
+.c-card__table {
+  .c-card__price {
+    font-size: $card-table-price-font-size;
+  }
+}

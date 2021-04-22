@@ -1,0 +1,15 @@
+.ez-alert {
+    &--location-scheduled-hide {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__message-container {
+        width: 100%;
+    }
+
+    .ez-btn {
+        padding: calculateRem(2px) calculateRem(10px);
+        font-size: calculateRem(13px);
+    }
+}

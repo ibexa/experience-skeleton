@@ -1,0 +1,145 @@
+// Default settings
+$meta-nav-background: lighten($secondary-color, 10%) !default;
+
+$tools-wrap-background: $white !default;
+$tools-wrap-border-color: $crumb-border-color !default;
+$tools-wrap-border-style: solid !default;
+$tools-wrap-border-width: rem-calc(1) !default;
+$tools-wrap-line-height: rem-calc(36) !default;
+$tools-wrap-padding-top: rem-calc(12) !default;
+$tools-wrap-padding-bottom: rem-calc(12) !default;
+$tools-wrap-line-height-large-up: normal !default;
+$tools-wrap-padding-top-large-up: rem-calc(30) !default;
+$tools-wrap-padding-bottom-large-up: rem-calc(30) !default;
+$tools-wrap-border-bottom-width-large-up: 0 !default;
+
+$nav-wrap-position: relative !default;
+$nav-wrap-position-right: rem-calc(0) !default;
+$nav-wrap-margin-top: rem-calc(-65) !default;
+$nav-wrap-padding-top: rem-calc(12) !default;
+$nav-wrap-padding-bottom: rem-calc(12) !default;
+
+$nav-wrap-border-color-on-large: $secondary-color !default;
+$nav-wrap-border-style-on-large: solid !default;
+$nav-wrap-border-width-on-large: rem-calc(1) !default;
+$nav-wrap-background-on-large: $white !default;
+$nav-wrap-position-on-large: static !default;
+$nav-wrap-margin-top-on-large: 0 !default;
+$nav-wrap-padding-on-large: 0 !default;
+$nav-wrap-background-contain-to-grid: $white !default;
+$nav-wrap-border-color-fixed: $secondary-color !default;
+$nav-wrap-border-style-fixed: solid !default;
+$nav-wrap-border-width-fixed: rem-calc(1) !default;
+
+$nav-wrap-top-bar-background: none !default;
+$nav-wrap-top-bar-overflow: visible !default;
+$nav-wrap-top-bar-background-on-large: $white !default;
+$nav-wrap-form-margin-top: rem-calc(12) !default;
+$nav-wrap-form-element-margin: 0 !default;
+$nav-wrap-form-button-background: $flat-belize-hole !default;
+$nav-wrap-form-button-border-color: darken($flat-belize-hole, 5%) !default;
+
+$crumb-wrap-background: scale-color($white, $lightness: -5%) !default;
+
+$page-header-logo-position: relative !default;
+$page-header-logo-index: 1 !default;
+$page-header-logo-display: inline-block !default;
+
+
+.meta-nav {
+  background: $meta-nav-background;
+}
+
+.tools-wrap {
+  padding-top: $tools-wrap-padding-top;
+  padding-bottom: $tools-wrap-padding-bottom;
+  line-height: $tools-wrap-line-height;
+  border-bottom: $tools-wrap-border-width $tools-wrap-border-style $tools-wrap-border-color;
+  background: $tools-wrap-background;
+
+  @media #{$large-up} {
+    border-bottom-width: $tools-wrap-border-bottom-width-large-up;
+    padding-top: $tools-wrap-padding-top-large-up;
+    padding-bottom: $tools-wrap-padding-bottom-large-up;
+    line-height: $tools-wrap-line-height-large-up;
+  }
+
+}
+
+.nav-wrap {
+  position: $nav-wrap-position;
+  right: $nav-wrap-position-right;
+  margin-top: $nav-wrap-margin-top;
+  padding-top: $nav-wrap-padding-top;
+  padding-bottom: $nav-wrap-padding-bottom;
+
+
+  @media #{$large-up} {
+    border-top: $nav-wrap-border-width-on-large $nav-wrap-border-style-on-large $nav-wrap-border-color-on-large;
+    border-bottom: $nav-wrap-border-width-on-large $nav-wrap-border-style-on-large $nav-wrap-border-color-on-large;
+    background: $nav-wrap-background-on-large;
+    position: $nav-wrap-position-on-large;
+    margin-top: $nav-wrap-margin-top-on-large;
+    padding: $nav-wrap-padding-on-large;
+  }
+
+  .contain-to-grid {
+    background: $nav-wrap-background-contain-to-grid;
+
+    &.fixed {
+      border-bottom: $nav-wrap-border-width-fixed $nav-wrap-border-style-fixed $nav-wrap-border-color-fixed;
+    }
+
+    @media #{$large-up} {
+      background: $nav-wrap-background-contain-to-grid;
+    }
+  }
+
+  .top-bar {
+    background: $nav-wrap-top-bar-background;
+    overflow: $nav-wrap-top-bar-overflow;
+  }
+
+  @media #{$large-up} {
+    .top-bar-section ul li:not(.has-form) > a,
+    .top-bar {
+      background: $nav-wrap-top-bar-background-on-large;
+    }
+  }
+
+  form {
+    margin-top: $nav-wrap-form-margin-top;
+
+    input,
+    button {
+      margin: $nav-wrap-form-element-margin;
+    }
+
+    button {
+      background: $nav-wrap-form-button-background;
+      border-color: $nav-wrap-form-button-border-color;
+    }
+  }
+}
+
+.crumb-wrap {
+  background: $crumb-wrap-background;
+}
+
+.c-page-header__logo {
+  position: $page-header-logo-position;
+  z-index: $page-header-logo-index;
+  display: $page-header-logo-display;
+}
+
+@media #{$medium-down} {
+  .fixed.c-page-header__logo {
+    position: fixed !important;
+    z-index: 9999;
+    left: rem-calc(30);
+    top: rem-calc(5);
+    img {
+      max-height: rem-calc(30);
+    }
+  }
+}

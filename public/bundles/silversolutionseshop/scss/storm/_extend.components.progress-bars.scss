@@ -1,0 +1,9 @@
+// Extends Progress bars component
+
+// Default settings
+$progress-bar-rating-color: orange !default;
+
+// custom meter background
+.meter.rating {
+  background-color: $progress-bar-rating-color;
+}

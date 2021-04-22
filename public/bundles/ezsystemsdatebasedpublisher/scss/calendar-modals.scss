@@ -1,0 +1,25 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem';
+
+.ez-modal--reschedule-publish-later,
+.ez-modal--reschedule-future-hide {
+    .modal-dialog {
+        width: calculateRem(355px);
+    }
+
+    .ez-reschedule-publish-later-modal {
+        &__input-wrapper {
+            position: relative;
+        }
+
+        &__clear-input {
+            position: absolute;
+            top: calculateRem(8px);
+            right: calculateRem(8px);
+
+            .ez-icon {
+                fill: $ibexa-color-base-dark;
+            }
+        }
+    }
+}

@@ -1,0 +1,392 @@
+@media print {
+  * {
+    border-color: $black !important;
+  }
+
+  html, body {
+    min-height: 100%;
+    height: auto;
+  }
+
+  // override default Foundation
+  // do not show href value
+  a[href]::after {
+    display: none;
+  }
+
+  // remove equalizer height
+  [data-equalizer-watch] {
+    // height: auto !important;
+  }
+
+  // buttons get border
+  // by default most print solutions removes backgrounds and any graphics applied in CSS
+  button,
+  .button {
+    border: 1px solid $black !important;
+  }
+
+  select::after {
+    content: '';
+  }
+
+  fieldset legend {
+    position: relative;
+    top: rem-calc(-12);
+    margin: 0;
+    padding: 0;
+  }
+
+  // grid adjustments
+
+  // full width at print
+  .large-12\@print {
+    width: 100%;
+  }
+
+  .u-full-width-on-small {
+    width: auto !important;
+  }
+
+  // hide these elements
+  .c-card--sidebar button,
+  .c-card--sidebar .c-text-buttons,
+  .cp-popup,
+  .close-reveal-modal,
+  .slick-prev,
+  .slick-next,
+  .c-tabs-landingpage:before,
+  .c-tabs-landingpage:after {
+    display: none !important;
+  }
+
+  // .show-for-print applies display: block, but we need an inline version
+  // with extra .inline class we make it possible
+  .show-for-print.inline {
+    display: inline-block !important;
+  }
+
+  // logo spacing
+  .tools-wrap {
+    padding: 0;
+  }
+
+  // content spacing
+  .main-section > .row.u-margin-top-4x {
+    margin-top: rem-calc(20) !important;
+  }
+
+  // tabs
+  .tabs dd,
+  .tabs .tab-title {
+    width: auto;
+  }
+
+  .tabs-content {
+    border: 0;
+    padding: 0;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    > .content {
+      display: block;
+      margin-bottom: $column-gutter;
+      padding: $column-gutter/2;
+      border: 1px solid black;
+    }
+
+  }
+
+  // accordion
+  .accordion .accordion-navigation,
+  .accordion .accordion-navigation > .content {
+    border-bottom: none;
+  }
+
+  // panel
+  .panel {
+    border-width: 1px;
+  }
+
+  // table inside tabs - product detail page
+  .accordion .accordion-navigation > .content.active table {
+    border: 1px solid $black;
+  }
+
+  // alert boxes
+  .alert-box {
+    border-width: 1px;
+  }
+
+  // headers
+  // - sidenave
+  // - accordion
+  .accordion .accordion-navigation a,
+  .side-nav > li > a:first-child:not(.button) {
+    border: 1px solid $iron;
+  }
+
+  // active accordion bold for better visibility
+  .accordion .accordion-navigation.active a {
+    font-weight: bold;
+  }
+
+  // button groups left border
+  .button-group > li:first-child .button {
+    border: 1px solid;
+  }
+
+  // facets dropdown
+  .c-facets__button {
+    width: auto;
+  }
+
+  // buttons inside card component
+  .tabs-content .c-card .button {
+    border-bottom: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .tabs-content .c-card .button-group li:first-child .button {
+    border-left: 0 !important;
+  }
+
+  // landing page slider items
+  .c-tabs-landingpage .c-card {
+    border: 1px solid;
+  }
+
+  .c-tabs-landingpage .c-card__image {
+    margin: 0 1%;
+    width: 98%;
+  }
+
+  .c-tabs-landingpage .slick-track {
+    width: 100% !important;
+
+    > div {
+      width: 25% !important;
+
+      &:nth-child(4n+1) {
+        clear: left;
+      }
+
+    }
+
+  }
+
+  // comparison
+  .sortable-group {
+    width: 100% !important;
+    overflow: hidden;
+  }
+
+  .sortable-list-group-item {
+    width: 33% !important;
+  }
+
+  .comparison .box {
+    height: 437px !important;
+  }
+
+  // force add to basket to fit inside the box
+  .element-info button {
+    padding: rem-calc(5 0) !important;
+    font-size: rem-calc(12) !important;
+  }
+
+  .element-list {
+    display: block;
+  }
+  .box-attributes .collapsed h4:after {
+    border-bottom: 0;
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-top: 10px solid #333;
+  }
+
+  // order confirmation
+  // we scope pages with p- prefix
+
+  // reset equalizer settings
+  .p-order-confirmation [data-equalizer-watch] {
+    height: auto !important
+  }
+
+  // card
+  .c-card [data-equalizer-watch="title"] {
+    height: rem-calc(70) !important; // 3 lines
+    text-overflow: ellipsis;
+  }
+
+
+  .c-card__price {
+    font-size: rem-calc(22);
+  }
+
+  .c-card .button-group .button {
+    border-bottom: 0 !important;
+    border-right: 0 !important;
+  }
+
+  .c-card .button-group li:first-child .button {
+    border-left: 0 !important;
+  }
+
+  .c-card .button-group li:last-child .button {
+    border-right: 0 !important;
+  }
+
+  // checkout
+  .checkout-step {
+    border: 1px solid $black;
+  }
+
+  .checkout-sidebar {
+    position: static !important;
+    width: auto !important;
+    border: 1px solid $black;
+
+    ul, ol {
+      font-size: rem-calc(14);
+    }
+
+    .text-right {
+      text-align: left !important;
+    }
+
+    [class^="small-"] {
+      width: 50%;
+    }
+
+    [class^="small-"] + [class^="small-"] {
+      text-align: right !important;
+    }
+
+  }
+
+  #box_summary {
+
+    // Reduce font-size inside the cart summary
+    .columns strong,
+    .c-card {
+      font-size: rem-calc(12);
+    }
+
+    // basket summary header column title needs a break
+    .checkout-basket-header strong {
+      word-break: break-all;
+    }
+
+  }
+
+  // modal windows with text
+  .reveal-modal.with-text {
+    background-color: $white !important;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -5px !important;
+    left: 0;
+    transform: translateX(0);
+    min-height: 100%;
+  }
+
+}
+
+// Print view product detail page
+
+@media print {
+  .print-product-detail {
+    font-size: 12pt;
+    .legend-text {
+      font-size: rem-calc(8);
+    }
+    .stock.legend span {
+      margin-bottom: 0;
+    }
+    .u-border {
+      border: 1px solid #000 !important;
+    }
+
+    figcaption,
+    .c-card--sidebar .button,
+    .c-card--sidebar .c-text-buttons,
+    .slick-list,
+    .print-product-detail__quantity {
+      display: none;
+    }
+    .c-card--sidebar {
+      background: #fff;
+    }
+    .columns {
+      width: 100%;
+    }
+    .print-product-detail__img {
+      width: 30%;
+      float: left;
+    }
+    .print-product-detail__data {
+      width: 25%;
+      float: left;
+    }
+    .print-product-detail__sidebar {
+      width: 35%;
+      position: absolute;
+      right: 0;
+      top: 57px;
+    }
+    .print-product-detail__description {
+      h4 {
+        border-bottom: 1px solid #000;
+      }
+      p {
+        font-size: 11pt;
+        margin-bottom: 2px;
+        padding: 2px 15px;
+      }
+      table tr th, table tr td {
+        padding: 5px 15px;
+      }
+      .tab-title {
+        font-size: 8pt;
+      }
+      .tabs dd,
+      .tabs .tab-title {
+        width: auto;
+      }
+
+      .tabs-content {
+        border: 0;
+        padding: 0;
+
+        > .content {
+          display: block;
+          margin-bottom: 0;
+          padding: 0;
+          border: 0;
+        }
+      }
+      .accordion .accordion-navigation.active > a, .accordion dd.active > a {
+        background: transparent;
+      }
+      .accordion .accordion-navigation > .content.active table {
+        border: 0;
+      }
+      .accordion .accordion-navigation a, .side-nav > li > a:first-child:not(.button) {
+        border: 0;
+      }
+      .accordion .accordion-navigation > a, .accordion dd > a {
+        padding-bottom: 2px;
+      }
+    }
+    .column + .column:last-child, .columns + .column:last-child, .column +
+    .columns:last-child, .columns +
+    .columns:last-child {
+      float: left;
+    }
+  }
+}

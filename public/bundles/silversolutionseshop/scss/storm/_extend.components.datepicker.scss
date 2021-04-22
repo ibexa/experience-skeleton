@@ -1,0 +1,50 @@
+// making Foundation date-picker configurable component
+// source: vendor/silversolutions/silver.e-shop/src/Silversolutions/Bundle/EshopBundle/Resources/public/foundation/vendor/foundation-datepicker/css/foundation-datepicker.scss
+
+// color settings
+$datepicker-color-bg: $white !default; // #fff
+$datepicker-color-smoke: $smoke !default; // #eee
+$datepicker-color-iron: $iron !default; // #ccc
+$datepicker-color-aluminum: $aluminum !default; // #999
+$datepicker-color-oil: $oil !default; // #333
+$datepicker-color-primary: $primary-color !default;
+$datepicker-black-20: rgba(0, 0, 0, .2) !default;
+
+
+.datepicker-dropdown:before {
+  border-bottom-color: $datepicker-color-iron;
+}
+
+.datepicker.dropdown-menu {
+  font-family: $font-family-sans-serif;
+  background-color: $datepicker-color-bg;
+  border-color: $datepicker-black-20;
+  color: $datepicker-color-oil;
+}
+
+.datepicker th,
+.datepicker td {
+  background-color: $datepicker-color-bg;
+}
+
+.datepicker th.active.day,
+.datepicker th.active.month,
+.datepicker th.active.year,
+.datepicker th span.active,
+.datepicker td.active.day,
+.datepicker td.active.month,
+.datepicker td.active.year,
+.datepicker td span.active
+{
+  background-color: $datepicker-color-primary;
+  color: $datepicker-color-bg;
+}
+
+.datepicker td.old,
+.datepicker td.new {
+  color: $datepicker-color-aluminum;
+}
+
+.datepicker td.day.disabled {
+  color: $datepicker-color-smoke;
+}

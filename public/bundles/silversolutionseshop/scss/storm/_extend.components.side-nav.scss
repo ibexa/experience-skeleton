@@ -1,0 +1,90 @@
+// Default settings
+$side-nav-border-width: rem-calc(1) !default;
+$side-nav-border-color: $iron !default;
+$side-nav-border-style: solid !default;
+
+$side-nav-element-font-color: $primary-color !default;
+$side-nav-element-background: $white !default;
+
+$side-nav-margin-bottom: rem-calc(16) !default;
+
+$side-nav-active-element-background: $flat-peter-river !default;
+$side-nav-active-element-color: $white !default;
+
+$side-nav-2nd-lvl-link-bg-color: scale-color($side-nav-active-element-background, $lightness: 40%) !default;
+$side-nav-2nd-lvl-link-border-color: scale-color($side-nav-active-element-background, $lightness: 40%) !default;
+$side-nav-2nd-lvl-link-font-color: $side-nav-active-element-color !default;
+
+$side-nav-3rd-lvl-link-bg-color: scale-color($side-nav-active-element-background, $lightness: 80%) !default;
+$side-nav-3rd-lvl-link-border-color: scale-color($side-nav-active-element-background, $lightness: 80%) !default;
+$side-nav-3rd-lvl-link-font-color: $oil !default;
+
+
+.side-nav {
+  padding: 0;
+
+  li {
+    margin-bottom: 0;
+  }
+
+  > li {
+    border-bottom: $side-nav-border-width $side-nav-border-style $side-nav-border-color;
+    margin-bottom: $side-nav-margin-bottom;
+  }
+
+  > li a:not(.button) {
+    background: $side-nav-active-element-background;
+    color: $side-nav-active-element-color;
+  }
+
+  li.active > a:first-child:not(.button),
+  li a:not(.button):hover, .side-nav li a:not(.button):focus {
+    color: $side-nav-active-element-color;
+    background: $side-nav-active-element-background;
+  }
+
+}
+
+// custom classes
+.c-side-nav__next-level {
+  border-top: 0;
+
+  a {
+    border-left: $side-nav-border-width $side-nav-border-style $side-nav-border-color;
+    border-right: $side-nav-border-width $side-nav-border-style $side-nav-border-color;
+  }
+
+  li.active > a:first-child:not(.button),
+  li a:not(.button):hover, .side-nav li a:not(.button):focus {
+    background: $side-nav-2nd-lvl-link-bg-color;
+    border-color: $side-nav-2nd-lvl-link-border-color;
+    color: $side-nav-2nd-lvl-link-font-color;
+  }
+
+  // 3r level
+  li .dropdown li a:not(.button):hover,
+  li.active .dropdown li.active a {
+    background: $side-nav-3rd-lvl-link-bg-color;
+    border-color: $side-nav-3rd-lvl-link-border-color;
+    color: $side-nav-3rd-lvl-link-font-color;
+  }
+
+  li a:not(.button) {
+    font-size: $side-nav-font-size;
+    color: $side-nav-element-font-color;
+    background: $side-nav-element-background;
+  }
+
+  ul {
+    margin-left: 0 !important;
+
+    li a {
+      padding-left: 30px !important;
+    }
+
+    li:last-child a {
+      border-bottom: 0;
+    }
+  }
+
+}

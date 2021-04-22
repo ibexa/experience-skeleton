@@ -1,0 +1,38 @@
+.c-view-toggler {
+    @include toggler-wrapper();
+    width: calculateRem(64px);
+
+    &:before {
+        @include toggler-selected-btn();
+
+        content: '';
+        position: absolute;
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+        transition: transform 0.3s $ibexa-admin-transition;
+    }
+
+    &--list {
+        &:before {
+            transform: translateX(30px);
+        }
+    }
+
+    &__option {
+        @include toggler-icon-btn();
+        z-index: 1;
+
+        &--selected {
+            @include toggler-selected-btn();
+        }
+    }
+}
+
+.ez-table-header {
+    .c-view-toggler {
+        .ez-icon--small-medium {
+            width: calculateRem(20px);
+            height: calculateRem(20px);
+        }
+    }
+}

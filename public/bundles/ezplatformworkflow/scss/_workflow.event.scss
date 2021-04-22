@@ -1,0 +1,24 @@
+.ez-workflow-event {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__name {
+        font-weight: bold;
+        padding-right: calculateRem(8px);
+        line-height: calculateRem(32px);
+    }
+
+    &__author {
+        padding-right: calculateRem(8px);
+        line-height: calculateRem(32px);
+    }
+
+    &__date {
+        flex: 1 1 auto;
+        line-height: calculateRem(32px);
+    }
+
+    &__desc {
+        flex: 1 0 100%;
+    }
+}

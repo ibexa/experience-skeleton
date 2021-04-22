@@ -1,0 +1,393 @@
+// extends the standard icon-bar
+$icon-bar-border-width: 0 !default;
+$icon-bar-border-style: solid !default;
+$icon-bar-border-color: $primary-color !default;
+
+$icon-bar-background: transparent !default;
+$icon-bar-hover-background: transparent !default;
+
+$icon-bar-wrapper-column-width: 6 !default;
+
+$icon-bar-menu-link-padding-left: rem-calc(42) !default;
+
+// extending built in classes
+
+.icon-bar .item {
+  padding: 0;
+  border: $icon-bar-border-width $icon-bar-border-style $icon-bar-border-color;
+  border-right: 0;
+  background: $icon-bar-background;
+
+  @media #{$large-up} {
+    position: relative;
+  }
+
+  &.with-border,
+  &:first-child {
+    border-right: $icon-bar-border-width solid $icon-bar-border-color;
+
+    &:hover {
+      border-color: $icon-bar-border-color;
+    }
+  }
+
+  .f-topbar-fixed & {
+    border-right: $icon-bar-border-width solid darken($primary-color, 8%);
+
+    &:hover {
+      border-right: $icon-bar-border-width solid darken($primary-color, 8%);
+    }
+  }
+
+  &.is-disabled {
+    opacity: ($button-disabled-opacity/2);
+    cursor: default;
+
+    &:hover {
+      border-color: $icon-bar-border-color !important;
+    }
+
+    a,
+    label {
+      cursor: default;
+    }
+
+    a:hover {
+      background-color: $icon-bar-hover-background;
+      cursor: default;
+    }
+  }
+
+  &.is-inactive {
+    cursor: default;
+
+    a,
+    label {
+      cursor: default;
+      color: $icon-bar-font-color;
+    }
+
+    &:hover {
+      border-color: $icon-bar-border-color !important;
+    }
+
+    a:hover {
+      background-color: $icon-bar-hover-background;
+      cursor: default;
+    }
+  }
+
+  > a {
+    display: block;
+    padding: rem-calc(8);
+
+    &:hover {
+      border-color: $primary-color;
+      background-color: $icon-bar-hover-background;
+    }
+
+  }
+
+  i {
+    font-size: rem-calc(24);
+    color: $icon-bar-icon-color;
+  }
+
+  label {
+    display: none;
+    color: $icon-bar-font-color;
+    letter-spacing: rem-calc(1);
+  }
+
+  .button {
+    padding: $button-tny;
+  }
+
+}
+
+@media #{$large-up} {
+
+  .f-topbar-fixed {
+
+    .c-icon-bar__wrapper {
+      top: em-calc(8);
+      z-index: ($z-index-base - 1);
+      width: auto;
+    }
+
+    .icon-bar .item > a {
+      padding: rem-calc(10 20);
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    .icon-bar label {
+      display: none !important;
+    }
+
+  }
+
+}
+
+
+
+
+// additional classes
+
+.c-icon-bar__wrapper {
+  position: relative;
+
+  @media #{$large-up} {
+    @include grid-column($icon-bar-wrapper-column-width);
+    position: absolute;
+    top: -80px;
+    right: -($column-gutter/2);
+  }
+
+  // override Foundation standard
+  // our meta nav is floated to the right and we need some custom handling
+  .f-dropdown {
+    right: 0 !important;
+    left: auto !important;
+    width: 94vw !important; // 94% of viewport width
+    width: calc(100vw - #{$column-gutter}) !important; // 94% of viewport width
+    line-height: normal;
+    z-index: 100;
+
+    &:after {
+      right: 6px;
+      left: auto !important;
+    }
+
+    // place the arrow on the right side
+    &:before {
+      right: 7px;
+      left: auto !important;
+    }
+
+    .button {
+      position: relative;
+      top: 0;
+      height: auto;
+    }
+
+    @media #{$medium-up} {
+      // content positioning
+
+      &.tiny {
+        width: rem-calc(200) !important;
+      }
+
+      &.small {
+        width: rem-calc(300) !important;
+      }
+
+      &.medium {
+        max-width: rem-calc(400) !important;
+      }
+
+      &.large {
+        width: rem-calc(600) !important;
+      }
+    }
+  }
+
+  // we need to nest in order to override
+  .c-icon-bar__menu {
+
+    .c-icon-bar__menu,
+    i {
+      display: inline-block;
+      font-size: rem-calc(24);
+      margin-right: rem-calc(10);
+    }
+
+    a {
+      font-size: rem-calc(14);
+      font-weight: bold;
+
+      &:hover {
+        color: $anchor-font-color-hover;
+      }
+    }
+  }
+
+  .c-icon-bar__menu-item {
+    padding: rem-calc(5);
+
+    .c-icon-bar__menu-link {
+      position: relative;
+      padding-left: $icon-bar-menu-link-padding-left;
+    }
+
+    &.is-disabled {
+      opacity: ($button-disabled-opacity/2);
+      cursor: default;
+
+      a {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.c-icon-bar__menu-icon {
+  position: absolute;
+  left: 0;
+}
+
+.c-icon-bar__header {
+  margin-top: rem-calc(10);
+  padding: rem-calc(5) $f-dropdown-content-padding;
+  background-color: $smoke;
+  font-size: rem-calc(16);
+  cursor: default;
+}
+
+.c-icon-bar__counter {
+  position: absolute;
+  top: -3px;
+  left: 55%;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 2px;
+  text-align: center;
+  line-height: 18px;
+  font-weight: bold;
+  font-size: rem-calc(11);
+  text-shadow: none;
+}
+
+.c-icon-bar--radius {
+  @include radius;
+}
+
+.c-icon-bar__item--primary {
+  background-color: $white;
+  border-right: $icon-bar-border-width solid $icon-bar-border-color !important;
+}
+
+.c-icon-bar__item--fluid {
+  width: auto !important;
+  float: right;
+  margin-left: rem-calc(10);
+
+  &:last-child {
+    margin-left: 0;
+    margin-left: ($column-gutter / 2);
+  }
+}
+
+// We use this class to create arrow pointers
+// By default arrows are created inside a dropdown content.
+// Our solution is much more flexible and always centers the arrow in the middle of parent element
+// To make it work .f-dropdown requires .no-arrow class <div class="f-dropdown no-arrow ..."> ... </div>
+.c-icon-bar__arrow {
+  position: relative;
+
+  &.is-active {
+
+    &:before {
+      @include css-triangle($f-dropdown-triangle-size, $f-dropdown-triangle-color, bottom);
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      z-index: 90;
+      margin-left: -($f-dropdown-triangle-size - 1);
+    }
+
+    &:after {
+      @include css-triangle($f-dropdown-triangle-size + 1, $f-dropdown-border-color, bottom);
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      z-index: 89;
+      margin-left: -($f-dropdown-triangle-size);
+    }
+
+  }
+
+}
+
+.c-icon-bar__items-wrap {
+  margin: 0;
+  padding: 0 !important;
+
+  @media #{$large-up} {
+    padding-bottom: rem-calc(10) !important;
+  }
+}
+
+.c-icon-bar__border {
+  @include clearfix;
+  line-height: normal;
+  padding: rem-calc(5);
+
+  @media #{$large-up} {
+    border: 1px solid $iron;
+    padding: ($rem-base / 2);
+  }
+
+  .f-topbar-fixed & {
+    padding: rem-calc(5 8);
+  }
+
+  &:hover {
+    border-color: $iron !important;
+  }
+}
+
+.c-icon-bar__labels {
+  float: left;
+  text-align: right;
+}
+
+.c-icon-bar__heading {
+  text-transform: uppercase;
+  margin: 0;
+
+  .f-topbar-fixed & {
+    font-size: rem-calc(14);
+  }
+}
+
+.c-icon-bar__label {
+  font-size: rem-calc(14);
+  color: $jet;
+
+  .f-topbar-fixed & {
+    font-size: rem-calc(12);
+  }
+
+  .c-icon-bar__item--primary & {
+    color: $flat-peter-river;
+  }
+}
+
+.c-icon-bar__icons {
+  width: auto;
+
+  @media #{$large-up} {
+    width: 40px;
+  }
+}
+
+.c-icon-bar__icon-main {
+  font-size: rem-calc(24) !important;
+
+  @media #{$large-up} {
+    font-size: rem-calc(28) !important;
+  }
+
+  .f-topbar-fixed & {
+    font-size: rem-calc(24) !important;
+  }
+}
+
+.c-icon-bar__icon-secondary {
+  font-size: rem-calc(18) !important;
+  height: rem-calc(10);
+  line-height: rem-calc(10);
+}

@@ -1,0 +1,36 @@
+.m-image-editor {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $ibexa-color-base;
+    z-index: 99999;
+    display: grid;
+    grid-template-areas: 'header header' 'workspace sidebar';
+    grid-template-rows: calculateRem(100px) 1fr;
+    grid-template-columns: 1fr calculateRem(418px);
+
+    &__header {
+        grid-area: header;
+        background-color: $ibexa-white;
+    }
+
+    &__workspace {
+        grid-area: workspace;
+    }
+
+    &__sidebar {
+        grid-area: sidebar;
+        background-color: $ibexa-white;
+    }
+
+    &__confirm-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($ibexa-color-base-black, 0.5);
+    }
+}

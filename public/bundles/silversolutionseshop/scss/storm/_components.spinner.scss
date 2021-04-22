@@ -1,0 +1,78 @@
+// Default settings
+
+$spinner-position: fixed !default;
+$spinner-zindex: 9998 !default;
+$spinner-bg-color: rgba(0, 0, 0, 0.45) !default;
+
+$spinner-icon-display: inline-block !default;
+$spinner-icon-margin-left: rem-calc(-24) !default;
+$spinner-icon-margin-top: rem-calc(-36) !default;
+$spinner-icon-font-size: rem-calc(48) !default;
+$spinner-icon-font-family: FontAwesome, serif !default;
+$spinner-icon-color: $white !default;
+$spinner-icon-symbol: "\f110" !default;
+
+$spinner-inner-icon-font-size: rem-calc(32) !default;
+$spinner-inner-icon-color: $primary-color !default;
+
+$spinner-contained-zindex: 98 !default;
+$spinner-contained-icon-color: $primary-color !default;
+$spinner-contained-bg-color: rgba(255, 255, 255, 0.45) !default;
+
+
+.c-spinner {
+  position: $spinner-position;
+  z-index: $spinner-zindex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $spinner-bg-color;
+
+  // 1. Negative margins to vertically / horizontally center spinner on every device
+  // for some reason transform(-50%, -%50) is not working on mobile
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: $spinner-icon-margin-left; // [1]
+    margin-top: $spinner-icon-margin-top; // [1]
+    display: $spinner-icon-display;
+    font-family: $spinner-icon-font-family;
+    font-size: $spinner-icon-font-size;
+    color: $spinner-icon-color;
+    content: $spinner-icon-symbol;
+    animation: fa-spin 1s infinite steps(8);
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.c-spinner--inner {
+  position: relative;
+  text-align: center;
+  line-height: normal;
+  background: none;
+
+  &:after {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0;
+    font-size: $spinner-inner-icon-font-size;
+    color: $spinner-inner-icon-color;
+    transform: none;
+  }
+}
+
+.c-spinner--contained {
+  position: absolute;
+  z-index: $spinner-contained-zindex;
+  background: $spinner-contained-bg-color;
+
+  &:after {
+    color: $spinner-contained-icon-color;
+  }
+}

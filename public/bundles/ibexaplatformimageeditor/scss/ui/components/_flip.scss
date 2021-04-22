@@ -1,0 +1,32 @@
+.c-image-editor-flip {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .btn {
+        border: calculateRem(1px) solid $ibexa-color-base;
+        padding: calculateRem(6px) calculateRem(16px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        &:first-child {
+            margin-right: calculateRem(8px);
+        }
+
+        &:hover {
+            color: $ibexa-color-primary;
+
+            .ez-icon {
+                fill: $ibexa-color-primary;
+            }
+        }
+
+        .ez-icon {
+            margin-right: calculateRem(8px);
+        }
+    }
+}

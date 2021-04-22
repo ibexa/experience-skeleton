@@ -1,0 +1,33 @@
+.ez-charts {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: calculateRem(16px) calculateRem(8px) calculateRem(16px);
+    }
+
+    &__header-headline {
+        font-size: calculateRem(16px);
+    }
+
+    &__header-tools {
+        display: flex;
+
+        .btn {
+            margin: 0 calculateRem(5px);
+        }
+    }
+
+    &__filter-select {
+        min-width: calculateRem(250px);
+    }
+
+    &__filter-range-select[readonly] {
+        margin-top: calculateRem(5px);
+        background: $ibexa-white;
+    }
+
+    &__item {
+        margin-bottom: calculateRem(24px);
+    }
+}

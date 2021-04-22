@@ -1,0 +1,64 @@
+// Extends Accordion component
+
+// Default settings
+$accordion-border-width: 1px !default;
+$accordion-nav-border-bottom-width: 1px !default;
+$accordion-nav-border-bottom-style: solide !default;
+$accordion-nav-border-bottom-color: $white !default;
+$accordion-nav-link-position: relative !default;
+$accordion-nav-link-icon-position: absolute !default;
+$accordion-nav-link-icon-right: ($column-gutter / 2) !default;
+$accordion-nav-link-icon-symbol: '' !default;
+$accordion-nav-link-active-icon-symbol: '' !default;
+$accordion-nav-link-icon-color: $flat-wet-asphalt !default;
+$accordion-nav-link-icon-font-family: FontAwesome !default;
+$accordion-nav-small-link-padding: ($accordion-navigation-padding / 2) !default;
+
+$accordion-content-inner-table-border-color: $accordion-navigation-active-bg-color !default;
+$accordion-content-inner-table-border-top: none !default;
+
+$accordion-content-bordered-border-width: $accordion-border-width !default;
+$accordion-content-bordered-border-style: solid !default;
+$accordion-content-bordered-border-width: $accordion-navigation-active-bg-color !default;
+$accordion-content-inner-table-border-top-width: 0 !default;
+
+
+$accordion-border-width: 1px !default;
+
+.accordion .accordion-navigation {
+  border-bottom: $accordion-nav-border-bottom-width $accordion-nav-border-bottom-style $accordion-nav-border-bottom-color;
+}
+.accordion .accordion-navigation a {
+  position: $accordion-nav-link-position;
+
+  &:after {
+    position: $accordion-nav-link-icon-position;
+    right: $accordion-nav-link-icon-right;
+    content: $accordion-nav-link-icon-symbol;
+    color: $accordion-nav-link-icon-color;
+    font-family: $accordion-nav-link-icon-font-family;
+  }
+
+}
+
+.accordion .accordion-navigation.small a {
+  padding: $accordion-nav-small-link-padding;
+}
+
+.accordion .accordion-navigation.active a:after {
+  content: $accordion-nav-link-active-icon-symbol;
+}
+
+.accordion .accordion-navigation > .content.active {
+
+  table {
+    border-color: $accordion-content-inner-table-border-color;
+    border-top: $accordion-content-inner-table-border-top;
+  }
+
+}
+
+.accordion-navigation .content--bordered {
+  border: $accordion-content-bordered-border-width $accordion-content-bordered-border-style $accordion-content-bordered-border-width;
+  border-top-width: $accordion-content-inner-table-border-top-width;
+}

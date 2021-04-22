@@ -1,0 +1,19 @@
+.c-month-view {
+    &__headers {
+        display: flex;
+        width: calculateRem(550px);
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__header {
+        flex: 1 0 calculateRem(75px);
+        padding-left: calculateRem(6px);
+        font-size: calculateRem(12px);
+        color: $ibexa-color-base-dark;
+    }
+
+    &__days {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

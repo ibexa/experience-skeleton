@@ -1,0 +1,35 @@
+.ez-site-factory-list-table {
+    &__image {
+        max-width: calculateRem(160px);
+        max-height: calculateRem(95px);
+
+        &--default {
+            background-color: $ibexa-color-base-light;
+            min-height: calculateRem(80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__name {
+        display: block;
+        padding-bottom: calculateRem(5px);
+    }
+
+    .ez-table__cell {
+        padding-top: calculateRem(24px);
+        padding-bottom: calculateRem(24px);
+        vertical-align: top;
+    }
+
+    tbody {
+        > tr {
+            &:not(:last-child) {
+                .ez-table__cell {
+                    border-bottom: calculateRem(1px) solid $ibexa-color-base;
+                }
+            }
+        }
+    }
+}

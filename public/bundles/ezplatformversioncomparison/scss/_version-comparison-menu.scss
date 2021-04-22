@@ -1,0 +1,107 @@
+.ez-version-compare-menu {
+    &__header {
+        background-color: $ibexa-color-base-light;
+        margin: 0 calculateRem(-15px) calculateRem(10px);
+        padding: calculateRem(15px);
+    }
+
+    &__header-container {
+        display: flex;
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &--title {
+            width: calc(50% - #{calculateRem(40px)});
+            justify-content: flex-start;
+        }
+
+        &--selector {
+            width: calculateRem(80px);
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-size: calculateRem(26px);
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    &__type-selector-wrapper {
+        @include toggler-wrapper();
+        width: calculateRem(64px);
+        margin: 0;
+    }
+
+    &__type-selector {
+        @include toggler-icon-btn();
+        border: 0;
+        z-index: 1;
+
+        &:disabled {
+            @include toggler-selected-btn();
+        }
+    }
+
+    &__close {
+        position: fixed;
+        top: calculateRem(8px);
+        left: calculateRem(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calculateRem(30px);
+        height: calculateRem(30px);
+    }
+
+    &__version-selector-wrapper {
+        padding: calculateRem(30px) calculateRem(20px);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__version-selector {
+        width: calc(50% - #{calculateRem(50px)});
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        &--icon-wrapper {
+            height: calculateRem(36px);
+            width: calculateRem(36px);
+            background-color: $ibexa-color-base-dark;
+            border-radius: calculateRem(2px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.3;
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+
+        &--link {
+            opacity: 1;
+        }
+    }
+}
+
+.ez-version-compare-side-by-side-view {
+    .ez-version-compare-menu {
+        &__version-selector-wrapper {
+            background: linear-gradient(
+                90deg,
+                $ibexa-color-base-light 0%,
+                $ibexa-color-base-light 50%,
+                $ibexa-white 50%,
+                $ibexa-white 100%
+            );
+        }
+    }
+}

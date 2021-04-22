@@ -1,0 +1,15 @@
+.fb-config-field.fb-config-field--options {
+    .fb-config-field {
+        &__placeholder {
+            text-align: center;
+            justify-content: center;
+            font-weight: bold;
+            background: $ibexa-color-base-pale;
+            border: calculateRem(1px) solid $ibexa-color-base-light;
+        }
+    }
+
+    .fb-config-option + .fb-config-option {
+        margin-top: calculateRem(10px);
+    }
+}

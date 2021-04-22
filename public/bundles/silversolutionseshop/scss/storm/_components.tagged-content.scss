@@ -1,0 +1,18 @@
+// Tagged Content Component
+
+.c-tagged-content {
+  border: 1px solid #ECF0F1;
+
+  a {
+    letter-spacing: 1px;
+    line-height: rem-calc(35);
+  }
+
+  a:before {
+    content: "\f0f6";
+    font-family: FontAwesome;
+    color: $flat-peter-river;
+    margin-right: rem-calc(10);
+  }
+
+}

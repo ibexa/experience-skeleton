@@ -1,0 +1,162 @@
+/* SETTINGS
+   ========================================================================== */
+
+@import "settings";
+
+// Foundation settings
+$include-html-global-classes: false;
+$include-print-styles: false;
+$primary-color: #E24602;
+$success-color: #43ac6a;
+$alert-color: #f04124;
+
+// 31. Tabs
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$tabs-navigation-bg-color: lighten($iron, 5%);
+$tabs-navigation-active-bg-color: darken($iron, 50%);
+$tabs-navigation-active-font-color: $white;
+$tabs-content-margin-bottom: rem-calc(20);
+$tabs-content-padding: rem-calc(0);
+
+// we can't scope these because they are JS related
+@import "../vendor/foundation/scss/foundation/components/accordion";
+@import "../vendor/foundation/scss/foundation/components/tabs";
+
+// extra scope to override eZ styles
+.scope-foundation {
+
+  // scoped components
+  @import "../vendor/foundation/scss/foundation/components/alert-boxes";
+  @import "../vendor/foundation/scss/foundation/components/buttons";
+  @import "../vendor/foundation/scss/foundation/components/forms";
+  @import "../vendor/foundation/scss/foundation/components/tables";
+  @import "../vendor/foundation/scss/foundation/components/labels";
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+
+  // custom CSS
+
+  .accordion {
+    margin: 0;
+
+    .accordion-navigation > a {
+      margin-bottom: 1px;
+    }
+    .accordion-navigation img {
+      width: rem-calc(20);
+    }
+  }
+
+  a,
+  .tabs li a {
+    text-decoration: none;
+    margin: 0;
+  }
+
+  .tabs-content {
+    border: 1px solid darken($iron, 50%);
+    padding: rem-calc(10);
+  }
+
+  .accordion .accordion-navigation > a {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      right: ($column-gutter/2);
+      content: '';
+      font-family: FontAwesome;
+      color: darken($iron, 50%);
+    }
+
+  }
+
+  .accordion .accordion-navigation.active > a:after {
+    content: '';
+  }
+
+  table {
+    margin: rem-calc(10 0)
+  }
+
+  th {
+    background-color: darken($iron, 10%);
+  }
+
+  .config-field {
+    input,
+    select {
+      margin-bottom: 5px !important;
+    }
+
+    &:last-child {
+      input,
+      select {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .config-field .columns {
+     padding-left: 0;
+  }
+
+  .config-field .row {
+      margin: 0;
+  }
+
+  .row.config-field:nth-child(odd) {
+    background-color: $white;
+  }
+
+  .row.config-field {
+    input,
+    select {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  select {
+    padding-right: rem-calc(20);
+  }
+
+  input.button:hover {
+    border: 0;
+  }
+
+  button.tiny {
+    padding: rem-calc(8)
+  }
+
+  label.inline {
+    margin-bottom: 0;
+  }
+
+  .multiarray-value .field-remove {
+    margin: rem-calc(9 0);
+  }
+
+}
+
+.configuration-page {
+
+  // make row 100% width
+  .main-content > .row {
+    width: 100%;
+    max-width: none;
+
+    // remove padding from first descended
+    > .columns {
+      padding: 0;
+    }
+  }
+
+}
+
+// storm utils
+@import "storm/utils.spacing";

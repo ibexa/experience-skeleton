@@ -1,0 +1,12 @@
+.ez-site-factory-info {
+    display: flex;
+    align-items: flex-start;
+
+    &__status {
+        padding-right: calculateRem(8px);
+    }
+
+    &__root-link {
+        font-size: calculateRem(12px);
+    }
+}

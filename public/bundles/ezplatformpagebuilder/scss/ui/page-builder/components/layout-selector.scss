@@ -1,0 +1,88 @@
+.c-layout-selector {
+    &__modal-dialog {
+        min-width: calculateRem(480px);
+        max-width: calculateRem(1000px);
+        max-height: calculateRem(560px);
+    }
+
+    &__header {
+        flex-direction: column;
+    }
+
+    &__header-subtitle {
+        margin-top: calculateRem(4px);
+        font-size: calculateRem(14px);
+        color: $ibexa-color-font-pale;
+    }
+
+    &__item {
+        border-radius: 0 $ibexa-border-radius $ibexa-border-radius $ibexa-border-radius;
+        height: calculateRem(136px);
+        width: calculateRem(200px);
+        background: $ibexa-color-base-pale;
+        padding: calculateRem(8px);
+        border: calculateRem(1px) solid transparent;
+        transition: 0.3s border-color $ibexa-admin-transition;
+        margin: calculateRem(10px) calculateRem(5px);
+
+        &--selected {
+            border-color: $ibexa-color-primary;
+            position: relative;
+
+            &:before {
+                content: 'Selected layout';
+                display: inline-block;
+                position: absolute;
+                top: calculateRem(-23px);
+                left: calculateRem(-1px);
+                padding: calculateRem(4px) calculateRem(8px);
+                font-size: calculateRem(10px);
+                background: $ibexa-color-primary;
+                color: $ibexa-white;
+                border-radius: $ibexa-border-radius $ibexa-border-radius 0 0;
+            }
+        }
+    }
+
+    &__item-image {
+        max-width: calculateRem(176px);
+        max-height: calculateRem(88px);
+        display: block;
+        margin: auto;
+    }
+
+    &__item-desc {
+        margin-top: calculateRem(10px);
+        margin-bottom: 0;
+        font-size: calculateRem(12px);
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__btn--create {
+        transition: opacity 0.3s $ibexa-admin-transition;
+    }
+
+    &__modal-backdrop {
+        z-index: -1;
+
+        &.show {
+            z-index: 1040;
+        }
+    }
+
+    &__layouts {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        max-height: calculateRem(332px);
+        overflow: auto;
+        padding-top: calculateRem(12px);
+    }
+
+    &__headline {
+        font-size: calculateRem(16px);
+    }
+}

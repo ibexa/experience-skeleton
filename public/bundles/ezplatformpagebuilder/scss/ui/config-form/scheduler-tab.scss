@@ -1,0 +1,11 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+.ez-scheduler-tab {
+    margin: 0;
+
+    .col-form-label {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

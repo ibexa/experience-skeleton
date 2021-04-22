@@ -1,0 +1,80 @@
+// Configurable styling for jQuery Autocomplete plugin
+// https://github.com/devbridge/jQuery-Autocomplete
+
+// IMPORTANT:
+// We don't use BEM for this component. We don't want to override any classes
+// that might be hardcoded in the jQuery Plugin
+
+$autocomplete-border-width: 1px !default;
+$autocomplete-border-style: solid !default;
+$autocomplete-border-color: $aluminum !default;
+
+$autocomplete-bg-color: $white !default;
+
+$autocomplete-box-offset-x: 1px !default;
+$autocomplete-box-offset-y: 4px !default;
+$autocomplete-box-blur: 3px !default;
+$autocomplete-box-spread: 0 !default;
+$autocomplete-box-color: $iron !default;
+
+$autocomplete-highlight-font-weight: bold !default;
+$autocomplete-highlight-font-color: $black !default;
+
+$autocomplete-item-padding: rem-calc(2px 5px) !default;
+$autocomplete-selected-bg-color: $snow !default;
+
+$autocomplete-group-title-font-weight: bold !default;
+$autocomplete-group-title-font-size: rem-calc(16) !default;
+$autocomplete-group-title-font-color: $black !default;
+$autocomplete-group-title-border-bottom-width: 1px !default;
+$autocomplete-group-title-border-bottom-style: solid !default;
+$autocomplete-group-title-border-bottom-color: black !default;
+
+.autocomplete-suggestions {
+  border: $autocomplete-border-width $autocomplete-border-style $autocomplete-border-color;
+  background: $autocomplete-bg-color;
+  cursor: default;
+  overflow: auto;
+  box-shadow: $autocomplete-box-offset-x $autocomplete-box-offset-y $autocomplete-box-blur $autocomplete-box-spread $autocomplete-box-color;
+
+  strong {
+    font-weight: $autocomplete-highlight-font-weight;
+    color: $autocomplete-highlight-font-color;
+  }
+
+}
+
+.autocomplete-suggestion {
+  padding: $autocomplete-item-padding;
+  white-space: nowrap;
+  overflow: hidden;
+  right: 10px;
+  @media #{$large-up} {
+    right: auto;
+  }
+}
+
+.autocomplete-no-suggestion {
+  padding: $autocomplete-item-padding;
+}
+
+.autocomplete-selected {
+  background: $autocomplete-selected-bg-color;
+}
+
+.autocomplete-group {
+  padding: $autocomplete-item-padding;
+
+  strong {
+    display: block;
+    font-weight: $autocomplete-group-title-font-weight;
+    font-size: $autocomplete-group-title-font-size;
+    color: $autocomplete-group-title-font-color;
+    border-bottom: $autocomplete-group-title-border-bottom-width $autocomplete-group-title-border-bottom-style $autocomplete-group-title-border-bottom-color;
+  }
+
+}
+
+.autocomplete-suggestion-product {
+  line-height: 36px; // like tiny button height
+}

@@ -1,0 +1,282 @@
+$megamenu-highlight-bg: lighten($secondary-color, 10%) !default;
+$megamenu-highlite-bg: $megamenu-highlight-bg !default;  // used for legacy purposes
+$megamenu-link-bg-color: $megamenu-highlight-bg !default;
+$megamenu-dropdown-border-width: 1px 1px 1px 1px !default;
+$megamenu-dropdown-border-style: solid !default;
+$megamenu-dropdown-border-color: $secondary-color !default;
+$megamenu-dropdown-box-shadow: 1px 14px 75px -8px rgba(0,0,0,0.27) !default;
+$megamenu-border-radius: 0 0 10px 10px !default;
+
+$megamenu-1st-level-height: rem-calc(61) !default;
+$megamenu-1st-level-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-1st-level-hover-font-color: $primary-color !default;
+$megamenu-1st-level-arrow-color: $primary-color !default;
+$megamenu-1st-level-arrow-top: ($topbar-height / 2) + rem-calc(8) !default;
+$megamenu-1st-level-item-bg-color: none !default;
+$megamenu-1st-level-item-border-right-width: 1px !default;
+$megamenu-1st-level-item-border-right-style: solid !default;
+$megamenu-1st-level-item-border-right-color: $secondary-color !default;
+$megamenu-1st-level-link-font-size: rem-calc(16) !default;
+$megamenu-1st-level-link-font-color: $primary-color !default;
+$megamenu-1st-level-link-padding-top: rem-calc(8) !default;
+$megamenu-1st-level-link-padding-bottom: rem-calc(8) !default;
+$megamenu-1st-level-link-active-bg-color: $megamenu-highlight-bg !default;
+$megamenu-1st-level-link-active-font-color: $primary-color !default;
+$megamenu-1st-level-link-active-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-1st-level-link-active-hover-font-color: $primary-color !default;
+$megamenu-1st-level-link-active-arrow-color: $primary-color !default;
+
+$megamenu-2nd-level-bg-color: $megamenu-highlight-bg !default;
+$megamenu-2nd-level-parent-width: 100% !default;
+$megamenu-2nd-level-parent-padding-left: rem-calc(10) !default;
+$megamenu-2nd-level-stretched-bg-color: transparent !default; // set to transparent in order to remove
+$megamenu-2nd-level-item-margin-right: rem-calc(20) !default;
+$megamenu-2nd-level-link-padding: rem-calc(0 10) !default;
+$megamenu-2nd-level-link-font-size: rem-calc(18) !default;
+$megamenu-2nd-level-link-font-color: $primary-color !default;
+$megamenu-2nd-level-width: 20% !default;
+$megamenu-2nd-level-link-active-bg-color: $megamenu-highlight-bg !default;
+$megamenu-2nd-level-link-active-font-color: $flat-peter-river !default;
+$megamenu-2nd-level-link-active-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-2nd-level-link-active-hover-font-color: $flat-peter-river !default;
+
+$megamenu-3rd-level-padding-left: 0 !default;
+$megamenu-3rd-level-border-top-width: 1px !default;
+$megamenu-3rd-level-border-top-style: solid !default;
+$megamenu-3rd-level-border-top-color: $primary-color !default;
+$megamenu-3rd-level-link-padding-left: rem-calc(10) !default;
+$megamenu-3rd-level-link-font-size: rem-calc(15) !default;
+$megamenu-3rd-level-link-line-height: rem-calc(35) !default;
+$megamenu-3rd-level-link-border-bottom: none !default;
+$megamenu-3rd-level-link-hover-font-color: $flat-peter-river !default;
+$megamenu-3rd-level-link-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-3rd-level-link-active-bg-color: $megamenu-highlight-bg !default;
+$megamenu-3rd-level-link-active-font-color: $flat-peter-river !default;
+$megamenu-3rd-level-link-active-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-3rd-level-link-active-hover-font-color: $flat-peter-river !default;
+
+$megamenu-4th-level-link-padding-left: rem-calc(10) !default;
+$megamenu-4th-level-link-font-size: rem-calc(13) !default;
+$megamenu-4th-level-link-hover-font-color: $flat-peter-river !default;
+$megamenu-4th-level-link-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-4th-level-link-active-bg-color: $megamenu-highlight-bg !default;
+$megamenu-4th-level-link-active-font-color: $flat-peter-river !default;
+$megamenu-4th-level-link-active-hover-bg-color: $megamenu-highlight-bg !default;
+$megamenu-4th-level-link-active-hover-font-color: $flat-peter-river !default;
+
+@media #{$large-up} {
+
+  .c-megamenu--horizontal {
+    height: $megamenu-1st-level-height;
+
+    .top-bar-section ul li:hover:not(.has-form) > a {
+      background: $megamenu-1st-level-hover-bg-color;
+      color: $megamenu-1st-level-hover-font-color;
+    }
+
+    .top-bar-section li.hover:not(.has-form) a:not(.button) {
+      color: $megamenu-1st-level-hover-font-color;
+      background-color: $megamenu-1st-level-hover-bg-color;
+    }
+
+    .top-bar-section li.active:not(.has-form) {
+
+      a:not(.button) {
+        background-color: $megamenu-1st-level-link-active-bg-color;
+        color: $megamenu-1st-level-link-active-font-color;
+
+        &:hover {
+          background: $megamenu-1st-level-hover-bg-color;
+          color: $megamenu-1st-level-hover-font-color;
+        }
+
+        &:after {
+          border-top-color: $megamenu-1st-level-link-active-arrow-color;
+        }
+      }
+
+      // 2nd level active
+      .active > a {
+        background-color: $megamenu-2nd-level-link-active-bg-color !important;
+        color: $megamenu-2nd-level-link-active-font-color !important;
+
+        &:hover {
+          background-color: $megamenu-2nd-level-link-active-hover-bg-color !important;
+          color: $megamenu-2nd-level-link-active-hover-font-color !important;
+        }
+
+      }
+
+      // 3rd level active
+      .active .active > a {
+        background-color: $megamenu-3rd-level-link-active-bg-color !important;
+        color: $megamenu-3rd-level-link-active-font-color !important;
+
+        &:hover {
+          background-color: $megamenu-3rd-level-link-active-hover-bg-color !important;
+          color: $megamenu-3rd-level-link-active-hover-font-color !important;
+        }
+
+      }
+
+      // 4th level active
+      .active .active .active > a {
+        background-color: $megamenu-4th-level-link-active-bg-color !important;
+        color: $megamenu-4th-level-link-active-font-color !important;
+
+        &:hover {
+          background-color: $megamenu-4th-level-link-active-hover-bg-color !important;
+          color: $megamenu-4th-level-link-active-hover-font-color !important;
+        }
+
+      }
+    }
+
+    .top-bar-section {
+      a {
+        position: relative;
+      }
+
+      .has-dropdown a:after {
+        border-color: $megamenu-1st-level-arrow-color transparent transparent transparent;
+      }
+
+      > ul > li {
+        position: static;
+        background: $megamenu-1st-level-item-bg-color;
+        border-right: $megamenu-1st-level-item-border-right-width $megamenu-1st-level-item-border-right-style $megamenu-1st-level-item-border-right-color;
+
+        &.has-dropdown > a:after {
+          top: $megamenu-1st-level-arrow-top;
+        }
+
+        > a {
+          font-size: $megamenu-1st-level-link-font-size;
+          color: $megamenu-1st-level-link-font-color;
+          padding-top: $megamenu-1st-level-link-padding-top !important;
+          padding-bottom: $megamenu-1st-level-link-padding-bottom !important;
+        }
+      }
+    }
+
+    // only 2nd level
+    .top-bar-section > ul > li > .dropdown {
+      border-width: $megamenu-dropdown-border-width;
+      border-style: $megamenu-dropdown-border-style;
+      border-color: $megamenu-dropdown-border-color;
+      box-shadow: $megamenu-dropdown-box-shadow;
+      border-radius: $megamenu-border-radius;
+    }
+
+    // 2nd level
+    .dropdown {
+      width: $megamenu-2nd-level-parent-width;
+      padding-left: $megamenu-2nd-level-parent-padding-left;
+      background: $megamenu-2nd-level-bg-color;
+
+      // stretch bg full width
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $megamenu-2nd-level-stretched-bg-color;
+      }
+
+      &:after {
+        left: auto;
+        right: -100%;
+      }
+
+      li {
+        margin-right: $megamenu-2nd-level-item-margin-right;
+      }
+
+      li a {
+        padding: $megamenu-2nd-level-link-padding !important;
+        font-size: $megamenu-2nd-level-link-font-size;
+        color: $megamenu-2nd-level-link-font-color !important;
+        font-weight: bold;
+
+        &:hover {
+          background-color: $megamenu-2nd-level-link-active-hover-bg-color !important;
+          color: $megamenu-2nd-level-link-active-hover-font-color !important;
+        }
+      }
+
+      // 3rd level
+      .dropdown {
+        padding-left: $megamenu-3rd-level-padding-left;
+        border-top: $megamenu-3rd-level-border-top-width $megamenu-3rd-level-border-top-style $megamenu-3rd-level-border-top-color;
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+
+      .has-dropdown.hover > .dropdown,
+      .has-dropdown:hover .dropdown,
+      .dropdown {
+        position: static !important;
+        top: auto;
+        left: auto;
+
+        li {
+          width: 100%;
+          float: none;
+
+          a {
+            padding-left: $megamenu-3rd-level-link-padding-left !important;
+            font-size: $megamenu-3rd-level-link-font-size;
+            line-height: $megamenu-3rd-level-link-line-height !important;
+            border-bottom: $megamenu-3rd-level-link-border-bottom;
+            font-weight: bold;
+
+            &:hover {
+              color: $megamenu-3rd-level-link-hover-font-color !important;
+              background-color: $megamenu-3rd-level-link-hover-bg-color !important;
+            }
+
+          }
+
+          // 4th level
+          .dropdown {
+            border-top: 0;
+
+            li a {
+              padding-left: $megamenu-4th-level-link-padding-left !important;
+              font-size: $megamenu-4th-level-link-font-size;
+              font-weight: normal;
+
+              &:hover {
+                background-color: $megamenu-4th-level-link-hover-bg-color !important;
+                color: $megamenu-4th-level-link-hover-font-color !important;
+              }
+            }
+
+          }
+
+        }
+      }
+
+      a {
+        background-color: $megamenu-link-bg-color !important;
+      }
+
+      // 2nd level arrow
+      .has-dropdown a:after {
+        display: none;
+      }
+
+      li {
+        width: $megamenu-2nd-level-width;
+      }
+    }
+
+  }
+
+}

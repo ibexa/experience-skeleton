@@ -1,0 +1,49 @@
+// we use this to style pagination from Pager Fanta using Foundation standard
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  margin: $pagination-li-margin;
+  font-size: $pagination-li-font-size;
+  color: $pagination-li-font-color;
+  height: $pagination-li-height;
+  border-radius: 0;
+  line-height: $base-line-height;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.pagination a {
+  color: $pagination-link-font-color;
+  padding: $pagination-link-pad;
+  &:hover {
+    background-color: $pagination-link-active-bg;
+  }
+}
+
+.pagination .current {
+  background-color: $pagination-link-current-background;
+  color: $pagination-link-current-font-color;
+  padding: $pagination-link-pad;
+
+  // fix in case we use pagination in dataTables plugin
+  .dataTables_paginate & {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.pagination .disabled {
+  color: $pagination-link-unavailable-font-color;
+  cursor: $pagination-link-unavailable-cursor;
+}
+
+.pagination nav {
+  line-height: rem-calc(35);
+}

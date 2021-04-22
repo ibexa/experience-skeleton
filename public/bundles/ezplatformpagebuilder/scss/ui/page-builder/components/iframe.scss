@@ -1,0 +1,16 @@
+.c-iframe,
+.c-iframe__loading,
+.c-iframe__preview {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    margin: auto;
+}
+
+.c-config-popup {
+    .c-iframe--is-loading {
+        .c-iframe__preview {
+            display: none;
+        }
+    }
+}

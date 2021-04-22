@@ -1,0 +1,42 @@
+.ez-strategy-model {
+    display: flex;
+    min-height: calculateRem(72px);
+    padding: calculateRem(16px);
+    margin-bottom: calculateRem(8px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-base;
+    transition: all 0.8s $ibexa-admin-transition;
+
+    &--dragged-success {
+        background: rgba($ibexa-color-positive, 0.2);
+    }
+
+    &--dragged-fail {
+        background: rgba($ibexa-color-danger, 0.2);
+    }
+
+    &__name {
+        flex: 3;
+        display: flex;
+        align-items: center;
+    }
+
+    &__settings {
+        flex: 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__select-context-container {
+        margin-right: calculateRem(10px);
+    }
+
+    &__select-context {
+        max-width: calculateRem(200px);
+    }
+
+    .form-check {
+        min-width: calculateRem(150px);
+    }
+}

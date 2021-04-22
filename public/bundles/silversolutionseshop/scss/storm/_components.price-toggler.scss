@@ -1,0 +1,21 @@
+.c-price-toggler {
+  @include button($button-tny, $secondary-color, $global-rounded);
+  left: rem-calc(12);
+  top: rem-calc(75);
+  z-index: 1000;
+
+  @media #{$large-up} {
+    top: rem-calc(12);
+  }
+
+  &.primary {
+    @include button($button-tny, $flat-peter-river, $global-rounded);
+  }
+
+}
+
+.c-price-toggler--mobile {
+  position: static !important;
+  margin: rem-calc(20) !important;
+
+} 

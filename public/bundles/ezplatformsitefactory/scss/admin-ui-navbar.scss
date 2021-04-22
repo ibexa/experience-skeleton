@@ -1,0 +1,11 @@
+#ezplatform_page_manager {
+    .ez-navbar {
+        &__item {
+            display: none;
+
+            &--visible {
+                display: block;
+            }
+        }
+    }
+}

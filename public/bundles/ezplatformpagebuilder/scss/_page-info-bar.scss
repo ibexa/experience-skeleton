@@ -1,0 +1,278 @@
+.ez-page-info-bar {
+    display: grid;
+    grid-template-areas:
+        'actions page-view content-action-info other content-details creation'
+        'timeline timeline timeline timeline timeline timeline';
+    grid-template-rows: 60px auto;
+    grid-template-columns: 84px 84px 1fr auto 400px 40px;
+    grid-gap: 0 16px;
+    padding: 0 15px;
+    height: 60px;
+    background-color: $ibexa-color-base-pale;
+    box-shadow: 0 4px 4px 0 rgba(219, 219, 219, 0.35);
+
+    .ez-page-builder--is-disabled &,
+    .ez-page-builder--has-error & {
+        .ez-page-info-bar {
+            &__actions,
+            &__page-view,
+            &__content-actions-info,
+            &__other,
+            &__content-details,
+            &__create-content-wrapper,
+            &__timeline-wrapper {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .ez-page-builder--is-disabled & {
+        .ez-page-info-bar {
+            &__actions {
+                opacity: 1;
+                pointer-events: initial;
+            }
+        }
+    }
+
+    & > div {
+        display: flex;
+        align-items: center;
+    }
+
+    &__actions {
+        grid-area: actions;
+        position: relative;
+
+        .ez-page-info-bar-switcher {
+            &.ez-page-info-bar__content-action-switcher {
+                @include checkbox-icon();
+            }
+        }
+
+        .ez-page-builder-create & {
+            display: none;
+        }
+    }
+
+    &__page-view {
+        grid-area: page-view;
+
+        .ez-page-info-bar-switcher {
+            &.ez-page-info-bar__content-mode-switcher {
+                @include checkbox-icon($ibexa-color-ground-dark);
+            }
+        }
+    }
+
+    &__content-action-info {
+        grid-area: content-action-info;
+        font-size: 13px;
+    }
+
+    &__other {
+        grid-area: other;
+    }
+
+    &__other-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    &__preview-switcher {
+        margin-right: calculateRem(10px);
+    }
+
+    &__timeline-toggler {
+        @include info-bar-button();
+
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+        margin-right: calculateRem(10px);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $ibexa-color-ground-dark;
+        }
+    }
+
+    &__info-tray-toggler {
+        @include info-bar-button();
+
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+        margin-right: calculateRem(5px);
+
+        &:hover,
+        &:focus,
+        &:active,
+        &--selected {
+            background-color: $ibexa-color-ground-dark;
+        }
+    }
+
+    &__tools-wrapper {
+        position: relative;
+        display: inline-block;
+        width: calculateRem(22px);
+    }
+
+    &__tools {
+        @include info-bar-button();
+
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+        width: calculateRem(16px);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $ibexa-color-ground-dark;
+            outline: none;
+
+            .ez-icon {
+                color: $ibexa-white;
+            }
+        }
+
+        &.dropdown-toggle::after {
+            display: none;
+        }
+
+        &-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: $ibexa-white;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45);
+            transition: all 0.2s $ibexa-admin-transition;
+            transform: scaleY(0);
+            transform-origin: top center;
+
+            &--expanded {
+                transform: scaleY(1);
+                z-index: 160;
+            }
+        }
+
+        &-item {
+            .ez-icon--tools {
+                fill: $ibexa-color-ground-dark;
+                margin-right: calculateRem(8px);
+            }
+
+            &:hover {
+                background-color: $ibexa-color-ground-dark;
+
+                .ez-btn {
+                    color: $ibexa-white;
+                }
+
+                .ez-icon--tools {
+                    fill: $ibexa-white;
+                }
+            }
+
+            .ez-btn {
+                white-space: nowrap;
+                text-align: left;
+                font-size: calculateRem(14px);
+            }
+        }
+    }
+
+    &__content-details {
+        grid-area: content-details;
+        font-size: 13px;
+    }
+
+    &__create-content-wrapper {
+        grid-area: creation;
+        position: relative;
+
+        .ez-btn {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .ez-dropdown__item {
+            padding: 0.25rem 0;
+        }
+    }
+
+    &__create-content {
+        @include info-bar-button();
+
+        background: $ibexa-color-primary;
+
+        .ez-icon {
+            fill: $ibexa-white;
+        }
+
+        &[disabled] {
+            background-color: $ibexa-color-base-dark;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &:hover,
+        &:focus {
+            background: darken($ibexa-color-primary, 15%);
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+
+        &[disabled]:hover,
+        &[disabled]:focus {
+            background-color: $ibexa-color-base-dark;
+        }
+    }
+
+    &__timeline-wrapper {
+        grid-area: timeline;
+    }
+
+    &--no-matching-langauge {
+        display: flex;
+        padding-left: 60px;
+        height: 60px;
+    }
+
+    .ez-with-backdrop,
+    .ez-dropdown {
+        z-index: 150;
+    }
+}
+
+.ez-page-builder-edit {
+    .ez-page-info-bar {
+        grid-template-areas:
+            'actions page-view content-action-info other content-details'
+            'timeline timeline timeline timeline timeline timeline';
+        grid-template-columns: 84px 84px 1fr auto auto;
+    }
+}
+
+.ez-page-builder-create {
+    .ez-page-info-bar {
+        grid-template-areas:
+            'page-view content-action-info other content-details creation'
+            'timeline timeline timeline timeline timeline';
+        grid-template-columns: 84px auto 206px 316px 200px;
+    }
+}
+
+.ez-backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

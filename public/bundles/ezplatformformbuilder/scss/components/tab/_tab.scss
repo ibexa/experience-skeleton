@@ -1,0 +1,56 @@
+.c-tab {
+    &__header {
+        height: calculateRem(32px);
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        background: $ibexa-color-primary;
+        padding: calculateRem(10px);
+        justify-content: space-between;
+        cursor: pointer;
+        border-radius: $ibexa-border-radius $ibexa-border-radius 0 0;
+    }
+
+    &__icon {
+        fill: $ibexa-white;
+    }
+
+    &__icon--opened {
+        display: none;
+    }
+
+    &__icon--closed {
+        display: block;
+    }
+
+    &__title {
+        color: $ibexa-white;
+        font-size: calculateRem(16px);
+        font-weight: normal;
+        margin: 0;
+    }
+
+    &--opened {
+        .c-tab {
+            &__icon--opened {
+                display: block;
+            }
+
+            &__icon--closed {
+                display: none;
+            }
+        }
+    }
+
+    .c-sidebar-field {
+        margin: calculateRem(12px) calculateRem(14px);
+
+        &:first-child {
+            margin-top: calculateRem(10px);
+        }
+
+        &:last-child {
+            margin-bottom: calculateRem(12px);
+        }
+    }
+}

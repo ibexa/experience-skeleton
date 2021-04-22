@@ -1,0 +1,13 @@
+.ez-json {
+    &__key {
+        color: $ibexa-color-font;
+    }
+    
+    &__value {
+        color: $ibexa-color-primary;
+    }
+
+    &__string {
+        color: $ibexa-color-positive;
+    }
+}

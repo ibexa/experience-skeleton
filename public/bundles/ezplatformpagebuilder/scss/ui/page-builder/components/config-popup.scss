@@ -1,0 +1,114 @@
+body {
+    &.ezs-non-scrollable {
+        overflow: hidden;
+        position: relative;
+    }
+
+    &.ez-airtime-popup-visible {
+        .m-page-builder__modal-container {
+            .c-config-popup {
+                height: 0;
+            }
+        }
+    }
+}
+
+.c-config-popup {
+    &__dialog {
+        z-index: 1000000;
+        height: 80vh;
+    }
+
+    &__content {
+        @include modal-content();
+        
+        width: 100%;
+        height: 100%;
+    }
+
+    &__btn--close {
+        @include close-button();
+    }
+
+    &__header {
+        @include modal-header();
+    }
+
+    &__body {
+        height: calc(100% - #{calculateRem(60px)});
+        padding: 0;
+
+        &.modal-body {
+            padding: 0;
+        }
+
+        .c-iframe,
+        .c-iframe__preview {
+            height: 100%;
+        }
+    }
+
+    &__headline {
+        max-width: calc(100% - #{calculateRem(56px)});
+    }
+
+    &__title {
+        line-height: 1;
+        display: block;
+        font-size: calculateRem(16px);
+    }
+
+    &__subtitle {
+        display: inline-block;
+        color: $ibexa-color-base-dark;
+        font-size: calculateRem(14px);
+        font-weight: 400;
+        position: relative;
+    }
+
+    &--airtime {
+        .c-config-popup {
+            &__content {
+                width: calculateRem(358px);
+            }
+
+            &__title {
+                font-size: calculateRem(16px);
+            }
+
+            &__btn--close {
+                top: calculateRem(12px);
+            }
+
+            &__btns {
+                margin: calculateRem(24px) 0;
+
+                .btn {
+                    margin: 0 calculateRem(4px) 0 0;
+                    font-size: calculateRem(14px);
+                }
+            }
+
+            &__header {
+                padding: calculateRem(16px);
+            }
+
+            &__body {
+                padding: 0;
+
+                .c-date-picker {
+                    margin: calculateRem(16px) 0;
+
+                    .flatpickr-input {
+                        background-color: $ibexa-white;
+                    }
+                }
+            }
+
+            &__dialog {
+                height: auto;
+                width: calculateRem(358px);
+            }
+        }
+    }
+}

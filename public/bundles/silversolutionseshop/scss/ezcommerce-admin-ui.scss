@@ -1,0 +1,12 @@
+@import './public/bundles/ezplatformadminui/scss/custom.scss';
+@import './public/bundles/ezplatformadminui/scss/mixins.scss';
+@import './public/bundles/ezplatformadminui/scss/functions/calculate.rem.scss';
+
+@import 'configuration-field';
+@import 'configuration-field-array';
+@import 'configuration-settings';
+@import 'product-management';
+@import 'stock-update';
+@import 'table';
+@import 'table-header';
+@import 'sku-search';

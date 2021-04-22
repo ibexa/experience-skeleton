@@ -1,0 +1,83 @@
+// Extends Reveal component
+
+// Default settings
+$reveal-error-color: $alert-color !default;
+$reveal-error-close-color: $white !default;
+
+$reveal-success-color: $success-color !default;
+$reveal-success-close-color: $white !default;
+
+$reveal-info-color: $info-color !default;
+$reveal-info-close-color: $white !default;
+
+$reveal-with-text-position: fixed !default;
+$reveal-with-text-top: 5% !important !default;
+$reveal-with-text-left: 50% !default;
+$reveal-with-text-max-height: 0 !default;
+$reveal-with-text-min-height: 90% !default;
+$reveal-with-text-width: 90% !default;
+$reveal-with-text-overflow-y: auto !default;
+$reveal-with-text-transform: translateX(-50%) !default;
+
+$reveal-no-full-screen-left: 50% !default;
+$reveal-no-full-screen-padding: rem-calc(16) !default;
+$reveal-no-full-screen-max-height: 0 !default;
+$reveal-no-full-screen-min-height: 80vh !default;
+$reveal-no-full-screen-height: auto !default;
+$reveal-no-full-screen-width: 90% !default;
+$reveal-no-full-screen-transform: translateX(-50%) !default;
+
+// Custom classes that comes from AJAX responses
+.reveal-modal.error {
+  @include alert-style($reveal-error-color);
+
+  .close-reveal-modal {
+    color: $reveal-error-close-color;
+  }
+}
+
+.reveal-modal.success {
+  @include alert-style($reveal-success-color);
+
+  .close-reveal-modal {
+    color: $reveal-success-close-color;
+  }
+}
+
+.reveal-modal.notice {
+  @include alert-style($reveal-info-color);
+
+  .close-reveal-modal {
+    color: $reveal-info-close-color;
+  }
+}
+
+// Prevent modal height stay out of the view-port when there is a lot of text inside
+.reveal-modal.with-text {
+  position: $reveal-with-text-position;
+  top: $reveal-with-text-top;
+  left: $reveal-with-text-left;
+  max-height: $reveal-with-text-max-height;
+  min-height: $reveal-with-text-min-height;
+  width: $reveal-with-text-width;
+  overflow-y: $reveal-with-text-overflow-y;
+  transform: $reveal-with-text-transform;
+}
+
+// No full screen modifier on small screen resolution
+// Gives better look for modal windows with small amount of text
+// We use it for messages like add to basket, etc
+
+@media #{$small-only} {
+
+  .reveal-modal.no-full-screen {
+    left: $reveal-no-full-screen-left;
+    padding: $reveal-no-full-screen-padding;
+    min-height: $reveal-no-full-screen-max-height;
+    max-height: $reveal-no-full-screen-min-height;
+    height: $reveal-no-full-screen-height;
+    width: $reveal-no-full-screen-width;
+    transform: $reveal-no-full-screen-transform;
+  }
+
+}

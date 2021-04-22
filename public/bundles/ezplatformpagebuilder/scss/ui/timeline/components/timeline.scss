@@ -1,0 +1,29 @@
+.c-timeline {
+    display: grid;
+    grid-template-areas: 'calendar selected-datetime slider list';
+    grid-template-columns: calculateRem(40px) calculateRem(95px) auto calculateRem(40px);
+    background-color: $ibexa-white;
+    padding: calculateRem(8px) calculateRem(16px);
+    grid-gap: calculateRem(16px);
+    box-shadow: 0 calculateRem(4px) calculateRem(4px) 0 rgba($ibexa-white, 0.35);
+
+    &__calendar-wrapper {
+        grid-area: calendar;
+    }
+
+    &__selected-datetime-wrapper {
+        grid-area: selected-datetime;
+        padding-left: calculateRem(5px);
+        font-size: calculateRem(13px);
+    }
+
+    &__slider-wrapper {
+        grid-area: slider;
+        position: relative;
+        margin: 0 calculateRem(48px);
+    }
+
+    &__list-wrapper {
+        grid-area: list;
+    }
+}

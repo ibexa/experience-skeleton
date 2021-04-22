@@ -1,0 +1,167 @@
+// Extends toastr.scss in terms of colors and a bit of styling
+// vendor/toastr/toastr.scss
+
+// Default settings
+$toastr-base-border-radius: $alert-radius !default;
+$toastr-base-border-left-width: $alert-left-border-width !default;
+$toastr-base-border-left-style: solid !default;
+
+$toastr-box-shadow-bg: $base !default;
+
+$toastr-icon-darken: 10% !default;
+
+$toastr-container-xxlarge-left: 50% !default;
+$toastr-container-xxlarge-margin-left: rem-calc(275) !default;
+
+$toastr-container-inner-large-width: rem-calc(300) !default;
+$toastr-container-inner-margin: rem-calc(0 0 10) !default;
+$toastr-container-inner-padding: rem-calc(15 25 15 50) !default;
+$toastr-container-inner-font-size: rem-calc(14) !default;
+$toastr-container-inner-liner-height: normal !default;
+$toastr-container-inner-border-radius: 0 !default;
+$toastr-container-inner-box-shadow: 0 0 30px $toastr-box-shadow-bg !default;
+$toastr-container-inner-box-shadow-hover: 0 0 30px darken($toastr-box-shadow-bg, 5%) !default;
+$toastr-container-inner-opacity: 1 !default;
+
+$toastr-container-icon-position: absolute !default;
+$toastr-container-icon-left: rem-calc(15) !default;
+$toastr-container-icon-top: 50% !default;
+$toastr-container-icon-font-family: FontAwesome !default;
+$toastr-container-icon-font-size: rem-calc(24) !default;
+$toastr-container-icon-transform: translateY(-50%) !default;
+
+$toastr-success-color: darken($success-color, $alert-text-color-darken) !default;
+$toastr-success-bg-color: $alert-success-bg-color !default;
+$toastr-success-bg-image: none !important !default;
+$toastr-success-icon-symbol: '\f058' !default;
+$toastr-success-icon-color: darken($success-color, $toastr-icon-darken) !default;
+
+$toastr-alert-color: darken($alert-color, $alert-text-color-darken) !default;
+$toastr-alert-bg-color: $alert-alert-bg-color !default;
+$toastr-alert-bg-image: none !important !default;
+$toastr-alert-icon-symbol: '\f06a' !default;
+$toastr-alert-icon-color: darken($alert-color, $toastr-icon-darken) !default;
+
+$toastr-info-color: darken($info-color, $alert-text-color-darken) !default;
+$toastr-info-bg-color: $alert-info-bg-color !default;
+$toastr-info-bg-image: none !important !default;
+$toastr-info-icon-symbol: '\f05a' !default;
+$toastr-info-icon-color: darken($info-color, $toastr-icon-darken) !default;
+
+$toastr-warning-color: darken($warning-color, $alert-text-color-darken) !default;
+$toastr-warning-bg-color: $alert-warning-bg-color !default;
+$toastr-warning-bg-image: none !important !default;
+$toastr-warning-icon-symbol: '\f071' !default;
+$toastr-warning-icon-color: darken($warning-color, $toastr-icon-darken) !default;
+
+$toastr-close-top: rem-calc(16) !important !default;
+$toastr-close-right: rem-calc(6) !important !default;
+$toastr-close-font-weight: normal !default;
+$toastr-close-text-shadow: none !default;
+$toastr-close-opacity: 0.3 !default;
+$toastr-close-hover-bg: none !default;
+$toastr-close-hover-opacity: 0.5 !default;
+
+@mixin toast-styling($border-color) {
+  border-radius: $toastr-base-border-radius !important;
+  border-left: $toastr-base-border-left-width $toastr-base-border-left-style $border-color;
+}
+
+@media #{$xxlarge-up} {
+
+  #toast-container {
+    left: $toastr-container-xxlarge-left;
+    margin-left: $toastr-container-xxlarge-margin-left;
+  }
+
+}
+
+#toast-container > div {
+  margin: $toastr-container-inner-margin;
+  padding: $toastr-container-inner-padding;
+  font-size: $toastr-container-inner-font-size;
+  line-height: $toastr-container-inner-liner-height;
+  border-radius: $toastr-container-inner-border-radius;
+  box-shadow: $toastr-container-inner-box-shadow;
+  opacity: $toastr-container-inner-opacity;
+
+  @media #{$large-up} {
+    width: $toastr-container-inner-large-width;
+  }
+
+  &:hover {
+    box-shadow: $toastr-container-inner-box-shadow-hover;
+  }
+
+  // icon using Font Awesome
+  &:before {
+    position: $toastr-container-icon-position;
+    left: $toastr-container-icon-left;
+    top: $toastr-container-icon-top;
+    font-family: $toastr-container-icon-font-family;
+    font-size: $toastr-container-icon-font-size;
+    transform: $toastr-container-icon-transform;
+  }
+
+  &.toast-success {
+    @include toast-styling($alert-success-border-color);
+    color: $toastr-success-color;
+    background: $toastr-success-bg-color $toastr-success-bg-image;
+
+    &:before {
+      content: $toastr-success-icon-symbol;
+      color: $toastr-success-icon-color;
+    }
+  }
+
+  &.toast-error {
+    @include toast-styling($alert-alert-border-color);
+    color: $toastr-alert-color;
+    background: $toastr-alert-bg-color $toastr-alert-bg-image;
+
+    &:before {
+      content: $toastr-alert-icon-symbol;
+      color: $toastr-alert-icon-color;
+    }
+  }
+
+  &.toast-info {
+    @include toast-styling($alert-info-border-color);
+    color: $toastr-info-color;
+    background: $toastr-info-bg-color $toastr-info-bg-image;
+
+    &:before {
+      content: $toastr-info-icon-symbol;
+      color: $toastr-info-icon-color;
+    }
+  }
+
+  &.toast-warning {
+    @include toast-styling($alert-warning-border-color);
+    color: $toastr-warning-color;
+    background-color: $toastr-warning-bg-color $toastr-warning-bg-image;
+
+    &:before {
+      content: $toastr-warning-icon-symbol;
+      color: $toastr-warning-icon-color;
+    }
+  }
+}
+
+.toast-close-button {
+  @include alert-close;
+  top: $toastr-close-top;
+  right: $toastr-close-right;
+  font-weight: $toastr-close-font-weight;
+  text-shadow: $toastr-close-text-shadow;
+  opacity: $toastr-close-opacity;
+}
+
+.toast-close-button:hover,
+.toast-close-button:focus {
+  background: $toastr-close-hover-bg;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: $toastr-close-hover-opacity;
+}
+

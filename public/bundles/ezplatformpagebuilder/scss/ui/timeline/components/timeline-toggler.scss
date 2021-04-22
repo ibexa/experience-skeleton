@@ -1,0 +1,18 @@
+.c-timeline-toggler {
+    border: none;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .ez-timeline-visible & {
+        background-color: $ibexa-color-ground-dark;
+
+        .ez-icon {
+            fill: $ibexa-white;
+        }
+    }
+}

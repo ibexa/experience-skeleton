@@ -1,0 +1,186 @@
+.ez-page-builder-wrapper {
+    overflow: hidden;
+
+    .ez-page-builder--has-error & {
+        position: relative;
+    }
+
+    .ez-page-builder-right-sidebar {
+        position: fixed;
+        top: calculateRem(60px);
+        right: calculateRem(-80px);
+        height: 100vh;
+        margin: calculateRem(8px) calculateRem(15px) 0;
+        opacity: 0;
+        transition: right 0.2s ease-out, opacity 0.2s ease-out, transform 0.3s linear;
+
+        &--expanded {
+            right: 0;
+            opacity: 1;
+            transition: right 0.4s ease-in, opacity 0.4s ease-in, transform 0.3s linear;
+        }
+
+        .ez-timeline-visible & {
+            transform: translate3d(0, calculateRem(56px), 0);
+        }
+
+        .ez-btn__label {
+            min-width: calculateRem(72px);
+            width: -webkit-min-content;
+            width: -moz-min-content;
+            width: min-content;
+        }
+    }
+
+    .ez-right-sidebar-toggler {
+        position: fixed;
+        z-index: 250;
+        bottom: calculateRem(18px);
+        right: calculateRem(18px);
+        width: calculateRem(40px);
+        height: calculateRem(40px);
+        padding: 0 calculateRem(1px) calculateRem(1px);
+        margin: 0;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        background: $ibexa-color-primary;
+        box-shadow: 0 calculateRem(6px) calculateRem(6px) 0 rgba(51, 51, 51, 0.3);
+
+        &--expanded {
+            .ez-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .ez-extra-actions-container {
+        .ez-extra-actions {
+            top: 0;
+        }
+    }
+
+    .ez-context-menu {
+        &--expanded {
+            z-index: 200;
+        }
+    }
+}
+
+.ez-page-builder-preview:not(.ez-page-builder--fields-visible),
+.ez-page-builder-create:not(.ez-page-builder--fields-visible),
+.ez-page-builder-edit:not(.ez-page-builder--fields-visible) {
+    .ez-page-builder {
+        &__fields {
+            display: none;
+        }
+    }
+}
+
+.ez-page-builder-preview:not(.ez-page-builder--fields-visible) {
+    .ez-page-builder-wrapper {
+        height: calc(100% - 160px);
+    }
+}
+
+.ez-page-builder-create:not(.ez-page-builder--fields-visible),
+.ez-page-builder-edit:not(.ez-page-builder--fields-visible) {
+    .ez-main-container {
+        height: 100%;
+    }
+
+    .ez-page-builder {
+        &,
+        &__landing-page {
+            height: 100%;
+        }
+
+        &-wrapper {
+            height: calc(100% - 60px);
+        }
+    }
+}
+
+.ez-page-builder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    &__fields {
+        flex: 0 0 100vw;
+
+        .ez-content-edit-container {
+            margin-right: calculateRem(80px);
+
+            .ez-edit-header {
+                margin-top: calculateRem(-55px);
+
+                &__content-type-name {
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__landingpage {
+        flex: 0 0 100vw;
+    }
+
+    &--fields-visible &__landingpage {
+        display: none;
+    }
+
+    &--fields-visible {
+        .ez-field-edit__label-wrapper {
+            margin-top: calculateRem(24px);
+
+            .ez-field-edit__label {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__preview {
+        width: 100%;
+        height: calc(100vh - 160px);
+        border: none;
+        margin: auto;
+        display: block;
+    }
+
+    &__loading-wrapper {
+        display: none;
+    }
+
+    &__error-screen {
+        position: absolute;
+        background: $ibexa-white;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &--is-preview-loading {
+        .ez-page-builder__preview {
+            display: none;
+        }
+
+        .ez-page-builder__loading-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 160px);
+        }
+    }
+}

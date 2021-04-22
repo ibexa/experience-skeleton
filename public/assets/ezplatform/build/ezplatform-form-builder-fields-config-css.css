@@ -1,0 +1,307 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.fb-config-option {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  background: #f7f7f9;
+}
+
+.fb-config-option__drag-handler {
+  display: flex;
+  align-items: center;
+  flex: 0 0 2rem;
+  margin: 0 0.625rem;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.fb-config-option__drag-handler .ez-icon {
+  fill: #ae1164;
+}
+
+.fb-config-option__input-wrapper {
+  flex: 1 1 auto;
+}
+
+.fb-config-option__actions {
+  display: flex;
+  flex: 0 0 8rem;
+  padding-right: 0.625rem;
+}
+
+.fb-config-option__action {
+  border: 0;
+  border-radius: 50%;
+  background: #ae1164;
+  height: 2.75rem;
+  width: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 1.25rem;
+  transition: 0.3s opacity cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fb-config-option__action[disabled] {
+  opacity: 0.25;
+}
+
+.fb-config-option__action:not([disabled]):hover, .fb-config-option__action:not([disabled]):focus {
+  cursor: pointer;
+  outline: none;
+}
+
+.fb-config-option__action:not([disabled]):hover {
+  opacity: 0.75;
+}
+
+.fb-config-option__action .ez-icon {
+  fill: #fff;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.fb-config-option__action--active {
+  opacity: 1;
+}
+
+.fb-config-option .form-group {
+  margin-bottom: 0;
+}
+
+.fb-selected-item {
+  display: grid;
+  grid-template-areas: 'image desc actions';
+  grid-template-columns: 125px auto 40px;
+  grid-column-gap: 1rem;
+}
+
+.fb-selected-item__image-wrapper {
+  grid-area: image;
+}
+
+.fb-selected-item__image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.fb-selected-item__actions {
+  grid-area: actions;
+}
+
+.fb-selected-item__action {
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: #ae1164;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fb-selected-item__action .ez-icon {
+  fill: #fff;
+  height: 24px;
+  width: 24px;
+}
+
+.fb-selected-item__action:hover {
+  background: #e75476;
+}
+
+.fb-selected-item__action:focus {
+  outline: none;
+}
+
+.fb-selected-item__title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.fb-selected-item__type {
+  font-size: 0.8125rem;
+  color: #ae1164;
+}
+
+.fb-config-field__btn--open-udw {
+  display: flex;
+  align-items: center;
+}
+
+.fb-config-field__btn--open-udw .ez-icon {
+  fill: #fff;
+  margin-right: 0.5rem;
+}
+
+.fb-config-field__config-label {
+  font-size: 0.875rem;
+}
+
+.fb-config-field__config-label--required:after {
+  content: '*:';
+}
+
+.fb-config-field.fb-config-field--options .fb-config-field__placeholder {
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #f5f5f5;
+  border: 0.0625rem solid #f7f7f9;
+}
+
+.fb-config-field.fb-config-field--options .fb-config-option + .fb-config-option {
+  margin-top: 0.625rem;
+}
+
+.fb-config-field.fb-config-field--action .ez-custom-dropdown__selection-info,
+.fb-config-field.fb-config-field--action .ez-custom-dropdown__items {
+  width: 100%;
+}
+
+.fb-config-field.fb-config-field--action .fb-config-field__action-wrapper {
+  padding: 1.25rem;
+  background: #f7f7f9;
+}
+
+.fb-config-field.fb-config-field--action .ez-custom-dropdown__selected-item[data-value=''] {
+  background: none;
+  border: none;
+}
+
+.fb-config-field.fb-config-field--action .ez-custom-dropdown__selected-item[data-value=''] .ez-custom-dropdown__remove-selection {
+  display: none;
+}
+
+.fb-config-field.fb-config-field--action .ez-custom-dropdown__item[disabled] {
+  display: none;
+}
+
+.fb-config-field.fb-config-field--field-name {
+  width: calc(100% + 30px);
+  margin: 0 -15px;
+  padding: 0 15px 15px;
+  background: #ededed;
+}
+
+.ez-field-config--default .fb-config-field--field-name {
+  height: 3.3125rem;
+  overflow: hidden;
+}
+
+.ez-field-config--default .fb-field-config {
+  height: calc(100% - 3.3125rem - 1rem);
+}
+
+.ez-main-container,
+[name='field_configuration'],
+.ez-field-config {
+  height: 100%;
+}
+
+.ez-field-config {
+  display: grid;
+  grid-template-areas: 'tabs' 'content' 'actions';
+  grid-template-rows: 3.375rem auto 0.5rem;
+}
+
+.ez-field-config__tabs {
+  grid-area: tabs;
+  margin: 0 -0.9375rem;
+  background: #fff;
+  padding: 0 1.25rem;
+  border: 0 none;
+}
+
+.ez-field-config__link-wrapper {
+  position: relative;
+}
+
+.ez-field-config__link {
+  line-height: 2.625rem;
+  padding: 0 1rem;
+  border: 0 none;
+}
+
+.ez-field-config__link--has-invalid-fields + .ez-warning-icon {
+  display: flex;
+  top: 0;
+  right: 0;
+}
+
+.ez-field-config__content {
+  grid-area: content;
+  overflow: auto;
+  padding: 1.5rem;
+}
+
+.ez-field-config__actions {
+  justify-content: flex-start;
+  padding: 1.5rem 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.ez-field-config__actions .btn {
+  margin: 0 0.25rem 0 0;
+}
+
+.ez-field-config [data-open-udw] {
+  display: block;
+}
+
+.ez-field-config__error {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #d92d42;
+}
+
+.ez-field-config .ez-field-config__link, .ez-field-config .ez-field-config__link:hover {
+  border: none;
+}
+
+.ez-field-config--default {
+  background: #fff;
+}
+
+.ez-field-config--default .ez-main-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-warning-icon {
+  position: absolute;
+  background: #d92d42;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  top: -0.5rem;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.ez-warning-icon .ez-icon.ez-icon--warning {
+  height: 12px;
+  width: 12px;
+  margin: -2px 0 0;
+  fill: #fff;
+}
+

@@ -1,0 +1,35 @@
+.c-sidebar-block {
+    flex: 0 0 calculateRem(75px);
+    width: calculateRem(75px);
+    min-height: calculateRem(60px);
+    background: $ibexa-white;
+    margin: calculateRem(5px) calculateRem(4px);
+    padding: calculateRem(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+    border-radius: calculateRem(2px);
+    font-size: calculateRem(12px);
+    line-height: calculateRem(14.5px);
+    transition: background 0.2s $ibexa-admin-transition, color 0.2s $ibexa-admin-transition;
+    flex-direction: column;
+    border: calculateRem(1px) solid $ibexa-color-base;
+    opacity: 0.5;
+
+    &:hover {
+        background: $ibexa-color-base-light;
+    }
+
+    &--is-draggable {
+        cursor: move;
+        cursor: -webkit-grab;
+        opacity: 1;
+    }
+
+    &__name {
+        font-size: calculateRem(11px);
+        text-align: center;
+        max-height: calculateRem(34px);
+    }
+}

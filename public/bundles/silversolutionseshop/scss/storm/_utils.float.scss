@@ -1,0 +1,28 @@
+// We use this file to create float classes for different breakpoints
+
+// Float class names
+$float-class-names:
+  small,
+  medium,
+  large;
+
+// Float breakpoints
+$float-class-breakpoints:
+  $small-only,
+  $medium-only,
+  $large-only;
+
+// Generates float classes
+@mixin float-classes{
+  .u-no-float        { float: none !important; }
+
+  @for $i from 1 through length($float-class-names) {
+    @media #{(nth($float-class-breakpoints, $i))} {
+      .u-no-float-on-#{(nth($float-class-names, $i))}       { float: none !important; }
+      .u-float-right-on-#{(nth($float-class-names, $i))}       { float: right !important; }
+      .u-float-left-on-#{(nth($float-class-names, $i))}       { float: left !important; }
+    }
+  }
+}
+
+@include float-classes;

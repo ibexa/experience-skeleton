@@ -1,0 +1,36 @@
+.c-all-events-view {
+    position: relative;
+
+    &__toggler {
+        border: calculateRem(1px) solid $ibexa-color-ground-dark;
+        border-radius: calculateRem(2px);
+        height: calculateRem(32px);
+        width: calculateRem(32px);
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+
+        .ez-icon {
+            fill: $ibexa-color-ground-dark;
+        }
+
+        &:hover,
+        &:focus {
+            background: $ibexa-color-ground-dark;
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+
+        &--is-list-visible {
+            background-color: $ibexa-color-ground-dark;
+
+            .ez-icon {
+                fill: $ibexa-white;
+            }
+        }
+    }
+}

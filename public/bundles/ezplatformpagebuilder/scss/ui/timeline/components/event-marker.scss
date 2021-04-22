@@ -1,0 +1,96 @@
+.c-event-marker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calculateRem(16px);
+    width: calculateRem(16px);
+    padding: 0;
+    top: calculateRem(-5px);
+    position: absolute;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 1;
+
+    &--in-calendar {
+        bottom: calculateRem(16px);
+        top: auto;
+        left: 50%;
+
+        .c-event-marker {
+            &__icon {
+                &:before {
+                    right: calculateRem(-15px);
+                }
+
+                &--tooltip-on-left:before {
+                    left: calculateRem(-15px);
+                }
+            }
+        }
+    }
+
+    &__btn {
+        border: none;
+        color: $ibexa-color-primary;
+    }
+
+    &__icon {
+        line-height: calculateRem(16px);
+        position: relative;
+        font-weight: 700;
+
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: calculateRem(10px) solid transparent;
+            border-bottom: calculateRem(10px) solid transparent;
+            border-right: calculateRem(10px) solid $ibexa-color-base-light;
+            position: absolute;
+            right: calculateRem(-20px);
+            top: 0;
+            display: none;
+            z-index: 1;
+        }
+
+        &--tooltip-on-left:before {
+            right: auto;
+            left: calculateRem(-20px);
+            border-left: calculateRem(10px) solid $ibexa-color-base-light;
+            border-right: none;
+        }
+    }
+
+    &:not(.c-event-marker--in-calendar):before {
+        content: '';
+        position: absolute;
+        background-color: $ibexa-color-primary;
+        width: calculateRem(2px);
+        height: calculateRem(9px);
+        bottom: calculateRem(-10px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:not(.c-event-marker--in-calendar):after {
+        content: '';
+        position: absolute;
+        background-color: $ibexa-color-primary;
+        bottom: calculateRem(-12px);
+        height: calculateRem(5px);
+        width: calculateRem(5px);
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &:hover {
+        .c-event-marker__icon:before {
+            display: block;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

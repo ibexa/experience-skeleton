@@ -1,0 +1,9 @@
+.ez-container--models-list {
+    .ez-table {
+        &__cell {
+            &--model-name {
+                max-width: calculateRem(300px);
+            }
+        }
+    }
+}

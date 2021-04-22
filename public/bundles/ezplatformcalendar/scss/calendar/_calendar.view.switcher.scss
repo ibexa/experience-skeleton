@@ -1,0 +1,55 @@
+.c-calendar-view-switcher {
+    @include toggler-wrapper();
+
+    &__select-slider {
+        @include toggler-selected-btn();
+
+        position: absolute;
+        top: calculateRem(4px);
+        left: calculateRem(4px);
+        height: calc(100% - #{calculateRem(8px)});
+        width: calc(33% - #{calculateRem(8px)});
+        border-radius: $ibexa-border-radius;
+    }
+
+    &__radio-input {
+        display: none;
+
+        &:checked {
+            &:nth-child(1) {
+                & + label {
+                    color: $ibexa-white;
+                }
+            }
+
+            &:nth-child(3) {
+                & + label {
+                    color: $ibexa-white;
+                }
+
+                & ~ .c-calendar-view-switcher__select-slider {
+                    transform: translateX(70px);
+                }
+            }
+
+            &:nth-child(5) {
+                & + label {
+                    color: $ibexa-white;
+                }
+
+                & ~ .c-calendar-view-switcher__select-slider {
+                    transform: translateX(140px);
+                }
+            }
+        }
+    }
+
+    &__option {
+        @include toggler-btn();
+
+        position: relative;
+        z-index: 1;
+        width: calculateRem(70px);
+        height: calculateRem(30px);
+    }
+}

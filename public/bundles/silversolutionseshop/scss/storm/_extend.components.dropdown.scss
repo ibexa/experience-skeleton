@@ -1,0 +1,75 @@
+// Extends dropdown component
+
+// Default settings
+$dropdown-smaller-max-width: rem-calc(250) !default;
+
+$dropdown-flexible-width: 95% !important !default;
+$dropdown-flexible-left: 2.5% !important !default;
+$dropdown-flexible-medium-only-right: ($column-gutter/2) !important !default;
+$dropdown-flexible-medium-only-left: auto !important !default;
+$dropdown-flexible-medium-only-tiny-max-width: rem-calc(200) !important !default;
+$dropdown-flexible-medium-only-small-max-width: rem-calc(300) !important !default;
+$dropdown-flexible-medium-only-medium-max-width: rem-calc(500) !important !default;
+$dropdown-flexible-large-up-width: auto !important !default;
+$dropdown-flexible-large-up-tiny-max-width: rem-calc(200) !important !default;
+$dropdown-flexible-large-up-small-max-width: rem-calc(300) !important !default;
+$dropdown-flexible-large-up-medium-max-width: rem-calc(500) !important !default;
+
+.f-dropdown.smaller {
+  max-width: $dropdown-smaller-max-width;
+}
+
+// We use this to remove pointer arrow inside dropdown content
+.f-dropdown.no-arrow {
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+.f-dropdown.no-arrow-on-small {
+  @media (max-width: $small-breakpoint) {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// We use this class to extend dropdown.
+// We this approach we are more flexible and can position dropdowns where ever we want in HTML structure
+// The best combined with .no-arrow class and .c-icon-bar__arrow for a trigger
+// Example from icon bar
+/*
+  <a class="c-icon-bar__arrow" data-dropdown="dropdown-basket">
+    <label class="show-for-large-up">{{ 'Shopping basket'|trans }}</label>
+  </a>
+
+  <div id="dropdown-basket" class="f-dropdown medium no-arrow content text-left" data-dropdown-content>
+  ...
+  </div>
+*/
+.f-dropdown.flexible {
+  @media #{$small-only} {
+    width: $dropdown-flexible-width;
+    left: $dropdown-flexible-left;
+  }
+
+  @media #{$medium-only} {
+    right: $dropdown-flexible-medium-only-right;
+    left: $dropdown-flexible-medium-only-left;
+
+    &.tiny    { max-width: $dropdown-flexible-medium-only-tiny-max-width; }
+    &.small   { max-width: $dropdown-flexible-medium-only-small-max-width; }
+    &.medium  { max-width: $dropdown-flexible-medium-only-medium-max-width; }
+
+  }
+
+  @media #{$large-up} {
+    width: $dropdown-flexible-large-up-width;
+
+    &.tiny    { max-width: $dropdown-flexible-large-up-tiny-max-width; }
+    &.small   { max-width: $dropdown-flexible-large-up-small-max-width; }
+    &.medium  { max-width: $dropdown-flexible-large-up-medium-max-width; }
+  }
+}

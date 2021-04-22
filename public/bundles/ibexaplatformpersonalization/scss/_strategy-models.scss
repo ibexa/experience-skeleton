@@ -1,0 +1,16 @@
+.ez-strategy-models {
+    padding: calculateRem(14px) calculateRem(20px);
+    margin-bottom: calculateRem(14px);
+    border-radius: $ibexa-border-radius;
+    border: calculateRem(1px) solid $ibexa-color-base;
+
+    &__title-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: calculateRem(8px);
+    }
+
+    &__title {
+        font-size: calculateRem(16px);
+    }
+}

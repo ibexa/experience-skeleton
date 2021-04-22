@@ -1,0 +1,384 @@
+// Slider Component for Landingpage
+
+.c-slider-landingpage,
+.c-slider-banner{
+  figure {
+    margin: 0;
+  }
+}
+
+.c-slider-landingpage {
+  img {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+}
+
+.c-slider-banner__item {
+  -webkit-background-size: cover;
+  background-size: cover;
+  @media #{$large-up} {
+    min-height: rem-calc(450);
+  }
+}
+
+.c-slider-banner__headline-only {
+  color: $white;
+  margin: 2.5%;
+}
+
+.c-slider-banner__text {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 2.5%;
+  margin: 2.5%;
+  @media #{$small-only} {
+    margin: 0;
+    .button {
+      width: 100%;
+    }
+  }
+  h2 {
+    font-size: rem-calc(30);
+    @media #{$small-only} {
+      font-size: rem-calc(20);
+    }
+  }
+  p {
+    font-size: rem-calc(20);
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
+  }
+  @media #{$large-up} {
+    margin: 15%;
+    h2 {
+      font-size: rem-calc(40);
+    }
+    p {
+      font-size: rem-calc(25);
+    }
+  }
+}
+
+.c-slider-banner__item--secondary {
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: rem-calc(350);
+  @media #{$large-up} {
+    min-height: rem-calc(350);
+  }
+}
+
+.c-slider-banner__text--secondary {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1.5%;
+  margin: 5%;
+  @media #{$small-only} {
+    .button {
+      width: 100%;
+    }
+  }
+  h2 {
+    font-size: rem-calc(18);
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
+  }
+  p {
+    font-size: rem-calc(14);
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
+  }
+  @media #{$large-up} {
+
+    h2 {
+      font-size: rem-calc(20);
+    }
+    p {
+      font-size: rem-calc(16);
+    }
+  }
+}
+
+.c-slider-banner__image {
+  margin-top: rem-calc(5);
+  margin-bottom: rem-calc(5);
+  img {
+    @media #{$small-only} {
+      width: 60%;
+    }
+    @media #{$medium-up} {
+      margin-top: rem-calc(45);
+      margin-bottom: rem-calc(15);
+    }
+    margin: 0 auto;
+    max-height: rem-calc(400);
+    width: auto;
+  }
+}
+
+// Tabs for Landingpages
+
+.c-tabs-landingpage {
+  margin-left: ($column-gutter/2);
+  margin-right: ($column-gutter/2);
+
+  h3 {
+    margin: 0;
+  }
+
+  // Tab Component overrides
+  .tabs-content {
+    background: lighten($secondary-color, 10%);
+    border: 0;
+    margin: 0;
+    //margin-bottom: rem-calc(-57);
+  }
+  .tabs .tab-title.active > a {
+    background: $flat-peter-river;
+    color: $white;
+    border: 0;
+  }
+  .tabs dd > a, .tabs .tab-title > a {
+    background: lighten($secondary-color, 15%);
+    border: 0;
+  }
+  .tabs .tab-title.active > a:before {
+    height: 0;
+  }
+
+  // Card Component overrides
+  .c-card {
+    background: $white;
+    padding-top: rem-calc(10);
+    border: 0;
+  }
+  .c-card__title {
+    background: darken($secondary-color, 15%);
+    margin-top: rem-calc(10);
+
+    a {
+      color: $white;
+    }
+  }
+
+  // Slick slider Component overrides
+  .slick-prev:before, .slick-next:before {
+    color: $primary-color;
+  }
+  .slick-dots {
+    bottom: rem-calc(-30);
+  }
+
+}
+
+// .c-tabs-landingpage:before,
+// .c-tabs-landingpage:after{
+//   position: absolute;
+//   content: '';
+//   left: -100%;
+//   top: rem-calc(57);
+//   width: 102%;
+//   width: calc(100% + (#{$column-gutter}/2));
+//   bottom: 0;
+//
+//   @media #{$medium-up} {
+//     background: lighten($secondary-color, 10%);
+//   }
+//
+// }
+
+.c-tabs-landingpage:after {
+  left: auto;
+  right: -100%;
+}
+
+
+// todo: this component needs to be refactored
+
+/* LANDING PAGE */
+@media #{$large-up} {
+  .landing-page-block {
+    margin-bottom: 30px !important;
+  }
+}
+/* LANDING PAGE OVERLAY */
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+.overlay-fade-in p {
+  letter-spacing: 0.15em;
+  color: #f4f4f4;
+  font-size: 28px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.overlay-fade-in .img {
+  transition: all 0.2s linear;
+}
+.overlay-fade-in .image-overlay-content {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
+}
+.overlay-fade-in {
+
+
+  h3 {
+    font-size: 1.8rem;
+    padding: 20px 0;
+    margin-top: 125px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: em-calc(20px);
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+  a {
+    color: #f2f2f2;
+  }
+
+  .card__price {
+    color: #f2f2f2;
+    font-size: em-calc(28px);
+    font-weight: 100;
+
+  }
+
+}
+
+.overlay-fade-in .button {
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: #FFF;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  border: 1px solid #fff;
+  opacity: 0;
+  font-weight: 200;
+  letter-spacing: 1.5px;
+  transition: all 0.2s ease-in-out;
+  font-size: em-calc(14px);
+  padding: em-calc(15px 20px);
+}
+.overlay-fade-in .button:hover {
+  box-shadow: 0 0 5px #000;
+}
+.overlay-fade-in:hover .img {
+  transform: scale(1.2);
+}
+.overlay-fade-in:hover .image-overlay-content {
+  opacity: 1;
+}
+.overlay-fade-in:hover h3, .overlay-fade-in p, .overlay-fade-in .button {
+  opacity: 1;
+}
+.overlay-fade-in:hover p {
+  transition-delay: 0.1s;
+}
+.overlay-fade-in:hover .button {
+  transition-delay: 0.2s;
+}
+
+.landing-page-block .c-card__price {
+  color: #f2f2f2;
+  font-size: em-calc(28px);
+}
+
+/* LANDING PAGE STYLING */
+
+.pos_1, .pos_2, .pos_3, .pos_4 {
+  background-color: #F5D76E;
+}
+
+@media #{$large-up} {
+
+  .pos_1 {
+    height: 630px;
+  }
+  .pos_2 {
+    height: 300px;
+  }
+}
+
+/* LANDING PAGE SIZES */
+
+/* LANDING PAGE POSITIONS */
+
+.pos_1 .img, .pos_2 .img{
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-wrapper.pos_1 h2, .image-wrapper.pos_2 h2{
+  position: absolute;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  height: 2.2rem;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2.2rem;
+  padding: 0 1.25rem;
+  overflow: hidden;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.image-wrapper.pos_1:hover h2,.image-wrapper.pos_2:hover h2 {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+@media #{$large-up} {
+
+  .image-wrapper.pos_2 h2 {
+    top: 20px;
+    left: 0px;
+  }
+
+  .pos_1 .img {
+    height: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .pos_2 .img {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .pos_1 .image-overlay-content h3 {
+    margin-top: 80%;
+  }
+  .pos_2 .image-overlay-content h3 {
+    margin-top: 50px;
+  }
+  .margin-top-30 {
+    margin-top: 30px;
+  }
+
+}

@@ -1,0 +1,31 @@
+.ez-page-info-bar-switcher {
+    &.ez-page-info-bar__content-mode-switcher {
+        &.is-form-invalid {
+            .ez-warning-icon {
+                display: flex;
+            }
+
+            &.has-other-fieldtypes-invalid {
+                .ez-warning-icon {
+                    right: -0.5rem;
+                    left: auto;
+                }
+            }
+
+            &.has-page-fieldtype-invalid {
+                .ez-warning-icon {
+                    left: -0.5rem;
+                    right: auto;
+                }
+            }
+
+            &.has-other-fieldtypes-invalid.has-page-fieldtype-invalid {
+                .ez-warning-icon {
+                    left: 50%;
+                    right: auto;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}

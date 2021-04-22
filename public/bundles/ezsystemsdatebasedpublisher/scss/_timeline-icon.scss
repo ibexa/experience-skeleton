@@ -1,0 +1,10 @@
+.c-event-marker[data-event-type='future_publication'] {
+    .ez-icon {
+        fill: $ibexa-color-base-dark;
+    }
+
+    &:before,
+    &:after {
+        background-color: $ibexa-color-base-dark;
+    }
+}

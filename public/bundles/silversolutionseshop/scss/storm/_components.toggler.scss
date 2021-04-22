@@ -1,0 +1,35 @@
+// Default settings
+$toggler-text-align: center !default;
+$toggler-line-color: #999 !default;
+$toggler-line-height: 1px !default;
+$toggler-trigger-font-size: rem-calc(14) !default;
+$toggler-trigger-padding: rem-calc(5) !default;
+$toggler-trigger-bg-color: $white !default;
+
+.c-toggler {
+  position: relative;
+  text-align: $toggler-text-align;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    height: $toggler-line-height;
+    background: $toggler-line-color;
+    z-index: 0;
+  }
+}
+.c-toggler__trigger {
+  background: $toggler-trigger-bg-color;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: $toggler-trigger-padding;
+  font-size: $toggler-trigger-font-size;
+
+  &:after {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.c-events-table-row {
+    &:hover {
+        background-color: $ibexa-white;
+        cursor: pointer;
+    }
+
+    &__icon-wrapper {
+        background: $ibexa-white;
+        border-radius: 50%;
+        width: calculateRem(32px);
+        height: calculateRem(32px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .ez-icon {
+            width: calculateRem(20px);
+            height: calculateRem(20px);
+        }
+    }
+
+    &__cell {
+        &:first-child {
+            width: calculateRem(40px);
+        }
+    }
+}
