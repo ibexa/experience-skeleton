@@ -1,0 +1,172 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.dbp-publish-later {
+  width: auto;
+}
+
+.dbp-publish-later .ez-extra-actions__content {
+  max-height: inherit;
+}
+
+.dbp-publish-later__pick {
+  margin-bottom: 1rem;
+}
+
+.dbp-publish-later__pick-input {
+  margin-bottom: 0.125rem;
+}
+
+.dbp-publish-later__pick-input[readonly] {
+  background-color: #fff;
+}
+
+.dbp-publish-later__pick-label {
+  font-weight: bold;
+}
+
+.dbp-publish-later__input-wrapper {
+  position: relative;
+}
+
+.dbp-publish-later__input-wrapper .dbp-publish-later__clear-input-schedule {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  border: none;
+  outline: none;
+}
+
+.dbp-publish-later__input-wrapper .dbp-publish-later__clear-input-schedule .ez-icon {
+  fill: #131c26;
+  width: 1rem;
+  height: 1rem;
+}
+
+.ez-context-menu .ez-extra-actions-container .dbp-publish-later__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.ez-context-menu .ez-extra-actions-container .dbp-publish-later__actions .ez-btn--confirm-schedule {
+  font-size: 0.875rem;
+  width: 12.5rem;
+}
+
+.ez-dropdown .dbp-publish-later {
+  border-color: #ae1164;
+  background-color: #ae1164;
+}
+
+.ez-dropdown .dbp-publish-later:after {
+  background-color: #ae1164;
+}
+
+.ez-dropdown .dbp-publish-later .ez-extra-actions__content {
+  padding: 1rem;
+}
+
+.ez-schedule-hide--hidden-calendar .flatpickr-calendar {
+  display: none;
+}
+
+.dbp-notification .ez-notifications-modal__type .type__icon {
+  background: #d92d42;
+  fill: #f7f7f9;
+}
+
+.dbp-notification.ez-notifications-modal__item--read .type__icon {
+  background-color: #878b90;
+}
+
+.c-event-marker[data-event-type='future_publication'] .ez-icon {
+  fill: #878b90;
+}
+
+.c-event-marker[data-event-type='future_publication']:before, .c-event-marker[data-event-type='future_publication']:after {
+  background-color: #878b90;
+}
+
+.ez-modal--scheduling .modal-header {
+  border-bottom: none;
+  padding: 0.9375rem 0.9375rem 0 0.9375rem;
+  position: relative;
+  min-height: 2.5rem;
+}
+
+.ez-modal--scheduling .modal-body {
+  padding: 0.9375rem 1.875rem;
+}
+
+.ez-modal--scheduling .modal-body .flatpickr-wrapper {
+  width: 15.625rem;
+}
+
+.ez-modal--scheduling .modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+
+.ez-modal--scheduling .ez-scheduling-modal__input-label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1.25rem;
+}
+
+.ez-modal--scheduling .ez-scheduling-modal__btn {
+  display: flex;
+}
+
+.ez-modal--scheduling .ez-scheduling-modal__btn-spinner {
+  margin-right: 0.5rem;
+  display: none;
+}
+
+.ez-modal--scheduling .ez-scheduling-modal__btn-spinner--visible {
+  display: initial;
+}
+
+.ez-dashboard .table.ez-table__all-scheduled, .ez-dashboard .table.ez-table__my-scheduled, .ez-dashboard .table.ez-scheduling-modal__table {
+  margin-bottom: 0;
+}
+
+.ez-dashboard .table.ez-table__all-scheduled thead, .ez-dashboard .table.ez-table__my-scheduled thead, .ez-dashboard .table.ez-scheduling-modal__table thead {
+  background-color: #fff;
+}
+
+.ez-dashboard .table.ez-table__all-scheduled thead th, .ez-dashboard .table.ez-table__my-scheduled thead th, .ez-dashboard .table.ez-scheduling-modal__table thead th {
+  border-bottom: 0.125rem solid #fff;
+}
+
+.ez-alert--location-scheduled-hide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ez-alert__message-container {
+  width: 100%;
+}
+
+.ez-alert .ez-btn {
+  padding: 0.125rem 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.ez-extra-actions__buttons {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.ez-extra-actions__buttons .ez-btn.ez-btn--wide {
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.ez-modal--content-reveal-confirmation .modal-header {
+  border-bottom: none;
+}
+
+.ez-modal--content-reveal-confirmation .modal-footer {
+  border-top: none;
+}
+

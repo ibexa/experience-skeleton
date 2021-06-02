@@ -1,0 +1,19 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-table--add-segments .ez-table__cell--has-checkbox {
+  vertical-align: middle;
+}
+
+.ez-modal--create-segment-group .modal-dialog {
+  max-width: 40vw;
+}
+
+.ez-modal--create-segment-group .modal-body {
+  max-height: 31.25rem;
+  overflow: auto;
+}
+
+.ez-modal--create-segment-group .modal-body .form-group {
+  width: 60%;
+}
+
