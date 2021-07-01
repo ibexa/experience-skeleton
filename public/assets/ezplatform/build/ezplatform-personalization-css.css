@@ -1,0 +1,1110 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+.ez-action-container {
+  padding: 1rem;
+}
+
+.ez-action-container__title {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  border-bottom: 0.0625rem solid #e0e0e8;
+}
+
+.ez-action-container__available-model {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #e0e0e8;
+}
+
+.ez-action-container__available-model:hover {
+  cursor: grab;
+}
+
+.ez-action-container__available-model-icon {
+  margin-top: 0.125rem;
+  margin-right: 0.5rem;
+}
+
+.ez-action-container--models {
+  flex: 2;
+  margin-right: 1rem;
+}
+
+.ez-action-container--configured-models {
+  flex: 3;
+  margin-left: 1rem;
+}
+
+.ez-modal--strategy-edit .ez-modal .modal-dialog {
+  max-width: 37.5rem;
+}
+
+.ez-modal--strategy-edit .ez-modal__row-input {
+  margin-bottom: 1rem;
+}
+
+.ez-modal--strategy-edit .ez-modal__row-input .ez-label {
+  display: inline;
+}
+
+.ez-modal--strategy-edit .ez-modal__sub-row-input {
+  margin-top: 0.5rem;
+}
+
+.ez-modal--strategy-edit .ez-modal__sub-row-input .ez-label {
+  font-size: 0.875rem;
+}
+
+.ez-modal--strategy-edit .ez-modal__sub-row-input .ez-personalization-base-item__input-field--number-spinner {
+  display: inline;
+}
+
+.ez-modal--strategy-edit .ez-modal__sub-row-input--first-level {
+  margin-left: 2rem;
+}
+
+.ez-modal--strategy-edit .ez-modal__sub-row-input--second-level {
+  margin-left: 4rem;
+}
+
+.ez-modal--strategy-edit .ez-modal__sub-row-input--inactive {
+  opacity: 0.3;
+}
+
+.ez-strategy-model {
+  display: flex;
+  min-height: 4.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #e0e0e8;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ez-strategy-model:hover {
+  cursor: grab;
+}
+
+.ez-strategy-model__icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+}
+
+.ez-strategy-model--dragged-success {
+  background: rgba(0, 130, 92, 0.2);
+}
+
+.ez-strategy-model--dragged-fail {
+  background: rgba(217, 45, 66, 0.2);
+}
+
+.ez-strategy-model__name {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+
+.ez-strategy-model__settings {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ez-strategy-model__select-context-container {
+  margin-right: 0.625rem;
+}
+
+.ez-strategy-model__select-context {
+  max-width: 12.5rem;
+}
+
+.ez-strategy-model .form-check {
+  min-width: 9.375rem;
+}
+
+.ez-strategy-models {
+  padding: 0.875rem 1.25rem;
+  margin-bottom: 0.875rem;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #e0e0e8;
+}
+
+.ez-strategy-models__title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.ez-strategy-models__title {
+  font-size: 1rem;
+}
+
+.ez-json__key {
+  color: #131c26;
+}
+
+.ez-json__value {
+  color: #ae1164;
+}
+
+.ez-json__string {
+  color: #00825c;
+}
+
+.ez-multiline-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.ez-multiline-label__line {
+  display: flex;
+  align-items: center;
+}
+
+.ez-multiline-label__line .form-control {
+  margin-bottom: 0;
+}
+
+.ez-chart {
+  height: 100%;
+  max-height: 62.5rem;
+  border: 0.0625rem solid #ececf1;
+  border-radius: 0.125rem;
+}
+
+.ez-chart--no-data .ez-chart__canvas, .ez-chart--no-data .ez-chart__legend, .ez-chart--no-data .ez-chart__summary {
+  opacity: 0.4;
+}
+
+.ez-chart__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.ez-chart__time-range, .ez-chart__time-period {
+  color: #878b90;
+}
+
+.ez-chart__message {
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 150px);
+  left: calc(50% - 190px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  width: 25rem;
+  height: 14.125rem;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #e0e0e8;
+  background: #fff;
+}
+
+.ez-chart__message .ez-icon {
+  margin-bottom: 0.75rem;
+}
+
+.ez-chart__body {
+  position: relative;
+  padding: 0 0.875rem 0 0.75rem;
+}
+
+.ez-chart__canvas {
+  max-height: 37.5rem;
+  width: 100%;
+}
+
+.ez-chart__legend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0.125rem 0 0.25rem;
+}
+
+.ez-chart__legend-checkbox-label {
+  display: flex;
+  height: 1.25rem;
+  align-items: center;
+  margin-right: 0.9375rem;
+  font-size: 0.875rem;
+}
+
+.ez-chart__legend-checkbox-label .ez-input {
+  margin-right: 0.25rem;
+}
+
+.ez-chart__legend-checkbox-label .ez-input--legend-checkbox {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ez-chart__summary {
+  display: flex;
+  height: auto;
+  padding: 1rem;
+}
+
+.ez-chart__summary-item {
+  padding: 0.625rem 0.9375rem;
+}
+
+.ez-chart__summary-row-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding-left: 0;
+}
+
+.ez-chart__summary-main-value {
+  color: #131c26;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.ez-chart__summary-main-label {
+  color: #878b90;
+  font-size: 0.875rem;
+}
+
+.ez-chart__summary--revenue {
+  align-items: center;
+}
+
+.ez-chart__summary--revenue .ez-chart__summary-item {
+  padding: 0.625rem 1.25rem 0 0;
+}
+
+.ez-chart__summary--recommendation-calls, .ez-chart__summary--collected-events, .ez-chart__summary--conversion-rate {
+  margin-top: 0 1.25rem;
+}
+
+.ez-chart__summary--recommendation-calls .ez-chart__summary-item-details, .ez-chart__summary--collected-events .ez-chart__summary-item-details, .ez-chart__summary--conversion-rate .ez-chart__summary-item-details {
+  padding: 1.25rem 1rem 0;
+  flex: 0 0 70%;
+}
+
+.ez-chart__summary--recommendation-calls .ez-chart__summary-item-total, .ez-chart__summary--collected-events .ez-chart__summary-item-total, .ez-chart__summary--conversion-rate .ez-chart__summary-item-total {
+  padding: 0 0 0 1.25rem;
+  flex: 0 0 30%;
+}
+
+.ez-chart__summary--recommendation-calls .ez-chart__summary-main-label, .ez-chart__summary--collected-events .ez-chart__summary-main-label, .ez-chart__summary--conversion-rate .ez-chart__summary-main-label {
+  font-size: 1.75rem;
+  text-align: right;
+}
+
+.ez-chart__summary--recommendation-calls .ez-chart__summary-main-value, .ez-chart__summary--collected-events .ez-chart__summary-main-value, .ez-chart__summary--conversion-rate .ez-chart__summary-main-value {
+  text-align: right;
+}
+
+.ez-charts__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem 1rem;
+}
+
+.ez-charts__header-headline {
+  font-size: 1rem;
+}
+
+.ez-charts__header-tools {
+  display: flex;
+}
+
+.ez-charts__header-tools .btn {
+  margin: 0 0.3125rem;
+}
+
+.ez-charts__filter-select {
+  min-width: 15.625rem;
+}
+
+.ez-charts__filter-range-select[readonly] {
+  margin-top: 0.3125rem;
+  background: #fff;
+}
+
+.ez-charts__item {
+  margin-bottom: 1.5rem;
+}
+
+.ez-time-range {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 18.75rem;
+  justify-content: flex-end;
+}
+
+.ez-time-range__label {
+  height: 2.375rem;
+  line-height: 2.375rem;
+  margin-right: 0.625rem;
+  color: #878b90;
+}
+
+.ez-time-range__download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.375rem;
+  width: 1.875rem;
+}
+
+.ez-time-range__custom-range-container {
+  min-width: 14.0625rem;
+  margin-right: 2.375rem;
+}
+
+.ez-container--fetching-data {
+  opacity: 0.5;
+}
+
+.ez-products-purchased .ez-time-range__custom-range-container {
+  margin-right: 0;
+}
+
+.ez-summary {
+  padding: 1.25rem 0;
+}
+
+.ez-summary__item {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: #fff;
+}
+
+.ez-summary__item-period {
+  color: #878b90;
+  font-size: 0.875rem;
+}
+
+.ez-summary__item-value {
+  font-weight: bold;
+  font-size: 1.625rem;
+  padding: 0.75rem 0 0.25rem;
+}
+
+.ez-summary__item-name {
+  color: #878b90;
+}
+
+.ez-summary__reco-delta-value {
+  color: #878b90;
+}
+
+.ez-summary__reco-delta-value .ez-icon {
+  display: none;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.ez-summary__reco-delta-value--up {
+  color: #00825c;
+}
+
+.ez-summary__reco-delta-value--up .ez-icon {
+  display: inline;
+  fill: #00825c;
+  transform: rotate(90deg);
+}
+
+.ez-summary__reco-delta-value--down {
+  color: #d92d42;
+}
+
+.ez-summary__reco-delta-value--down .ez-icon {
+  display: inline;
+  fill: #d92d42;
+  transform: rotate(-90deg);
+}
+
+.ez-personalization-list .ez-table-header__headline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ez-personalization-list .ez-table-header__hedaline-action {
+  font-weight: normal;
+}
+
+.ez-personalization-list .ez-table__header-cell {
+  vertical-align: middle;
+}
+
+.ez-personalization-list .ez-table__header-cell-content, .ez-personalization-list .ez-table__cell-content {
+  display: flex;
+}
+
+.ez-personalization-list .ez-table__cell {
+  border-bottom: 0.0625rem solid #f5f5f5;
+}
+
+.ez-personalization-list .ez-table__cell-description {
+  margin-top: 1.25rem;
+}
+
+.ez-personalization-list .ez-table__status {
+  display: inline-block;
+}
+
+.ez-personalization-list .ez-table__status--as-dot:before {
+  content: " ";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.3125rem;
+  border-radius: 50%;
+}
+
+.ez-personalization-list .ez-table__status--danger {
+  color: #d92d42;
+}
+
+.ez-personalization-list .ez-table__status--danger:before {
+  background: #d92d42;
+}
+
+.ez-personalization-list .ez-table__status--success {
+  color: #00825c;
+}
+
+.ez-personalization-list .ez-table__status--success:before {
+  background: #00825c;
+}
+
+.ez-container--models-list .ez-table__cell--model-name {
+  max-width: 18.75rem;
+}
+
+.ez-container--scenarios-list .ez-table__header-cell--scenarion-actions {
+  max-width: 12.5rem;
+}
+
+.ez-container--scenarios-list .ez-table__header-cell--scenarion-actions .ez-table__header-cell-content {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ez-container--scenarios-list .ez-table__cell--scenarion-name {
+  max-width: 18.75rem;
+}
+
+.ez-container--scenarios-list .ez-table__cell--scenarion-actions {
+  justify-content: space-between;
+}
+
+.ez-container--scenarios-list .ez-table__cell--scenarion-actions .ez-table__cell-content {
+  justify-content: space-between;
+}
+
+.ez-container--scenarios-list .ez-table__status {
+  font-size: 0.875rem;
+  margin-top: 0.3125rem;
+}
+
+.ez-personalization-base-item__input-field--short {
+  max-width: 28.125rem;
+}
+
+.ez-personalization-base-item .ez-header {
+  display: flex;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: #fff;
+  border-bottom: 0.0625rem solid #e0e0e8;
+}
+
+.ez-personalization-base-item .ez-header__exit-btn {
+  position: fixed;
+  top: 0.3125rem;
+  left: 0.3125rem;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.ez-personalization-base-item .ez-fieldgroup__name {
+  border-bottom: none;
+  padding: 2rem 0 0;
+}
+
+.ez-personalization-base-item .ez-main-row {
+  background: #fff;
+}
+
+.ez-personalization-base-item__checkbox-input-field-contanier {
+  display: flex;
+}
+
+.ez-personalization-base-item__input-field--short {
+  max-width: 28.125rem;
+}
+
+.ez-personalization-base-item__input-field--description {
+  min-height: 12.5rem;
+}
+
+.ez-personalization-base-item__input-field--checkbox-number-input {
+  max-width: 5rem;
+}
+
+.ez-personalization-base-item__input-field--checkbox-text-input {
+  max-width: 7.5rem;
+}
+
+.ez-personalization-base-item__input-field--number-spinner {
+  max-width: 6.25rem;
+}
+
+.ez-personalization-base-item .ez-field-edit__error {
+  margin-top: 0;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit {
+  padding: 1.5rem 0;
+  border-bottom: 0.0625rem solid #e0e0e8;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit__data > .form-check {
+  margin: 0.25rem 0;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit__data-group-items--boost-items {
+  display: flex;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit__data-group-items--inline {
+  display: flex;
+  align-items: center;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit__data-group-items--inline .col-form-label {
+  font-weight: normal;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit__data-group-items--inline .form-control {
+  margin-bottom: 0;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit__data-group-items--inline .form-check-label {
+  display: flex;
+  align-items: center;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit .ez-field-edit__label-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ez-personalization-base-item--edit .ez-field-edit .ez-field-edit__label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #878b90;
+}
+
+.ez-personalization-base-item--details .ez-content-edit-container {
+  margin-left: 5.625rem;
+}
+
+.ez-submodel-select,
+.ez-submodel-type {
+  max-width: 28.125rem;
+  margin-bottom: 1rem;
+}
+
+.ez-submodel__content {
+  display: flex;
+}
+
+.ez-submodel__available-items {
+  min-height: 18.75rem;
+  width: 28.125rem;
+  margin-right: 3rem;
+}
+
+.ez-submodel__available-items .ez-submodel__items {
+  height: 100%;
+  margin: 0;
+}
+
+.ez-submodel__available-items .ez-submodel__item .ez-tag {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.ez-submodel__available-items .ez-submodel__item .ez-tag__remove-btn {
+  display: none;
+}
+
+.ez-submodel__existing-groups-header, .ez-submodel__ranges-header {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  width: 28.125rem;
+}
+
+.ez-submodel__existing-groups-header-title, .ez-submodel__ranges-title {
+  color: #878b90;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.ez-submodel__items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 28.125rem;
+  min-height: 2.8125rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.125rem;
+}
+
+.ez-submodel__item {
+  margin: 0.25rem 0;
+}
+
+.ez-submodel__item--edit-numeric {
+  display: flex;
+}
+
+.ez-submodel__item .ez-tag {
+  font-size: 0.875rem;
+}
+
+.ez-submodel__item-range-label {
+  height: 2.375rem;
+  line-height: 2.375rem;
+  color: #878b90;
+}
+
+.ez-submodel__item-range-value {
+  display: inline-block;
+  width: 5rem;
+  margin: 0 0.375rem;
+  padding: 0.375rem 0.5rem;
+  text-align: right;
+  border: 0.0625rem solid #878b90;
+  border-radius: 0.125rem;
+}
+
+.ez-submodel__remove-group-button {
+  position: absolute;
+  top: calc(50% - 0.625rem);
+  right: -2rem;
+}
+
+.ez-submodel--nominal .ez-submodel__items {
+  border: 0.0625rem solid #878b90;
+}
+
+.ez-submodel--numeric .ez-submodel__content {
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.ez-submodel--numeric .ez-submodel__item {
+  display: flex;
+  margin-bottom: 0.25rem;
+}
+
+.ez-submodel--numeric .ez-submodel__item .form-control {
+  display: inline-block;
+  max-width: 5rem;
+  margin: 0 0.3125rem;
+}
+
+.ez-editorial-models {
+  margin-top: 1rem;
+}
+
+.ez-editorial-models__actions-wrapper {
+  padding: 1rem 1.875rem;
+  background: #f7f7f9;
+}
+
+.ez-editorial-models__btn {
+  margin: 0.75rem 0 1.5rem;
+}
+
+.ez-editorial-models__no-items {
+  font-size: 0.875rem;
+}
+
+.ez-editorial-models__items {
+  margin-bottom: 0.5rem;
+}
+
+.ez-editorial-models__item {
+  display: inline-block;
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+.ez-scenario-strategy {
+  display: flex;
+}
+
+.ez-scenario-strategy__item {
+  flex: 1;
+  padding: 0 0.25rem;
+  margin-right: 1.5rem;
+}
+
+.ez-scenario-strategy__item-title {
+  color: #878b90;
+}
+
+.ez-scenario-strategy__models {
+  margin-top: 0.5rem;
+}
+
+.ez-scenario-strategy__model {
+  width: 100%;
+  min-height: 1.75rem;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #e0e0e8;
+  color: #fff;
+  border-radius: 0.125rem;
+}
+
+.ez-scenario-strategy__model--filled {
+  background: #ae1164;
+}
+
+.ez-scenario-strategy-edit {
+  display: flex;
+}
+
+.ez-scenario-preview__container {
+  border-bottom: 0.0625rem solid #e0e0e8;
+}
+
+.ez-scenario-preview__container--recomendation-response {
+  margin-top: 1.5rem;
+}
+
+.ez-scenario-preview__container--recomendation-call {
+  margin-bottom: 3.125rem;
+}
+
+.ez-scenario-preview__container--recomendation-call .ez-content-field {
+  border: none;
+}
+
+.ez-scenario-preview__container--recomendation-call .ez-content-field-name {
+  color: #878b90;
+}
+
+.ez-scenario-preview__container--recomendation-call .ez-content-field-value {
+  display: flex;
+  align-items: middle;
+}
+
+.ez-scenario-preview__row {
+  padding: 1rem 0;
+}
+
+.ez-scenario-preview__col--light {
+  color: #878b90;
+}
+
+.ez-scenario-preview__gallery {
+  display: flex;
+  height: 15.625rem;
+  overflow: hidden;
+}
+
+.ez-scenario-preview__gallery-control-button {
+  width: 2%;
+  height: 15.625rem;
+}
+
+.ez-scenario-preview__gallery-content {
+  width: 96%;
+  display: flex;
+  overflow: hidden;
+}
+
+.ez-scenario-preview__gallery-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #ae1164;
+}
+
+.ez-scenario-preview__gallery-item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 17.25rem;
+  height: 15.625rem;
+  margin: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ez-scenario-preview__gallery-item {
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 0.125rem;
+  border: 0.0625rem solid #e0e0e8;
+}
+
+.ez-scenario-preview__gallery-item-header {
+  height: 6.875rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ez-scenario-preview__gallery-item-body {
+  padding: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.ez-scenario-preview__gallery-item-title {
+  height: 3.125rem;
+}
+
+.ez-scenario-preview__json-response {
+  display: flex;
+  flex-direction: column;
+}
+
+.ez-scenario-preview__json-response-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 25rem;
+  overflow: hidden;
+  padding-top: 0.3125rem;
+  border: 0.0625rem solid #e0e0e8;
+  border-radius: 0.125rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ez-scenario-preview__json-response-container--hide {
+  max-height: 0;
+  border: none;
+}
+
+.ez-scenario-preview__json-response-content {
+  max-height: 18.75rem;
+  overflow: auto;
+  padding-left: 1.25rem;
+}
+
+.ez-scenario-preview__json-response-button {
+  width: 12.5rem;
+  align-self: flex-end;
+  text-align: right;
+  margin-bottom: 0.3125rem;
+}
+
+.ez-scenario-preview__context-items-add-container, .ez-scenario-preview__attributes-add-container, .ez-scenario-preview__custom-parameters-add-container {
+  display: flex;
+  width: 30rem;
+  margin-bottom: 0.5rem;
+}
+
+.ez-scenario-preview__input {
+  margin-right: 0.25rem;
+}
+
+.ez-scenario-preview__send-request {
+  margin: 1.5rem 0;
+}
+
+.ez-scenario-preview .ez-personalization-base-item__form .ez-field-edit--ezinteger .ez-data-source__input {
+  width: 28.125rem;
+}
+
+.ez-scenario-preview .ez-personalization-base-item__form .ez-scenario-preview__field-name {
+  margin: 1rem 0 0.25rem;
+  color: #878b90;
+}
+
+.ez-scenario-preview .ez-personalization-base-item__form .ez-scenario-preview__field-name .col-form-label,
+.ez-scenario-preview .ez-personalization-base-item__form .ez-scenario-preview__field-name .ez-field-edit__label {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  color: #878b90;
+}
+
+.ez-container--personalization-welcome {
+  margin-top: 2.5rem;
+}
+
+.ez-modal--terms-and-condition .modal-dialog {
+  max-width: 87.5rem;
+  max-height: 90vh;
+}
+
+.ez-modal--terms-and-condition .ez-modal__close-button {
+  margin: 1rem 1.375rem 0 0;
+  opacity: 1;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content {
+  padding: 1.5rem 0 0 4rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-terms {
+  max-height: 56vh;
+  overflow: auto;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-container {
+  padding: 1.5rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-title {
+  margin-bottom: 3rem;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents {
+  padding: 1.5rem;
+  background: #f7f7f9;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-title {
+  font-size: 1rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list {
+  padding: 1rem 0 0 2.5rem;
+  margin: 0;
+  list-style-type: none;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list-item {
+  padding: 0.375rem 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list-item:hover:before {
+  border-color: #ae1164;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list-item:before {
+  content: " ";
+  display: inline-block;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.75rem;
+  border: 0.125rem solid #878b90;
+  border-radius: 50%;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list-item--active:before {
+  border-color: #ae1164;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list-item--active .ez-modal__table-of-contents-list-link {
+  color: #ae1164;
+}
+
+.ez-modal--terms-and-condition .ez-modal__table-of-contents-list-link {
+  text-decoration: none;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-terms {
+  padding-right: 2rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-terms-section-title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-terms-subsection-title {
+  font-size: 1rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__cotent-terms-description {
+  margin-bottom: 2.625rem;
+}
+
+.ez-modal--terms-and-condition .ez-modal__content-actions {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.ez-welcome-content__actions {
+  padding: 3.125rem;
+}
+
+.ez-welcome-content__description {
+  height: 100%;
+  padding: 3.125rem;
+  background: #f7f7f9;
+}
+
+.ez-welcome-content__title-row {
+  margin-bottom: 4.375rem;
+}
+
+.ez-welcome-content__description-row {
+  margin-bottom: 2.5rem;
+}
+
+.ez-welcome-content__description-row-title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ez-welcome-content__activation-status-title, .ez-welcome-content__activation-status-subtitle, .ez-welcome-content__activation-status-question, .ez-welcome-content__invalid-key-title, .ez-welcome-content__form-title {
+  margin-bottom: 1.5rem;
+}
+
+.ez-welcome-content__form-subtitle {
+  margin-bottom: 2rem;
+}
+
+.ez-welcome-content__form {
+  margin: 1rem 0;
+}
+
+.ez-welcome-content__terms-description {
+  color: #878b90;
+  margin: 0.75rem 0;
+}
+
+.ez-welcome-content__accept-terms-container {
+  display: flex;
+}
+
+.ez-welcome-content__accept-terms-checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.ez-welcome-content__send-button {
+  margin-top: 1.5rem;
+}
+
