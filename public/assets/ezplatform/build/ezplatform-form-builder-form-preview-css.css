@@ -1,0 +1,7 @@
+/* eZ variables: These variables are deprecated, please use variables with the "ibexa" prefix */
+/* boostrap variables*/
+body {
+  height: auto;
+  background-color: #fff;
+}
+
