@@ -1,0 +1,75 @@
+{
+    "extends": "@ibexa/ts-config",
+    "include": [
+        "vendor/ibexa/**/*"
+    ],
+    "exclude": [
+        "vendor/ibexa/**/node_modules/**/*",
+        "vendor/ibexa/**/vendors/**/*",
+        "vendor/ibexa/**/vendor/**/*"
+    ],
+    "compilerOptions": {
+        "paths": {
+            "@ibexa-admin-ui-assets/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/admin-ui-assets/*"
+            ],
+            "@ibexa-admin-ui-helpers/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/admin-ui/src/bundle/Resources/public/js/scripts/helpers/*"
+            ],
+            "@ibexa-admin-ui-modules/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/admin-ui/src/bundle/ui-dev/src/modules/*"
+            ],
+            "@ibexa-admin-ui/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/admin-ui/*"
+            ],
+            "@ibexa-connect/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/connect/*"
+            ],
+            "@ibexa-connector-ai-modules/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/connector-ai/src/bundle/ui-dev/src/modules/*"
+            ],
+            "@ibexa-connector-ai/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/connector-ai/*"
+            ],
+            "@ibexa-connector-qualifio/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/connector-qualifio/*"
+            ],
+            "@ibexa-content-tree/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/content-tree/*"
+            ],
+            "@ibexa-corporate-account/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/corporate-account/*"
+            ],
+            "@ibexa-dashboard/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/dashboard/*"
+            ],
+            "@ibexa-headless-assets/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/headless-assets/*"
+            ],
+            "@ibexa-image-picker/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/image-picker/*"
+            ],
+            "@ibexa-page-builder/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/page-builder/*"
+            ],
+            "@ibexa-product-catalog/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/product-catalog/*"
+            ],
+            "@ibexa-seo/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/seo/*"
+            ],
+            "@ibexa-taxonomy/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/taxonomy/*"
+            ],
+            "@ibexa-tree-builder/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/tree-builder/*"
+            ],
+            "@ids-assets/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-assets/dist/*"
+            ],
+            "@ids-components/*": [
+                "/home/jenkins/workspace/DXP/Archive_Maker_Experience/ibexa-experience/vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-components/dist/*"
+            ]
+        }
+    }
+}
