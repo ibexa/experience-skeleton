@@ -1,7 +1,7 @@
 {
-  "name": "ibexa/experience-skeleton",
-  "type": "project",
-  "license": "proprietary",
-  "description": "A project package for installing Ibexa DXP Experience edition",
-  "require": {}
+    "name": "ibexa/experience-skeleton",
+    "type": "project",
+    "license": "proprietary",
+    "description": "A project package for installing Ibexa DXP Experience edition",
+    "require": {}
 }
