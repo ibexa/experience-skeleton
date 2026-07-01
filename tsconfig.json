@@ -1,0 +1,159 @@
+{
+    "extends": "@ibexa/ts-config",
+    "include": [
+        "vendor/ibexa/**/*"
+    ],
+    "exclude": [
+        "vendor/ibexa/**/node_modules/**/*",
+        "vendor/ibexa/**/vendors/**/*",
+        "vendor/ibexa/**/vendor/**/*"
+    ],
+    "compilerOptions": {
+        "paths": {
+            "@ibexa-admin-ui": [
+                "./vendor/ibexa/admin-ui/index"
+            ],
+            "@ibexa-admin-ui-assets": [
+                "./vendor/ibexa/admin-ui-assets/index"
+            ],
+            "@ibexa-admin-ui-assets/*": [
+                "./vendor/ibexa/admin-ui-assets/*"
+            ],
+            "@ibexa-admin-ui-helpers": [
+                "./vendor/ibexa/admin-ui/src/bundle/Resources/public/js/scripts/helpers/index"
+            ],
+            "@ibexa-admin-ui-helpers/*": [
+                "./vendor/ibexa/admin-ui/src/bundle/Resources/public/js/scripts/helpers/*"
+            ],
+            "@ibexa-admin-ui-modules": [
+                "./vendor/ibexa/admin-ui/src/bundle/ui-dev/src/modules/index"
+            ],
+            "@ibexa-admin-ui-modules/*": [
+                "./vendor/ibexa/admin-ui/src/bundle/ui-dev/src/modules/*"
+            ],
+            "@ibexa-admin-ui/*": [
+                "./vendor/ibexa/admin-ui/*"
+            ],
+            "@ibexa-connect": [
+                "./vendor/ibexa/connect/index"
+            ],
+            "@ibexa-connect/*": [
+                "./vendor/ibexa/connect/*"
+            ],
+            "@ibexa-connector-ai": [
+                "./vendor/ibexa/connector-ai/index"
+            ],
+            "@ibexa-connector-ai-modules": [
+                "./vendor/ibexa/connector-ai/src/bundle/ui-dev/src/modules/index"
+            ],
+            "@ibexa-connector-ai-modules/*": [
+                "./vendor/ibexa/connector-ai/src/bundle/ui-dev/src/modules/*"
+            ],
+            "@ibexa-connector-ai/*": [
+                "./vendor/ibexa/connector-ai/*"
+            ],
+            "@ibexa-connector-qualifio": [
+                "./vendor/ibexa/connector-qualifio/index"
+            ],
+            "@ibexa-connector-qualifio/*": [
+                "./vendor/ibexa/connector-qualifio/*"
+            ],
+            "@ibexa-content-tree": [
+                "./vendor/ibexa/content-tree/index"
+            ],
+            "@ibexa-content-tree/*": [
+                "./vendor/ibexa/content-tree/*"
+            ],
+            "@ibexa-corporate-account": [
+                "./vendor/ibexa/corporate-account/index"
+            ],
+            "@ibexa-corporate-account/*": [
+                "./vendor/ibexa/corporate-account/*"
+            ],
+            "@ibexa-dashboard": [
+                "./vendor/ibexa/dashboard/index"
+            ],
+            "@ibexa-dashboard/*": [
+                "./vendor/ibexa/dashboard/*"
+            ],
+            "@ibexa-headless-assets": [
+                "./vendor/ibexa/headless-assets/index"
+            ],
+            "@ibexa-headless-assets/*": [
+                "./vendor/ibexa/headless-assets/*"
+            ],
+            "@ibexa-image-picker": [
+                "./vendor/ibexa/image-picker/index"
+            ],
+            "@ibexa-image-picker/*": [
+                "./vendor/ibexa/image-picker/*"
+            ],
+            "@ibexa-page-builder": [
+                "./vendor/ibexa/page-builder/index"
+            ],
+            "@ibexa-page-builder/*": [
+                "./vendor/ibexa/page-builder/*"
+            ],
+            "@ibexa-product-catalog": [
+                "./vendor/ibexa/product-catalog/index"
+            ],
+            "@ibexa-product-catalog/*": [
+                "./vendor/ibexa/product-catalog/*"
+            ],
+            "@ibexa-scheduler": [
+                "./vendor/ibexa/scheduler/index"
+            ],
+            "@ibexa-scheduler-modules": [
+                "./vendor/ibexa/scheduler/src/bundle/ui-dev/src/modules/index"
+            ],
+            "@ibexa-scheduler-modules/*": [
+                "./vendor/ibexa/scheduler/src/bundle/ui-dev/src/modules/*"
+            ],
+            "@ibexa-scheduler/*": [
+                "./vendor/ibexa/scheduler/*"
+            ],
+            "@ibexa-seo": [
+                "./vendor/ibexa/seo/index"
+            ],
+            "@ibexa-seo/*": [
+                "./vendor/ibexa/seo/*"
+            ],
+            "@ibexa-taxonomy": [
+                "./vendor/ibexa/taxonomy/index"
+            ],
+            "@ibexa-taxonomy/*": [
+                "./vendor/ibexa/taxonomy/*"
+            ],
+            "@ibexa-tree-builder": [
+                "./vendor/ibexa/tree-builder/index"
+            ],
+            "@ibexa-tree-builder/*": [
+                "./vendor/ibexa/tree-builder/*"
+            ],
+            "@ids-assets": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-assets/dist/index"
+            ],
+            "@ids-assets/*": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-assets/dist/*"
+            ],
+            "@ids-components": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-components/dist/index"
+            ],
+            "@ids-components/*": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-components/dist/*"
+            ],
+            "@ids-core": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-core/dist/index"
+            ],
+            "@ids-core/*": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/ids-core/dist/*"
+            ],
+            "@popperjs/core": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/@popperjs/core/lib/index"
+            ],
+            "@popperjs/core/*": [
+                "./vendor/ibexa/admin-ui-assets/src/bundle/Resources/public/vendors/@popperjs/core/lib/*"
+            ]
+        }
+    }
+}
